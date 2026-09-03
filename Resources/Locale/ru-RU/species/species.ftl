@@ -20,3 +20,6 @@ species-name-apid = Апид
 species-name-ant = Муравей
 species-name-allulalo = Аллулало
 species-name-ungu = Унгу
+species-name-decapoid = Декапоид
+species-name-gastropoid = Гастропоид
+

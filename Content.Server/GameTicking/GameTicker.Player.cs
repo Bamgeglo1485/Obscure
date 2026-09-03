@@ -1,3 +1,4 @@
+using Content.Server._Corvax.Events;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
@@ -23,6 +24,7 @@ namespace Content.Server.GameTicking
         private void InitializePlayer()
         {
             _playerManager.PlayerStatusChanged += PlayerStatusChanged;
+            SubscribeLocalEvent<GhostJoinLobbyRequestEvent>(OnGhostJoinLobbyRequest); // CorvaxGoob-GoLobby
         }
 
         private async void PlayerStatusChanged(object? sender, SessionStatusEventArgs args)
@@ -218,6 +220,13 @@ namespace Content.Server.GameTicking
             RaiseNetworkEvent(GetInfoMsg(), client);
             RaiseLocalEvent(new PlayerJoinedLobbyEvent(session));
         }
+
+        // Corvax-Changes-Start
+        private void OnGhostJoinLobbyRequest(GhostJoinLobbyRequestEvent ev)
+        {
+            PlayerJoinLobby(ev.Session);
+        }
+        // Corvax-Changes-End
 
         private void ReqWindowAttentionAll()
         {

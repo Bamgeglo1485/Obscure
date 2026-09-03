@@ -1,4 +1,4 @@
-﻿using Robust.Shared.Configuration;
+using Robust.Shared.Configuration;
 
 namespace Content.Shared.Corvax.CCCVars;
 
@@ -98,4 +98,12 @@ public sealed class CCCVars
     /// </summary>
     public static readonly CVarDef<float> SoundBarotraumaMoles =
         CVarDef.Create("sound.barotraumamoles", 10f, CVar.SERVERONLY);
+    public static readonly CVarDef<bool> GhostGoLobbyEnabled =
+        CVarDef.Create("ghost.go_lobby.enabled", true, CVar.SERVER | CVar.REPLICATED);
+
+    public static readonly CVarDef<float> GhostGoLobbyTimeHours =
+        CVarDef.Create("ghost.go_lobby.require_time", 1f, CVar.SERVERONLY);
+
+    public static readonly CVarDef<float> GhostGoLobbyDeathTimeMinutes =
+        CVarDef.Create("ghost.go_lobby.death_time", 5f, CVar.SERVERONLY);
 }

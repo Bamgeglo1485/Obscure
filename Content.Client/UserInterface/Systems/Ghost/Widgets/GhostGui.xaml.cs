@@ -11,6 +11,9 @@ public sealed partial class GhostGui : UIWidget
 {
     public GhostTargetWindow TargetWindow { get; }
 
+    public event Action? GhostGoLobbyPressed; // Corvax-GoLobby
+    public event Action? TDMArenaButtonPressed;//RAYTEN
+    public event Action? TTTArenaButtonPressed;//RAYTEN
     public event Action? RequestWarpsPressed;
     public event Action? ReturnToBodyPressed;
     public event Action? GhostRolesPressed;
@@ -24,6 +27,10 @@ public sealed partial class GhostGui : UIWidget
 
         MouseFilter = MouseFilterMode.Ignore;
 
+        TDMArenaButton.OnPressed += _ => TDMArenaButtonPressed?.Invoke();//RAYTEN
+        TTTArenaButton.OnPressed += _ => TTTArenaButtonPressed?.Invoke();//RAYTEN
+        GhostGoLobbyButton.OnPressed += _ => GhostGoLobbyPressed?.Invoke(); // Corvax-GoLobby
+
         GhostWarpButton.OnPressed += _ => RequestWarpsPressed?.Invoke();
         ReturnToBodyButton.OnPressed += _ => ReturnToBodyPressed?.Invoke();
         GhostRolesButton.OnPressed += _ => GhostRolesPressed?.Invoke();
@@ -36,9 +43,10 @@ public sealed partial class GhostGui : UIWidget
         Visible = false;
     }
 
-    public void Update(int? roles, bool? canReturnToBody)
+    public void Update(int? roles, bool? canReturnToBody, bool? canGoLobby = true) // Corvax-GoLobby edit
     {
         ReturnToBodyButton.Disabled = !canReturnToBody ?? true;
+        GhostGoLobbyButton.Visible = canGoLobby ?? true; // Corvax-GoLobby
 
         if (roles != null)
         {
@@ -54,6 +62,37 @@ public sealed partial class GhostGui : UIWidget
 
         TargetWindow.Populate();
     }
+
+    // RAYTEN STARTS
+    public void TDMUpdate(TimeSpan timeToNewCycle, int tdmwannajoin)
+    {
+        if (timeToNewCycle <= TimeSpan.FromSeconds(-1))
+        {
+            TDMArenaButton.Text = Loc.GetString("TDM-NotAvailable");
+            TDMArenaButton.Disabled = true;
+        }
+        else
+        {
+            var blueguys = (tdmwannajoin % 2 == 1) ? tdmwannajoin / 2 + 1 : tdmwannajoin / 2;
+            var redguys = tdmwannajoin / 2;
+            TDMArenaButton.Text = Loc.GetString("TDM-Available", ("blueguys", blueguys), ("redguys", redguys), ("timer", timeToNewCycle));
+            TDMArenaButton.Disabled = false;
+        }
+    }
+    public void TTTUpdate(TimeSpan timeToNewCycle, int tTTwannajoin)
+    {
+        if (timeToNewCycle <= TimeSpan.FromSeconds(-1))
+        {
+            TTTArenaButton.Text = Loc.GetString("TTT-NotAvailable");
+            TTTArenaButton.Disabled = true;
+        }
+        else
+        {
+            TTTArenaButton.Text = Loc.GetString("TTT-Available", ("players", tTTwannajoin), ("timer", timeToNewCycle));
+            TTTArenaButton.Disabled = false;
+        }
+    }
+    // RAYTEN ENDS
 
     protected override void Dispose(bool disposing)
     {

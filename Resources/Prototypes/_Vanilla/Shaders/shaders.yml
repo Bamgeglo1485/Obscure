@@ -17,9 +17,3 @@
   id: Backrooms
   kind: source
   path: "/Textures/Vanilla/Shaders/backrooms.swsl"
-
-# Funky RMC Explosions
-- type: shader
-  id: ShockWave
-  kind: source
-  path: "/Textures/_Funkystation/Shaders/shock_wave.swsl"
