@@ -1,44 +1,10 @@
-<p align="center"> <img alt="Space Station 14" width="880" height="200" src="https://github.com/funky-station/funky-station/blob/master/Resources/Textures/Logo/logo.png" /></p>
+Форк ForkyStation(FunkyStation), с переносом оригинального контента проекта Rayten/Vanilla/Obscure
 
-This is a Macrocosm powered Space Station 14 server. To prevent people forking RobustToolbox, a "content" pack is loaded by the client and server. This content pack contains everything needed to play the game on one specific server.
+## Ссылки
 
-## Links
+[Наш Дискорд Сервер](https://discord.gg/Pk5pXUX8fk)
 
-[Funky Station Discord Server](https://discord.gg/5FqgaAA2qF)
+## Лицензия
 
-## Documentation/Wiki
-
-The [Funky Station Developer Documentation](https://docs.funkystation.org/) has information on how to contribute to Funky Station. It contains guides, game design documents and helpful tips on how to contribute to a repository.
-
-## Contributing
-
-We welcome everyone to contribute to our fork. Please join our Discord for collaborating!
-We recommend you read the contribution guidelines. [Contribution Guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html)
-
-## Building
-
-1. Clone this repo:
-```shell
-git clone https://github.com/funky-station/forky-station.git
-```
-2. Go to the project folder and run `RUN_THIS.py` to initialize the submodules and load the engine:
-```shell
-cd space-station-14
-python RUN_THIS.py
-```
-3. Compile the solution:
-
-Build the server using `dotnet build`.
-
-[More detailed instructions on building the project.](https://docs.spacestation14.com/en/general-development/setup.html)
-
-## License
-
-This repository is MIT. See `LICENSES` for a copy of the MIT license.
-
-Most media assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and the copyright in the metadata file. [Example](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
-
-Note that some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
-
-If you find that your work is misattributed or someone elses work is misattributed, please create an issue on this repos GitHub page, or email the Funky Station Maintainers @ `maintainers@funkystation.org`.
-
+Большая часть лицензий это MIT, а именно контент Space Wizards и Funky/Forky Station. Остальной код распространяется под лицензией AGPL-3.0.
+Подробнее о лицензиях может быть указано в самом код и файлах с лицензиями, также в мете спрайтов.
