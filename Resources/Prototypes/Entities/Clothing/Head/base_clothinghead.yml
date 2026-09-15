@@ -26,10 +26,10 @@
   - type: Stainable
     clothingVisuals:
       head:
-      - sprite: /Textures/_Funkystation/Effects/blood.rsi
+      - sprite: _Funkystation/Effects/blood.rsi
         state: helmetblood
     iconVisuals:
-    - sprite: /Textures/_Funkystation/Effects/blood.rsi
+    - sprite: _Funkystation/Effects/blood.rsi
       state: helmetbloodicon
   - type: SolutionManager
     solutions:
@@ -155,9 +155,7 @@
     - HeadTop
     - HeadSide
     - FacialHair
-  - type: ESViewconeModifier # Funky
-    angleModifier: -90
-  - type: StainBlocker # Funky
+  - type: StainBlocker
     slots: [MASK]
 
 - type: entity
@@ -214,14 +212,12 @@
   - type: Stainable
     clothingVisuals:
       head:
-      - sprite: /Textures/_Funkystation/Effects/blood.rsi
+      - sprite: _Funkystation/Effects/blood.rsi
         state: helmetblood
     iconVisuals:
-    - sprite: /Textures/_Funkystation/Effects/blood.rsi
+    - sprite: _Funkystation/Effects/blood.rsi
       state: helmetbloodicon
-  - type: ESViewconeModifier # Funky
-    angleModifier: -60
-  - type: StainBlocker # Funky
+  - type: StainBlocker
     slots: [MASK]
 
 - type: entity
@@ -324,8 +320,8 @@
   - type: Stainable
     clothingVisuals:
       head:
-      - sprite: /Textures/_Funkystation/Effects/blood.rsi
+      - sprite: _Funkystation/Effects/blood.rsi
         state: helmetblood
     iconVisuals:
-    - sprite: /Textures/_Funkystation/Effects/blood.rsi
+    - sprite: _Funkystation/Effects/blood.rsi
       state: helmetbloodicon

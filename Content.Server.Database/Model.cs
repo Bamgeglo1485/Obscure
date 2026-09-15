@@ -59,15 +59,15 @@ namespace Content.Server.Database
                 .IsUnique();
 
             modelBuilder.Entity<Profile>()
-                .HasIndex(p => new {p.Slot, PrefsId = p.PreferenceId})
+                .HasIndex(p => new { p.Slot, PrefsId = p.PreferenceId })
                 .IsUnique();
 
             modelBuilder.Entity<Antag>()
-                .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.AntagName})
+                .HasIndex(p => new { HumanoidProfileId = p.ProfileId, p.AntagName })
                 .IsUnique();
 
             modelBuilder.Entity<Trait>()
-                .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.TraitName})
+                .HasIndex(p => new { HumanoidProfileId = p.ProfileId, p.TraitName })
                 .IsUnique();
 
             modelBuilder.Entity<ProfileRoleLoadout>()
@@ -115,15 +115,15 @@ namespace Content.Server.Database
                 .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<AdminFlag>()
-                .HasIndex(f => new {f.Flag, f.AdminId})
+                .HasIndex(f => new { f.Flag, f.AdminId })
                 .IsUnique();
 
             modelBuilder.Entity<AdminRankFlag>()
-                .HasIndex(f => new {f.Flag, f.AdminRankId})
+                .HasIndex(f => new { f.Flag, f.AdminRankId })
                 .IsUnique();
 
             modelBuilder.Entity<AdminLog>()
-                .HasKey(log => new {log.RoundId, log.Id});
+                .HasKey(log => new { log.RoundId, log.Id });
 
             modelBuilder.Entity<AdminLog>()
                 .Property(log => log.Id);
@@ -148,7 +148,7 @@ namespace Content.Server.Database
                 .HasIndex(round => round.StartDate);
 
             modelBuilder.Entity<AdminLogPlayer>()
-                .HasKey(logPlayer => new {logPlayer.RoundId, logPlayer.LogId, logPlayer.PlayerUserId});
+                .HasKey(logPlayer => new { logPlayer.RoundId, logPlayer.LogId, logPlayer.PlayerUserId });
 
             // Ban exemption can't have flags 0 since that wouldn't exempt anything.
             // The row should be removed if setting to 0.
@@ -296,6 +296,26 @@ namespace Content.Server.Database
                 .OwnsOne(p => p.HWId)
                 .Property(p => p.Type)
                 .HasDefaultValue(HwidType.Legacy);
+            //Rayten-start
+            modelBuilder.Entity<ProfileRoleSkills>()
+                .HasOne(e => e.Profile)
+                .WithMany(e => e.RoleSkills)
+                .HasForeignKey(e => e.ProfileId)
+                .IsRequired();
+
+            modelBuilder.Entity<ProfileBasicSkill>()
+                .HasOne(e => e.ProfileRoleSkills)
+                .WithMany(e => e.AddedBasicSkills)
+                .HasForeignKey(e => e.ProfileRoleSkillsId)
+                .IsRequired();
+
+            modelBuilder.Entity<ProfileEasySkill>()
+                .HasOne(e => e.ProfileRoleSkills)
+                .WithMany(e => e.AddedEasySkills)
+                .HasForeignKey(e => e.ProfileRoleSkillsId)
+                .IsRequired();
+            //Rayten-end
+
 
             ModelBan.OnModelCreating(modelBuilder);
             ModelCustomVoteLog.OnModelCreating(modelBuilder);
@@ -335,6 +355,8 @@ namespace Content.Server.Database
         public string? Voice { get; set; } = null!; // If null, the voice gets defaulted to the sex associated value
         public string Gender { get; set; } = null!;
         public string Species { get; set; } = null!;
+        [Column("bark_voice")] public string BarkVoice { get; set; } = "Papyrus"; // Rayten-TTS
+        [Column("bark_voice_pitch")] public float BarkVoicePitch { get; set; } = 1.0f; // Rayten-TTS
         [Column(TypeName = "jsonb")] public JsonDocument? OrganMarkings { get; set; } = null!;
         [Column(TypeName = "jsonb")] public JsonDocument? Markings { get; set; } = null!;
         public string HairName { get; set; } = null!;
@@ -349,7 +371,7 @@ namespace Content.Server.Database
         public List<Trait> Traits { get; } = new();
 
         public List<ProfileRoleLoadout> Loadouts { get; } = new();
-
+        public List<ProfileRoleSkills> RoleSkills { get; } = new(); //Rayten-RoleSkills
         [Column("pref_unavailable")] public DbPreferenceUnavailableMode PreferenceUnavailable { get; set; }
 
         public int PreferenceId { get; set; }
@@ -392,6 +414,43 @@ namespace Content.Server.Database
 
         public string TraitName { get; set; } = null!;
     }
+    //RAYTEN-START
+    #region предыстории
+    public class ProfileRoleSkills
+    {
+        public int Id { get; set; }
+
+        public int ProfileId { get; set; }
+
+        public Profile Profile { get; set; } = null!;
+
+        public string RoleName { get; set; } = string.Empty;
+
+        public List<ProfileBasicSkill> AddedBasicSkills { get; set; } = new();
+
+        public List<ProfileEasySkill> AddedEasySkills { get; set; } = new();
+    }
+    public class ProfileBasicSkill
+    {
+        public int Id { get; set; }
+
+        public int ProfileRoleSkillsId { get; set; }
+
+        public ProfileRoleSkills ProfileRoleSkills { get; set; } = null!;
+
+        public string SkillId { get; set; } = string.Empty;
+
+        public int Level { get; set; }
+    }
+    public class ProfileEasySkill
+    {
+        public int Id { get; set; }
+        public int ProfileRoleSkillsId { get; set; }
+        public ProfileRoleSkills ProfileRoleSkills { get; set; } = null!;
+        public string SkillId { get; set; } = string.Empty;
+    }
+    #endregion
+    //RAYTEN-END
 
     #region Loadouts
 
@@ -660,7 +719,7 @@ namespace Content.Server.Database
     public enum ServerBanExemptFlags
     {
         // @formatter:off
-        None       = 0,
+        None = 0,
 
         /// <summary>
         /// Ban is a datacenter range, connections usually imply usage of a VPN service.

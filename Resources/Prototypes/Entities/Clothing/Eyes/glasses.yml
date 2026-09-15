@@ -53,31 +53,22 @@
         Blunt: 10
 
 - type: entity
-  parent: [ClothingEyesBase, BaseEngineeringContraband]
+  parent: [ClothingEyesBase, FirstEngineeringContraband]
   id: ClothingEyesGlassesMeson
-  name: NT-THz Meson Goggles #more confusion
-  description: Nanotrasen-issue engineering goggles that utilize THz radiation and mesons to reveal sub-floor infrastructure, while protecting the eyes from sparks and debris.
+  name: engineering goggles #less confusion
+  description: Green-tinted goggles using a proprietary polymer that provides protection from eye damage of all types.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Eyes/Glasses/meson.rsi
+    sprite: Clothing/Eyes/Glasses/meson.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Eyes/Glasses/meson.rsi
+    sprite: Clothing/Eyes/Glasses/meson.rsi
+  - type: EyeProtection
   - type: IdentityBlocker
     coverage: EYES
   - type: Tag
     tags:
     - PetWearable
     - WhitelistChameleon
-  - type: TrayScanner
-    toggleAction: ActionToggleTrayScanner
-    soundOn:
-      path: /Audio/Items/flashlight_on.ogg
-    soundOff:
-      path: /Audio/Items/flashlight_off.ogg
-  - type: GoggleShader
-    shader: Goggles
-    color: '#5AB43CCC'
-    enabled: false
 
 - type: entity
   parent: ClothingEyesBase
@@ -159,7 +150,7 @@
     coverage: EYES
 
 - type: entity
-  parent: ClothingEyesGlassesCheapSunglasses
+  parent: [ClothingEyesGlassesCheapSunglasses, FirstSecurityBartenderMusicianContraband]
   id: ClothingEyesGlassesSunglasses
   name: sun glasses
   description: A pair of black sunglasses.
@@ -175,15 +166,15 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, BaseSecurityContraband]
+  parent: [ClothingEyesBase, ShowSecurityIcons, FirstSecurityContraband]
   id: ClothingEyesGlassesSecurity
   name: security glasses
   description: Upgraded sunglasses that provide flash immunity and a security HUD.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Eyes/Glasses/sec.rsi
+    sprite: Clothing/Eyes/Glasses/secglasses.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Eyes/Glasses/sec.rsi
+    sprite: Clothing/Eyes/Glasses/secglasses.rsi
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
@@ -203,7 +194,7 @@
     coverage: EYES
 
 - type: entity
-  parent: [ClothingEyesBase, BaseCommandContraband]
+  parent: [ClothingEyesBase, FirstCommandContraband]
   id: ClothingEyesGlassesCommand
   name: administration glasses
   description: Upgraded sunglasses that provide flash immunity and show ID card status.
@@ -279,7 +270,7 @@
       - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingEyesBase, BaseHighlyIllegalContraband]
+  parent: [ClothingEyesBase, ThirdContraband]
   id: ClothingEyesVisorNinja
   name: ninja visor
   description: An advanced visor protecting a ninja's eyes from flashing lights.
@@ -291,7 +282,7 @@
   - type: FlashImmunity
 
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, BaseSecurityContraband]
+  parent: [ClothingEyesBase, ShowSecurityIcons, FirstSecurityContraband]
   id: ClothingEyesGlassesNoir
   name: noir-tech glasses
   description: A pair of glasses that simulate what the world looked like before the invention of color.
@@ -310,16 +301,3 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-
-- type: entity
-  id: ActionToggleTrayScanner
-  parent: BaseAction
-  name: Toggle T-Ray Scanner
-  description: Turn the T-ray scanning functionality on or off.
-  components:
-  - type: Sprite
-    sprite: Objects/Tools/t-ray.rsi
-    layers:
-    - state: tray-on
-  - type: InstantAction
-    event: !type:ToggleTrayScannerEvent

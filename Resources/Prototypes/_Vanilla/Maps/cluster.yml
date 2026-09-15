@@ -1,0 +1,63 @@
+- type: gameMap
+  id: Cluster
+  mapName: 'Кластер'
+  mapPath: /Maps/Vanilla/cluster.yml
+  minPlayers: 0
+  maxPlayers: 20
+  stations:
+    Cluster:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_cluster.yml
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Кластер {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            # фанки хуйня
+            ExecutiveOfficer: [ 1, 1 ]
+            HospitalityDirector: [ 1, 1 ]
+            Magistrate: [ 1, 1 ]
+            CorporateLiaison: [ 1, 1 ]
+            InternalAffairsAgent: [ 1, 1 ]
+            #service
+            Captain: [ 1, 1 ]
+            HeadOfPersonnel: [ 1, 1 ]
+            Bartender: [ 1, 1 ]
+            Botanist: [ 2, 2 ]
+            Chef: [ 1, 1 ]
+            Janitor: [ 1, 1 ]
+            Chaplain: [ 1, 1 ]
+            Librarian: [ 1, 1 ]
+            Lawyer: [ 1, 1 ]
+            Reporter: [ 1, 1 ]
+            ServiceWorker: [ -1, -1 ] # Rayten-graytidegate
+            Passenger: [ -1, -1 ]
+            #engineering
+            ChiefEngineer: [ 1, 1 ]
+            AtmosphericTechnician: [ 2, 2 ]
+            StationEngineer: [ 3, 3 ]
+            TechnicalAssistant: [ 2, -1 ] # Rayten-graytidegate
+            #science
+            ResearchDirector: [ 1, 1 ]
+            Scientist: [ 4, 4 ]
+            ResearchAssistant: [ 2, -1 ] # Rayten-graytidegate
+            Chemist: [ 2, 2 ]
+            SalvageSpecialist: [ 2, 2 ]
+            #security
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 2, 2 ]
+            Paramedic: [ 1, 1 ]
+            SecurityOfficer: [ 3, 3 ]
+            SecurityCadet: [ 2, -1 ] # Rayten-graytidegate
+            #civillian
+            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            Clown: [ 1, 1 ]
+            Mime: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            #silicon (3)
+            StationAi: [ 1, 1 ]
+            Borg: [ 1, 1 ]

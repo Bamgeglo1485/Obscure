@@ -2,7 +2,7 @@
   id: Emergency
   name: chat-radio-emergency
   frequency: 150.1
-  keycode: "r"
+  keycode: "э"
   color: "#db4373"
   longRange: true
 
@@ -16,7 +16,7 @@
 - type: radioChannel
   id: Prisoner
   name: chat-radio-prisoner
-  keycode: 'p'
+  keycode: 'з'
   frequency: 123.7
   color: "#dddbc5"
   longRange: true

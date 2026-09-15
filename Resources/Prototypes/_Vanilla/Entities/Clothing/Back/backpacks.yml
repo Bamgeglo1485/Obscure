@@ -1,0 +1,36 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingFormalCMOBackpack
+  name: Формальный рюкзак главного врача
+  description: В этом рюкзаке может быть что-то, что спасёт жизни экипажа!
+  components:
+    - type: Sprite
+      sprite: Vanilla/Clothing/Back/Backpacks/formalCMO.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackAbsolute
+  name: абсолютный рюкзак
+  description: Рюкзак, открывающий локальное пространство блюспейса, также имеет два манипулятора.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Back/Backpacks/absolutepack.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Back/Backpacks/absolutepack.rsi
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK
+      - state: equipped-BACKPACK-unlit
+        shader: unshaded
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,19,9
+  - type: ExtraHandsEquipment
+    hands:
+      extra_hand_1:
+        location: Middle
+      extra_hand_2:
+        location: Middle

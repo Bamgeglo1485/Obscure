@@ -185,12 +185,13 @@ public sealed partial class DamageableSystem
         _mobThreshold.SetAllowRevives(ent, false);
     }
 
-    private void DamageableGetState(Entity<DamageableComponent> ent, ref ComponentGetState args)
+   private void DamageableGetState(Entity<DamageableComponent> ent, ref ComponentGetState args)
     {
         args.State = new DamageableComponentState(
             _netMan.IsServer ? ent.Comp.Damage : ent.Comp.Damage.Clone(),
             ent.Comp.DamageModifierSetId,
-            ent.Comp.Displacement
+            ent.Comp.Displacement,
+            ent.Comp.Bleeding //rayten
         );
     }
 

@@ -10,9 +10,9 @@
       - ClothMade
       - Recyclable
     - type: Sprite
-      sprite: _Funkystation/Clothing/Hands/Gloves/black.rsi #funky resprite
+      sprite: Clothing/Hands/Gloves/Color/black.rsi
     - type: Clothing
-      sprite: _Funkystation/Clothing/Hands/Gloves/black.rsi #funky resprite
+      sprite: Clothing/Hands/Gloves/Color/black.rsi
     - type: ChameleonClothing
       slot: [gloves]
       default: ClothingHandsGlovesColorBlack
@@ -28,3 +28,31 @@
   - type: Thieving
     stripTimeReduction: 2
     stealthy: true
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-Chameleon-syndicate
+      whitelistMind:
+        mindRoles:
+        - TraitorRole
+        - NukeopsRole
+    - label: corvax-hidden-desc-ThievingGloves-syndicate
+      whitelistMind:
+        mindRoles:
+        - TraitorRole
+        - NukeopsRole
+    - label: corvax-hidden-desc-Chameleon-thief
+      whitelistMind:
+        mindRoles:
+        - ThiefRole
+    - label: corvax-hidden-desc-ThievingGloves-thief
+      whitelistMind:
+        mindRoles:
+        - ThiefRole
+    - label: corvax-hidden-desc-Chameleon-research
+      jobRequired:
+        - ResearchAssistant
+        - ResearchDirector
+        - Scientist
+        - Borg
+# Corvax-HiddenDesc-End

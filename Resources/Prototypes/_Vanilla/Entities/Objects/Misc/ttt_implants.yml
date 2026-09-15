@@ -1,0 +1,170 @@
+#debug
+- type: entity
+  id: TraitorShopImplanter
+  name: Имплантер трейторшопа
+  parent: BaseImplantOnlyImplanter
+  suffix: Debug, TTT
+  components:
+    - type: Implanter
+      implant: TraitorShopImplant
+
+- type: entity
+  id: DetectiveShopImplanter
+  name: Имплантер детективШопа
+  parent: BaseImplantOnlyImplanter
+  suffix: Debug, TTT
+  components:
+    - type: Implanter
+      implant: DetectiveShopImplant
+
+#end-debug
+- type: entity
+  parent: [ BaseSubdermalImplant, StorePresetTraitorShop ]
+  id: TraitorShopImplant
+  name: ТрейторШоп
+  description: Закупка разных грязных штучек
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionOpenTraitorShopImplant
+  - type: Store
+    balance:
+      TTTCredit: 2
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+
+- type: entity
+  parent: [ BaseSubdermalImplant, StorePresetDetectiveShop ]
+  id: DetectiveShopImplant
+  name: ДетективШоп
+  description: Закупка разных хороших предметов
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionOpenDetectiveShopImplant
+    whitelist:
+      components:
+      - Hands
+  - type: Store
+    balance:
+      TTTCredit: 1
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+
+- type: entity
+  parent: BaseAction
+  id: ActionOpenDetectiveShopImplant
+  name: Открыть ДетективШоп
+  description: Открыть магазин детектива
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    priority: -20
+  - type: InstantAction
+    event: !type:OpenUplinkImplantEvent
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: old-radio
+
+- type: entity
+  parent: BaseAction
+  id: ActionOpenTraitorShopImplant
+  name: Открыть ТрейторШоп
+  description: Открыть магазин предателя
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    priority: -20
+  - type: InstantAction
+    event: !type:OpenUplinkImplantEvent
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: old-radio
+
+- type: entity
+  id: DisguiserImplanter
+  name: Имплантер маскировщика
+  parent: BaseImplantOnlyImplanter
+  suffix: TTT
+  components:
+    - type: Implanter
+      implant: DisguiserImplant
+
+- type: entity
+  parent: [ BaseSubdermalImplant, StorePresetTraitorShop ]
+  id: DisguiserImplant
+  name: Маскировщик
+  description: Позволяет скрывать имя владельца
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionDisguiser
+
+- type: entity
+  parent: BaseToggleAction
+  id: ActionDisguiser
+  name: Cкpыть имя
+  description: Заменяет ваше имя на "Неизвестный"
+  components:
+  - type: Action
+    raiseOnUser: true
+    itemIconStyle: BigAction
+    useDelay: 1
+    priority: 7
+  - type: InstantAction
+    event: !type:TTTDisguiserActionEvent
+  - type: Sprite
+    sprite: Objects/Devices/chameleon_projector.rsi
+    layers:
+    - state: "icon"
+      map: ["enum.ActionVisuals.Icon"]
+    - state: "powered"
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+
+- type: entity
+  id: TTTRadarImplanter
+  name: Имплантер радара
+  parent: BaseImplantOnlyImplanter
+  suffix: TTT
+  components:
+  - type: Implanter
+    implant: TTTRadarImplant
+
+- type: entity
+  parent: [ BaseSubdermalImplant, StorePresetTraitorShop ]
+  id: TTTRadarImplant
+  name: радар
+  description: Показывает местоположение всех игроков 1 раз в 30 секунд
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TTTRadar
+  - type: SubdermalImplant
+    implantAction: ActionTTTRadarOpen
+  - type: UserInterface
+    interfaces:
+      enum.StationMapUiKey.Key:
+        type: TTTRadarBoundUserInterface
+        requireInputValidation: false
+
+- type: entity
+  parent: BaseMentalAction
+  id: ActionTTTRadarOpen
+  name: Открыть радар
+  description: Открыть радар, который раз в 30 секунд показывает местоположение всех игроков.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:OpenUiActionEvent
+      key: enum.StationMapUiKey.Key
+  - type: Sprite
+    sprite: Interface/Actions/pai-map.rsi
+    layers:
+    - state: icon

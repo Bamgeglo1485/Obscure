@@ -7,6 +7,13 @@ namespace Content.Shared.Research.Components;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class ResearchServerComponent : Component
 {
+    //RAYTEN-START
+    [AutoNetworkedField]
+    [DataField("advancedPoints"), ViewVariables(VVAccess.ReadWrite)]
+    public int AdvancedPoints;
+    //RAYTEN-END
+
+
     /// <summary>
     /// The name of the server
     /// </summary>

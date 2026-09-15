@@ -1,0 +1,46 @@
+- type: entity
+  parent: [BasePlasticExplosive, SecondContraband]
+  id: FireBombPack
+  name: explosion pack
+  description: Quite a dangerous thing, especially for the one holding it.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Makeshift/bombpack.rsi
+    state: icon
+  - type: Item
+    sprite: Vanilla/Objects/Weapons/Makeshift/bombpack.rsi
+  - type: Explosive # Weak explosion in a very small radius. Ignites surrounding entities.
+    explosionType: Cryo
+    totalIntensity: 300
+    intensitySlope: 15
+    maxIntensity: 12
+    canCreateVacuum: false
+  - type: TimerTrigger
+    delay: 5
+    keysIn:
+    - startTimer
+    keyOut: trigger
+    examinable: false
+    initialBeepDelay: 0
+    beepSound:
+      path: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+      params:
+        volume: 1
+  - type: RandomTimerTrigger
+    min: 0
+    max: 25
+  - type: ExplodeOnTrigger
+  - type: TriggerOnUse
+    keyOut: startTimer
+  - type: GenericVisualizer
+    visuals:
+      enum.Trigger.TriggerVisuals.VisualState:
+        base:
+          Primed: { state: icon }
+          Unprimed: { state: icon }
+  - type: Construction
+    graph: ImprovisedBombPackGraph
+    node: bombpack
+  - type: DeviceLinkSink
+    ports:
+      - Timer

@@ -1,0 +1,199 @@
+﻿- type: entity
+  id: ActionSlam
+  name: Slam
+  description: +Ground Slam
+  components:
+  - type: RepulseAttract
+    speed: 25
+    range: 6
+    whitelist:
+      components:
+      - MobMover
+      - Item
+  - type: Action
+    useDelay: 30
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Vanilla/Effects/R1/Slam.ogg
+  - type: InstantAction
+    event: !type:RepulseAttractActionEvent
+  - type: Sprite
+    sprite: Vanilla/Actions/R1.rsi
+    layers:
+    - state: Slam
+
+- type: entity
+  id: ActionDashR1
+  name: Dash
+  description: +Tactical Retreat
+  components:
+  - type: Action
+    useDelay: 20
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: R1Dash
+  - type: Sprite
+    sprite: Vanilla/Actions/R1.rsi
+    layers:
+    - state: Dash
+
+- type: polymorph
+  id: R1Dash
+  configuration:
+    entity: R1DashEntity
+    transferName: true
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: false
+    polymorphSound: /Audio/Vanilla/Effects/R1/Dash.ogg
+    exitPolymorphSound: /Audio/Vanilla/Effects/R1/Slam.ogg
+    duration: 4
+
+- type: entity
+  parent: [BaseMob, Incorporeal]
+  categories: [ HideSpawnMenu ]
+  id: R1DashEntity
+  components:
+  - type: Sprite
+    sprite: Vanilla/Mobs/Silicon/chassis.rsi
+    layers:
+    - state: R1_Dash
+  - type: NpcFactionMember
+    factions:
+    - Dragon
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 7.5
+    baseSprintSpeed : 7.5
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepPlating
+  - type: ShowHealthBars
+  - type: Reflect
+    reflectProb: 1
+    spread: 0
+  - type: ShowHealthIcons
+  - type: Access
+    enabled: false
+    groups:
+    - AllAccess
+  - type: Input
+    context: "ghost"
+  - type: InputMover
+  - type: SpawnOnTrigger
+    proto: R1DashTrack
+  - type: RepeatingTrigger
+    delay: .2
+
+- type: entity
+  parent: [BaseMob, Incorporeal]
+  categories: [ HideSpawnMenu ]
+  id: R1DashTrack
+  components:
+  - type: Sprite
+    sprite: Vanilla/Mobs/Silicon/chassis.rsi
+    layers:
+    - state: R1_Dash
+  - type: TimedDespawn
+    lifetime: 0.5
+
+- type: entity
+  id: FistfulOfDollarAction
+  name: Fistful Of Dollar
+  description: +Fistful Of Dollar +Ricoshot
+  components:
+  - type: WorldTargetAction
+    event: !type:ProjectileSpellEvent
+      prototype: ReflectCoin
+      projectileSpeed: 6
+  - type: Action
+    priority: -99
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Vanilla/Effects/R1/Fistful.ogg
+  - type: TargetAction
+    checkCanAccess: false
+    range: 0
+  - type: Sprite
+    sprite: Vanilla/Actions/R1.rsi
+    layers:
+    - state: Fistful
+
+- type: entity
+  id: ActionToggleHealing
+  name: Переключить ремонт
+  description: Использовать кровь для ремонта обшивки, или копить её.
+  components:
+  - type: Action
+    useDelay: 1
+    itemIconStyle: BigAction
+    priority: -20
+  - type: InstantAction
+    event: !type:ToggleHealingActionEvent
+  - type: Sprite
+    sprite: Vanilla/Actions/R1.rsi
+    layers:
+    - state: "Repair"
+      map: ["enum.ActionVisuals.Icon"]
+    - state: "Repair2"
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+
+# R-2
+
+- type: entity
+  id: ActionDashR2
+  name: Dash
+  description: +Tactical Retreat
+  components:
+  - type: Action
+    useDelay: 20
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: R2Dash
+  - type: Sprite
+    sprite: Vanilla/Actions/R1.rsi
+    layers:
+    - state: Dash
+
+- type: polymorph
+  id: R2Dash
+  configuration:
+    entity: R2DashEntity
+    transferName: true
+    forced: true
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: false
+    exitPolymorphSound: /Audio/Vanilla/Effects/R1/Slam.ogg
+    duration: 4
+
+- type: entity
+  parent: R1DashEntity
+  categories: [ HideSpawnMenu ]
+  id: R2DashEntity
+  components:
+  - type: Sprite
+    layers:
+    - state: R2_Dash
+  - type: SpawnOnTrigger
+    proto: R2DashTrack
+  - type: TimedSpawner
+    prototypes:
+    - R2DashTrack
+    chance: 1
+    intervalSeconds: 1
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 1
+
+- type: entity
+  parent: R1DashTrack
+  categories: [ HideSpawnMenu ]
+  id: R2DashTrack
+  components:
+  - type: Sprite
+    layers:
+    - state: R2_Dash

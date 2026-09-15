@@ -1,0 +1,152 @@
+- type: loadoutEffectGroup
+  id: SuperMasterCap
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobCaptain
+      time: 100h
+
+# Jumpsuit
+
+- type: loadout
+  id: UniformJumpsuitWhiteCaptain
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitWhiteCaptain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SuperMasterCap
+
+- type: loadout
+  id: UniformJumpskirtWhiteCaptain
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtWhiteCaptain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SuperMasterCap
+
+- type: loadout
+  id: UniformJumpsuitNavalCaptain
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNavalCaptain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterCap
+
+#head
+- type: loadout
+  id: CaptainCapcapWhite
+  equipment:
+    head: ClothingHeadHatCapcapWhite
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SuperMasterCap
+
+- type: loadout
+  id: CapNavalCap
+  equipment:
+    head: ClothingHeadHatNavalCap
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterCap
+
+#outer clothing
+- type: loadout
+  id: ClothingOuterCoat
+  equipment:
+    outerClothing: ClothingOuterCoatCaptain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterCap
+
+- type: loadout
+  id: ClothingOuterCoatCaptainWhite
+  equipment:
+    outerClothing: ClothingOuterCoatCaptainWhite
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SuperMasterCap
+
+- type: loadout
+  id: CoatNavalCaptain
+  equipment:
+    outerClothing: ClothingOuterCoatNavalCaptain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterCap
+
+# Gloves
+- type: loadout
+  id: CaptainGlovesDefault
+  equipment:
+    gloves: ClothingHandsGlovesCaptain
+
+- type: loadout
+  id: CaptainGlovesWhite
+  equipment:
+    gloves: ClothingHandsGlovesCaptainWhite
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SuperMasterCap
+
+#sabres
+- type: loadout
+  id: PowerSabreLoadout
+  equipment:
+    belt: PowerSabre
+
+- type: loadout
+  id: CaptainSabreLoadout
+  equipment:
+    belt: ClothingBeltSheathFilled
+
+- type: loadout
+  id: CaptainWhiteSabreLoadout
+  equipment:
+    belt: ClothingBeltWhiteSheathFilled
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SuperMasterCap
+#Neck
+
+- type: loadout
+  id: ClothingNeckCaptainWideLoadout
+  equipment:
+    neck: ClothingNeckCaptainWide
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterCap
+
+- type: loadout
+  id: CaptainWhiteMantle
+  equipment:
+    neck: ClothingNeckWhiteMantleCaptain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SuperMasterCap
+
+- type: loadout
+  id: CaptainCloakRoyal
+  equipment:
+    neck: ClothingNeckCloakRoyalCaptain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SuperMasterCap
+
+- type: loadout
+  id: TieDetCap
+  equipment:
+    neck: ClothingNeckTieDet
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterCap
+
+# Backpacks
+
+- type: loadout
+  id: NavalCaptainSatchel
+  equipment:
+    back: ClothingBackpackSatchelNavalCaptain
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterCap

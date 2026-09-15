@@ -1,0 +1,92 @@
+# БАЗОВЫЕ ПРОТОТИПЫ
+- type: entity
+  abstract: true
+  parent: [ClothingOuterBaseLargeInsulated, AllowSuitStorageClothing]
+  id: ClothingOuterExoskeletonBase
+  name: базовый экзоскелет
+  components:
+  - type: Clothing
+    equipSound:
+      path: /Audio/Vanilla/Effects/exoskeletonEquip.ogg
+    unequipSound:
+      path: /Audio/Vanilla/Effects/exoskeletonUnequip.ogg
+    equipDelay: 0.5
+    unequipDelay: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 1.2
+    sprintModifier: 1.2
+  - type: ProtectedFromStepTriggers
+    slots: WITHOUT_POCKET
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10
+    slots: OUTERCLOTHING
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: ExoskeletonFootsteps
+      params:
+        volume: -5
+
+- type: entity
+  abstract: true
+  parent: ClothingOuterExoskeletonBase
+  id: ClothingOuterExoskeletonModuleBase
+  name: базовый модульный экзоскелет
+  components:
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Storage
+    storageInsertSound: /Audio/Vanilla/Effects/moduleInsert.ogg
+    storageRemoveSound: /Audio/Vanilla/Effects/moduleRemove.ogg
+    storageOpenSound: /Audio/Vanilla/Effects/moduleOpen.ogg
+    grid:
+    - 0,0,1,2
+    - 3,0,3,2
+    maxItemSize: Normal
+    whitelist:
+      tags:
+      - MODSuitModule
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
+      cell_slot: !type:ContainerSlot
+      fuel_slot: !type:ContainerSlot
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+      fuel_slot:
+        whitelist:
+          components:
+          - FitsInDispenser
+          - GasTank
+  - type: PowerCellDraw
+    drawRate: 1.5
+  - type: ToggleCellDraw
+  - type: MODSuitFrame
+    sprite: Vanilla/Clothing/OuterClothing/MODSuit/equipped_modules.rsi
+  - type: MODSuitFrameVisuals
+  - type: MODSuitFuel
+
+# СУЩЕСТВУЮЩИЕ МОДСЬЮТЫ
+- type: entity
+  parent: ClothingOuterExoskeletonModuleBase
+  id: ClothingOuterMODSuitExoskeleton
+  name: модульный экзоскелет
+  description: Модульный экзоскелет, который можно преобразовать в скафандр.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/OuterClothing/MODSuit/base_exoskeleton.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/OuterClothing/MODSuit/base_exoskeleton.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1

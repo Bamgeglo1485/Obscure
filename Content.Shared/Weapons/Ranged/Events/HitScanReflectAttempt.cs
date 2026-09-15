@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Shared.Inventory;
 using Content.Shared.Weapons.Reflect;
+using Content.Shared.Damage;
 
 namespace Content.Shared.Weapons.Ranged.Events;
 
@@ -13,3 +14,7 @@ public record struct HitScanReflectAttemptEvent(EntityUid? Shooter, EntityUid So
 {
     SlotFlags IInventoryRelayEvent.TargetSlots => SlotFlags.WITHOUT_POCKET;
 }
+//Rayten-Start
+[ByRefEvent]
+public record struct HitscanHitEvent(EntityUid? Target, EntityUid SourceItem, DamageSpecifier dmg);
+//Rayten-End

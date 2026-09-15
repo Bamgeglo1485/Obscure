@@ -1,0 +1,156 @@
+using System.Linq;
+using Content.Client.Lobby;
+using Content.Shared.Corvax.Interface;
+using Content.Shared.Preferences;
+using Content.Shared.Vanilla.VoiceSpeech;
+using Content.Client.Vanilla.VoiceSpeech;
+using Content.Shared.Vanilla.Sponsor;
+using Content.Shared.Audio;
+using Robust.Shared.Audio.Systems;
+using Robust.Shared.Random;
+using Timer = Robust.Shared.Timing.Timer;
+using Robust.Shared.Player;
+using Robust.Shared.Audio;
+
+namespace Content.Client.Lobby.UI;
+
+public sealed partial class HumanoidProfileEditor
+{
+    private SharedSponsorManager? _sponsorsMgr;
+    private List<VoiceSpeechPrototype> _voiceList = new();
+    private readonly List<string> _sampleText =
+        new()
+        {
+            "Съешь же ещё этих мягких французских булок, да выпей чаю.",
+            "Клоун, прекрати разбрасывать банановые кожурки офицерам под ноги!",
+            "Капитан, вы уверены что хотите назначить клоуна на должность главы персонала?",
+            "Эс Бэ! Тут человек в сером костюме, с тулбоксом и в маске! Помогите!!",
+            "Учёные, тут странная аномалия в баре! Она уже съела мима!",
+            "Я надеюсь что инженеры внимательно следят за сингулярностью...",
+            "Вы слышали эти странные крики в техах? Мне кажется туда ходить небезопасно.",
+            "Вы не видели Гамлета? Мне кажется он забегал к вам на кухню.",
+            "Здесь есть доктор? Человек умирает от отравленного пончика! Нужна помощь!",
+            "Вам нужно согласие и печать квартирмейстера, если вы хотите сделать заказ на партию дробовиков.",
+            "Возле эвакуационного шаттла разгерметизация! Инженеры, нам срочно нужна ваша помощь!",
+            "Бармен, налей мне самого крепкого вина, которое есть в твоих запасах!"
+        };
+    private void InitializeVoice()
+    {
+        _voiceList = _prototypeManager
+            .EnumeratePrototypes<VoiceSpeechPrototype>()
+            .Where(o => o.RoundStart)
+            .OrderBy(o => o.SponsorOnly) // false → true
+            .ThenBy(o => o.Name)
+            .ToList();
+
+
+        Pitch.OnValueChanged += args =>
+        {
+            if (!MathHelper.CloseTo(PitchInput.Value, args.Value))
+                PitchInput.Value = args.Value;
+
+            SetVoicePitch(args.Value);
+        };
+
+        PitchInput.OnValueChanged += args =>
+        {
+            if (!MathHelper.CloseTo(Pitch.Value, args.Value))
+                Pitch.Value = args.Value;
+
+            SetVoicePitch(args.Value);
+        };
+
+        BarkVoiceButton.OnItemSelected += args =>
+        {
+            BarkVoiceButton.SelectId(args.Id);
+            SetBarkVoice(_voiceList[args.Id].ID);
+        };
+
+        BarkVoicePlayButton.OnPressed += _ => PlayPreviewTTS();
+        _sponsorsMgr = IoCManager.Resolve<SharedSponsorManager>();
+    }
+
+    private void UpdateTTSVoicesControls()
+    {
+        if (Profile is null)
+            return;
+
+        BarkVoiceButton.Clear();
+
+        var firstVoiceChoiceId = 1;
+        for (var i = 0; i < _voiceList.Count; i++)
+        {
+            var voice = _voiceList[i];
+            if (!HumanoidCharacterProfile.CanHaveVoice(voice, Profile.Sex))
+                continue;
+            var name = voice.Name;
+            BarkVoiceButton.AddItem(name, i);
+
+            if (firstVoiceChoiceId == 1)
+                firstVoiceChoiceId = i;
+
+            if (_sponsorsMgr is null)
+                continue;
+
+            if (voice.SponsorOnly && _sponsorsMgr != null && !_sponsorsMgr.GetSponsorPrototypes().Contains(voice.ID))
+            {
+                BarkVoiceButton.SetItemDisabled(BarkVoiceButton.GetIdx(i), true);
+            }
+        }
+
+        var voiceChoiceId = _voiceList.FindIndex(x => x.ID == Profile.BarkVoice);
+        if (!BarkVoiceButton.TrySelectId(voiceChoiceId) &&
+            BarkVoiceButton.TrySelectId(firstVoiceChoiceId))
+        {
+            SetBarkVoice(_voiceList[firstVoiceChoiceId].ID);
+        }
+        Pitch.Value = Profile.BarkVoicePitch;
+        PitchInput.Value = Profile.BarkVoicePitch;
+        PitchInput.IsValid = value => value >= 0.5f && value <= 1.5f;
+    }
+
+    private void PlayPreviewTTS()
+    {
+        if (Profile is null)
+            return;
+
+        var rng = IoCManager.Resolve<IRobustRandom>();
+        var entMan = IoCManager.Resolve<IEntityManager>();
+        var _audio = entMan.System<SharedAudioSystem>();
+        var _voiceSys = entMan.System<VoiceSpeechSystem>();
+        var previewBeepText = rng.Pick(_sampleText);
+
+        int _previewBeepIndex = 0;
+
+        var voice = Profile.BarkVoice;
+
+        if (!_prototypeManager.TryIndex<VoiceSpeechPrototype>(voice, out var protoVoice))
+            return;
+
+        var Sound = protoVoice.Voice;
+        AudioParams audioparms = AudioParams.Default
+                .WithPitchScale(Profile.BarkVoicePitch)
+                .WithVariation(0.05f)
+                .WithVolume(_voiceSys.AdjustVolume(false, protoVoice.Basevolume));
+
+        void BeepStep()
+        {
+            if (_previewBeepIndex >= previewBeepText.Length)
+                return;
+
+            var nextChar = previewBeepText[_previewBeepIndex];
+
+            if (!char.IsWhiteSpace(nextChar) && nextChar != ',' && nextChar != '.' && nextChar != '!' && nextChar != '?')
+                _audio.PlayGlobal(Sound, Filter.Local(), true, audioparms);
+
+            _previewBeepIndex++;
+
+            if (_previewBeepIndex < previewBeepText.Length && _previewBeepIndex <= 55)
+            {
+                Timer.Spawn(TimeSpan.FromSeconds(rng.NextFloat(0.085f, 0.135f)), BeepStep);
+            }
+        }
+
+        Timer.Spawn(TimeSpan.FromSeconds(0.085f), BeepStep);
+    }
+}

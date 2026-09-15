@@ -1,5 +1,7 @@
+## Belts that need/have visualizers
+
 - type: entity
-  parent: [ClothingBeltBase, ClothingSlotBase, BaseCommandContraband]
+  parent: [ClothingBeltBase, ClothingSlotBase, FirstCommandContraband]
   id: ClothingBeltSheath
   name: sabre sheath
   description: An ornate sheath designed to hold an officer's blade.
@@ -71,7 +73,7 @@
 ## Belts without visualizers
 
 - type: entity
-  parent: [ClothingBeltAmmoProviderBase, BaseSecurityBartenderContraband]
+  parent: [ClothingBeltAmmoProviderBase, FirstSecurityBartenderContraband]
   id: ClothingBeltBandolier
   name: bandolier
   description: A bandolier for holding shotgun ammunition.
@@ -89,7 +91,7 @@
     capacity: 14
 
 - type: entity
-  parent: [ ClothingBeltStorageBase, BaseMagicalContraband ]
+  parent: [ ClothingBeltStorageBase, MagicalContraband ]
   id: ClothingBeltWand
   name: wand belt
   description: A belt designed to hold various rods of power. A veritable fanny pack of exotic magic.
@@ -127,7 +129,7 @@
     - 0,0,4,1
 
 - type: entity
-  parent: [ClothingBeltStorageBase, BaseSyndicateContraband]
+  parent: [ClothingBeltStorageBase, FirstSyndicateContraband]
   id: ClothingBeltSyndieHolster
   name: syndicate shoulder holster
   description: A deep shoulder holster capable of holding many types of ballistics.
@@ -163,12 +165,12 @@
   description: Unique and versatile chest rig, can hold security gear.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/securitywebbing.rsi
+    sprite: Vanilla/Clothing/Belt/securitywebbing.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/Belt/securitywebbing.rsi
+    sprite: Vanilla/Clothing/Belt/securitywebbing.rsi # Rayten-Resprites
 
 - type: entity
-  parent: [ ClothingBeltStorageBase, BaseSecurityCargoContraband ]
+  parent: [ ClothingBeltStorageBase, FirstSecurityCargoContraband ]
   id: ClothingBeltMercWebbing
   name: mercenary webbing
   description: Ideal for storing everything from ammo to weapons and combat essentials.
@@ -190,7 +192,7 @@
     sprite: Clothing/Belt/salvagewebbing.rsi
 
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseSyndicateContraband]
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, FirstSecurityCargoContraband]
   id: ClothingBeltMilitaryWebbing
   name: chest rig
   description: A set of tactical webbing worn by Syndicate boarding parties.
@@ -216,7 +218,7 @@
     sprite: Clothing/Belt/militarywebbingmed.rsi
 
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingBeltMilitaryWebbing ]
+  parent: [ CentcommContraband, ClothingBeltMilitaryWebbing ]
   id: ClothingBeltMilitaryWebbingERT
   name: ERT chest rig
   description: A set of tactical webbing worn by Emergency Response Team operatives.

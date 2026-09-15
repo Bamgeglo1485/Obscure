@@ -1,3 +1,5 @@
+# Belts meant to be used by a specific job to hold their tools
+
 - type: entity
   abstract: true
   parent: ClothingBeltStorageBase
@@ -28,7 +30,6 @@
       - WeldingMask
       - RemoteSignaller
       - UtilityKnife
-      - ConstructionChalk # Funky
       components:
       - StationMap
       - SprayPainter
@@ -42,9 +43,8 @@
       - TrayScanner
       - GasAnalyzer
       - HandLabeler
-      - TapeRoll # Funky
   - type: ItemMapper
-    sprite: &BeltOverlay Clothing/Belt/belt_overlay.rsi
+    sprite: &BeltOverlay Vanilla/Clothing/Belt/belt_overlay.rsi # Rayten Resprites
     mapLayers:
       drill:
         whitelist:
@@ -87,9 +87,9 @@
   description: Can hold various things.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/utility.rsi
+    sprite: Vanilla/Clothing/Belt/utility.rsi # Rayten Resprites
   - type: Clothing
-    sprite: Clothing/Belt/utility.rsi
+    sprite: Vanilla/Clothing/Belt/utility.rsi # Rayten Resprites
   - type: Tag
     tags:
     - UtilityBelt
@@ -102,9 +102,9 @@
   description: Holds tools, looks snazzy.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/ce.rsi
+    sprite: Vanilla/Clothing/Belt/ce.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/Belt/ce.rsi
+    sprite: Vanilla/Clothing/Belt/ce.rsi # Rayten-Resprites
   - type: Storage
     grid:
     - 0,0,9,1
@@ -138,9 +138,6 @@
       - TrashBagHolding
       - GoldenPlunger
       - WireBrush
-      - Screwdriver # Funky Start
-      - Powerdrill
-      - Rag # Funky End
       - LightReplacer
       - CleanerGrenade
   - type: ItemMapper
@@ -203,9 +200,9 @@
   description: Can hold various medical equipment.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Belt/medical.rsi
+    sprite: Vanilla/Clothing/Belt/medical.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: _Funkystation/Clothing/Belt/medical.rsi
+    sprite: Vanilla/Clothing/Belt/medical.rsi # Rayten-Resprites
   - type: Storage
     whitelist:
       tags:
@@ -269,9 +266,9 @@
   description: Perfect for holding various equipment for medical emergencies.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Belt/emt.rsi
+    sprite: Clothing/Belt/emt.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Belt/emt.rsi
+    sprite: Clothing/Belt/emt.rsi
 
 - type: entity
   parent: ClothingBeltStorageBase
@@ -280,9 +277,9 @@
   description: A belt used to hold most hydroponics supplies. Suprisingly, not green.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Belt/hydro.rsi
+    sprite: Clothing/Belt/plant.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Belt/hydro.rsi
+    sprite: Clothing/Belt/plant.rsi
   - type: Storage
     whitelist:
       tags:
@@ -300,7 +297,7 @@
       - Smokable
       - HandLabeler
   - type: ItemMapper
-    sprite: _Funkystation/Clothing/Belt/belt_overlay.rsi
+    sprite: *BeltOverlay
     mapLayers:
       hatchet:
         whitelist:
@@ -402,15 +399,15 @@
   - type: Appearance
 
 - type: entity
-  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseSecurityContraband]
+  parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, FirstSecurityContraband]
   id: ClothingBeltSecurity
   name: security belt
   description: Can hold security gear like handcuffs and flashes.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Belt/security_belt.rsi
+    sprite: Clothing/Belt/security.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Belt/security_belt.rsi
+    sprite: Clothing/Belt/security.rsi
   - type: ExplosionResistance
     damageCoefficient: 0.9
   - type: Storage
@@ -437,7 +434,6 @@
       - DoorRemote
       - Whistle
       - BalloonPopper
-      - TapeRoll # Funky
   - type: ItemMapper
     sprite: *BeltOverlay
     mapLayers:

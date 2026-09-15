@@ -1,0 +1,30 @@
+[server]
+lobby_name = "️Rayten"
+[game]
+hostname = "[MRP] [RU] ✨ RAYTEN ✨ | НОВОЕ КОМЬЮНИТИ | SCP | Навыки"
+desc = """
+Rayten ждёт тебя!
+- Море уникального контента: новые расы, режимы, механики и антагонисты.
+- Собственная система навыков!
+- 14 уникальных SCP-объектов.
+- Уютное RP-комьюнити без токсичности и с адекватной администрацией.
+- Сервер с самым сильным античитом.
+
+✨ Заходи к нам ✨
+"""
+soft_max_players = 69
+showgreentext = false
+
+[hub]
+tags = "lang:ru,region:eu_e,rp:med"
+advertise = true
+
+[net]
+tickrate = 30
+max_connections = 80
+port = 1212
+
+[infolinks]
+discord = "https://discord.gg/sRSGDyGPw2"
+github = "https://github.com/Bamgeglo1485/New-Rayten.git"
+

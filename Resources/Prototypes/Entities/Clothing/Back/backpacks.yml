@@ -70,7 +70,7 @@
       collection: IanBark
 
 - type: entity
-  parent: [ClothingBackpack, BaseSecurityContraband]
+  parent: [ClothingBackpack, FirstSecurityContraband]
   id: ClothingBackpackSecurity
   name: security backpack
   description: It's a very robust backpack.
@@ -79,7 +79,7 @@
     sprite: Clothing/Back/Backpacks/security.rsi
 
 - type: entity
-  parent: [ClothingBackpack, BaseSecurityContraband]
+  parent: [ClothingBackpack, FirstSecurityContraband]
   id: ClothingBackpackBrigmedic
   name: brigmedic backpack
   description: It's a very sterile backpack.
@@ -115,7 +115,7 @@
     sprite: Clothing/Back/Backpacks/medical.rsi
 
 - type: entity
-  parent: [ClothingBackpack, BaseCommandContraband]
+  parent: [ClothingBackpack, FirstCommandContraband]
   id: ClothingBackpackCaptain
   name: captain's backpack
   description: It's a special backpack made exclusively for Nanotrasen officers.
@@ -151,7 +151,7 @@
   description: It's a backpack made of all-natural fibers.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Back/Backpacks/hydroponics.rsi
+    sprite: Clothing/Back/Backpacks/hydroponics.rsi
 
 - type: entity
   parent: ClothingBackpack
@@ -209,7 +209,7 @@
 
 #ERT
 - type: entity
-  parent: [ ClothingBackpack, BaseCentcommContraband ]
+  parent: [ ClothingBackpack, CentcommContraband ]
   id: ClothingBackpackERTLeader
   name: ERT leader backpack
   description: A spacious backpack with lots of pockets, worn by the Leader of an Emergency Response Team.
@@ -218,7 +218,7 @@
     sprite: Clothing/Back/Backpacks/ertleader.rsi
   - type: Storage
     grid:
-    - 0,0,8,3
+    - 0,0,10,3
   - type: ExplosionResistance
     damageCoefficient: 0.1
 
@@ -287,7 +287,7 @@
 
 #Syndicate
 - type: entity
-  parent: [ClothingBackpack, BaseSyndicateContraband]
+  parent: [ClothingBackpack, FirstSyndicateContraband]
   id: ClothingBackpackSyndicate
   name: syndicate backpack
   description:
@@ -331,6 +331,9 @@
     - state: holding
     - state: holding-unlit
       shader: unshaded
+  - type: Tag # Rayten
+    tags:
+    - BagOfHolding
 
 - type: entity
   parent: ClothingBackpackClown

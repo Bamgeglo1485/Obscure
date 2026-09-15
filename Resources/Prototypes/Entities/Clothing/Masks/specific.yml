@@ -19,6 +19,21 @@
     - type: HideLayerClothing
       slots:
       - Snout
+# Corvax-HiddenDesc-Start
+    - type: HiddenDescription
+      entries:
+      - label: corvax-hidden-desc-Chameleon-syndicate
+        whitelistMind:
+          mindRoles:
+          - TraitorRole
+          - NukeopsRole
+      - label: corvax-hidden-desc-Chameleon-research
+        jobRequired:
+          - ResearchAssistant
+          - ResearchDirector
+          - Scientist
+          - Borg
+# Corvax-HiddenDesc-End
 
 - type: entity
   parent: ClothingMaskGasChameleon

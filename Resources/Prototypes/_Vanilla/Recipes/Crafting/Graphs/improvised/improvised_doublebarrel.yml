@@ -1,0 +1,41 @@
+- type: constructionGraph
+  id: ImprovisedDoubleBarrelGraph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: shotgun
+      steps:
+      - tag: Handcuffs
+        icon:
+          sprite: Objects/Misc/cablecuffs.rsi
+          state: cuff
+          color: red
+        name: construction-graph-tag-cuffs
+      - tag: Handcuffs
+        icon:
+          sprite: Objects/Misc/cablecuffs.rsi
+          state: cuff
+          color: red
+        name: construction-graph-tag-cuffs
+      - tag: Handcuffs
+        icon:
+          sprite: Objects/Misc/cablecuffs.rsi
+          state: cuff
+          color: red
+        name: construction-graph-tag-cuffs
+      - tag: HandmadeShotgun
+        icon:
+          sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun.rsi
+          state: icon
+        name: construction-graph-tag-improvisedshotgun
+      - tag: HandmadeShotgun
+        icon:
+          sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun.rsi
+          state: icon
+        name: construction-graph-tag-improvisedshotgun
+      - material: Steel
+        amount: 1
+        doAfter: 2
+  - node: shotgun
+    entity: WeaponShotgunDoubleBarreledMakeshift

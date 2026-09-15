@@ -1,0 +1,10 @@
+- type: latheRecipePack
+  id: SpaceManipulation
+  recipes:
+  - TimeStopper
+  - LocalAtmosGenerator
+
+- type: latheRecipePack
+  id: FemurBreaker
+  recipes:
+  - FemurBreakerBedMachineCircuitboard

@@ -67,22 +67,57 @@ public sealed partial class HumanoidProfileEditor
                 });
             }
 
+            // RAYTEN STARTS - ТРЕЙТЫ СОРТИРУЮТСЯ ТАК - СПЕРВА ПОЛОЖИТЕЛЬНЫЕ, ПОТОМ ОТРИЦАТЕЛЬНЫЕ
+            var sortedCategoryTraits = categoryTraits
+                .Select(id => _prototypeManager.Index<TraitPrototype>(id))
+                .OrderByDescending(t => t.Cost > 0)
+                .ThenByDescending(t => t.Cost)
+                .ThenBy(t => t.Cost)
+                .ToList();
+            // RAYTEN ENDS
+
             List<TraitPreferenceSelector?> selectors = new();
             var selectionCount = 0;
 
-            foreach (var traitProto in categoryTraits)
+            foreach (var trait in sortedCategoryTraits)
             {
-                var trait = _prototypeManager.Index<TraitPrototype>(traitProto);
-                var selector = new TraitPreferenceSelector(trait);
-
-                selector.Preference = Profile?.TraitPreferences.Contains(trait.ID) == true;
-                if (selector.Preference)
+                if (Profile?.TraitPreferences.Contains(trait.ID) == true)
                     selectionCount += trait.Cost;
+            }
+
+            // RAYTEN STARTS
+            foreach (var trait in sortedCategoryTraits)
+            // RAYTEN ENDS
+            {
+                var isSelected = Profile?.TraitPreferences.Contains(trait.ID) == true;
+                var selector = new TraitPreferenceSelector(trait);
+                selector.Preference = isSelected;
+
+                var canSelect = true;
+                if (category is { MaxTraitPoints: >= 0 } && !isSelected)
+                {
+                    var newTotal = selectionCount + trait.Cost;
+                    canSelect = newTotal <= category.MaxTraitPoints;
+                }
 
                 selector.PreferenceChanged += preference =>
                 {
                     if (preference)
                     {
+                        if (category is { MaxTraitPoints: >= 0 })
+                        {
+                            var currentTotal = 0;
+                            foreach (var t in sortedCategoryTraits)
+                            {
+                                if (Profile?.TraitPreferences.Contains(t.ID) == true)
+                                    currentTotal += t.Cost;
+                            }
+                            if (currentTotal + trait.Cost > category.MaxTraitPoints)
+                            {
+                                RefreshTraits();
+                                return;
+                            }
+                        }
                         Profile = Profile?.WithTraitPreference(trait.ID, _prototypeManager);
                     }
                     else
@@ -91,8 +126,19 @@ public sealed partial class HumanoidProfileEditor
                     }
 
                     SetDirty();
-                    RefreshTraits(); // If too many traits are selected, they will be reset to the real value.
+                    RefreshTraits();
                 };
+
+                if (!canSelect && !isSelected)
+                {
+                    selector.Checkbox.Disabled = true;
+                    selector.Checkbox.Label.FontColorOverride = Color.Gray;
+                }
+                else if (category is { MaxTraitPoints: >= 0 } && isSelected)
+                {
+                    selector.Checkbox.Label.FontColorOverride = null;
+                }
+
                 selectors.Add(selector);
             }
 
@@ -110,12 +156,6 @@ public sealed partial class HumanoidProfileEditor
             {
                 if (selector == null)
                     continue;
-
-                if (category is { MaxTraitPoints: >= 0 } &&
-                    selector.Cost + selectionCount > category.MaxTraitPoints)
-                {
-                    selector.Checkbox.Label.FontColorOverride = Color.Red;
-                }
 
                 TraitsList.AddChild(selector);
             }

@@ -1,0 +1,29 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitAbsolute
+  name: абсолютный комбинезон
+  description: Продвинутый комбинезон.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Uniforms/Jumpsuit/absolute.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Uniforms/Jumpsuit/absolute.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.7
+        Caustic: 0.7
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPatriot
+  name: костюм патриота НТ
+  description: Я сильнее, я умнее, Я ЛУЧШЕ.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Uniforms/Jumpsuit/captain_patriot.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Uniforms/Jumpsuit/captain_patriot.rsi

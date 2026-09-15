@@ -1,0 +1,42 @@
+- type: constructionGraph
+  id: PortalGunGraph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: end
+      steps:
+      - tag: Handcuffs
+        icon:
+          sprite: Objects/Misc/cablecuffs.rsi
+          state: cuff
+          color: red
+        name: construction-graph-tag-cuffs
+      - tag: Teleporter
+        icon:
+          sprite: /Textures/Objects/Devices/hand_teleporter.rsi
+          state: icon
+        name: construction-graph-tag-teleporter
+      - material: Steel
+        amount: 6
+        doAfter: 2
+      - material: Plasma
+        amount: 10
+        doAfter: 2
+      - material: Uranium
+        amount: 3
+        doAfter: 2
+      - material: Plasteel
+        amount: 2
+        doAfter: 0.5
+      - material: CableMV
+        amount: 5
+        doAfter: 0.5
+      - material: CableHV
+        amount: 5
+        doAfter: 0.5
+      - material: Manipulator
+        amount: 5
+        doAfter: 0.5
+  - node: end
+    entity: PortalGun

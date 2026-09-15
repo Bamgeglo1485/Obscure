@@ -1,0 +1,41 @@
+- type: soundCollection
+  id: FootstepTactical
+  files:
+  - /Audio/Vanilla/Effects/Footsteps/gear1.ogg
+  - /Audio/Vanilla/Effects/Footsteps/gear2.ogg
+  - /Audio/Vanilla/Effects/Footsteps/gear3.ogg
+  - /Audio/Vanilla/Effects/Footsteps/gear4.ogg
+  - /Audio/Vanilla/Effects/Footsteps/gear5.ogg
+  - /Audio/Vanilla/Effects/Footsteps/gear6.ogg
+
+- type: soundCollection
+  id: SoldierDeath
+  files:
+  - /Audio/Vanilla/Effects/Footsteps/death1.ogg
+  - /Audio/Vanilla/Effects/Footsteps/death2.ogg
+  - /Audio/Vanilla/Effects/Footsteps/death3.ogg
+  - /Audio/Vanilla/Effects/Footsteps/death4.ogg
+
+
+- type: soundCollection
+  id: Footsteps049
+  files:
+  - /Audio/Vanilla/Effects/Footsteps/049/Step0491.ogg
+  - /Audio/Vanilla/Effects/Footsteps/049/Step0492.ogg
+  - /Audio/Vanilla/Effects/Footsteps/049/Step0493.ogg
+
+- type: soundCollection
+  id: Footsteps106
+  files:
+  - /Audio/Vanilla/Effects/Footsteps/106/106step1.ogg
+  - /Audio/Vanilla/Effects/Footsteps/106/106step2.ogg
+  - /Audio/Vanilla/Effects/Footsteps/106/106step3.ogg
+  - /Audio/Vanilla/Effects/Footsteps/106/106step4.ogg
+  - /Audio/Vanilla/Effects/Footsteps/106/106step5.ogg
+
+- type: soundCollection
+  id: ExoskeletonFootsteps
+  files:
+  - /Audio/Vanilla/Effects/Footsteps/exo1.ogg
+  - /Audio/Vanilla/Effects/Footsteps/exo2.ogg
+  - /Audio/Vanilla/Effects/Footsteps/exo3.ogg

@@ -12,10 +12,10 @@
   - type: Stainable
     clothingVisuals:
       outerClothing:
-      - sprite: /Textures/_Funkystation/Effects/blood.rsi
+      - sprite: _Funkystation/Effects/blood.rsi
         state: outerclothing
     iconVisuals:
-    - sprite: /Textures/_Funkystation/Effects/blood.rsi
+    - sprite: _Funkystation/Effects/blood.rsi
       state: outerclothing
   - type: SolutionManager
     solutions:
@@ -45,10 +45,10 @@
   - type: Stainable
     clothingVisuals:
       outerClothing:
-      - sprite: /Textures/_Funkystation/Effects/blood.rsi
+      - sprite: _Funkystation/Effects/blood.rsi
         state: suitblood
     iconVisuals:
-    - sprite: /Textures/_Funkystation/Effects/blood.rsi
+    - sprite: _Funkystation/Effects/blood.rsi
       state: suitbloodicon
   - type: StainBlocker
     slots: [INNERCLOTHING, FEET, GLOVES]
@@ -92,10 +92,10 @@
   - type: Stainable
     clothingVisuals:
       outerClothing:
-      - sprite: /Textures/_Funkystation/Effects/blood.rsi
+      - sprite: _Funkystation/Effects/blood.rsi
         state: coatblood
     iconVisuals:
-    - sprite: /Textures/_Funkystation/Effects/blood.rsi
+    - sprite: _Funkystation/Effects/blood.rsi
       state: coatbloodicon
 
 - type: entity
@@ -138,10 +138,10 @@
   - type: Stainable
     clothingVisuals:
       outerClothing:
-      - sprite: /Textures/_Funkystation/Effects/blood.rsi
+      - sprite: _Funkystation/Effects/blood.rsi
         state: outerclothing
     iconVisuals:
-    - sprite: /Textures/_Funkystation/Effects/blood.rsi
+    - sprite: _Funkystation/Effects/blood.rsi
       state: outerclothing
 
 - type: entity
@@ -204,9 +204,6 @@
   - type: HideLayerClothing
     slots:
     - Tail
-    - Tenta # macro: for kodes
-  - type: StainBlocker #Funky - Staining
-    slots: [INNERCLOTHING, FEET, GLOVES]
 
 - type: entity
   abstract: true
@@ -243,18 +240,6 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
-  - type: ProtectedFromStepTriggers
-    slots: WITHOUT_POCKET
-  - type: DamageOnInteractProtection
-    damageProtection:
-      flatReductions:
-        Heat: 10 # the average lightbulb only does around four damage!
-    slots: OUTERCLOTHING
-  - type: HideLayerClothing
-    slots:
-    - Tail
-  - type: StainBlocker
-    slots: [INNERCLOTHING, FEET, GLOVES]
 
 - type: entity
   parent: ClothingOuterEVASuitBase

@@ -1,0 +1,43 @@
+- type: technology
+  id: SpaceManipulation
+  name: research-technology-space-manipulation
+  icon:
+    sprite: Vanilla/Objects/Devices/timestopper.rsi
+    state: icon
+  discipline: Experimental
+  advancedPointCost: 3
+  tier: 4
+  cost: 50000
+  technologyPrerequisites:
+  - QuantumLeaping
+  - BluespaceTimeManipulation
+  - OptimizedMicrogalvanism
+  recipeUnlocks:
+  - TimeStopper
+  - LocalAtmosGenerator
+
+- type: technology
+  id: AdvancedRedSpace
+  name: research-technology-advanced-red-space
+  icon:
+    sprite: Vanilla/Objects/Specific/Research/archonlocator.rsi
+    state: fullicon
+  discipline: Experimental
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - ArchonLocator
+
+- type: technology
+  id: FemurBreaker
+  name: research-technology-femur-breaker
+  icon:
+    sprite: Vanilla/Mobs/Archons/OldMan.rsi
+    state: base
+  discipline: Experimental
+  tier: 2
+  cost: 7500
+  technologyPrerequisites:
+  - AdvancedRedSpace
+  recipeUnlocks:
+  - FemurBreakerBedMachineCircuitboard

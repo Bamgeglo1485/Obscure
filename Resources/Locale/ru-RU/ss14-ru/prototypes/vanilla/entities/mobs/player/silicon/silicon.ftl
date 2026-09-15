@@ -1,0 +1,15 @@
+ent-R1Base = { ent-BaseBorgChassis }
+    .desc = Машина, венец творения, созданная исключительно для убийств.
+ent-R1 = { ent-R1Base }
+    .desc = { ent-R1Base.desc }
+ent-R1NotAntag = R-1
+    .suffix = NotAntag
+    .desc = { ent-R1Base.desc }
+ent-R1Spawner = R-1
+    .suffix = Спавнер
+    .desc = { ent-BaseAntagSpawner.desc }
+ent-R2 = { ent-R1Base }
+    .desc = Модифицированная версия R-1, который меньше потребляет крови и не использует редспейс.
+ent-R2Spawner = R-2
+    .suffix = Spawner
+    .desc = { ent-BaseAntagSpawner.desc }

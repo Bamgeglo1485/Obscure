@@ -38,22 +38,11 @@ public sealed partial class SpeechSoundSystem : EntitySystem
     /// </summary>
     public SoundSpecifier? GetSpeechSound(Entity<SpeechComponent> ent, string message)
     {
-        // MACRO Start: SpeechSounds
-        //if (ent.Comp.SpeechSounds == null)
-        //    return null;
-        var protoId = ent.Comp.SpeechSounds;
-
-        // raise event for voice-changing equipment
-        var voiceEv = new TransformSpeakerVoiceEvent(ent);
-        RaiseLocalEvent(ent, voiceEv);
-        protoId = voiceEv.SpeechSounds ?? protoId;
-
-        if (protoId == null)
+        if (ent.Comp.SpeechSounds == null)
             return null;
-        // MACRO End: SpeechSounds
 
         // Play speech sound
-        var prototype = ProtoMan.Index<SpeechSoundsPrototype>(protoId); // MACRO: SpeechSounds, change to protoId
+        var prototype = ProtoMan.Index<SpeechSoundsPrototype>(ent.Comp.SpeechSounds);
 
         // Different sounds for ask/exclaim based on last character
         var contextSound = message[^1] switch

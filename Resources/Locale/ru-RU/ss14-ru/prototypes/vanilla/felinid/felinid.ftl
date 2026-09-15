@@ -1,0 +1,10 @@
+ent-PartFelinid = Фелинид части тела
+    .desc = { ent-BaseItem.desc }
+ent-OrganFelinidStomach = { ent-OrganAnimalStomach }
+    .desc = { ent-OrganAnimalStomach.desc }
+ent-MobFelinid = Урист МакФели
+    .desc = { ent-BaseMobFelinid.desc }
+ent-BaseMobFelinid = Урист МакФели
+    .desc = { ent-BaseMobSpeciesOrganic.desc }
+ent-MobFelinidDummy = Урист МакФели, кошачий
+    .desc = Манекен фелинида, предназначенный для использования при создании персонажа.

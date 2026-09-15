@@ -1,10 +1,12 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using Robust.Shared.ContentPack;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map.Events;
+#if DEBUG
 using Robust.Shared.Prototypes;
+#endif
 using Robust.Shared.Serialization.Markdown;
 using Robust.Shared.Serialization.Markdown.Mapping;
 using Robust.Shared.Serialization.Markdown.Value;
@@ -17,9 +19,17 @@ namespace Content.Server.Maps;
 /// </summary>
 public sealed partial class MapMigrationSystem : EntitySystem
 {
+#if DEBUG
+    [Dependency] private IPrototypeManager _protoMan = default!;
+#endif
     [Dependency] private IResourceManager _resMan = default!;
 
-    private const string MigrationFile = "/migration.yml";
+    // Starlight-edit
+    private static readonly string[] _migrationFiles =
+    [
+        "/migration.yml",
+        "/_Obscure/migration.yml"
+    ];
 
     public override void Initialize()
     {
@@ -27,23 +37,18 @@ public sealed partial class MapMigrationSystem : EntitySystem
         SubscribeLocalEvent<BeforeEntityReadEvent>(OnBeforeReadEvent);
 
 #if DEBUG
-        if (!TryReadFile(out var mappings))
-            return;
-
-        // Verify that all of the entries map to valid entity prototypes.
-        foreach (var node in mappings.Children.Values)
-        {
-            var newId = ((ValueDataNode) node).Value;
-            if (!string.IsNullOrEmpty(newId) && newId != "null")
-                DebugTools.Assert(ProtoMan.HasIndex<EntityPrototype>(newId), $"{newId} is not an entity prototype.");
-        }
+        //🌟Starlight🌟
+        foreach (var file in _migrationFiles)
+            ValidateMigrations(file);
 #endif
     }
 
-    private bool TryReadFile([NotNullWhen(true)] out MappingDataNode? mappings)
+
+
+    private bool TryReadFile(string file, [NotNullWhen(true)] out MappingDataNode? mappings) //🌟Starlight🌟
     {
         mappings = null;
-        var path = new ResPath(MigrationFile);
+        var path = new ResPath(file);
         if (!_resMan.TryContentFileRead(path, out var stream))
             return false;
 
@@ -53,13 +58,19 @@ public sealed partial class MapMigrationSystem : EntitySystem
         if (documents == null)
             return false;
 
-        mappings = (MappingDataNode) documents.Root;
+        mappings = (MappingDataNode)documents.Root;
         return true;
     }
 
-    private void OnBeforeReadEvent(BeforeEntityReadEvent ev)
+    private void OnBeforeReadEvent(BeforeEntityReadEvent ev) //🌟Starlight🌟
     {
-        if (!TryReadFile(out var mappings))
+        foreach (var file in _migrationFiles)
+            ReadMigrations(ev, file);
+    }
+
+    private void ReadMigrations(BeforeEntityReadEvent ev, string file) //🌟Starlight🌟
+    {
+        if (!TryReadFile(file, out var mappings))
             return;
 
         foreach (var (key, value) in mappings)
@@ -73,4 +84,21 @@ public sealed partial class MapMigrationSystem : EntitySystem
                 ev.RenamedPrototypes.Add(key, valueNode.Value);
         }
     }
+
+#if DEBUG
+    //🌟Starlight🌟
+    private void ValidateMigrations(string file)
+    {
+        if (!TryReadFile(file, out var mappings))
+            return;
+
+        // Verify that all of the entries map to valid entity prototypes.
+        foreach (var node in mappings.Children.Values)
+        {
+            var newId = ((ValueDataNode)node).Value;
+            if (!string.IsNullOrEmpty(newId) && newId != "null")
+                DebugTools.Assert(_protoMan.HasIndex<EntityPrototype>(newId), $"{newId} is not an entity prototype.");
+        }
+    }
+#endif
 }

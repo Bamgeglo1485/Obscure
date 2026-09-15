@@ -1,0 +1,25 @@
+ent-Bible = библия
+    .desc = Новая межзвёздная версия 2340.
+# Corvax-HiddenDesc-Start
+ent-BibleNecronomicon = священный древний фолиант
+    .suffix = некрономикон
+    .desc = Имеется пометка: Klatuu, Verata, Nikto – Не забыть об этом опять!
+# Corvax-HiddenDesc-End
+ent-ActionBibleSummon = Призвать фамильяра
+    .desc = Призовите фамильяра, который станет помогать вам и обретёт человекоподобный интеллект после вселения в него души.
+ent-BibleDruid = друидический планшет
+    .desc = Это — тайна друидов!
+ent-BibleNarsie = том Нар’Си
+    .desc = Что может пойти не так с книгой, покрытой кровью?
+ent-BibleCommunistManifesto = Коммунистический манифест
+    .desc = Сорвите с капитала маску человечности.
+ent-BibleHonk = веселье Матери Хонк
+    .desc = О, Великая и Славная Мать, Госпожа Веселья, Покровительница Масок и Шутовства — благословенна Ты среди клоунов.
+ent-BibleRatvar = скрижаль Ратвара
+    .desc = Священная реликвия Часового Культа, благословлённая самим Судией Механизмов — Ратваром.
+ent-BibleNanoTrasen = кодекс Нанотрасенус
+    .desc = Знакомая книга, содержащая Священные Операционные Процедуры.
+ent-HolyLightEffect = { "" }
+    .desc = { "" }
+ent-EvilLightEffect = { ent-HolyLightEffect }
+    .desc = { ent-HolyLightEffect.desc }

@@ -1,0 +1,79 @@
+- type: construction
+  id: SpanishArmyKnife
+  graph: praxitObjects
+  startNode: start
+  targetNode: spanishArmyKnife
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Diamond
+  graph: praxitObjects
+  startNode: start
+  targetNode: diamond
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Uranium
+  graph: praxitObjects
+  startNode: start
+  targetNode: uranium
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Plasma
+  graph: praxitObjects
+  startNode: start
+  targetNode: plasma
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Gold
+  graph: praxitObjects
+  startNode: start
+  targetNode: gold
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Silver
+  graph: praxitObjects
+  startNode: start
+  targetNode: silver
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Glass
+  graph: praxitObjects
+  startNode: start
+  targetNode: glass
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Steel
+  graph: praxitObjects
+  startNode: start
+  targetNode: steel
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Plastic
+  graph: praxitObjects
+  startNode: start
+  targetNode: plastic
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: SpaceCash
+  graph: praxitObjects
+  startNode: start
+  targetNode: spaceCash
+  category: construction-category-paraxit
+  objectType: Item

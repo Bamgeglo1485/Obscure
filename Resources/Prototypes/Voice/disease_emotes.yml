@@ -31,6 +31,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-cough"]
   chatTriggers:
     - cough
@@ -42,6 +43,11 @@
     - cough!
     - coughs!
     - coughed!
+    # Corvax-Localization-Start
+    - кашель
+    - кашляет
+    - кашлянул
+    # Corvax-Localization-End
 
 - type: emote
   id: CatMeow
@@ -78,10 +84,15 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-yawn"]
   chatTriggers:
     - yawn
     - yawns
+    # Corvax-Localization-Start
+    - зевок
+    - зевает
+    # Corvax-Localization-End
 
 - type: emote
   id: Snore

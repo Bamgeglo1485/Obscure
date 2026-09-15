@@ -1,0 +1,251 @@
+# If you add a new trait, make sure to add the corresponding component to the whitelist in \Resources\Prototypes\Entities\Mobs\Player\clone.yml so it gets copied to clones correctly!
+
+- type: trait
+  id: Pacifist
+  name: trait-pacifist-name
+  description: trait-pacifist-desc
+  category: General
+  cost: -3
+  components:
+  - type: Pacified
+
+- type: trait
+  id: Blindness
+  name: trait-blindness-name
+  description: trait-blindness-desc
+  traitGear: WhiteCane
+  category: General
+  cost: -4
+  whitelist:
+    components:
+      - Blindable
+  components:
+    - type: PermanentBlindness
+
+- type: trait
+  id: PoorVision
+  name: trait-poor-vision-name
+  description: trait-poor-vision-desc
+  traitGear: ClothingEyesGlasses
+  category: General
+  cost: -2
+  whitelist:
+    components:
+      - Blindable
+  components:
+    - type: PermanentBlindness
+      blindness: 4
+
+- type: trait
+  id: Narcolepsy
+  name: trait-narcolepsy-name
+  description: trait-narcolepsy-desc
+  category: General
+  cost: -2
+  components:
+    - type: Narcolepsy
+      maxTimeBetweenIncidents: 600
+      minTimeBetweenIncidents: 300
+      maxDurationOfIncident: 30
+      minDurationOfIncident: 10
+
+- type: trait
+  id: Unrevivable
+  name: trait-unrevivable-name
+  description: trait-unrevivable-desc
+  category: General
+  cost: -3
+  components:
+    - type: Unrevivable
+      cloneable: true
+
+- type: trait
+  id: Muted
+  name: trait-muted-name
+  description: trait-muted-desc
+  category: General
+  cost: -3
+  blacklist:
+    components:
+      - BorgChassis
+  specials:
+  - !type:ApplyStatusEffectSpecial
+    statusEffects:
+    - TraitStatusEffectMuted
+
+- type: trait
+  id: Hemophilia
+  name: trait-hemophilia-name
+  description: trait-hemophilia-desc
+  category: General
+  cost: -2
+  specials:
+  - !type:ApplyStatusEffectSpecial
+    statusEffects:
+    - TraitStatusEffectHemophilia
+
+- type: trait
+  id: ImpairedMobility
+  name: trait-impaired-mobility-name
+  description: trait-impaired-mobility-desc
+  traitGear: OffsetCane
+  category: General
+  cost: -3
+  components:
+    - type: ImpairedMobility
+
+- type: trait
+  id: Wimp
+  name: trait-wimp-name
+  description: trait-wimp-desc
+  category: General
+  cost: -3
+  overwrite: true
+  components:
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        70: Critical
+        150: Dead
+
+- type: trait
+  id: Respawn
+  name: trait-respawn-name
+  description: trait-respawn-desc
+  category: General
+  cost: 3
+  components:
+    - type: ForceRespawn
+
+- type: trait
+  id: Thieving
+  name: trait-thieving-name
+  description: trait-thieving-desc
+  category: General
+  cost: 2
+  components:
+    - type: Thieving
+      stripTimeReduction: -10
+
+- type: trait
+  id: Speed
+  name: trait-speed-name
+  description: trait-speed-desc
+  category: General
+  cost: 2
+  overwrite: true
+  components:
+    - type: Rusher
+      staminaLoss: 15
+      distanceModifier: 0.5
+      speed: 10
+
+- type: trait
+  id: Regeneration
+  name: trait-regeneration-name
+  description: trait-regeneration-desc
+  category: General
+  cost: 3
+  traitGear: NanoRobotsImplanter
+
+- type: trait
+  id: Defib
+  name: trait-defib-name
+  description: trait-defib-desc
+  category: General
+  cost: 2
+  traitGear: DefibrillatorImplanter
+
+- type: trait
+  id: Corporate
+  name: trait-corporate-name
+  description: trait-corporate-desc
+  category: General
+  cost: 1
+  traitGear: SyndicateBusinessCard
+  components:
+    - type: AntagImmune
+    - type: AutoImplant
+      implants:
+      - MindShieldImplant
+
+- type: trait
+  id: Shooter
+  name: trait-shooter-name
+  description: trait-shooter-desc
+  category: General
+  cost: 2
+  traitGear: WeaponPistolMk58
+
+- type: trait
+  id: Melee
+  name: trait-melee-name
+  description: trait-melee-desc
+  category: General
+  cost: 2
+  overwrite: true
+  components:
+    - type: Shoving
+      staminaDamage: 20
+    - type: BonusMeleeDamage
+      bonusDamage:
+        types:
+          Blunt: 6
+
+- type: trait
+  id: Rich
+  name: trait-rich-name
+  description: trait-rich-desc
+  category: General
+  traitGear: SpaceCash10000
+  cost: 1
+
+- type: trait
+  id: Danger
+  name: trait-danger-name
+  description: trait-danger-desc
+  category: General
+  cost: -3
+  overwrite: true
+  components:
+    - type: NpcFactionMember
+      factions:
+      - Wizard
+
+- type: trait
+  id: Gib
+  name: trait-gib-name
+  description: trait-gib-desc
+  category: General
+  cost: -6
+  components:
+    - type: GibOnTrigger
+      keysIn: [timer]
+    - type: TimerTrigger
+      delay: 1800
+    - type: Unrevivable
+      cloneable: false
+    - type: TriggerOnSpawn
+
+- type: trait
+  id: PainNumbness
+  name: trait-painnumbness-name
+  description: trait-painnumbness-desc
+  category: General
+  cost: -1
+  specials:
+  - !type:ApplyStatusEffectSpecial
+    statusEffects:
+    - TraitStatusEffectPainNumbness
+
+- type: trait
+  id: NightVision
+  name: trait-nightvision-name
+  description: trait-nightvision-desc
+  category: General
+  cost: 2
+  overwrite: true
+  components:
+    - type: NightVision
+      lightingColor: "#7a7a7a54"
+      overlayColor: "#7a7a7a54"

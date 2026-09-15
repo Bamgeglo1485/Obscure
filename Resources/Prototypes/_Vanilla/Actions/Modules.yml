@@ -1,0 +1,96 @@
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemMassScanner
+  name: Сканер массы
+  description: Выдвигает ручной сканер массы.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    temporary: true
+  - type: Sprite
+    sprite: Interface/Actions/actions_ai.rsi
+    layers:
+    - state: mass_scanner
+      map: ["enum.ActionVisuals.Icon"]
+    - state: comms_console
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: HandHeldMassScannerMODSuit
+
+- type: entity
+  name: выдвижной сканер масс
+  parent: HandHeldMassScannerEmpty
+  id: HandHeldMassScannerMODSuit
+  description: Выдвижной сканер масс
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PowerCellSlot
+    mODSuitModule: true
+
+- type: entity
+  parent: BaseAction
+  id: ActionRetractableItemTetherGun
+  name: Гравиперчатки
+  description: Выдвигает гравипушку.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    itemIconStyle: BigAction
+    temporary: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Launchers/tether_gun.rsi
+    layers:
+    - state: base
+      map: ["enum.ActionVisuals.Icon"]
+    - state: base-unshaded
+      map: ["enum.ActionVisuals.IconToggled"]
+      visible: false
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: WeaponTetherGunMODSuit
+
+- type: entity
+  parent: WeaponTetherGun
+  id: WeaponTetherGunMODSuit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: PowerCellSlot
+    mODSuitModule: true
+
+- type: entity
+  parent: BaseAction
+  id: ActionRepulsor
+  name: "[color=orange]Репульсор[/color]"
+  description: Джарвис, взорви его яйца!
+  components:
+  - type: Action
+    useDelay: 2
+    itemIconStyle: BigAction
+    priority: 2
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Animals/space_dragon_breath.ogg
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: fireball
+  - type: ActionRequireMODFuel
+  - type: TargetAction
+    checkCanAccess: false
+    range: 0
+  - type: WorldTargetAction
+    event: !type:ProjectileSpellEvent
+      prototype: ProjectileDragonsBreath
+      projectileSpeed: 5

@@ -156,7 +156,13 @@ public sealed partial class ResearchSystem
 
         if (technology.Cost > serverComp.Points)
             return false;
-
+        //rayten-start
+        if (technology.AdvancedPointCost != null)
+        {
+            if (technology.AdvancedPointCost.Value > serverComp.AdvancedPoints)
+                return false;
+        }
+        //rayten-end
         return true;
     }
 

@@ -438,6 +438,7 @@ namespace Content.Server.GameTicking
             ReqWindowAttentionAll();
             UpdateLateJoinStatus();
             _announcer.RandomizeAnnouncer(); // Macrocosm edit
+            RaiseLocalEvent(new RoundStartedEvent(RoundId)); // Corvax
             AnnounceRound();
             UpdateInfoText();
             SendRoundStartedDiscordMessage();
@@ -599,6 +600,7 @@ namespace Content.Server.GameTicking
                 listOfPlayerInfoFinal,
                 sound
             );
+            RaiseLocalEvent(new RoundEndedEvent(RoundId, roundDuration)); // Corvax
             RaiseNetworkEvent(roundEndMessageEvent);
             RaiseLocalEvent(roundEndMessageEvent);
 

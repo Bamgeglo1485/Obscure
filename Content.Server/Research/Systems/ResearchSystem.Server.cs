@@ -148,6 +148,25 @@ public sealed partial class ResearchSystem
         return ev.Points;
     }
 
+    /// RAYTEN-START
+    public void ModifyServerAdvancedPoints(EntityUid uid, int points, ResearchServerComponent? component = null)
+    {
+        if (points == 0)
+            return;
+
+        if (!Resolve(uid, ref component))
+            return;
+
+        component.AdvancedPoints += points;
+
+        var ev = new ResearchServerPointsChangedEvent(uid, component.Points, 0);
+        foreach (var client in component.Clients)
+            RaiseLocalEvent(client, ref ev);
+
+        Dirty(uid, component);
+    }
+    /// RAYTEN-END
+
     /// <summary>
     /// Adds a specified number of points to a server.
     /// </summary>

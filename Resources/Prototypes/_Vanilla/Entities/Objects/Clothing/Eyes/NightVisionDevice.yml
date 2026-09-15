@@ -1,0 +1,91 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesNightVisionDeviceEmpty
+  name: прибор ночного видения
+  suffix: Пустой
+  description: Позволяет разглядеть всё, что прячется в темноте. Даже тех, кто думал, что их не видно.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Eyes/Hud/night_vision_device.rsi
+    layers:
+      - state: icon
+      - state: icon-on
+        visible: true
+        shader: unshaded
+        map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Appearance
+  - type: Clothing
+    sprite: Vanilla/Clothing/Eyes/Hud/night_vision_device.rsi
+    equippedPrefix: off
+  - type: ToggleableVisuals
+    spriteLayer: enum.ToggleableVisuals.Layer
+    clothingVisuals:
+      eyes:
+      - state: on-equipped-EYES
+        shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {visible: true}
+          False: {visible: false}
+  - type: ToggleClothing
+    action: ActionToggleNightVision
+    mustEquip: true
+    disableOnUnequip: true
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+    predictable: false
+    soundActivate:
+      path: /Audio/Vanilla/Effects/Actions/nightvisionswitch.ogg
+    soundDeactivate:
+      path: /Audio/Vanilla/Effects/Actions/nightvisionoff.ogg
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Vanilla/Effects/Actions/nightvisionambient.ogg
+      params:
+        volume: -4
+        maxDistance: 5
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: PowerCellDraw
+    drawRate: 2
+    useCharge: 20
+  - type: ToggleCellDraw
+  - type: PointLight
+    radius: 20
+    energy: 0.2
+    enabled: false
+    netsync: false
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: NightVision
+    enabled: false
+    action: ActionChangelingNightVision
+    lightingColor: "#09af3baa"
+    noiseAmount: 1
+    noiseMultiplier: 2
+    overlayColor: "#08ab51aa"
+    prioritized: false
+    relayOverlay: true
+
+- type: entity
+  parent: ClothingEyesNightVisionDeviceEmpty
+  id: ClothingEyesNightVisionDevice
+  suffix: Заполнен
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellSmall

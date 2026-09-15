@@ -1,0 +1,91 @@
+- type: soundCollection
+  id: Megalovania
+  files:
+  - /Audio/Vanilla/Effects/Voices/Megalovania1.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania2.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania3.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania4.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania5.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania6.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania7.ogg
+
+
+- type: soundCollection
+  id: Temmie
+  files:
+  - /Audio/Vanilla/Effects/Voices/Temmie1.ogg
+  - /Audio/Vanilla/Effects/Voices/Temmie2.ogg
+  - /Audio/Vanilla/Effects/Voices/Temmie3.ogg
+  - /Audio/Vanilla/Effects/Voices/Temmie4.ogg
+
+- type: soundCollection
+  id: Willow
+  files:
+  - /Audio/Vanilla/Effects/Voices/Willow1.ogg
+  - /Audio/Vanilla/Effects/Voices/Willow2.ogg
+  - /Audio/Vanilla/Effects/Voices/Willow3.ogg
+  - /Audio/Vanilla/Effects/Voices/Willow4.ogg
+  - /Audio/Vanilla/Effects/Voices/Willow5.ogg
+  - /Audio/Vanilla/Effects/Voices/Willow6.ogg
+
+- type: soundCollection
+  id: WX
+  files:
+  - /Audio/Vanilla/Effects/Voices/wx1.ogg
+  - /Audio/Vanilla/Effects/Voices/wx2.ogg
+
+- type: soundCollection
+  id: Warly
+  files:
+  - /Audio/Vanilla/Effects/Voices/warly1.ogg
+  - /Audio/Vanilla/Effects/Voices/warly2.ogg
+  - /Audio/Vanilla/Effects/Voices/warly3.ogg
+  - /Audio/Vanilla/Effects/Voices/warly4.ogg
+  - /Audio/Vanilla/Effects/Voices/warly5.ogg
+
+- type: soundCollection
+  id: Walany
+  files:
+  - /Audio/Vanilla/Effects/Voices/walany1.ogg
+  - /Audio/Vanilla/Effects/Voices/walany2.ogg
+  - /Audio/Vanilla/Effects/Voices/walany3.ogg
+  - /Audio/Vanilla/Effects/Voices/walany4.ogg
+  - /Audio/Vanilla/Effects/Voices/walany5.ogg
+  - /Audio/Vanilla/Effects/Voices/walany6.ogg
+  - /Audio/Vanilla/Effects/Voices/walany7.ogg
+
+- type: soundCollection
+  id: Chingchong
+  files:
+  - /Audio/Vanilla/Effects/Voices/Chinese1.ogg
+  - /Audio/Vanilla/Effects/Voices/Chinese2.ogg
+  - /Audio/Vanilla/Effects/Voices/Chinese3.ogg
+  - /Audio/Vanilla/Effects/Voices/Chinese4.ogg
+
+- type: soundCollection
+  id: Meme
+  files:
+  - /Audio/Vanilla/Effects/Voices/meme1.ogg
+  - /Audio/Vanilla/Effects/Voices/meme2.ogg
+  - /Audio/Vanilla/Effects/Voices/meme3.ogg
+  - /Audio/Vanilla/Effects/Voices/meme4.ogg
+  - /Audio/Vanilla/Effects/Voices/meme5.ogg
+  - /Audio/Vanilla/Effects/Voices/meme6.ogg
+  - /Audio/Vanilla/Effects/Voices/meme7.ogg
+  - /Audio/Vanilla/Effects/Voices/meme8.ogg
+  - /Audio/Vanilla/Effects/Voices/meme9.ogg
+  - /Audio/Vanilla/Effects/Voices/meme10.ogg
+  - /Audio/Vanilla/Effects/Voices/meme11.ogg
+  - /Audio/Vanilla/Effects/Voices/meme12.ogg
+  - /Audio/Vanilla/Effects/Voices/meme13.ogg
+
+- type: soundCollection
+  id: PlagueDoctor
+  files:
+  - /Audio/Vanilla/Effects/Voices/0491.ogg
+  - /Audio/Vanilla/Effects/Voices/0492.ogg
+  - /Audio/Vanilla/Effects/Voices/0493.ogg
+  - /Audio/Vanilla/Effects/Voices/0494.ogg
+  - /Audio/Vanilla/Effects/Voices/0495.ogg
+  - /Audio/Vanilla/Effects/Voices/0496.ogg
+  - /Audio/Vanilla/Effects/Voices/0497.ogg

@@ -1,0 +1,118 @@
+# Blue Sky
+
+- type: entity
+  parent: FoodInjectableBase
+  name: плита голубого неба
+  id: BlueSkyPlate
+  description: Плита эфедронекса. Чистое стекло 5-7 сантиметов в длину.
+  abstract: false
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Consumable/Food/BlueSky.rsi
+    state: BlueSkyPlate
+  - type: ToolRefinable
+    refineResult:
+    - id: BlueSkyPiece
+      amount: 4
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 64
+        reagents:
+        - ReagentId: Ephedronex
+          Quantity: 60
+  - type: Edible
+  - type: FlavorProfile
+    flavors:
+      - bitter
+      - tingly
+      - fizzy
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1
+  - type: Extractable
+    grindableSolutionName: food
+  - type: Physics
+    bodyType: Dynamic
+    fixedRotation: false
+  - type: Tag
+    tags:
+    - ReptilianFood
+  - type: StaticPrice
+    price: 2000
+
+- type: entity
+  parent: BlueSkyPlate
+  name: кусок голубого неба
+  id: BlueSkyPiece
+  description: Кристаллы эфедронекса с 99.1% чистотой. Настоящее искусство.
+  abstract: false
+  components:
+  - type: Sprite
+    state: BlueSkyPiece
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 16
+        reagents:
+        - ReagentId: Ephedronex
+          Quantity: 15
+  - type: Item
+    size: Tiny
+    shape:
+    - 0,0,0,0
+  - type: StaticPrice
+    price: 550
+  - type: Tag
+    tags:
+    - EphedronexPiece
+  - type: Construction
+    graph: EphedronexBagConstruct
+    node: start
+
+- type: entity
+  parent: BlueSkyPiece
+  name: рыхлый кусок голубого неба
+  id: BlueSkyPieceBagged
+  description: Кристаллы эфедронекса из пакетика. Не подлежит к продаже.
+  abstract: false
+  components:
+  - type: StaticPrice
+    price: 900
+  - type: CargoSellBlacklist
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Ephedronex
+          Quantity: 10
+
+# Sawdust Oatmeal
+
+- type: entity
+  name: каша из опилок
+  parent: FoodBowlBase
+  id: FoodSawdustMeal
+  description: Ходят слухи, что это было единственной едой в Лондоне в 1886 году.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - SawdustFlavor
+  - type: Sprite
+    sprite: Vanilla/Objects/Consumable/Food/SawdustMeal.rsi
+    layers:
+    - state: bowl
+    - state: oatmeal
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 7
+        - ReagentId: Vitamin
+          Quantity: 2
+        - ReagentId: Cellulose
+          Quantity: 10

@@ -1,14 +1,19 @@
+# Numbers for armor here largely taken from /tg/.
+# armor.yml covers both armored vests (e.g. not just cosmetic) and armor that covers multiple bodyparts/limbs
+
+
+#Basic armor vest for inheritance
 - type: entity
   abstract: true
-  parent: [ ClothingOuterBaseMedium, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseMedium, AllowSuitStorageClothing, FirstSecurityContraband ]
   id: ClothingOuterArmorBase
   name: armor vest
   description: A standard Type I armored vest that provides decent protection against most types of damage.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/OuterClothing/Armor/security.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/security.rsi # RAYTEN RESPRITES
   - type: Clothing
-    sprite: _Funkystation/Clothing/OuterClothing/Armor/security.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/security.rsi # RAYTEN RESPRITES
   - type: Armor #Based on /tg/ but slightly compensated to fit the fact that armor stacks in SS14.
     modifiers:
       coefficients:
@@ -21,15 +26,15 @@
   - type: Stainable
     clothingVisuals:
       outerClothing:
-      - sprite: /Textures/_Funkystation/Effects/blood.rsi
+      - sprite: _Funkystation/Effects/blood.rsi
         state: armorblood
     iconVisuals:
-    - sprite: /Textures/_Funkystation/Effects/blood.rsi
+    - sprite: _Funkystation/Effects/blood.rsi
       state: armorbloodicon
 
 #Standard armor vest, allowed for security only
 - type: entity
-  parent: [ BaseSecurityContraband, ClothingOuterArmorBase ]
+  parent: [ FirstSecurityContraband, ClothingOuterArmorBase ]
   id: ClothingOuterArmorBasic
   components:
   - type: Tag
@@ -38,16 +43,16 @@
 
 #Alternate / slim basic armor vest, allowed for security and bartenders
 - type: entity
-  parent: [ BaseSecurityBartenderContraband, ClothingOuterArmorBasic ]
+  parent: [ FirstSecurityBartenderContraband, ClothingOuterArmorBasic ]
   id: ClothingOuterArmorBasicSlim
   name: armor vest
   suffix: slim
   description: A slim Type I armored vest that provides decent protection against most types of damage.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/security_slim.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/security_slim.rsi # RAYTEN RESPRITES
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/security_slim.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/security_slim.rsi # RAYTEN RESPRITES
 
 - type: entity
   parent: ClothingOuterArmorBasic
@@ -56,9 +61,9 @@
   description: A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/bulletproof.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/bulletproof.rsi # RAYTEN RESPRITES
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/bulletproof.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/bulletproof.rsi # RAYTEN RESPRITES
   - type: Armor
     modifiers:
       coefficients:
@@ -94,7 +99,7 @@
 
 #Detective's vest
 - type: entity
-  parent: [ClothingOuterArmorBasic, BaseSecurityContraband]
+  parent: [ClothingOuterArmorBasic, FirstSecurityContraband]
   id: ClothingOuterVestDetective
   name: detective's vest
   description: A hard-boiled private investigator's armored vest.
@@ -120,33 +125,33 @@
   - type: GroupExamine
 
 - type: entity
-  parent: [ClothingOuterArmorBaseCarapace, BaseCommandContraband]
+  parent: [ClothingOuterArmorBaseCarapace, SecondCommandContraband]
   id: ClothingOuterArmorCaptainCarapace
   name: captain's carapace
   description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/captain_carapace.rsi # Rayten Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/captain_carapace.rsi # Rayten Resprites
   - type: Tag
     tags:
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingOuterArmorBaseCarapace, BaseCentcommContraband]
+  parent: [ClothingOuterArmorBaseCarapace, CentcommContraband]
   id: ClothingOuterArmorCentcommCarapace
   name: centcomm carapace
   description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to centcomm officials and agents.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/centcomm_carapace.rsi # Rayten Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/centcomm_carapace.rsi # Rayten Resprites
 
 #Web vest
 - type: entity
-  parent: [ClothingOuterArmorBase, ClothingOuterStorageBase, BaseSyndicateContraband]
+  parent: [SecondSyndicateContraband, ClothingOuterArmorBase, ClothingOuterStorageBase]
   id: ClothingOuterVestWeb
   name: web vest
   description: A synthetic armor vest. This one has added webbing and ballistic plates.
@@ -167,7 +172,7 @@
 
 #Elite web vest
 - type: entity
-  parent: [ClothingOuterArmorBase, TemperatureProtection, ClothingOuterStorageBase, BaseSyndicateContraband]
+  parent: [ClothingOuterArmorBase, TemperatureProtection, ClothingOuterStorageBase, SecondSecurityContraband]
   id: ClothingOuterVestWebElite
   name: elite web vest
   description: A synthetic armor vest. This one has added webbing and heat resistant fibers.
@@ -192,7 +197,7 @@
 
 #Mercenary web vest
 - type: entity
-  parent: [ BaseMajorContraband, ClothingOuterVestWeb] #web vest so it should have some pockets for ammo
+  parent: [ FirstContraband, ClothingOuterVestWeb] #web vest so it should have some pockets for ammo
   id: ClothingOuterVestWebMerc
   name: mercenary web vest
   description: A high-quality armored vest made from a hard synthetic material. It's surprisingly flexible and light, despite formidable armor plating.
@@ -212,7 +217,7 @@
 
 # Armor covering multiple body parts including limbs
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSyndicateContraband ]
+  parent: [ThirdSyndicateContraband, ClothingOuterBaseLarge, AllowSuitStorageClothing ]
   id: ClothingOuterArmorRaid
   name: syndicate raid suit
   description: A somewhat flexible and well-armored suit with a powerful shoulder mounted flashlight manufactured in the Gorlex Marauder's iconic blood-red color scheme, it does not protect its wearer from space.
@@ -286,15 +291,15 @@
     size: Normal
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSecurityContraband]
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, FirstSecurityContraband]
   id: ClothingOuterArmorRiot
   name: riot suit
   description: A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Perfect for fighting delinquents around the station.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/riot.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/riot.rsi # RAYTEN RESPRITES
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/riot.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/riot.rsi # RAYTEN RESPRITES
   - type: Armor
     modifiers:
       coefficients:
@@ -308,7 +313,7 @@
   - type: GroupExamine
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseLarge, SecondContraband, AllowSuitStorageClothing ]
   id: ClothingOuterArmorCult
   name: acolyte armor
   description: An evil-looking piece of cult armor, made of bones.
@@ -394,7 +399,7 @@
     sprite: Clothing/OuterClothing/Armor/magusred.rsi
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseLarge, FirstContraband, AllowSuitStorageClothing ]
   id: ClothingOuterArmorChangeling
   name: chitinous armor
   description: Inflates the changeling's body into an all-consuming chitinous mass of armor.
@@ -422,7 +427,7 @@
     slots: WITHOUT_POCKET
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseLarge, FirstContraband, AllowSuitStorageClothing ]
   id: ClothingOuterArmorBone
   name: bone armor
   description: Sits on you like a second skin.
@@ -451,7 +456,7 @@
     slots: WITHOUT_POCKET
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseLarge, FirstSecurityContraband, AllowSuitStorageClothing ]
   id: ClothingOuterArmorPodWars
   name: ironclad II armor
   description: A repurposed suit of ironclad II armor, a relic of the pod wars.

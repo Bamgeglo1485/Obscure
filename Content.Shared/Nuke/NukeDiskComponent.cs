@@ -8,6 +8,8 @@ namespace Content.Shared.Nuke;
 [RegisterComponent, NetworkedComponent]
 public sealed partial class NukeDiskComponent : Component
 {
+    [DataField]
+    public TimeSpan? WillTpAt;
     /// <summary>
     /// Used to modify the nuke's countdown timer.
     /// </summary>

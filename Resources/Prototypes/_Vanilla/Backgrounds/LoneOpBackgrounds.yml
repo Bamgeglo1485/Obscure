@@ -1,0 +1,41 @@
+- type: BackgroundGroup
+  id: LoneOpBackgroundGroup
+  backgrounds:
+  - LoneOpsButcherBackground
+  - LoneOpsStandartBackground
+  - LoneOpsFriendBackground
+  - LoneOpsCatsBackground
+
+- type: Background
+  id: LoneOpsButcherBackground
+  name: background-loneops-name-butcher
+  description: background-loneops-desc-butcher
+
+- type: Background
+  id: LoneOpsStandartBackground
+  name: background-loneops-name-standart
+  description: background-loneops-desc-standart
+
+- type: Background
+  id: LoneOpsFriendBackground
+  name: background-loneops-name-friend
+  description: background-loneops-desc-friend
+  specialDesc:
+    - Вы не антагонист
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles:
+    - MindRoleGhostRoleNeutral
+
+- type: Background
+  id: LoneOpsCatsBackground
+  name: background-loneops-name-cats
+  description: background-loneops-desc-cats
+  specialDesc:
+    - На миссию вы взяли трёх своих самых верных пушистиков
+  specials:
+  - !type:AddItemSpecial
+    items:
+    - MobCatSyndy
+    - MobCatSyndy
+    - MobCatSyndy

@@ -1,0 +1,26 @@
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleR1
+  name: R1 Role
+  components:
+  - type: MindRole
+    antagPrototype: R1Antag
+    roleType: SoloAntagonist
+    exclusiveAntag: true
+    antag: true
+  - type: R1Role
+  - type: RoleBriefing
+    briefing: r1-role-briefing
+
+# Диверсант
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleDiversionist
+  name: Диверсант
+  components:
+  - type: MindRole
+    antagPrototype: Diversionist
+    exclusiveAntag: true
+    subtype: roles-antag-diversionist-name
+  - type: DiversionistRole
+  - type: TraitorRole

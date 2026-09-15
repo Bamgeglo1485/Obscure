@@ -13,6 +13,11 @@ namespace Content.Shared.Weapons.Melee;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(fieldDeltas: true), AutoGenerateComponentPause]
 public sealed partial class MeleeWeaponComponent : Component
 {
+    //Rayten-start
+    [DataField, AutoNetworkedField]
+    public bool WeaponDisarm = false;
+    //Rayten-end
+
     // TODO: This is becoming bloated as shit.
     // This should just be its own component for alt attacks.
     /// <summary>
@@ -92,6 +97,7 @@ public sealed partial class MeleeWeaponComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public float Range = 1.5f;
+
 
     /// <summary>
     /// Total width of the angle for wide attacks.

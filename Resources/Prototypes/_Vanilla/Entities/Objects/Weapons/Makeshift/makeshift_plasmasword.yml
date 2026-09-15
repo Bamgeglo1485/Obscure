@@ -1,0 +1,197 @@
+- type: entity
+  name: makeshift plasma sword
+  parent: [BaseItem, SecondContraband]
+  id: MeleeWeaponMakeshiftPlasmaSword
+  description: It looks more like a bomb than an energy sword.
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Makeshift/makeshift_plasmasword.rsi
+    layers:
+    - state: base
+    - state: enabled
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleableVisuals.Layer"]
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ItemTogglePointLight
+    toggleableVisualsColorModulatesLights: true
+  - type: Item
+    size: Small
+    sprite: Vanilla/Objects/Weapons/Makeshift/makeshift_plasmasword_inhands.rsi
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Vanilla/Weapons/PlasmaSword/plasmasword_activate.ogg
+      params:
+        variation: 0.125
+        volume: -3
+    soundDeactivate:
+      collection: WelderOff
+      params:
+        variation: 0.125
+        volume: -5
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+      params:
+        variation: 0.250
+        volume: -12
+    deactivatedSoundOnHitNoDamage:
+      collection: MetalThud
+    activatedDamage:
+        types:
+            Heat: 20
+            Structural: 18
+  - type: ItemToggleSize
+    activatedSize: Large
+  - type: ComponentToggler
+    components:
+    - type: DisarmMalus
+      malus: 0.6
+    - type: Execution
+      doAfterDuration: 8.0
+    - type: IgniteOnMeleeHit
+      fireStacks: 0.4
+    - type: DamageOnInteract
+      damage:
+        types:
+          Heat: 5
+      throw: true
+      throwSpeed: 3
+      interactTimer: 2
+      ignoreResistances: false
+      popupText: powered-light-component-burn-hand
+      interactSound: /Audio/Effects/lightburn.ogg
+      stunChance: 0.10
+      stunSeconds: 1.5
+  - type: ItemToggleHot
+  - type: IgnitionSource
+    temperature: 900
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Vanilla/Weapons/PlasmaSword/plasmasword_idle.ogg
+      params:
+        volume: -8
+        maxDistance: 12
+  - type: ToggleableVisuals
+    spriteLayer: blade
+    inhandVisuals:
+      left:
+      - state: left_enabled
+        shader: unshaded
+      right:
+      - state: right_enabled
+        shader: unshaded
+  - type: UseDelay
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    damage:
+      types:
+        Blunt: 2
+    soundHit:
+      collection: MetalThud
+  - type: RefillableSolution
+    solution: Sword
+  - type: SolutionContainerManager
+    solutions:
+      Sword:
+        maxVol: 50
+  - type: PointLight
+    enabled: false
+    radius: 2.5
+    color: blue
+    netsync: false
+  - type: Appearance
+  - type: StaticPrice
+    price: 1000
+  - type: Welder
+    fuelReagent: Plasma
+    fuelSolutionName: Sword
+    welderUpdateTimer: 0.15
+  - type: Explosive
+    explosionType: FireBomb
+    totalIntensity: 100
+    intensitySlope: 4
+    maxIntensity: 25
+    canCreateVacuum: false
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+  - type: Construction
+    graph: ImprovisedPlasmaSwordGraph
+    node: sword
+
+- type: entity
+  name: makeshift plasma sword
+  parent: MeleeWeaponMakeshiftPlasmaSword
+  id: MeleeWeaponMakeshiftPlasmaSwordFilled
+  suffix: Filled
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      Sword:
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 50
+        maxVol: 50
+
+- type: entity
+  name: unfinished plasma sword
+  parent: [BaseItem, SecondContraband]
+  id: MakeshiftPlasmaSwordUnfinished
+  description: Just a wrapper.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Makeshift/makeshift_plasmasword.rsi
+    state: unfinished
+  - type: Construction
+    graph: ImprovisedPlasmaSwordGraph
+    node: electronics
+  - type: Explosive
+    explosionType: FireBomb
+    totalIntensity: 100
+    intensitySlope: 4
+    maxIntensity: 25
+    canCreateVacuum: false
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+  - type: TimerTrigger
+    delay: 0.1
+    examinable: false
+    initialBeepDelay: 0
+    beepSound:
+      path: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+      params:
+        volume: 1
+  - type: ExplodeOnTrigger

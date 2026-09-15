@@ -1,0 +1,8 @@
+- type: entity
+  id: ArsenalDoor
+  name: барьер арсенала
+  description: Силовой барьер, созданый из твёрдого света. Автоматически изменяет режим доступа в зависимости от текущего уровня угрозы на станции.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window

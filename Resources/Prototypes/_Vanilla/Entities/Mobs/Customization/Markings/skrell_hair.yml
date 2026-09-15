@@ -1,0 +1,26 @@
+- type: marking
+  id: SkrellHairThreeTails
+  bodyPart: Hair
+  canBeDisplaced: false
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Vanilla/Mobs/Customization/skrell_hair.rsi
+      state: ThreeTails
+
+- type: marking
+  id: SkrellHairSnips
+  bodyPart: Hair
+  canBeDisplaced: false
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Vanilla/Mobs/Customization/skrell_hair.rsi
+      state: Snips
+
+- type: marking
+  id: SkrellShortHair
+  bodyPart: Hair
+  canBeDisplaced: false
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Vanilla/Mobs/Customization/skrell_hair.rsi
+      state: Short

@@ -1,0 +1,79 @@
+- type: entity
+  parent: [ClothingBeltBase, BaseToggleClothing]
+  id: LocalAtmosGenerator
+  name: генератор локального атмос-поля
+  description: Устройство, создающее мнимое давление из виртуальных частиц флуктуаций вакуума.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Belt/LAG.rsi
+    layers:
+    - state: icon
+    - state: icon-unlit
+      shader: unshaded
+      visible: false
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Clothing
+    sprite: Vanilla/Clothing/Belt/LAG.rsi
+  - type: ToggleClothing
+    action: ActionToggleLAG
+    mustEquip: true
+    disableOnUnequip: true
+  - type: ComponentToggler
+    parent: true
+    components:
+    - type: PermanentStatusEffects
+      statusEffects:
+      - StatusEffectPressureImmunity
+    - type: TemperatureProtection
+      coefficient: 0.001
+  - type: PowerCellDraw
+    drawRate: 0
+  - type: ToggleCellDraw
+  - type: UseDelay
+    delay: 5
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: false
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+        disableEject: true
+        whitelist:
+          tags:
+            - PowerCell
+
+  - type: PointLight
+    enabled: false
+    radius: 2
+    energy: 1
+    color: "#ff587c"
+    netsync: false
+  - type: ItemTogglePointLight
+  - type: ToggleableVisuals
+    spriteLayer: enum.ToggleableVisuals.Layer
+    clothingVisuals:
+      eyes:
+      - state: on-equipped-EYES
+        shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {visible: true}
+          False: {visible: false}
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+    predictable: false
+    soundActivate:
+      path: /Audio/Vanilla/Effects/lag_enabled.ogg
+    soundDeactivate:
+      path: /Audio/Vanilla/Effects/lag_disabled.ogg
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+  - type: Appearance

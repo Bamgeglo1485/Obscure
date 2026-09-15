@@ -23,7 +23,8 @@ using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 using Robust.Shared;
 using YamlDotNet.RepresentationModel;
-
+using Content.Shared.Vanilla.VoiceSpeech;
+using Content.Shared.Vanilla.Sponsor;
 namespace Content.Shared.Preferences
 {
     /// <summary>
@@ -35,7 +36,17 @@ namespace Content.Shared.Preferences
     {
         public static readonly ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
         public static readonly ProtoId<EmoteSoundsPrototype> DefaultVoice = "MaleHuman";
-        private static readonly Regex RestrictedNameRegex = new(@"[^A-Za-z0-9 '\-]");
+        private static readonly Regex RestrictedNameRegex = new("[^А-Яа-яёЁ0-9' -]"); // Rayten-Localization
+        // Rayten-Start
+        public const string DefaultBarkVoice = "Papyrus";
+        public const float DefaultBarkVoicePitch = 1.0f;
+        public static readonly Dictionary<Sex, string> DefaultSexVoice = new()
+        {
+            {Sex.Male, "Papyrus"},
+            {Sex.Female, "Toriel"},
+            {Sex.Unsexed, "Alphys"},
+        };
+        //rayten-end
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
         /// <summary>
@@ -68,6 +79,13 @@ namespace Content.Shared.Preferences
 
         [DataField]
         private Dictionary<string, RoleLoadout> _loadouts = new();
+
+        //RAYTEN-START
+        [DataField]
+        public float BarkVoicePitch { get; set; } = DefaultBarkVoicePitch;
+        [DataField]
+        public string BarkVoice { get; set; } = DefaultBarkVoice;
+        //RAYTEN-END
 
         [DataField]
         public string Name { get; set; } = "John Doe";
@@ -134,6 +152,8 @@ namespace Content.Shared.Preferences
             string name,
             string flavortext,
             string species,
+            string barkvoice, // Rayten-TTS
+            float barkvoicepith, // Rayten-TTS
             int age,
             Sex sex,
             ProtoId<EmoteSoundsPrototype> voice,
@@ -149,6 +169,8 @@ namespace Content.Shared.Preferences
             Name = name;
             FlavorText = flavortext;
             Species = species;
+            BarkVoice = barkvoice ?? DefaultBarkVoice; // Rayten-TTS
+            BarkVoicePitch = barkvoicepith; // Rayten-TTS
             Age = age;
             Sex = sex;
             Voice = voice;
@@ -160,7 +182,6 @@ namespace Content.Shared.Preferences
             _antagPreferences = antagPreferences;
             _traitPreferences = traitPreferences;
             _loadouts = loadouts;
-
             var hasHighPrority = false;
             foreach (var (key, value) in _jobPriorities)
             {
@@ -181,6 +202,8 @@ namespace Content.Shared.Preferences
             : this(other.Name,
                 other.FlavorText,
                 other.Species,
+                other.BarkVoice, //Rayten-TTS
+                other.BarkVoicePitch, //Rayten-TTS
                 other.Age,
                 other.Sex,
                 other.Voice,
@@ -268,6 +291,7 @@ namespace Content.Shared.Preferences
                 .Where(x => ignoredSpecies == null ? x.RoundStart : x.RoundStart && !ignoredSpecies.Contains(x.ID))
                 .ToArray();
             var species = random.Pick(pool);
+
             return species;
         }
 
@@ -368,6 +392,15 @@ namespace Content.Shared.Preferences
             profile.Name = (randomizeCfg & RandomizeCfg.Name) != 0 ? RandomName(speciesProto, profile.Gender) : baseProfile.Name;
             profile.Age = (randomizeCfg & RandomizeCfg.Age) != 0 ? RandomAge(speciesProto) : baseProfile.Age;
 
+            // RAYTEN STARTS
+            var random = IoCManager.Resolve<IRobustRandom>();
+            profile.BarkVoice = random.Pick(prototypeManager
+                .EnumeratePrototypes<VoiceSpeechPrototype>()
+                .Where(o => CanHaveVoice(o, profile.Sex)).ToArray()
+            ).ID;
+            profile.BarkVoicePitch = 1.0f;
+            // RAYTEN ENDS
+
             profile.Appearance = HumanoidCharacterAppearance.Random(speciesProto, profile.Sex, randomizeCfg, baseProfile.Appearance);
 
             return profile;
@@ -423,6 +456,16 @@ namespace Content.Shared.Preferences
             return new(this) { Species = species };
         }
 
+        // Rayten-TTS-Start
+        public HumanoidCharacterProfile WithBarkVoice(string voice)
+        {
+            return new(this) { BarkVoice = voice };
+        }
+        public HumanoidCharacterProfile WithVoicePitch(float pitch)
+        {
+            return new(this) { BarkVoicePitch = pitch };
+        }
+        // Rayten-TTS-End
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
@@ -521,7 +564,7 @@ namespace Content.Shared.Preferences
         {
             return new(this)
             {
-                _antagPreferences = new (antagPreferences),
+                _antagPreferences = new(antagPreferences),
             };
         }
 
@@ -616,6 +659,8 @@ namespace Content.Shared.Preferences
             if (Age != other.Age) return false;
             if (Sex != other.Sex) return false;
             if (Voice != other.Voice) return false;
+            if (BarkVoice != other.BarkVoice) return false;
+            if (BarkVoicePitch != other.BarkVoicePitch) return false;
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
@@ -632,6 +677,7 @@ namespace Content.Shared.Preferences
         {
             var configManager = collection.Resolve<IConfigurationManager>();
             var prototypeManager = collection.Resolve<IPrototypeManager>();
+            var sponsorManager = collection.Resolve<SharedSponsorManager>();
 
             if (!prototypeManager.TryIndex(Species, out var speciesPrototype) || speciesPrototype.RoundStart == false)
             {
@@ -709,7 +755,9 @@ namespace Content.Shared.Preferences
             {
                 flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText);
             }
-
+            //rayten-start
+            var sponsorPrototypes = sponsorManager.GetSponsorPrototypes(session.UserId);
+            //rayten-end
             var appearance = HumanoidCharacterAppearance.EnsureValid(Appearance, Species, Sex);
 
             var prefsUnavailableMode = PreferenceUnavailable switch
@@ -780,6 +828,21 @@ namespace Content.Shared.Preferences
             _traitPreferences.Clear();
             _traitPreferences.UnionWith(GetValidTraits(traits, prototypeManager));
 
+            // Rayten-start
+            //Rayten-voice
+            if (!prototypeManager.TryIndex<VoiceSpeechPrototype>(BarkVoice, out var voicePrototype) || voicePrototype.RoundStart == false)
+            {
+                BarkVoice = HumanoidCharacterProfile.DefaultSexVoice[sex];
+                voicePrototype = prototypeManager.Index<VoiceSpeechPrototype>(BarkVoice);
+            }
+
+            if (BarkVoicePitch < 0.5f)
+                BarkVoicePitch = 0.5f;
+            if (BarkVoicePitch > 1.5f)
+                BarkVoicePitch = 1.5f;
+            // Rayten-end
+
+
             // Checks prototypes exist for all loadouts and dump / set to default if not.
             var toRemove = new ValueList<string>();
 
@@ -841,7 +904,12 @@ namespace Content.Shared.Preferences
 
             return result;
         }
-
+        // Rayten-Voice-Start
+        public static bool CanHaveVoice(VoiceSpeechPrototype voice, Sex sex)
+        {
+            return voice.RoundStart && (sex == Sex.Unsexed || voice.Sex == sex || voice.Sex == Sex.Unsexed);
+        }
+        // Rayten-Voice-TTS-End
         public HumanoidCharacterProfile Validated(ICommonSession session, IDependencyCollection collection)
         {
             var profile = new HumanoidCharacterProfile(this);

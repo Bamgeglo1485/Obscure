@@ -35,6 +35,26 @@ namespace Content.Shared.Verbs
             IconsOnly = iconsOnly;
         }
 
+        //Vanilla-Station-start
+        // Подкатегории
+        public List<VerbCategory> SubCategories { get; set; } = new List<VerbCategory>();
+        public bool ShowInHead { get; set; } = true;
+        // Метод для добавления подкатегории
+        public void AddSubCategory(VerbCategory subCategory)
+        {
+            SubCategories.Add(subCategory);
+            subCategory.ShowInHead = false;
+        }
+        public static readonly VerbCategory Bureaucracy =
+            new VerbCategory("verb-categories-Bureaucracy", "/Textures/Vanilla/Interface/VerbIcons/pen.svg.192dpi.png");
+        public static readonly VerbCategory BureaucracyOrder =
+            new VerbCategory("verb-categories-Bureaucracy-Order", null);
+        public static readonly VerbCategory BureaucracyReports =
+            new VerbCategory("verb-categories-Bureaucracy-Reports", null);
+        public static readonly VerbCategory BureaucracyRequest =
+            new VerbCategory("verb-categories-Bureaucracy-Request", null);
+        //Vanilla-Station-end
+
         public static readonly VerbCategory Admin =
             new("verb-categories-admin", "/Textures/Interface/character.svg.192dpi.png");
 

@@ -1,0 +1,26 @@
+- type: entity
+  id: StorePresetTraitorShop
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-ttt-traitor
+    categories:
+    - TTTTraitrorCategory
+    currencyWhitelist:
+    - TTTCredit
+
+- type: entity
+  id: StorePresetDetectiveShop
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-ttt-detective
+    categories:
+    - TTTDetectiveCategory
+    currencyWhitelist:
+    - TTTCredit
+
+- type: currency
+  id: TTTCredit
+  displayName: store-currency-display-ttt-credit
+  canWithdraw: false

@@ -23,7 +23,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Utility;
-
+using Content.Shared.Vanilla.Sponsor;
 namespace Content.Server.Preferences.Managers
 {
     /// <summary>
@@ -43,6 +43,7 @@ namespace Content.Server.Preferences.Managers
         [Dependency] private IPrototypeManager _prototypeManager = default!;
         [Dependency] private MarkingManager _marking = default!;
         [Dependency] private ISerializationManager _serialization = default!;
+        [Dependency] private SharedSponsorManager _sponsors = default!;
 
         // Cache player prefs on the server so we don't need as much async hell related to them.
         private readonly Dictionary<NetUserId, PlayerPrefData> _cachedPlayerPrefs =
@@ -93,7 +94,7 @@ namespace Content.Server.Preferences.Managers
         internal HumanoidCharacterProfile ConvertProfiles(Profile profile)
         {
 
-            var jobs = profile.Jobs.ToDictionary(j => new ProtoId<JobPrototype>(j.JobName), j => (JobPriority) j.Priority);
+            var jobs = profile.Jobs.ToDictionary(j => new ProtoId<JobPrototype>(j.JobName), j => (JobPriority)j.Priority);
             var antags = profile.Antags.Select(a => new ProtoId<AntagPrototype>(a.AntagName));
             var traits = profile.Traits.Select(t => new ProtoId<TraitPrototype>(t.TraitName));
 
@@ -101,12 +102,21 @@ namespace Content.Server.Preferences.Managers
             if (Enum.TryParse<Sex>(profile.Sex, true, out var sexVal))
                 sex = sexVal;
 
-            var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
+            var spawnPriority = (SpawnPriorityPreference)profile.SpawnPriority;
 
             var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
             if (Enum.TryParse<Gender>(profile.Gender, true, out var genderVal))
                 gender = genderVal;
 
+            // Rayten-TTS-Start
+            var barkVoice = profile.BarkVoice ?? string.Empty;
+            if (string.IsNullOrEmpty(barkVoice))
+                barkVoice = HumanoidCharacterProfile.DefaultSexVoice[sex];
+
+            var barkVoicePitch = profile.BarkVoicePitch;
+            if (barkVoicePitch == 0)
+                barkVoicePitch = 1f;
+            // Rayten-TTS-End
 
             var markings =
                 new Dictionary<ProtoId<OrganCategoryPrototype>, Dictionary<HumanoidVisualLayers, List<Marking>>>();
@@ -175,11 +185,12 @@ namespace Content.Server.Preferences.Managers
 
                 loadouts[role.RoleName] = loadout;
             }
-
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
                 species,
+                barkVoice, // Rayten-TTS
+                barkVoicePitch, //Rayten-TTS
                 profile.Age,
                 sex,
                 voice,
@@ -192,7 +203,7 @@ namespace Content.Server.Preferences.Managers
                 ),
                 spawnPriority,
                 jobs,
-                (PreferenceUnavailableMode) profile.PreferenceUnavailable,
+                (PreferenceUnavailableMode)profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
                 loadouts
@@ -445,6 +456,14 @@ namespace Content.Server.Preferences.Managers
             return _cachedPlayerPrefs.ContainsKey(session.UserId);
         }
 
+        // Corvax-Sponsors-Start: Calculate total available users slots with sponsors
+        private int GetMaxUserCharacterSlots(NetUserId userId)
+        {
+            var maxSlots = _cfg.GetCVar(CCVars.GameMaxCharacterSlots);
+            var extraSlots = _sponsors.GetServerExtraCharSlots(userId);
+            return maxSlots + extraSlots;
+        }
+        // Corvax-Sponsors-End
 
         /// <summary>
         /// Tries to get the preferences from the cache

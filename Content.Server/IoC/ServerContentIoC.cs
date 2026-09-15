@@ -1,3 +1,7 @@
+using Content.Server.Corvax.DiscordAuth;
+using Content.Shared.Players.RateLimiting;
+using Content.Server.Vanilla.Sponsor;
+using Content.Shared.Vanilla.Sponsor;
 using Content.Server._RMC14.Mentor;
 using Content.Server._MACRO.Announcements;
 using Content.Server.Administration;
@@ -33,7 +37,6 @@ using Content.Shared.Chat;
 using Content.Shared.FeedbackSystem;
 using Content.Shared.IoC;
 using Content.Shared.Players.PlayTimeTracking;
-using Content.Shared.Players.RateLimiting;
 
 namespace Content.Server.IoC;
 
@@ -42,6 +45,11 @@ internal static class ServerContentIoC
     public static void Register(IDependencyCollection deps)
     {
         SharedContentIoC.Register(deps);
+        //rayten-start
+        deps.Register<DiscordAuthManager>(); // Corvax-DiscordAuth
+        deps.Register<SponsorManager>(); // Rayten-Sponsor
+        deps.Register<SharedSponsorManager>(); // Rayten-Sponsor
+        //rayten-end
         deps.Register<IChatManager, ChatManager>();
         deps.Register<ISharedChatManager, ChatManager>();
         deps.Register<IChatSanitizationManager, ChatSanitizationManager>();

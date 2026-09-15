@@ -37,9 +37,9 @@
   description: A thick blue-apron, perfect for insulating your soft flesh from spills, soil and thorns.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/OuterClothing/misc/hydro_apron.rsi
+    sprite: Clothing/OuterClothing/Misc/apronbotanist.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/OuterClothing/misc/hydro_apron.rsi
+    sprite: Clothing/OuterClothing/Misc/apronbotanist.rsi
   - type: Tag
     tags:
     - Apron
@@ -184,7 +184,7 @@
 
 - type: entity
   abstract: true
-  parent: [ ClothingOuterBase, AllowSuitStorageClothingGasTanks, BaseMagicalContraband ]
+  parent: [ ClothingOuterBase, AllowSuitStorageClothingGasTanks, MagicalContraband ]
   id: ClothingOuterWizardBase
   components:
   - type: WizardClothes

@@ -64,7 +64,7 @@
     sprite: Clothing/OuterClothing/Bio/scientist.rsi
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSecurityContraband]
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, FirstSecurityContraband]
   id: ClothingOuterBioSecurity
   name: bio suit
   suffix: Security

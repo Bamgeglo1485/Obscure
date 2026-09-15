@@ -1,0 +1,67 @@
+# СБ
+- type: loadoutGroup
+  id: HOSGuns
+  name: loadout-group-security-gun-vanilla
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  #- AssaultDominatorSec
+  #- EnergyShotgunSec
+  #- DominatorSec
+  #- MK58Sec
+  - EnergyMagnumSec
+
+- type: loadoutGroup
+  id: WardenGuns
+  name: loadout-group-security-gun-vanilla
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  #- DominatorSec
+  - EnergyShotgunSec
+
+- type: loadoutGroup
+  id: SecGuns
+  name: loadout-group-security-gun-vanilla
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - DominatorSec
+  - MK58Sec
+
+- type: loadoutGroup
+  id: VanillaLegends
+  name: loadout-group-inventory-vanilla
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - PlushieLizardGrandTanakaLoadout
+  - plushieUnaAkvanovaLoadout
+  - PlushieCentcomAliaZimovaLoadout
+  # - PlushieZamiraBolshakova
+  - PlushieJozephTexov
+
+- type: loadoutGroup
+  id: CaptainsSabers
+  name: loadout-group-Captains-Sabers
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CaptainSabreLoadout
+  - PowerSabreLoadout
+  - CaptainWhiteSabreLoadout
+
+- type: loadoutGroup
+  id: CaptainGloves
+  name: loadout-group-Captain-gloves
+  maxLimit: 1
+  loadouts:
+  - CaptainGlovesWhite
+
+- type: loadoutGroup
+  id: ChiefMedicalOfficerBack
+  name: loadout-group-chief-medical-officer-back
+  loadouts:
+  - ChiefMedicalOfficerBackpack
+  - ChiefMedicalOfficerDuffel
+  - ChiefMedicalOfficerSatchel

@@ -10,7 +10,8 @@ namespace Content.Shared.Localizations
         [Dependency] private ILocalizationManager _loc = default!;
 
         // If you want to change your codebase's language, do it here.
-        private const string Culture = "en-US";
+        private const string Culture = "ru-RU"; // Corvax-Localization
+        private const string FallbackCulture = "en-US"; // Corvax-Localization
 
         /// <summary>
         /// Custom format strings used for parsing and displaying minutes:seconds timespans.
@@ -26,8 +27,12 @@ namespace Content.Shared.Localizations
         public void Initialize()
         {
             var culture = new CultureInfo(Culture);
+            var fallbackCulture = new CultureInfo(FallbackCulture); // Corvax-Localization
 
             _loc.LoadCulture(culture);
+            _loc.LoadCulture(fallbackCulture); // Corvax-Localization
+            _loc.SetFallbackCluture(fallbackCulture); // Corvax-Localization
+            _loc.AddFunction(culture, "MANY", FormatMany); // Corvax-Localization: To prevent problems in auto-generated locale files
             _loc.AddFunction(culture, "PRESSURE", FormatPressure);
             _loc.AddFunction(culture, "POWERWATTS", FormatPowerWatts);
             _loc.AddFunction(culture, "POWERJOULES", FormatPowerJoules);
@@ -49,6 +54,7 @@ namespace Content.Shared.Localizations
             var cultureEn = new CultureInfo("en-US");
 
             _loc.AddFunction(cultureEn, "MAKEPLURAL", FormatMakePlural);
+            _loc.AddFunction(cultureEn, "NATURALFIXED", FormatNaturalFixed);
             _loc.AddFunction(cultureEn, "MANY", FormatMany);
         }
 
@@ -117,8 +123,8 @@ namespace Content.Shared.Localizations
             {
                 <= 0 => string.Empty,
                 1 => list[0],
-                2 => $"{list[0]} and {list[1]}",
-                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}, and {list[^1]}"
+                2 => $"{list[0]} и {list[1]}",
+                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}, и {list[^1]}"
             };
         }
 
@@ -131,8 +137,8 @@ namespace Content.Shared.Localizations
             {
                 <= 0 => string.Empty,
                 1 => list[0],
-                2 => $"{list[0]} or {list[1]}",
-                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}, or {list[^1]}"
+                2 => $"{list[0]} или {list[1]}",
+                _ => $"{string.Join(", ", list.GetRange(0, list.Count - 1))}, или {list[^1]}"
             };
         }
 

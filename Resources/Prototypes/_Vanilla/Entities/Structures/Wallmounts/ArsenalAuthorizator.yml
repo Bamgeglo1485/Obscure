@@ -1,0 +1,8 @@
+- type: entity
+  id: ArsenalAuthorizator
+  name: авторизатор арсенала
+  description: Устройство контроля доступа в оружейную комнату. Открытие арсенала приведёт к установке красного кода.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wallmount

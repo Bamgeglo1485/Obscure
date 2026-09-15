@@ -1,0 +1,9 @@
+ent-MobERTPeacekeeperLeader = Лидер ОБР
+    .suffix = ОБР-Л
+    .desc = { ent-MobERTLeader.desc }
+ent-MobERTPeacekeeperMedic = медик ОБР
+    .suffix = ОБР-М
+    .desc = { ent-MobERTMedic.desc }
+ent-MobERTPeacekeeperRegular = оперативник ОБР
+    .suffix = ОБР-О
+    .desc = { ent-MobERTRegular.desc }

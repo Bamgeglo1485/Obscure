@@ -1,3 +1,5 @@
+using Content.Client.Vanilla.DiscordAuth;
+using Content.Shared.Vanilla.Sponsor;
 using Content.Client._Funkystation.Explosion; // Funky RMC explosions
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
@@ -48,6 +50,8 @@ namespace Content.Client.Entry
 {
     public sealed partial class EntryPoint : GameClient
     {
+        [Dependency] private DiscordAuthManager _discordAuthManager = default!; // Corvax-DiscordAuth
+        [Dependency] private SharedSponsorManager _sponsorManager = default!; // Rayten-Sponsor
         [Dependency] private IBaseClient _baseClient = default!;
         [Dependency] private IGameController _gameController = default!;
         [Dependency] private IStateManager _stateManager = default!;

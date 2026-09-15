@@ -1,0 +1,146 @@
+- type: entity
+  parent: BaseItem
+  id: BaseMODModule
+  name: базовый модуль
+  description: Модуль, встраиваемый в МОД.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/OuterClothing/MODSuit/equipped_modules.rsi
+  - type: Tag
+    tags:
+    - MODSuitModule
+  - type: MODSuitModule
+
+- type: entity
+  parent: BaseMODModule
+  id: MODSuitModuleMassScaner
+  name: модуль сканера массы
+  components:
+  - type: Item # Слабые модули должны быть маленькими
+    size: Small
+  - type: Sprite
+    state: icon-mass-scanner-module
+  - type: MODSuitModule
+    occupyKey: MassScaner
+    actions:
+    - ActionRetractableItemMassScanner
+
+- type: entity
+  parent: BaseMODModule
+  id: MODSuitModuleTetherGun
+  name: модуль гравипушки
+  components:
+  - type: Sprite
+    state: icon-tether-gun-module
+  - type: MODSuitModule
+    occupyKey: Tether
+    actions:
+    - ActionRetractableItemTetherGun
+
+- type: entity
+  parent: BaseMODModule
+  id: MODSuitModuleJetpack
+  name: модуль джетпака
+  components:
+  - type: Sprite
+    state: icon-jetpack-module
+  - type: MODSuitModule
+    equippedState: equipped-jetpack-module
+    occupyKey: Jetpack
+    components:
+    - type: GasTank
+      releasePressure: 21.3
+      air:
+        volume: 5
+        temperature: 293.15
+    - type: Jetpack
+      moleUsage: 0.00085
+    interfaces:
+      enum.SharedGasTankUiKey.Key:
+        type: GasTankBoundUserInterface
+
+- type: entity
+  parent: BaseMODModule
+  id: MODSuitModuleDash
+  name: модуль рывка
+  components:
+  - type: Sprite
+    state: icon-tether-gun-module
+  - type: MODSuitModule
+    occupyKey: Dash
+    components:
+    - type: JumpAbility
+      jumpDistance: 5
+      jumpSound: /Audio/Effects/stealthoff.ogg
+    - type: ActionGrant
+      actions:
+      - ActionGravityJump
+    - type: ItemActionGrant
+      activeIfWorn: true
+
+- type: entity
+  parent: BaseMODModule
+  id: MODSuitModuleFly
+  name: модуль полёта
+  components:
+  - type: Sprite
+    state: icon-tether-gun-module
+  - type: MODSuitModule
+    occupyKey: Fly
+    userComponents:
+    - type: Flyer
+
+- type: entity
+  parent: BaseMODModule
+  id: MODSuitModuleSpringlock
+  name: модуль пружинного механизма
+  description: Модуль, встраиваемый в МОД. Ускоряет вас, но если на костюм попадет много жидкости...
+  components:
+  - type: Sprite
+    state: icon-springlock-module
+  - type: MODSuitModule
+    iconState: icon-springlock-module
+    equippedState: equipped-springlock-module
+    occupyKey: Springlock
+    components:
+    - type: Springlock
+
+- type: entity
+  parent: BaseMODModule
+  id: MODSuitModuleRepulsor
+  name: модуль репульсор
+  components:
+  - type: Sprite
+    state: icon-mass-scanner-module
+  - type: MODSuitModule
+    occupyKey: Repulsor
+    actions:
+    - ActionRepulsor
+
+- type: entity
+  parent: BaseMODModule
+  id: MODSuitModuleReturn
+  name: модуль возврата
+  components:
+  - type: Sprite
+    state: icon-return-module
+  - type: MODSuitModule
+    occupyKey: Return
+  - type: ClothingReturnModule
+
+- type: entity
+  parent: BaseItem
+  id: ClothingReturnButton
+  name: триггер МОДа
+  description: Джарвис, у меня РАЗГЕРМА!
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/OuterClothing/MODSuit/equipped_modules.rsi
+    state: return-signaller
+  - type: TriggerOnUse
+  - type: UseDelayOnTrigger
+  - type: UseDelay
+    delay: 30
+  - type: ClothingReturnOnTrigger
+    targetUser: true
+  - type: TriggerOnVoice

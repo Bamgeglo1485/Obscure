@@ -1,0 +1,115 @@
+- type: BackgroundGroup
+  id: ClosetSkeletonBackgroundGroup
+  backgrounds:
+  - ClosetSkeletonBrainlessBackground
+  - ClosetSkeletonKnightBackground
+  - ClosetSkeletonJesterBackground
+  - ClosetSkeletonEvilBackground
+  - ClosetSkeletonCurseBackground
+  # - ClosetSkeletonSaboteurBackground
+
+- type: Background
+  id: ClosetSkeletonBrainlessBackground
+  name: Безмозглый гений
+  description: background-closetskeleton-desc-Brainless
+  specialDesc:
+    - Вы не антагонист
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles:
+    - MindRoleGhostRoleNeutral
+
+- type: Background
+  id: ClosetSkeletonJesterBackground
+  name: Проклятый Шут
+  description: background-closetskeleton-desc-jester
+  sponsorOnly: true
+  specialDesc:
+    - Вы антагонист
+    - Вы не обладаете интеллектом
+    - Вы умеете призывать пироги
+    - Шутовской наряд
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+  - !type:AddActionSpecial
+    action: ActionSpawnPie
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    - jumpsuit
+    loadout:
+    - SkeletonJester
+  - !type:AddComponentsSpecial
+    components:
+    - type: Pacified
+    - type: AngrySkeleton
+    - type: ReplacementAccent
+      accent: genericAggressive
+
+- type: Background
+  id: ClosetSkeletonKnightBackground
+  name: Рыцарские кости
+  description: background-closetskeleton-desc-Knight
+  specialDesc:
+    - Вы не антагонист
+    - У вас есть клеймор и броня
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - SkeletonKnight
+
+- type: Background
+  id: ClosetSkeletonEvilBackground
+  name: Злоба и Ненависть
+  description: background-closetskeleton-desc-Evil
+  specialDesc:
+    - Вы антагонист
+    - Вы не обладаете интеллектом
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+  - !type:AddComponentsSpecial
+    components:
+    - type: AngrySkeleton
+    - type: ReplacementAccent
+      accent: genericAggressive
+
+- type: Background
+  id: ClosetSkeletonCurseBackground
+  name: Проклятие
+  description: background-closetskeleton-desc-SkeletonCurse
+  specialDesc:
+    - Вы носитель проклятия, которое делает вас скелетом, если вас кто-то убьет - проклятие перенесётся на него, а ваша душа упокоится
+    - Вы антагонист
+    - Вы не обладаете интеллектом
+    - Вы Пацифист
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+  - !type:AddComponentsSpecial
+    components:
+    - type: AngrySkeleton
+    - type: SkeletonCurse
+    - type: Pacified
+    - type: ReplacementAccent
+      accent: genericAggressive
+
+- type: Background
+  id: ClosetSkeletonSaboteurBackground
+  name: Саботёр
+  description: background-closetskeleton-desc-Saboteur
+  specialDesc:
+    - Вы антагонист
+  specials:
+  - !type:AddComponentsSpecial
+    components:
+    - type: AngrySkeleton
+  - !type:ChangeMindSpecial
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist

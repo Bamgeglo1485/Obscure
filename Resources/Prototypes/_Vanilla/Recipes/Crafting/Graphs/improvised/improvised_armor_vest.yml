@@ -1,0 +1,38 @@
+- type: constructionGraph
+  id: ImprovisedArmorVestGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: vest
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 0.5
+            - material: MetalRod
+              amount: 2
+              doAfter: 0.5
+            - tag: HandmadeShield
+              icon:
+                sprite: Objects/Weapons/Melee/shields.rsi
+                state: makeshift-icon
+              name: construction-graph-tag-handmadeshield
+            - tag: HandmadeShield
+              icon:
+                sprite: Objects/Weapons/Melee/shields.rsi
+                state: makeshift-icon
+              name: construction-graph-tag-handmadeshield
+            - tag: Handcuffs
+              icon:
+                sprite: Objects/Misc/cablecuffs.rsi
+                state: cuff
+                color: red
+              name: construction-graph-tag-cuffs
+            - tag: Handcuffs
+              icon:
+                sprite: Objects/Misc/cablecuffs.rsi
+                state: cuff
+                color: red
+              name: construction-graph-tag-cuffs
+    - node: vest
+      entity: ClothingOuterArmorMakeshift

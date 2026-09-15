@@ -10,15 +10,15 @@
     sprite: Clothing/OuterClothing/Coats/bomber.rsi
 
 - type: entity
-  parent: [ ClothingOuterArmorBase, ClothingOuterStorageBase, AllowSuitStorageClothing, BaseSecurityContraband ]
+  parent: [ ClothingOuterArmorBase, ClothingOuterStorageBase, AllowSuitStorageClothing, FirstSecurityContraband ]
   id: ClothingOuterCoatDetective
   name: detective's armored trenchcoat
   description: An 20th-century trenchcoat with an armored underlay. Someone who wears this means serious business.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/detective.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/detective.rsi # Rayten Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/detective.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/detective.rsi # Rayten Resprites
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -33,9 +33,9 @@
   description: Ah, your trusty coat. There's a few tears here and there, giving it a more timely look. Or at least, that's what you told yourself when you found out gettin' it repaired would set you back 200 spesos.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/detective_grey.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/detective_grey.rsi # Rayten Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/detective_grey.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/detective_grey.rsi # Rayten Resprites
 
 
 - type: entity
@@ -89,15 +89,15 @@
         Caustic: 0.9
 
 - type: entity
-  parent: [BaseSecurityCommandContraband, ClothingOuterArmorHoS]
+  parent: [FirstSecurityCommandContraband, ClothingOuterArmorHoS]
   id: ClothingOuterCoatHoSTrench
   name: head of security's armored trenchcoat
   description: A greatcoat enhanced with a special alloy for some extra protection and style for those with a commanding presence.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/OuterClothing/Coats/hos.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/hos_trenchcoat.rsi # Rayten Resprites
   - type: Clothing
-    sprite: _Funkystation/Clothing/OuterClothing/Coats/hos.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/hos_trenchcoat.rsi # Rayten Resprites
 
 - type: entity
   parent: ClothingOuterJacketToggleableBase
@@ -144,9 +144,9 @@
   description: A suit that protects against minor chemical spills.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/labcoat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/labcoat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat.rsi # Rayten-Resprites
   - type: Armor
     modifiers:
       coefficients:
@@ -164,9 +164,9 @@
   description: A suit that protects against minor chemical spills. Has an orange stripe on the shoulder.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/labcoat_chem.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_chem.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/labcoat_chem.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_chem.rsi # Rayten-Resprites
   - type: Armor
     modifiers:
       coefficients:
@@ -224,9 +224,9 @@
   description: Custom made blue lab coat for the Chief Medical Officer, offers improved protection against chemical spills and minor cuts.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/labcoat_cmo.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_cmo.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/labcoat_cmo.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_cmo.rsi # Rayten-Resprites
   - type: Armor
     modifiers:
       coefficients:
@@ -246,9 +246,9 @@
   description: A suit that protects against minor chemical spills. Has a purple stripe on the shoulder.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/labcoat_sci.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_sci.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/labcoat_sci.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_sci.rsi # Rayten-Resprites
   - type: Armor
     modifiers:
       coefficients:
@@ -286,9 +286,9 @@
   description: Woven with top of the line technology, this labcoat helps protect against radiation in similar way to the experimental hardsuit.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/labcoat_rd.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_rd.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/labcoat_rd.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_rd.rsi # Rayten-Resprites
   - type: Armor
     modifiers:
       coefficients:
@@ -312,15 +312,15 @@
     sprite: Clothing/OuterClothing/Coats/pirate.rsi
 
 - type: entity
-  parent: [ClothingOuterArmorWarden, BaseSecurityContraband]
+  parent: [ClothingOuterArmorWarden, FirstSecurityContraband]
   id: ClothingOuterCoatWarden
   name: warden's armored jacket
   description: A sturdy, utilitarian jacket designed to protect a warden from any brig-bound threats.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/OuterClothing/Coats/warden.rsi
+    sprite: Clothing/OuterClothing/Coats/warden.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/OuterClothing/Coats/warden.rsi
+    sprite: Clothing/OuterClothing/Coats/warden.rsi
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -345,7 +345,7 @@
     sprite: Clothing/OuterClothing/Coats/clownpriest.rsi
 
 - type: entity
-  parent: [ClothingOuterStorageBase, BaseMajorContraband]
+  parent: [ClothingOuterStorageBase, FirstContraband]
   id: ClothingOuterDogi
   name: samurai dogi
   description: Dogi is a type of traditional Japanese clothing. The dogi is made of heavy, durable fabric, it is practical in combat and stylish in appearance. It is decorated with intricate patterns and embroidery on the back.
@@ -373,7 +373,7 @@
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
 
 - type: entity
-  parent: [ClothingOuterStorageBase, BaseSyndicateContraband]
+  parent: [ClothingOuterStorageBase, FirstSyndicateContraband]
   id: ClothingOuterCoatSyndieCap
   name: syndicate's coat
   description: The syndicate's coat is made of durable fabric, with gilded patterns.
@@ -384,7 +384,7 @@
     sprite: Clothing/OuterClothing/Coats/syndicate/coatsyndiecap.rsi
 
 - type: entity
-  parent: [BaseSyndicateContraband, ClothingOuterCoatHoSTrench] # BaseSyndicateContraband as first parent so contraband system takes that as priority, yeah I know
+  parent: [FirstSyndicateContraband, ClothingOuterCoatHoSTrench] # FirstSyndicateContraband as first parent so contraband system takes that as priority, yeah I know
   id: ClothingOuterCoatSyndieCapArmored
   name: syndicate's armored coat
   description: The syndicate's armored coat is made of durable fabric, with gilded patterns.

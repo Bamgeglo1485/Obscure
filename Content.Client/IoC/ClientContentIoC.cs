@@ -1,3 +1,5 @@
+using Content.Client.Vanilla.DiscordAuth;
+using Content.Shared.Vanilla.Sponsor;
 using Content.Client.Administration.Managers;
 using Content.Client.Audio.Midi;
 using Content.Client.Changelog;
@@ -38,6 +40,8 @@ namespace Content.Client.IoC
         public static void Register(IDependencyCollection collection)
         {
             SharedContentIoC.Register(collection);
+            collection.Register<DiscordAuthManager>(); // Corvax-DiscordAuth
+            collection.Register<SharedSponsorManager>(); // Rayten-sponsor
             collection.Register<IParallaxManager, ParallaxManager>();
             collection.Register<GeneratedParallaxCache>();
             collection.Register<IChatManager, ChatManager>();

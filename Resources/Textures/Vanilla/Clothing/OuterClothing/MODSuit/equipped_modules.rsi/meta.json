@@ -1,0 +1,94 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "GEGLO",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "sealer-base-module"
+        },
+        {
+            "name": "icon-sealer-base-module"
+        },
+        {
+            "name": "equipped-sealer-base-module",
+            "directions": 4
+        },
+        {
+            "name": "sealer-base-helmet",
+            "directions": 4
+        },
+
+        {
+            "name": "steel-module"
+        },
+        {
+            "name": "equipped-steel-module",
+            "directions": 4
+        },
+        {
+            "name": "plastic-module"
+        },
+        {
+            "name": "equipped-plastic-module",
+            "directions": 4
+        },
+        {
+            "name": "uranium-module"
+        },
+        {
+            "name": "equipped-uranium-module",
+            "directions": 4
+        },
+        {
+            "name": "plasma-module"
+        },
+        {
+            "name": "equipped-plasma-module",
+            "directions": 4
+        },
+        {
+            "name": "diamond-module"
+        },
+        {
+            "name": "equipped-diamond-module",
+            "directions": 4
+        },
+        {
+            "name": "durathread-module"
+        },
+        {
+            "name": "equipped-durathread-module",
+            "directions": 4
+        },
+        {
+            "name": "icon-mass-scanner-module"
+        },
+        {
+            "name": "icon-tether-gun-module"
+        },
+        {
+            "name": "icon-springlock-module"
+        },
+        {
+            "name": "equipped-springlock-module",
+            "directions": 4
+        },
+        {
+            "name": "icon-return-module"
+        },
+        {
+            "name": "return-signaller"
+        },
+        {
+            "name": "icon-jetpack-module"
+        },
+        {
+            "name": "equipped-jetpack-module",
+            "directions": 4
+        }
+    ]
+}

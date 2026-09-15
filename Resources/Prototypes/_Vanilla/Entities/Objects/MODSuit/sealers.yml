@@ -1,0 +1,49 @@
+- type: entity
+  parent: BaseItem
+  id: BaseMODSuitSealer
+  name: герметик
+  description: Герметизированный кожух для экзоскелета, который защищает от вакуума.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/OuterClothing/MODSuit/equipped_modules.rsi
+    state: icon-sealer-base-module
+  - type: Tag
+    tags:
+    - MODSuitModule
+  - type: MODSuitModule
+    speedModifier: 0.9
+    equippedState: equipped-sealer-base-module
+    iconState: sealer-base-module
+    occupyKey: Sealer
+    components:
+    - type: HideLayerClothing
+      slots:
+      - Tail
+    - type: ToggleableClothing
+      clothingPrototype: ClothingHeadHelmetMODSuitSealerBase
+      slot: head
+      verbText: toggle-clothing-verb-helmet
+      action: ActionToggleSuitPiece
+    - type: PressureProtection
+      highPressureMultiplier: 0.02
+      lowPressureMultiplier: 1000
+
+- type: entity
+  parent: ClothingHeadHardsuitInsulatedBase
+  id: ClothingHeadHelmetMODSuitSealerBase
+  name: шлем модульного костюма
+  description: Бла блы бла
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/OuterClothing/MODSuit/equipped_modules.rsi
+    state: sealer-base-helmet
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: FireProtection
+    reduction: 0.2
+  - type: Clothing
+    sprite: Vanilla/Clothing/OuterClothing/MODSuit/equipped_modules.rsi
+    clothingVisuals:
+      head:
+      - state: sealer-base-helmet

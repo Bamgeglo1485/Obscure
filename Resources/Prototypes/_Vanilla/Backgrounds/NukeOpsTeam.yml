@@ -1,0 +1,106 @@
+- type: BackgroundGroup
+  id: NukeopsBackgroundGroup
+  backgrounds:
+  - NukeOpfreelancerBackground
+  - NukeOpYoungBloodBackground
+  - LoneOpsButcherBackground
+  - NukeOpAnimalBackground
+
+- type: BackgroundGroup
+  id: NukeopsMedicBackgroundGroup
+  backgrounds:
+  - NukeOpMedicMedEngBackground
+  - NukeOpMedicWariorBackground
+
+- type: BackgroundGroup
+  id: NukeopsCommanderBackgroundGroup
+  backgrounds:
+  - NukeOpComanderSmartBackground
+  - NukeOpComanderGreedyBackground
+  - NukeOpComanderWariorBackground
+
+- type: Background
+  id: NukeOpfreelancerBackground
+  name: Фрилансер
+  description: background-nukeops-desc-FreeLancer
+  sponsorOnly: true
+  specialDesc:
+    - Не входит в иерархию Синдиката — вы игнорируете приказы командира, если они кажутся глупыми (то есть всегда).
+    - Пиратская экипировка.
+    - Вам выдали 5 телекристаллов, правда вы не знаете как ими пользоваться...
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - pocket1
+    - pocket2
+    - id
+    - outerClothing
+    - jumpsuit
+    - back
+    loadout:
+    - NukeOpFreelancer
+  - !type:AddItemSpecial
+    items:
+    - WeaponLauncherPirateCannon
+    - ClothingBackpackSatchelNavalFilled
+    - Telecrystal5
+
+# Ядерный оперативник
+- type: Background
+  id: NukeOpYoungBloodBackground
+  name: background-nukeops-name-YoungBlood
+  description: background-nukeops-desc-YoungBlood
+  specialDesc:
+    - Вам выдали допонительные 5 телекристаллов в честь первого задания
+  specials:
+  - !type:AddItemSpecial
+    items:
+    - Telecrystal5
+
+- type: Background
+  id: NukeOpAnimalBackground
+  name: background-nukeops-name-Animal
+  description: background-nukeops-desc-Animal
+
+
+# Ядерный оперативник (командир)
+- type: Background
+  id: NukeOpComanderSmartBackground
+  name: background-NukeOpComander-name-Smart
+  description: background-NukeOpComander-desc-Smart
+  specialDesc:
+    - Глушилка длится на 5 минут дольше.
+  specials:
+  - !type:RaiseEventSpecial
+    events:
+    - !type:OverrideJammerTimeEvent
+      minutes: 5
+
+- type: Background
+  id: NukeOpComanderGreedyBackground
+  name: background-NukeOpComander-name-Greedy
+  description: background-NukeOpComander-desc-Greedy
+
+- type: Background
+  id: NukeOpComanderWariorBackground
+  name: background-NukeOpComander-name-Warior
+  description: background-NukeOpComander-desc-Warior
+
+# Ядерный оперативник (медик)
+
+- type: Background
+  id: NukeOpMedicMedEngBackground
+  name: background-NukeOpMedic-name-MedEng
+  description: background-NukeOpMedic-desc-MedEng
+  specialDesc:
+    - За время подготовки к миссии вы быстренького смастерили саботажного киборга Синдиката
+  specials:
+  - !type:AddItemSpecial
+    items:
+    - PlayerBorgSyndicateSaboteurGhostRole
+
+- type: Background
+  id: NukeOpMedicWariorBackground
+  name: background-NukeOpMedic-name-Warior
+  description: background-NukeOpMedic-desc-Warior
+

@@ -1,0 +1,9 @@
+ent-MobArchonOldMan106 = Старик
+    .desc = выглядит как пожилой гуманоид на поздней стадии разложения.
+ent-OldManJaunt = нечто под полом
+    .suffix = Старик
+    .desc = { ent-Incorporeal.desc }
+ent-PDEnterPortal = { "" }
+    .desc = { "" }
+ent-OldManJumpTrack = { "" }
+    .desc = { "" }

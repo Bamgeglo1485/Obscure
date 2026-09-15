@@ -1,0 +1,116 @@
+- type: constructionGraph
+  id: praxitObjects
+  start: start
+  graph:
+  - node: start
+    edges:
+
+    - to: spanishArmyKnife
+      completed:
+      - !type:SetStackCount
+        amount: 1
+      steps:
+      - material: Paraxit
+        amount: 2
+
+    - to: diamond
+      completed:
+      - !type:SetStackCount
+        amount: 5
+      steps:
+      - material: Paraxit
+        amount: 1
+
+    - to: uranium
+      completed:
+      - !type:SetStackCount
+        amount: 10
+      steps:
+      - material: Paraxit
+        amount: 1
+
+    - to: plasma
+      completed:
+      - !type:SetStackCount
+        amount: 20
+      steps:
+      - material: Paraxit
+        amount: 1
+
+    - to: gold
+      completed:
+      - !type:SetStackCount
+        amount: 20
+      steps:
+      - material: Paraxit
+        amount: 1
+
+    - to: silver
+      completed:
+      - !type:SetStackCount
+        amount: 20
+      steps:
+      - material: Paraxit
+        amount: 1
+
+    - to: glass
+      completed:
+      - !type:SetStackCount
+        amount: 30
+      steps:
+      - material: Paraxit
+        amount: 1
+
+    - to: steel
+      completed:
+      - !type:SetStackCount
+        amount: 30
+      steps:
+      - material: Paraxit
+        amount: 1
+
+    - to: plastic
+      completed:
+      - !type:SetStackCount
+        amount: 30
+      steps:
+      - material: Paraxit
+        amount: 1
+
+    - to: spaceCash
+      steps:
+      - material: Paraxit
+        amount: 1
+
+  - node: telecrystal
+    entity: Telecrystal
+
+  - node: diamond
+    entity: MaterialDiamond
+
+  - node: uranium
+    entity: SheetUranium
+
+  - node: plasma
+    entity: SheetPlasma
+
+  - node: gold
+    entity: IngotGold
+
+  - node: silver
+    entity: IngotSilver
+
+  - node: glass
+    entity: SheetGlass10
+
+  - node: steel
+    entity: SheetSteel
+
+  - node: plastic
+    entity: SheetPlastic
+
+  - node: spaceCash
+    entity: SpaceCash2500
+
+  - node: spanishArmyKnife
+    entity: ToolDebug

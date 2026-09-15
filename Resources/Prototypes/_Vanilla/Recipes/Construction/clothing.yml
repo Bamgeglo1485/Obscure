@@ -1,0 +1,7 @@
+- type: construction
+  id: ClothingEyesMedSecThermalGlasses
+  graph: MedSecThermalGlasses
+  startNode: start
+  targetNode: medsecthermalglasses
+  category: construction-category-clothing
+  objectType: Item

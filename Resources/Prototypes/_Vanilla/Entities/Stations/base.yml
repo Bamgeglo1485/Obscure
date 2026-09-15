@@ -1,0 +1,19 @@
+- type: entity
+  id: BaseStationJammer
+  abstract: true
+  components:
+    - type: StationJammer
+
+- type: entity
+  id: BaseStationERT
+  abstract: true
+  components:
+    - type: StationERT
+
+- type: entity
+  id: BaseStationAlternateDimension
+  abstract: true
+  components:
+    - type: StationAlternateDimensionGenerator
+      dimensions:
+      - Backrooms

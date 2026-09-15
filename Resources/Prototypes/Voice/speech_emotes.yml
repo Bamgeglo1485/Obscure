@@ -1,3 +1,4 @@
+# vocal emotes
 - type: emote
   id: Scream
   name: chat-emote-name-scream
@@ -6,6 +7,9 @@
   whitelist:
     components:
     - Vocal
+  blacklist:
+    tags:
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
     - scream
@@ -24,6 +28,17 @@
     - yells
     - yelled
     - yelling
+    # Corvax-Localization-Start
+    - кричит
+    - кричит.
+    - кричит!
+    - орёт
+    - орёт.
+    - орёт!
+    - визжит
+    - визжит.
+    - визжит!
+    # Corvax-Localization-End
 
 - type: emote
   id: Laugh
@@ -36,6 +51,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
     - laugh
@@ -53,6 +69,15 @@
     - chortle
     - chortles
     - chortling
+    # Corvax-Localization-Start
+    - смеется
+    - смеётся
+    - хохочет
+    - хихикает
+    - хихикнул
+    - хихикнула
+    - ржёт
+    # Corvax-Localization-End
 
 - type: emote
   id: Honk
@@ -65,12 +90,16 @@
     - Vocal
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-honk"]
   chatTriggers:
     - honk
     - honks
     - honked
     - honking
+    # Corvax-Localization-Start
+    - хонк
+    # Corvax-Localization-End
 
 - type: emote
   id: Sigh
@@ -83,11 +112,17 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-sigh"]
   chatTriggers:
     - sigh
     - sighs
     - sighed
+    # Corvax-Localization-Start
+    - вздыхает
+    - вздохнул
+    - вздохнула
+    # Corvax-Localization-End
 
 - type: emote
   id: Whistle
@@ -100,11 +135,16 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-whistle"]
   chatTriggers:
     - whistle
     - whistles
     - whistleblowing
+    # Corvax-Localization-Start
+    - свистит
+    - свистнул
+    # Corvax-Localization-End
 
 - type: emote
   id: Crying
@@ -117,6 +157,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-crying"]
   chatTriggers:
     - cry
@@ -125,6 +166,10 @@
     - sob
     - sobs
     - sobbing
+    # Corvax-Localization-Start
+    - плачет
+    - рыдает
+    # Corvax-Localization-End
 
 - type: emote
   id: Squish
@@ -138,11 +183,15 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-squish"]
   chatTriggers:
     - squish
     - squishing
     - squishes
+    # Corvax-Localization-Start
+    - хлюпает
+    # Corvax-Localization-End
 
 - type: emote
   id: Chitter
@@ -156,11 +205,15 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-chitter"]
   chatTriggers:
    - chitter
    - chitters
    - chittered
+   # Corvax-Localization-Start
+   - стрекочет
+   # Corvax-Localization-End
 
 - type: emote
   id: Squeak
@@ -174,11 +227,15 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-squeak"]
   chatTriggers:
    - squeak
    - squeaks
    - squeaked
+   # Corvax-Localization-Start
+   - пищит
+   # Corvax-Localization-End
 
 - type: emote
   id: Click
@@ -192,10 +249,15 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-click"]
   chatTriggers:
    - click
    - clicks
+   # Corvax-Localization-Start
+   - клац
+   - клацает
+   # Corvax-Localization-End
 
 # Vulpkanin
 - type: emote
@@ -209,6 +271,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-bark"]
   chatTriggers:
   - bark
@@ -227,6 +290,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-snarl"]
   chatTriggers:
   - snarl
@@ -245,6 +309,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-whine"]
   chatTriggers:
   - whine
@@ -263,6 +328,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-howl"]
   chatTriggers:
   - howl
@@ -300,11 +366,21 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-clap"]
   chatTriggers:
     - claps
     - clapping
     - clapped
+    # Corvax-Localization-Start
+    - хлопает
+    - хлопнул
+    - хлопнула
+    - хлопает в ладоши
+    - хлопнул в ладоши
+    - хлопнула в ладоши
+    - апплодирует
+    # Corvax-Localization-End
 
 - type: emote
   id: ClapSingle
@@ -317,6 +393,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: [ "chat-emote-msg-clap-single" ]
   chatTriggers:
     - clap
@@ -336,6 +413,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-snap"]
   chatTriggers:
     - snap
@@ -350,6 +428,20 @@
     - snaps its fingers
     - snapping fingers
     - snapped fingers
+    # Corvax-Localization-Start
+    - щелкает
+    - щелкнул
+    - щелкнула
+    - щёлкает
+    - щёлкнул
+    - щёлкнула
+    - щелкает пальцами
+    - щелкнул пальцами
+    - щелкнула пальцами
+    - щёлкает пальцами
+    - щёлкнул пальцами
+    - щёлкнула пальцами
+    # Corvax-Localization-End
 
 - type: emote
   id: Thump
@@ -363,6 +455,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-thump"]
   chatTriggers:
     - thump
@@ -375,6 +468,13 @@
     - thumps her tail
     - thumps his tail
     - thumps its tail
+    # Corvax-Localization-Start
+    - стучит хвостом
+    - стукнул хвостом
+    - стукнула хвостом
+    - стукнул своим хвостом
+    - стукнула своим хвостом
+    # Corvax-Localization-End
 
 - type: emote
   id: Salute
@@ -387,10 +487,17 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-salute"]
   chatTriggers:
     - salute
     - salutes
+    # Corvax-Localization-Start
+    - салютует
+    - отдаёт честь
+    - отдал честь
+    - отдала честь
+    # Corvax-Localization-End
 
 - type: emote
   id: Gasp
@@ -411,6 +518,11 @@
   whitelist:
     components:
     - MobState
+ # rayten-start
+  blacklist:
+    tags:
+    - DisableEmotes
+ # rayten-end
   chatMessages: ["chat-emote-msg-deathgasp"]
   chatTriggers:
   - deathgasp
@@ -444,6 +556,11 @@
     - buzz
     - buzzed
     - buzzes
+    # Corvax-Localization-Start
+    - жужжит
+    - зажужжал
+    - зажужжала
+    # Corvax-Localization-End
 
 - type: emote
   id: Weh
@@ -472,12 +589,16 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-chirp"]
   chatTriggers:
     - chirp
     - chirps
     - chirped
     - chirping
+    # Corvax-Localization-Start
+    - чирикает
+    # Corvax-Localization-End
 
 - type: emote
   id: Flap
@@ -532,6 +653,9 @@
     - beeps
     - beeped
     - beeping
+    # Corvax-Localization-Start
+    - бип
+    # Corvax-Localization-End
 
 - type: emote
   id: Chime
@@ -550,6 +674,9 @@
     - chimes
     - chimed
     - chiming
+    # Corvax-Localization-Start
+    - дзынь
+    # Corvax-Localization-End
 
 - type: emote
   id: Buzz-Two
@@ -574,6 +701,14 @@
     - buzzes twice
     - buzzing twice
     - buzzed twice
+    # Corvax-Localization-Start
+    - бипбуп
+    - бип буп
+    - бип-буп
+    - бипбип
+    - бип бип
+    - бип-бип
+    # Corvax-Localization-End
 
 - type: emote
   id: Ping
@@ -592,3 +727,6 @@
     - pings
     - pinged
     - pinging
+    # Corvax-Localization-Start
+    - пинг
+    # Corvax-Localization-End

@@ -1,0 +1,9 @@
+- type: TDMMap
+  id: NightHouse
+  arena: Maps/Vanilla/Misc/TDM/TDM_NightHouse.yml
+  arenaparty: 20
+
+- type: TDMMap
+  id: Office
+  arena: Maps/Vanilla/Misc/TDM/TDM_Office.yml
+  arenaparty: 30

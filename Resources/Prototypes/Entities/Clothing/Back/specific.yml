@@ -118,6 +118,9 @@
         location: Middle
       extra_hand_2:
         location: Middle
+  - type: Tag # Rayten
+    tags:
+    - HARMPACK
 
 - type: entity
   parent: ClothingBackpack

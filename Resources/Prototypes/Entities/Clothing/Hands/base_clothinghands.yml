@@ -12,13 +12,20 @@
   - type: Item
     size: Small
     storedRotation: -90
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Fiber
-        Quantity: 15
+  # FUNKY STATION STARTS
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+      stain:
+        maxVol: 5
+  # FUNKY STATION ENDS
   - type: Tag
     tags:
+    - Gloves
     - ClothMade
     - WhitelistChameleon
   - type: DamageOnInteractProtection
@@ -29,14 +36,11 @@
   - type: Stainable
     clothingVisuals:
       gloves:
-      - sprite: /Textures/_Funkystation/Effects/blood.rsi
+      - sprite: _Funkystation/Effects/blood.rsi
         state: gloveblood
     iconVisuals:
-    - sprite: /Textures/_Funkystation/Effects/blood.rsi
+    - sprite: _Funkystation/Effects/blood.rsi
       state: glovebloodicon
-  - type: SolutionManager
-    solutions:
-    - SolutionStain
 
 - type: entity
   abstract: true
@@ -51,6 +55,7 @@
       Cloth: 50
   - type: Tag
     tags:
+    - Gloves
     - ClothMade
     - Recyclable
     - WhitelistChameleon

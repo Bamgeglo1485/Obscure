@@ -6,6 +6,7 @@ using Content.Shared.CombatMode;
 using Content.Shared.Cuffs;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Events;
+using Content.Shared.Vanilla.Damage.Events;
 using Content.Shared.Database;
 using Content.Shared.Effects;
 using Content.Shared.FixedPoint;
@@ -21,6 +22,7 @@ using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Melee.Events;
+using Robust.Shared.Random;
 using JetBrains.Annotations;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -159,13 +161,10 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         if (component.Critical)
             return;
 
-        var damage = args.PushProbability * component.CritThreshold;
-        TakeStaminaDamage(uid, damage, component, source: args.Source);
+        TakeStaminaDamage(uid, args.StaminaDamage, component, source: args.Source);
 
         args.PopupPrefix = "disarm-action-shove-";
         args.IsStunned = component.Critical;
-
-        args.Handled = true;
     }
 
     [SubscribeLocalEvent]
@@ -299,7 +298,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
     }
 
     // Here so server can properly tell all clients in PVS range to start the animation
-    protected virtual void SetStaminaAnimation(Entity<StaminaComponent> entity){}
+    protected virtual void SetStaminaAnimation(Entity<StaminaComponent> entity) { }
 
     private void SetStaminaAlert(EntityUid uid, StaminaComponent? component = null)
     {
@@ -307,7 +306,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
             return;
 
         var severity = ContentHelpers.RoundToLevels(MathF.Max(0f, component.CritThreshold - component.StaminaDamage), component.CritThreshold, 7);
-        _alerts.ShowAlert(uid, component.StaminaAlert, (short) severity);
+        _alerts.ShowAlert(uid, component.StaminaAlert, (short)severity);
     }
 
     /// <summary>
@@ -470,6 +469,10 @@ public abstract partial class SharedStaminaSystem : EntitySystem
         component.NextUpdate = Timing.CurTime + component.StunTime + StamCritBufferTime;
         EnsureComp<ActiveStaminaComponent>(uid);
         Dirty(uid, component);
+        //rayten-start
+        var ev = new StaminaCritEvent();
+        RaiseLocalEvent(uid, ev);
+        //rayten-end
         _adminLogger.Add(LogType.Stamina, LogImpact.Medium, $"{ToPrettyString(uid):user} entered stamina crit");
     }
 

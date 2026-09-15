@@ -1,0 +1,65 @@
+- type: BureaucracyDocument
+  id: SituationReport
+  text: Bureaucracy-Report-Situation
+  label: "Отчёт о ситуации"
+  category: Report
+
+- type: BureaucracyDocument
+  id: DepGoalReport
+  text: Bureaucracy-Report-DepGoal
+  label: "Отчёт о выполнении цели отдела"
+  category: Report
+
+- type: BureaucracyDocument
+  id: MeetingReport
+  text: Bureaucracy-Report-Meeting
+  label: "Отчёт о собрании глав"
+  category: Report
+
+- type: BureaucracyDocument
+  id: DetectiveReport
+  text: Bureaucracy-Report-Detective
+  label: "Отчёт о расследовании"
+  category: Report
+
+- type: BureaucracyDocument
+  id: EpicrisisReport
+  text: Bureaucracy-Report-epicrisis
+  label: "Выписной эпикриз"
+  category: Report
+
+- type: BureaucracyDocument
+  id: PsyhoReport
+  text: Bureaucracy-Report-Psyho
+  label: "Заключение о психологическом здоровье"
+  category: Report
+
+- type: BureaucracyDocument
+  id: DisposalReport
+  text: Bureaucracy-Report-Disposal
+  label: "Отчёт об утилизации"
+  category: Report
+
+- type: BureaucracyDocument
+  id: DepartmentReport
+  text: Bureaucracy-Report-Department
+  label: "Отчёт о работе отдела"
+  category: Report
+
+- type: BureaucracyDocument
+  id: StudyingReport
+  text: Bureaucracy-Report-Analysis
+  label: "Отчёт об изучении обьекта"
+  category: Report
+
+- type: BureaucracyDocument
+  id: DeathReport
+  text: Bureaucracy-Report-Death
+  label: "Свидетельство о смерти"
+  category: Report
+
+- type: BureaucracyDocument
+  id: InterimCapReport
+  text: Bureaucracy-Report-InterimCap
+  label: "Доклад о становлении ВрИО капитана"
+  category: Report

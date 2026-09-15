@@ -1,0 +1,19 @@
+- type: reagent
+  id: Insulin
+  name: reagent-name-insulin
+  desc: reagent-desc-insulin
+  physicalDesc: reagent-physical-desc-antidiabetic
+  color: "#b9cfd6"
+  boilingPoint: 4200.0
+  meltingPoint: 3550.0
+  metabolisms:
+    Bloodstream:
+      metabolismRate: 0.25
+      effects:
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentCondition
+          reagent: Sugar
+          min: 1
+        reagent: Sugar
+        amount: -5

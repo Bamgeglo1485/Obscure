@@ -1,0 +1,17 @@
+ent-AtmosFixBlockerMarker = Маркер вакуума Atmos Fix
+    .desc = Вакуум, 20°C
+ent-AtmosFixOxygenMarker = Маркер кислорода Atmos Fix
+    .desc = Кислород под давлением газодобытчика, 20°C
+ent-AtmosFixNitrogenMarker = Маркер азота Atmos Fix
+    .desc = Азот под давлением газодобытчика, 20°C
+ent-AtmosFixPlasmaMarker = Маркер плазмы Atmos Fix
+    .desc = Плазма под давлением газодобытчика, 20°C
+ent-AtmosFixInstantPlasmaFireMarker = Маркер мгновенного плазменного пожара Atmos Fix
+    .desc = МГНОВЕННЫЙ ПЛАЗМЕННЫЙ ПОЖАР
+ent-AtmosFixFreezerMarker = Маркер холодильной камеры Atmos Fix
+    .desc = Устанавливает температуру воздуха на 235K (-38°C) с небольшим запасом для настройки
+ent-AtmosFixVoxMarker = { ent-AtmosFixNitrogenMarker }
+    .desc = Азот под давлением 101 кПа, 20°C
+    .suffix = Атмосфера воксов
+ent-AtmosFixAirMarker = Маркер воздуха Atmos Fix
+    .desc = Кислород (21%) и азот (79%) под давлением газодобытчика, 20°C

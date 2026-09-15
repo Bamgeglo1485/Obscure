@@ -10,6 +10,9 @@
   id: BaseSpeciesMob
   save: false
   components:
+    # RAYTEN STARTS
+  - type: Rusher
+    # RAYTENDS
   - type: DamageVisuals
     thresholds: [ 10, 20, 30, 50, 70, 100 ]
     targetLayers:

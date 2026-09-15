@@ -9,7 +9,6 @@ using Content.Shared.Traits;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-
 namespace Content.Shared.Humanoid;
 
 /// <summary>
@@ -79,10 +78,17 @@ public sealed partial class HumanoidCharacterProfileV1
 
     [DataField]
     public PreferenceUnavailableMode PreferenceUnavailable;
+    //rayten-start
+
+    [DataField]
+    public float VoicePitch;
+    [DataField]
+    public string Voice;
+    //rayten-end
 
     public HumanoidCharacterProfile ToV2()
     {
-        return new(Name, FlavorText, Species, Age, Sex, GetDefaultVoice(Species, Sex), Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts);
+        return new(Name, FlavorText, Species, Voice, VoicePitch, Age, Sex, GetDefaultVoice(Species, Sex), Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts);
     }
 
     // In V2 voices are stored as a separate database entry, this picks the default for the species and sex, which would give the same voice as pre-nubody.

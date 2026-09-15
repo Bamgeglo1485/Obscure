@@ -1,0 +1,149 @@
+- type: entity
+  name: captain's force sabre
+  parent: [BaseItem, FirstCommandContraband]
+  id: PowerSabre
+  description: An energy sword that uses a red-hot containment field to bypass the prohibitions of the Earth government. The captain's own weapon.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Melee/powersabre.rsi
+    layers:
+    - state: beam
+      visible: false
+      shader: unshaded
+      map: ["blade"]
+    - state: base
+      map: ["base"]
+    - state: activated
+      map: ["enum.ToggleableVisuals.Layer"]
+    - state: on-equipped-BELT
+      shader: unshaded
+      visible: false
+  - type: MeleeBatteryHitsLeft
+  - type: StaminaDamageOnHitRequiresToggle
+  - type: StaminaDamageOnHitRequiresCharge
+    requiredCharge: 1
+  - type: ItemToggleExaminableStatus
+  - type: ItemToggleRequiresCharge
+    requiredCharge: 1
+  - type: ItemToggleSize
+    activatedSize: Ginormous
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Vanilla/Weapons/PowerSabre/powersabreon.ogg
+      params:
+        variation: 0.250
+        volume: -7
+    soundDeactivate:
+      path: /Audio/Vanilla/Weapons/PowerSabre/powersabreoff.ogg
+      params:
+        variation: 0.250
+        volume: -5
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+      params:
+        variation: 0.250
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Vanilla/Weapons/PowerSabre/powersabrehit.ogg
+      params:
+        variation: 0.250
+        volume: 6
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Vanilla/Weapons/PowerSabre/powersabremiss.ogg
+      params:
+        variation: 0.250
+        volume: 6
+    activatedSoundOnSwing:
+      path: /Audio/Vanilla/Weapons/PowerSabre/powersabremiss.ogg
+      params:
+        variation: 0.125
+        volume: 6
+    activatedDamage:
+      types:
+        Blunt: 8
+        Heat: 4
+        Structural: 20
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage: {}
+  - type: StaminaDamageOnHit
+    damage: 15
+  - type: Clothing
+    sprite: Vanilla/Objects/Weapons/Melee/powersabre.rsi
+    equipSound:
+      path: /Audio/Items/belt_equip.ogg
+    slots: [belt]
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Vanilla/Weapons/PowerSabre/powersabreidle.ogg
+      params:
+        volume: -4
+        maxDistance: 5
+  - type: ComponentToggler
+    components:
+    - type: MeleeThrowOnHit
+      speed: 10
+      unanchorOnHit: Unanchorable
+      stunTime: 0
+    - type: DisarmMalus
+      malus: 0.7
+  - type: LandAtCursor
+  - type: Battery
+    maxCharge: 5000
+    startingCharge: 5000
+  - type: UseDelay
+    delay: 1
+  - type: ItemToggleHot
+  - type: PointLight
+    enabled: false
+    radius: 2
+    energy: 2
+    color: "#9b99ff"
+    netsync: false
+  - type: Item
+    sprite: Vanilla/Objects/Weapons/Melee/powersabre_inhands.rsi
+    size: Small
+  - type: Appearance
+  - type: ItemTogglePointLight
+    toggleableVisualsColorModulatesLights: true
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+        base:
+          True: {visible: false}
+          False: { visible: true }
+  - type: ToggleableVisuals
+    spriteLayer: "blade"
+    inhandVisuals:
+      left:
+      - state: left_enabled
+        shader: unshaded
+      - state: off-inhand-left
+      right:
+      - state: right_enabled
+        shader: unshaded
+      - state: off-inhand-right
+        clothingVisuals:
+          belt:
+          - state: on-equipped-BELT
+  - type: StaticPrice
+    price: 80
+  - type: Riggable
+  - type: SolutionContainerManager
+    solutions:
+      battery:
+        maxVol: 5
+  - type: InjectableSolution
+    solution: battery
+  - type: DrawableSolution
+    solution: battery
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Plastic: 100
+  - type: Tag
+    tags:
+    - PowerSabre

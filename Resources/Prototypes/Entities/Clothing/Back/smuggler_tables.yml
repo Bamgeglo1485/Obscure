@@ -1,3 +1,4 @@
+#Table
 - type: entityTable
   id: RandomSatchelTable
   table: !type:GroupSelector
@@ -464,7 +465,7 @@
     children:
     - id: Crowbar
     - id: Multitool
-    - id: FuClothingHandsGlovesInsuls #Funky
+    - id: ClothingHandsGlovesColorYellow
     - id: Screwdriver
     - id: ClothingHeadHatWeldingMaskFlame
     - id: WelderExperimental

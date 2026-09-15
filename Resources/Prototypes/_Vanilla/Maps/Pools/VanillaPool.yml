@@ -1,0 +1,9 @@
+- type: gameMapPool
+  id: VanillaMapPool
+  maps:
+  # Lowpop (0)
+  - Saltern
+  - CorvaxTushkan
+  - CorvaxSilly
+  # Highpop (15)
+  - CorvaxMaus

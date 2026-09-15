@@ -1,0 +1,479 @@
+# Скаут
+- type: startingGear
+  id: BlueGuyScout
+  parent: BlueTeamGearDefault
+  equipment:
+    shoes: ClothingShoesBootsSpeedUnrem
+    belt: ClothingBeltBandolierFilled
+    outerClothing: ClothingOuterFlannelBlue
+    back: BaseBallBat
+  inhand:
+  - WeaponShotgunSawn
+  - WeaponShotgunSawn
+
+- type: startingGear
+  id: RedGuyScout
+  parent: RedTeamGearDefault
+  equipment:
+    shoes: ClothingShoesBootsSpeedUnrem
+    belt: ClothingBeltBandolierFilled
+    outerClothing: ClothingOuterFlannelRed
+    back: BaseBallBat
+  inhand:
+  - WeaponShotgunSawn
+  - WeaponShotgunSawn
+
+# СОЛДАТ
+- type: startingGear
+  id: BlueGuySoldier
+  parent: BlueTeamGearDefault
+  storage:
+    belt:
+    - MagazineBoxLightRifle
+    - MagazineLightRifle
+    - MagazineLightRifle
+    back:
+    - GrenadeShrapnel
+    - ExGrenade
+  inhand:
+  - WeaponRifleAk
+
+- type: startingGear
+  id: RedGuySoldier
+  parent: RedTeamGearDefault
+  storage:
+    belt:
+    - MagazineBoxLightRifle
+    - MagazineLightRifle
+    - MagazineLightRifle
+    back:
+    - GrenadeShrapnel
+    - ExGrenade
+  inhand:
+  - WeaponRifleAk
+
+# Пулемётчик
+- type: startingGear
+  id: BlueGuyHeavy
+  parent: BlueTeamGearDefault
+  equipment:
+    outerClothing: ClothingOuterArmorHeavyUnrem
+    pocket1: FoodBakedGrilledCheeseSandwich
+    head: ClothingHeadHatWeldingMaskFlameBlueUnrem
+  inhand:
+  - WeaponMinigun
+
+- type: startingGear
+  id: RedGuyHeavy
+  parent: RedTeamGearDefault
+  equipment:
+    outerClothing: ClothingOuterArmorHeavyUnrem
+    pocket1: FoodBakedGrilledCheeseSandwich
+    head: ClothingHeadHatWeldingMaskFlameUnrem
+  inhand:
+  - WeaponMinigun
+# Медик
+
+- type: startingGear
+  id: RedGuyMedic
+  parent: RedTeamGearDefault
+  equipment:
+    eyes: ClothingEyesHudMedical
+  storage:
+    back:
+    - MedicatedSuture
+    - MedicatedSuture
+    - Stimpack
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+  inhand:
+    - Hypospray
+
+- type: startingGear
+  id: BlueGuyMedic
+  parent: BlueTeamGearDefault
+  equipment:
+    eyes: ClothingEyesHudMedical
+  storage:
+    back:
+    - MedicatedSuture
+    - MedicatedSuture
+    - Stimpack
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+  inhand:
+    - Hypospray
+
+# Снайпер
+- type: startingGear
+  id: BlueGuySniper
+  parent: BlueTeamGearDefault
+  equipment:
+    outerClothing: ClothingOuterFlannelBlue
+  storage:
+    back:
+    - MagazineBoxAntiMateriel
+  inhand:
+    - WeaponSniperHristov
+
+- type: startingGear
+  id: RedGuySniper
+  parent: RedTeamGearDefault
+  equipment:
+    outerClothing: ClothingOuterFlannelRed
+  storage:
+    back:
+    - MagazineBoxAntiMateriel
+  inhand:
+    - WeaponSniperHristov
+
+# Шпион
+- type: startingGear
+  id: BlueGuySpy
+  parent: RedTeamGearDefault
+  storage:
+    belt:
+    - MagazineBoxCaselessRifle
+    - MagazinePistolCaselessRifle
+    - MagazinePistolCaselessRifle
+    back:
+    - SmokeGrenade
+  inhand:
+    - WeaponPistolCobra
+    - TTTKnife
+
+- type: startingGear
+  id: RedGuySpy
+  parent: BlueTeamGearDefault
+  storage:
+    belt:
+    - MagazineBoxCaselessRifle
+    - MagazinePistolCaselessRifle
+    - MagazinePistolCaselessRifle
+    back:
+    - SmokeGrenade
+  inhand:
+    - WeaponPistolCobra
+    - TTTKnife
+
+# инженер
+- type: startingGear
+  id: RedGuyEngineer
+  parent: RedTeamGearDefault
+  equipment:
+    belt: ClothingBeltChiefEngineer
+    shoes: ClothingShoesBootsMagAdv
+    pocket1: HandTeleporter
+    pocket2: Wrench
+  storage:
+    belt:
+    - TDMRCD
+  inhand:
+    - ToolboxTurretTDMRed
+
+- type: startingGear
+  id: BlueGuyEngineer
+  parent: BlueTeamGearDefault
+  equipment:
+    belt: ClothingBeltChiefEngineer
+    shoes: ClothingShoesBootsMagAdv
+    pocket1: HandTeleporter
+    pocket2: Wrench
+  storage:
+    belt:
+    - TDMRCD
+  inhand:
+    - ToolboxTurretTDMBlue
+
+# базовые гиры
+- type: startingGear
+  id: BlueTeamGearDefault
+  equipment:
+    head: ClothingHeadHatBluesoftUnrem
+    jumpsuit: ClothingUniformJumpsuitCasualBlueUnrem
+    back: ClothingMilitaryBackpack
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsMercGlovesCombat
+    outerClothing: ClothingOuterVestWebMerc
+    shoes: ClothingShoesBootsCombatFilled
+    belt: ClothingBeltMilitaryWebbing
+    neck: ClothingNeckNanoTrasenPin
+    id: PassengerPDAUnrem
+
+- type: startingGear
+  id: RedTeamGearDefault
+  equipment:
+    head: ClothingHeadHatRedsoftUnrem
+    jumpsuit: ClothingUniformJumpsuitCasualRedUnrem
+    back: ClothingMilitaryBackpack
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsMercGlovesCombat
+    outerClothing: ClothingOuterVestWebMerc
+    shoes: ClothingShoesBootsCombatFilled
+    belt: ClothingBeltMilitaryWebbing
+    neck: ClothingNeckUSSPPin
+    id: PassengerPDAUnrem
+
+## UNREM ВЕРСИИ
+
+- type: entity
+  parent: PassengerPDA
+  id: PassengerPDAUnrem
+  categories: [ HideSpawnMenu ]
+  name: КПК Наёмника
+  description: Почему он серый?
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadHatRedsoft
+  id: ClothingHeadHatRedsoftUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadHatBluesoft
+  id: ClothingHeadHatBluesoftUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingUniformJumpsuitCasualRed
+  id: ClothingUniformJumpsuitCasualRedUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingUniformJumpsuitCasualBlue
+  id: ClothingUniformJumpsuitCasualBlueUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadHatWeldingMaskFlame
+  id: ClothingHeadHatWeldingMaskFlameUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadHatWeldingMaskFlameBlue
+  id: ClothingHeadHatWeldingMaskFlameBlueUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingShoesAbsoluteBoots
+  id: ClothingShoesBootsSpeedUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingOuterArmorHeavy
+  id: ClothingOuterArmorHeavyUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.25
+        Slash: 0.25
+        Piercing: 0.25
+        Heat: 0.25
+        Caustic: 0.25
+  - type: Unremoveable
+  - type: ClothingSpeedModifier
+    walkModifier: 0.65
+    sprintModifier: 0.65
+
+
+- type: entity
+  suffix: puncturase
+  parent: Beaker
+  id: PuncturaseBeakerSmall
+  components:
+  - type: Label
+    currentLabel: reagent-name-puncturase
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 50
+        reagents:
+        - ReagentId: Puncturase
+          Quantity: 50
+
+- type: entity
+  name: Свёрнутая турель
+  parent: ToolboxMechanical
+  id: ToolboxTurretTDMBlue
+  categories: [ HideSpawnMenu ]
+  description: Гаечным ключём разворачивается, отвёрткой сворачивается.
+  components:
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 1
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              WeaponTurretBlueTeam:
+                min: 1
+                max: 1
+
+- type: entity
+  name: Свёрнутая турель
+  parent: ToolboxEmergency
+  id: ToolboxTurretTDMRed
+  categories: [ HideSpawnMenu ]
+  description: Гаечным ключём разворачивается, отвёрткой сворачивается.
+  components:
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 1
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              WeaponTurretRedTeam:
+                min: 1
+                max: 1
+
+- type: entity
+  parent: WeaponTurretSyndicateDisposable
+  id: WeaponTurretRedTeam
+  name: турель красной команды
+  description: Красотка.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Gun
+    fireRate: 9
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+  - type: TDMMarker
+    team: true
+  - type: NpcFactionMember
+    factions:
+    - RedTeamTDM
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 395
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:TriggerBehavior
+
+- type: entity
+  parent: WeaponTurretSyndicateDisposable
+  id: WeaponTurretBlueTeam
+  name: турель синей команды
+  description: Красотка.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Gun
+    fireRate: 9
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
+  - type: TDMMarker
+    team: false
+  - type: NpcFactionMember
+    factions:
+    - BlueTeamTDM
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 395
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:TriggerBehavior
+
+- type: entity
+  parent: RCD
+  id: TDMRCD
+  name: РСУ
+  description: Ставь стеночки инженер!
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RCD
+    availablePrototypes:
+    - WallSolid
+    - Window
+
+- type: entity
+  parent: ClothingBeltBandolier
+  id: ClothingBeltBandolierFilled
+  name: Патронташ
+  description: ЗАРЯЖАЙ
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BallisticAmmoProvider
+    proto: ShellShotgun
+    whitelist:
+      tags:
+        - ShellShotgun
+    capacity: 28

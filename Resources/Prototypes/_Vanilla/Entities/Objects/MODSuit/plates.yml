@@ -1,0 +1,122 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMODSuitPlate
+  name: базовая бронепластина
+  description: Устанавливается в экзоскелет.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/MODSuit/plates.rsi
+    state: steel
+  - type: Tag
+    tags:
+    - MODSuitModule
+  - type: MODSuitModule
+
+- type: entity
+  parent: BaseMODSuitPlate
+  id: MODSuitPlateSteel
+  name: стальная бронепластина
+  description: Устанавливается в экзоскелет. Имеет средний вес и броню. Плохо защищает от ударов.
+  components:
+  - type: MODSuitModule
+    equippedState: equipped-steel-module
+    iconState: steel-module
+    spritePriority: 2
+    speedModifier: 0.85
+    armorModifiers:
+      coefficients:
+        Blunt: 0.95 # Металлы хорошо защищают от колющих и режущих, но плохо от ударов
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Shock: 1.2 # Проводит электричество
+
+- type: entity
+  parent: BaseMODSuitPlate
+  id: MODSuitPlatePlasteel
+  name: пласталевая бронепластина
+  description: Устанавливается в экзоскелет. Имеет тяжёлый вес и хорошую броню. Плохо защищает от ударов.
+  components:
+  - type: Sprite
+    state: plasteel
+  - type: MODSuitModule
+    equippedState: equipped-steel-module
+    iconState: steel-module
+    speedModifier: 0.75 # Медленнее, чем стальная
+    armorModifiers: # Броня сильнее, чем стальная
+      coefficients:
+        Blunt: 0.9 # Металлы хорошо защищают от колющих и режущих, но плохо от ударов
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
+
+- type: entity
+  parent: BaseMODSuitPlate
+  id: MODSuitPlateUranium
+  name: урановая бронепластина
+  description: Устанавливается в экзоскелет. Хорошо защищает от радиации, но повышает урон от ожогов. Не замедляет.
+  components:
+  - type: Sprite
+    state: uranium
+  - type: MODSuitModule
+    equippedState: equipped-uranium-module
+    iconState: uranium-module
+    armorModifiers:
+      coefficients:
+        Radiation: 0.1 # Защищает от радиации, потому что необогащённый уран это замедлитель
+
+- type: entity
+  parent: BaseMODSuitPlate
+  id: MODSuitPlatePlastic
+  name: пластиковая бронепластина
+  description: Устанавливается в экзоскелет. Очень хорошо защищает режущих, но повышает урон от колющих и тупых. Не замедляет.
+  components:
+  - type: Sprite
+    state: plastic
+  - type: MODSuitModule
+    equippedState: equipped-plastic-module
+    iconState: plastic-module
+    armorModifiers:
+      coefficients:
+        Blunt: 1.2 # Пластик легко ломается
+        Slash: 0.6
+        Piercing: 1.2 # Пластик легко ломается
+
+- type: entity
+  parent: BaseMODSuitPlate
+  id: MODSuitPlateDurathread
+  name: дюратканевая бронепластина
+  description: Устанавливается в экзоскелет. Очень хорошо защищает колющих и режущих, но сильно повышает урон от ожогов. Не замедляет.
+  components:
+  - type: Sprite
+    state: durathread
+  - type: MODSuitModule
+    equippedState: equipped-durathread-module
+    iconState: durathread-module
+    armorModifiers:
+      coefficients:
+        Heat: 1.4
+        Piercing: 0.75
+        Slash: 0.75
+
+- type: entity
+  parent: BaseMODSuitPlate
+  id: MODSuitPlateDiamond
+  name: алмазная бронепластина
+  description: Устанавливается в экзоскелет. Хорошо отражает лазеры, но повышает урон от тупых. Немного замедляет.
+  components:
+  - type: Sprite
+    state: diamond
+  - type: MODSuitModule
+    speedModifier: 0.9
+    equippedState: equipped-diamond-module
+    iconState: diamond-module
+    armorModifiers:
+      coefficients:
+        Blunt: 1.3
+    components:
+    - type: Reflect
+      reflectProb: 0.5
+      reflects:
+      - Energy

@@ -1,0 +1,97 @@
+[game]
+map_pool = "VanillaMapPool"
+panic_bunker.enabled = false
+contraband_examine = true
+lobbyenabled = true
+lobbyduration = 180
+round_restart_time = 260
+secret_weight_prototype = "RaytenSecretDefault"
+admin_job_tracking = true
+fallbackenabled = false
+
+[log]
+path = "logs"
+format = "log_%(date)s-%(time)s.txt"
+level = 1
+enabled = true
+
+[ic]
+punctuation = true
+flavor_text = false
+ssd_sleep_time = 120
+
+[vote]
+restart_required_ratio = 0.7
+restart_enabled = false
+map_enabled = true
+timermap = 45
+
+[chat]
+rate_limit_count = 7
+rate_limit_period = 7
+max_announcement_length = 850
+
+[shuttle]
+auto_call_time = 100
+auto_call_extension_time = 30
+emergency_early_launch_allowed = false
+travel_time = 1
+
+[biomass]
+easy_mode = false
+
+[netres]
+limit = 10.0
+
+[admin]
+deadmin_on_join = true
+see_own_notes = true
+new_player_threshold = 300
+alert.min_players_sharing_connection = 2
+new_player_join_sound = true
+note_stale_days = 180.0
+note_fresh_days = 90.0
+
+[console]
+login_host_user = "Geglo1485x"
+
+[ahelp]
+admin_prefix = 1
+rate_limit_count = 3
+rate_limit_period = 6
+
+[atmos]
+space_wind = true
+max_explosion_range = 7
+
+[auth]
+mode = 1
+
+[viewport]
+maximum_width = 30
+
+[server]
+rules_file = "MRPRulset"
+
+[rules]
+time = 30
+
+[replay]
+auto_record = true
+
+[discord]
+rich_main_icon_id = "vanilla-station"
+
+[movement]
+mob_pushing = true
+
+[events]
+enabled = true
+[ghost]
+role_time = 10
+
+[control]
+storage_limit = 3
+
+[queue]
+enabled = true

@@ -1,0 +1,39 @@
+- type: construction
+  id: ImprovisedPlasmaSword
+  graph: ImprovisedPlasmaSwordGraph
+  startNode: start
+  targetNode: sword
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: ImprovisedDoubleBarreledShotgun
+  graph: ImprovisedDoubleBarrelGraph
+  startNode: start
+  targetNode: shotgun
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: ImprovisedBombPack
+  graph: ImprovisedBombPackGraph
+  startNode: start
+  targetNode: bombpack
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: ImprovisedEmitterGun
+  graph: ImprovisedEmitterGunGraph
+  startNode: start
+  targetNode: finish
+  category: construction-category-weapons
+  objectType: Item
+
+- type: construction
+  id: ImprovisedArmorVest
+  graph: ImprovisedArmorVestGraph
+  startNode: start
+  targetNode: vest
+  category: construction-category-clothing
+  objectType: Item

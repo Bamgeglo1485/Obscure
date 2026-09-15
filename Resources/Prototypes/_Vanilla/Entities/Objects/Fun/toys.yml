@@ -1,0 +1,114 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieLizardGrandTanaka
+  name: Grand-Tanaka plushie
+  description: An adorable stuffed toy that resembles a lizardperson. HandMade.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
+    state: plushie_lizard_grand_tanaka
+  - type: EmitSoundOnUse
+    sound: &TanakaSound
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnLand
+    sound: *TanakaSound
+  - type: EmitSoundOnActivate
+    sound: *TanakaSound
+  - type: EmitSoundOnTrigger
+    sound: *TanakaSound
+  - type: Edible
+    requiresSpecialDigestion: true
+    useSound: *TanakaSound
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit: *TanakaSound
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceThatMakesYouWeh
+        Quantity: 30
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+        - ReagentId: JuiceThatMakesYouWeh
+          Quantity: 10
+  - type: Clothing
+    quickEquip: false
+    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
+    equippedPrefix: lizard_grand_tanaka
+    slots:
+    - HEAD
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieCentcomAliaZimova
+  name: Alia Zimova plushie
+  description: The OCC is a toy that smells of bureaucracy so strongly that you can already feel how paper reports wrap around you, ready to strangle you with their endless bureaucratic power. Well, shall we make another request for permission to breathe?
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
+    state: plushie_centcom_alia_zimova
+  - type: EmitSoundOnUse
+    sound: &ZimovaSound
+      path: /Audio/Items/Toys/rawr.ogg
+  - type: EmitSoundOnLand
+    sound: *ZimovaSound
+  - type: EmitSoundOnActivate
+    sound: *ZimovaSound
+  - type: EmitSoundOnTrigger
+    sound: *ZimovaSound
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit: *ZimovaSound
+
+- type: entity
+  parent: BasePlushie
+  id: plushieUnaAkvanova
+  name: Una Akvanova plushe
+  description: Rumor has it that she is a backyard cosplayer...
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
+    state: plushie_una_Akvanova
+  - type: Tag
+    tags:
+      - Payload
+  - type: UseDelay
+    delay: 35.0
+  - type: EmitSoundOnUse
+    sound: &UnaSound
+      path: /Audio/Vanilla/Items/Toys/yooooo.ogg
+      params:
+        volume: -3
+        maxDistance: 4
+  - type: EmitSoundOnActivate
+    sound: *UnaSound
+  - type: EmitSoundOnTrigger
+    sound: *UnaSound
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieJozephTexov
+  name: плюшевый Джозеф Техов
+  description: По слухам, именно он изменил внешний вид более сотни предметов одним махом, используя загадочную технологию "респрайтинга".
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
+    state: plushie_joseph_techov
+  - type: EmitSoundOnUse
+    sound: &TexovSound
+      collection: ExplosionSmall
+      params:
+        volume: -4
+  - type: EmitSoundOnActivate
+    sound: *TexovSound
+  - type: EmitSoundOnCollide
+    sound: *TexovSound
+  - type: EmitSoundOnLand
+    sound: *TexovSound
+  - type: EmitSoundOnTrigger
+    sound: *TexovSound

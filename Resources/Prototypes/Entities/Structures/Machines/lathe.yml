@@ -199,6 +199,11 @@
     - ChemistryStatic
     - SurgeryStatic
     dynamicPacks:
+    # rayten-start
+    - SpaceManipulation
+    - AbsolteTechnology
+    - NightVision
+    # rayten-end
     - AdvancedTools
     - ScienceEquipment
     - ScienceExplosives

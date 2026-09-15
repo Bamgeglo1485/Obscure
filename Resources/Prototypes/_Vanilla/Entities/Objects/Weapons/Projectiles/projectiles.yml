@@ -1,0 +1,156 @@
+- type: entity
+  id: ProjectilePortalGun
+  parent: BaseBullet
+  name: Внестанционная дислокация
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: spell
+      color: '#00FF00'
+  - type: Projectile
+    damage:
+      types:
+        Cellular: 5
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: RepeatingTrigger
+    delay: 1.0
+  - type: DeleteOnTrigger
+  - type: SpawnOnTrigger
+    proto: RandomPortalEntry
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.8,-0.8,0.8,0.8"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+
+- type: entity
+  id: ProjectilePortalGunDimensional
+  parent: ProjectilePortalGun
+  name: Межпространственная дислокация
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnOnTrigger
+    proto: RandomPortalDimensionalEntry
+
+- type: entity
+  id: ProjectilePortalGunStation
+  parent: ProjectilePortalGun
+  name: Станционная дислокация
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnOnTrigger
+    proto: RandomPortalInStationEntry
+
+- type: entity
+  id: ProjectilePortalGunOmega
+  parent: ProjectilePortalGun
+  name: Внестанционная дислокация
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: spell
+      color: "#ffe600"
+  - type: SpawnOnTrigger
+    proto: RandomPortalEntryOmega
+
+- type: entity
+  id: ProjectilePortalGunDimensionalOmega
+  parent: ProjectilePortalGunOmega
+  name: Межпространственная дислокация
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnOnTrigger
+    proto: RandomPortalDimensionalEntryOmega
+
+- type: entity
+  id: ProjectilePortalGunStationOmega
+  parent: ProjectilePortalGunOmega
+  name: Станционная дислокация
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SpawnOnTrigger
+    proto: RandomPortalInStationEntryOmega
+
+- type: entity
+  id: ProjectilePortalGunCoordinated
+  parent: BaseBullet
+  name: Координатная дислокация
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: spell
+      color: '#00FF00'
+  - type: Projectile
+    damage:
+      types:
+        Cellular: 5
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: RepeatingTrigger
+    delay: 1.0
+  - type: DeleteOnTrigger
+  - type: SpawnCoordinatedPortalOnTrigger
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.8,-0.8,0.8,0.8"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+
+- type: entity
+  id: ProjectilePortalGunCoordinatedOmega
+  parent: ProjectilePortalGunCoordinated
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: spell
+      color: "#ffe600"
+  - type: SpawnCoordinatedPortalOnTrigger
+    portalPrototype: CoordinatedPortalEntryOmega
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBulletTrigger
+  id: ProjectileHID
+  components:
+  - type: PointLight
+    color: "#1fcbff"
+    radius: 3.0
+    energy: 5.0
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: bluespace
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 10000
+  - type: Projectile
+    damage:
+      types:
+        Shock: 20
+    deleteOnCollide: true
+  - type: IgnitionSource
+    temperature: 1000
+    ignited: true
+  - type: RepeatingTrigger
+    delay: .05
+  - type: SpawnOnTrigger
+    proto: RailTrack

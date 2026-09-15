@@ -17,7 +17,6 @@ namespace Content.Shared.Body.Components;
 /// </summary>
 [RegisterComponent, NetworkedComponent,]
 [AutoGenerateComponentState(fieldDeltas: true), AutoGenerateComponentPause]
-[Access(typeof(BloodstreamSystem))]
 public sealed partial class BloodstreamComponent : Component
 {
     public const string DefaultBloodSolutionName = "bloodstream";

@@ -58,7 +58,6 @@ public sealed partial class DamageableComponent : Component
     ///     The sum of all damages in the DamageableComponent.
     /// </summary>
     [ViewVariables]
-    [Access(typeof(DamageableSystem), Other = AccessPermissions.None)]
     public FixedPoint2 TotalDamage;
 
     [DataField("radiationDamageTypes")]
@@ -71,15 +70,25 @@ public sealed partial class DamageableComponent : Component
     /// </summary>
     [DataField]
     public ProtoId<DisplacementDataPrototype>? Displacement;
+
+    //Rayten-start
+    [DataField]
+    public Dictionary<string, ProtoId<DamageIconPrototype>> DamageGroupIcons = new();
+
+    [DataField]
+    public bool Bleeding;
+    //Rayten-end
 }
 
 [Serializable, NetSerializable]
 public sealed class DamageableComponentState(
     DamageSpecifier damage,
     ProtoId<DamageModifierSetPrototype>? modifierSetId,
-    ProtoId<DisplacementDataPrototype>? displacement)
+    ProtoId<DisplacementDataPrototype>? displacement,
+    bool bleeding) //Rayten
     : ComponentState
 {
+    public readonly bool Bleeding = bleeding; // RAYTEN
     public readonly DamageSpecifier Damage = damage;
     public readonly ProtoId<DamageModifierSetPrototype>? ModifierSetId = modifierSetId;
     public readonly ProtoId<DisplacementDataPrototype>? Displacement = displacement;

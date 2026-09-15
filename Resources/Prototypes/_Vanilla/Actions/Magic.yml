@@ -1,0 +1,102 @@
+- type: entity
+  id: ActionSplodeItem
+  name: Взорвать предмет
+  description: Позволяет заряжать неуглеродные вещества кинетической энергией, вызывая кабууум!
+  components:
+  - type: Action
+    useDelay: 3
+    itemIconStyle: BigAction
+    priority: -20
+    raiseOnAction: true
+  - type: InstantAction
+    event: !type:SplodeMarkingEvent
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionSplodeItemII
+  - type: Sprite
+    sprite: Vanilla/Actions/Splode.rsi
+    layers:
+    - state: ItemSplode
+
+- type: entity
+  id: ActionSplodeItemII
+  parent: ActionSplodeItem
+  components:
+  - type: Action
+    useDelay: 2
+  - type: InstantAction
+    event: !type:SplodeMarkingEvent
+      strength: 1.5
+      explosionType: Default
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionSplodeItemIII
+
+- type: entity
+  id: ActionSplodeItemIII
+  parent: ActionSplodeItemII
+  components:
+  - type: Action
+    useDelay: 1
+
+- type: entity
+  id: ActionSelfSplode
+  name: Взорваться
+  description: Позволяет зарядить свой скелет, вызвав сильный взрыв. Работает только если у вас достаточно режущего или колющего урона.
+  parent: BaseSuicideAction
+  components:
+  - type: Action
+    useDelay: 10
+    itemIconStyle: BigAction
+    priority: -20
+    raiseOnAction: true
+  - type: InstantAction
+    event: !type:SelfSplodingEvent
+  - type: SpeakOnAction
+    sentence: action-speech-self-splode
+  - type: Sprite
+    sprite: Vanilla/Actions/Splode.rsi
+    layers:
+    - state: SelfCharge
+
+- type: entity
+  id: ActionTimeStop5Sec
+  components:
+  - type: Action
+    useDelay: 300
+    itemIconStyle: BigAction
+    priority: -20
+  - type: InstantAction
+    event: !type:TimeStopEvent
+      prototype: TimeStop5sec
+  - type: Sprite
+    sprite: Vanilla/Objects/Devices/timestopper.rsi
+    layers:
+    - state: icon
+
+- type: entity
+  parent: ActionTimeStop5Sec
+  id: ActionTimeStop10Sec
+  components:
+  - type: Action
+    useDelay: 480
+  - type: InstantAction
+    event: !type:TimeStopEvent
+      prototype: TimeStop10sec
+  - type: SpeakOnAction
+    sentence: action-speech-time-stop
+
+- type: entity
+  id: ActionTimeStop5SecLowDelay
+  components:
+  - type: Action
+    useDelay: 30
+    itemIconStyle: BigAction
+    priority: -20
+  - type: InstantAction
+    event: !type:TimeStopEvent
+      prototype: TimeStop5sec
+  - type: Sprite
+    sprite: Vanilla/Objects/Devices/timestopper.rsi
+    layers:
+    - state: icon

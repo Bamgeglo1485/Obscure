@@ -83,6 +83,11 @@ public sealed partial class BatteryWeaponFireModesSystem : EntitySystem
         if (args.Handled)
             return;
 
+        // RAYTEN STARTS
+        if (!ent.Comp.ChangeModeOnUse)
+            return;
+        // RAYTENDS
+
         args.Handled = true;
         TryCycleFireMode(ent, args.User);
     }

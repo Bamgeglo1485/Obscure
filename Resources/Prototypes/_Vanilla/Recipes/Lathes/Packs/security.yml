@@ -1,0 +1,25 @@
+- type: latheRecipePack
+  id: DominatorWeaponry
+  recipes:
+  - WeaponAssaultDominator
+  - WeaponEnergyShotgun
+  - WeaponDominator
+
+- type: latheRecipePack
+  id: NightVision
+  recipes:
+  - ClothingEyesNightVisionDeviceEmpty
+
+- type: latheRecipePack
+  id: ThermalVision
+  recipes:
+  - ClothingEyesThermalGlassesEmpty
+
+- type: latheRecipePack
+  id: AbsolteTechnology
+  recipes:
+  - ClothingShoesAbsoluteBoots
+  - ClothingBackpackAbsolute
+  - ClothingHandsGlovesAbsolute
+  - ClothingOuterCoatAbsolute
+  - ClothingUniformJumpsuitAbsolute

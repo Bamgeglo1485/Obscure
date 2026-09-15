@@ -16,6 +16,17 @@
     priceMultiplier: 0
   - type: ZombificationResistance
     zombificationResistanceCoefficient: 0.55
+  - type: Edible
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 30
+      stain:
+        maxVol: 5
   - type: Tag
     tags:
     - ClothMade
@@ -46,7 +57,7 @@
   name: atmospherics winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: ATMOS-icon
   - type: Item
@@ -56,7 +67,7 @@
       right:
       - state: ATMOS-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: ATMOS-equipped-OUTERCLOTHING
@@ -87,12 +98,12 @@
     clothingPrototype: ClothingHeadHatHoodWinterBartender
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstCommandContraband]
   id: ClothingOuterWinterCap
   name: captain's winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     layers:
     - state: CAP-icon
   - type: Item
@@ -102,12 +113,23 @@
       right:
       - state: CAP-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     clothingVisuals:
       outerClothing:
       - state: CAP-equipped-OUTERCLOTHING
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterCaptain
+  # RAYTEN-STARTS
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.6
+        Heat: 0.5
+        Caustic: 0.9
+  - type: GroupExamine
+  # RAYTEN-ENDS
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable
@@ -133,12 +155,12 @@
     clothingPrototype: ClothingHeadHatHoodWinterCargo
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstCommandContraband]
   id: ClothingOuterWinterCE
   name: chief engineer's winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: CE-icon
   - type: Item
@@ -148,7 +170,7 @@
       right:
       - state: CE-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: CE-equipped-OUTERCLOTHING
@@ -156,7 +178,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterCE
 
 - type: entity
-  parent: [ ClothingOuterWinterCoatToggleable, BaseCentcommContraband ]
+  parent: [ ClothingOuterWinterCoatToggleable, CentcommContraband ]
   id: ClothingOuterWinterCentcom
   name: CentComm winter coat
   components:
@@ -206,7 +228,7 @@
   name: chemistry winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     layers:
     - state: CHEM-icon
   - type: Item
@@ -216,7 +238,7 @@
       right:
       - state: CHEM-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     clothingVisuals:
       outerClothing:
       - state: CHEM-equipped-OUTERCLOTHING
@@ -231,12 +253,12 @@
     clothingPrototype: ClothingHeadHatHoodWinterChem
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstCommandContraband]
   id: ClothingOuterWinterCMO
   name: chief medical officer's winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: CMO-icon
   - type: Item
@@ -246,7 +268,7 @@
       right:
       - state: CMO-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: CMO-equipped-OUTERCLOTHING
@@ -276,7 +298,7 @@
   name: engineering winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: ENGI-icon
   - type: Item
@@ -286,7 +308,7 @@
       right:
       - state: ENGI-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: ENGI-equipped-OUTERCLOTHING
@@ -324,7 +346,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterSci
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstCommandContraband]
   id: ClothingOuterWinterHoP
   name: head of personnel's winter coat
   components:
@@ -349,7 +371,7 @@
 
 ##########################################################
 - type: entity
-  parent: [ClothingOuterArmorHoS, ClothingOuterWinterCoatToggleable, BaseSecurityCommandContraband]
+  parent: [ClothingOuterArmorHoS, ClothingOuterWinterCoatToggleable, FirstSecurityCommandContraband]
   id: ClothingOuterWinterHoS
   name: head of security's armored winter coat
   description: A sturdy, utilitarian winter coat designed to protect a head of security from any brig-bound threats and hypothermic events.
@@ -368,7 +390,7 @@
 ##########################################################
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseSecurityCommandContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstSecurityCommandContraband]
   id: ClothingOuterWinterHoSUnarmored
   name: head of security's winter coat
   description: A sturdy coat, a warm coat, but not an armored coat.
@@ -450,7 +472,7 @@
   name: medical winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: MED-icon
   - type: Item
@@ -460,7 +482,7 @@
       right:
       - state: MED-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: MED-equipped-OUTERCLOTHING
@@ -551,12 +573,12 @@
     clothingPrototype: ClothingHeadHatHoodWinterPara
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstCommandContraband]
   id: ClothingOuterWinterQM
   name: quartermaster's winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: QM-icon
   - type: Item
@@ -566,7 +588,7 @@
       right:
       - state: QM-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: QM-equipped-OUTERCLOTHING
@@ -575,12 +597,12 @@
 
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstCommandContraband]
   id: ClothingOuterWinterRD
   name: research director's winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: RD-icon
   - type: Item
@@ -590,7 +612,7 @@
       right:
       - state: RD-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: RD-equipped-OUTERCLOTHING
@@ -634,7 +656,7 @@
   name: science winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: SCI-icon
   - type: Item
@@ -644,7 +666,7 @@
       right:
       - state: SCI-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: SCI-equipped-OUTERCLOTHING
@@ -659,12 +681,12 @@
     clothingPrototype: ClothingHeadHatHoodWinterSci
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseSecurityContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstSecurityContraband]
   id: ClothingOuterWinterSec
   name: security winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     layers:
     - state: SEC-icon
   - type: Item
@@ -674,7 +696,7 @@
       right:
       - state: SEC-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     clothingVisuals:
       outerClothing:
       - state: SEC-equipped-OUTERCLOTHING
@@ -713,7 +735,7 @@
 
 ################################################################
 - type: entity
-  parent: [ClothingOuterArmorWarden, ClothingOuterWinterCoatToggleable, BaseSecurityContraband]
+  parent: [ClothingOuterArmorWarden, ClothingOuterWinterCoatToggleable, FirstSecurityContraband]
   id: ClothingOuterWinterWarden
   name: warden's armored winter coat
   description: A sturdy, utilitarian winter coat designed to protect a warden from any brig-bound threats and hypothermic events.
@@ -732,7 +754,7 @@
 ################################################################
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseSecurityContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstSecurityContraband]
   id: ClothingOuterWinterWardenUnarmored
   name: warden's winter coat
   description: A sturdy coat, a warm coat, but not an armored coat.
@@ -756,7 +778,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterWarden
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseSyndicateContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstSyndicateContraband]
   id: ClothingOuterWinterSyndieCap
   name: syndicate's winter coat
   description: "The syndicate's winter coat is made of durable fabric, with gilded patterns, and coarse wool."
@@ -781,7 +803,7 @@
 
 ##############################################################
 - type: entity
-  parent: [ BaseSyndicateContraband, ClothingOuterWinterWarden ]
+  parent: [ SecondSyndicateContraband, ClothingOuterWinterWarden ]
   id: ClothingOuterWinterSyndieCapArmored
   name: syndicate's armored winter coat
   description: "The syndicate's armored winter coat is made of durable fabric, with gilded patterns, and coarse wool."
@@ -795,7 +817,7 @@
 ##############################################################
 
 - type: entity
-  parent: [ClothingOuterWinterCoatToggleable, BaseSyndicateContraband]
+  parent: [ClothingOuterWinterCoatToggleable, FirstSyndicateContraband]
   id: ClothingOuterWinterSyndie
   name: syndicate's winter coat
   description: Insulated winter coat, looks like a merch from "Syndieland".
@@ -866,7 +888,7 @@
     solution:
       reagents:
       - ReagentId: Fiber
-        Quantity: 20 # 15 (3 (fiber count of web) * 5 (to craft)) + 5 (magical crafting bonus)
+        Quantity: 50 # 50 (10 (fiber count of web) * 5 (to craft))
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterWeb
 

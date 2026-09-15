@@ -1,0 +1,51 @@
+- type: listing
+  id: UplinkThermalGlasses
+  name: uplink-thermalglasses-name
+  description: uplink-thermalglasses-desc
+  productEntity: ClothingEyesThermalGlassesSyndie
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 5
+  categories:
+  - UplinkWearables
+
+- type: listing
+  id: UplinkClothingBackpackThermoOptic
+  name: uplink-thermo-optic-name
+  description: uplink-thermo-optic-desc
+  productEntity: ClothingBackpackThermoOptic
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 5
+  categories:
+  - UplinkWearables
+
+- type: listing
+  id: UplinkSheathSyndieFilledBox
+  name: uplink-syndicate-rapier-name
+  description: uplink-syndicate-rapier-desc
+  icon: { sprite: Vanilla/Objects/Weapons/Melee/syndicate_rapier.rsi, state: icon }
+  productEntity: BeltSheathSyndieFilledBox
+  discountDownTo:
+    Telecrystal: 5
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: UplinkDNAInjector
+  name: uplink-dna-injector-name
+  description: uplink-dna-injector-desc
+  productEntity: DnaInjector
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkDeception

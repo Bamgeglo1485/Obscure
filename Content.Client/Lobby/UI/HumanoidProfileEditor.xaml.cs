@@ -19,6 +19,7 @@ using Robust.Shared.ContentPack;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Direction = Robust.Shared.Maths.Direction;
+using Content.Shared.Roles;
 
 namespace Content.Client.Lobby.UI
 {
@@ -35,7 +36,7 @@ namespace Content.Client.Lobby.UI
         private readonly MarkingManager _markingManager;
         private readonly JobRequirementsManager _requirements;
         private readonly LobbyUIController _controller;
-
+        private ISawmill _sawmill = default!;
         private readonly SpriteSystem _sprite;
 
         // CCvar.
@@ -72,8 +73,6 @@ namespace Content.Client.Lobby.UI
                 UpdateSaveButton();
             }
         }
-
-        private ISawmill _sawmill;
 
         private MarkingsViewModel _markingsModel = new();
 
@@ -139,7 +138,6 @@ namespace Content.Client.Lobby.UI
             };
 
             #region Left
-
             #region Name
 
             NameEdit.OnTextChanged += args => { SetName(args.Text); };
@@ -323,6 +321,11 @@ namespace Content.Client.Lobby.UI
 
             UpdateSpeciesGuidebookIcon();
             IsDirty = false;
+            // Rayten-TTS-Start
+            #region Voice
+            InitializeVoice();
+            #endregion
+            // Rayten-TTS-End
         }
 
         private void SetDirty()
@@ -338,6 +341,22 @@ namespace Content.Client.Lobby.UI
             IsDirty = true;
         }
 
+        private void SetVoice(string newVoice)
+        {
+            Profile = Profile?.WithVoice(newVoice);
+            IsDirty = true;
+        }
+        private void SetBarkVoice(string newVoice)
+        {
+            Profile = Profile?.WithBarkVoice(newVoice);
+            IsDirty = true;
+        }
+        private void SetVoicePitch(float newVoicePitch)
+        {
+            Profile = Profile?.WithVoicePitch(newVoicePitch);
+            IsDirty = true;
+        }
+        //RAYTEN-END
         /// <summary>
         /// Reloads the entire dummy entity for preview.
         /// </summary>
@@ -386,7 +405,7 @@ namespace Content.Client.Lobby.UI
             UpdateEyePickers();
             UpdateSaveButton();
             UpdateMarkings();
-
+            UpdateTTSVoicesControls();//rayten
             RefreshAntags();
             RefreshJobs();
             RefreshLoadouts();

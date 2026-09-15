@@ -1447,7 +1447,7 @@ namespace Content.Shared.Interaction
         /// <param name="args">Optional handleable entity event to check.</param>
         /// <param name="interactionParticles">Whether to spawn interaction particles on this contact.</param>
         /// <param name="interactionParticleType">The type of interaction particle to spawn for this event.</param>
-        public void DoContactInteraction(EntityUid uidA, EntityUid? uidB, EntityUid? used, bool predicted, HandledEntityEventArgs? args = null, bool interactionParticles = true, StellarInteractionParticleType interactionParticleType = StellarInteractionParticleType.Use) // Stellar/ES - interaction particles
+        public void DoContactInteraction(EntityUid uidA, EntityUid? uidB, EntityUid? used = null, bool predicted = true, HandledEntityEventArgs? args = null, bool interactionParticles = true, StellarInteractionParticleType interactionParticleType = StellarInteractionParticleType.Use) // Stellar/ES - interaction particles
         {
             if (uidB == null || args?.Handled == false)
                 return;

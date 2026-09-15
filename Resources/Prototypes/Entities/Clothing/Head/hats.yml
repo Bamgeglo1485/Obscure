@@ -55,9 +55,9 @@
   description: A beret with the security department's insignia. For officers that are more inclined towards style than safety.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Head/Hats/security_beret.rsi
+    sprite: Clothing/Head/Hats/beret_security.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Head/Hats/security_beret.rsi
+    sprite: Clothing/Head/Hats/beret_security.rsi
   - type: Tag
     tags:
     - ClothMade
@@ -74,9 +74,9 @@
   description: A campaign hat for the Nanotrasen Troopers. It's supposed to come with a case, too...
   components:
   - type: Sprite
-    sprite:  _Funkystation/Clothing/Head/Hats/security.rsi
+    sprite: Clothing/Head/Hats/security_trooper_hat.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Head/Hats/security.rsi
+    sprite: Clothing/Head/Hats/security_trooper_hat.rsi
   - type: Tag
     tags:
     - ClothMade
@@ -161,9 +161,9 @@
   description: A black beret with a commander's rank emblem. For officers that are more inclined towards style than safety.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Head/Hats/hos_beret.rsi
+    sprite: Clothing/Head/Hats/beret_hos.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Head/Hats/hos_beret.rsi
+    sprite: Clothing/Head/Hats/beret_hos.rsi
   - type: Tag
     tags:
     - PetWearable
@@ -180,9 +180,9 @@
   description: A corporate-blue beret with a warden's rank emblem. For officers that are more inclined towards style than safety.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Head/Hats/warden_beret.rsi
+    sprite: Clothing/Head/Hats/beret_warden.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Head/Hats/warden_beret.rsi
+    sprite: Clothing/Head/Hats/beret_warden.rsi
   - type: Tag
     tags:
     - PetWearable
@@ -270,7 +270,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseCommandContraband]
+  parent: [ClothingHeadBase, FirstCommandContraband]
   id: ClothingHeadHatCaptain
   name: captain's hardhat
   description: Feels good being the king.
@@ -304,7 +304,7 @@
   - type: IngestionBlocker
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  parent: [ ClothingHeadBase, CentcommContraband ]
   id: ClothingHeadHatCentcom
   name: CentComm brand hat
   description: Feels good being the king's boss.
@@ -409,7 +409,7 @@
     - CorgiWearable
 
 - type: entity
-  parent: [ClothingHeadBase, BaseCommandContraband]
+  parent: [ClothingHeadBase, FirstCommandContraband]
   id: ClothingHeadHatHopcap
   name: head of personnel's cap
   description: A stylish cap worn by the Head of Personnel. Shows paperwork who's in charge.
@@ -428,15 +428,15 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseCommandContraband]
+  parent: [ClothingHeadBase, FirstCommandContraband]
   id: ClothingHeadHatHoshat
   name: head of security cap
   description: A stylish cap worn by the Head of Security. Shows the officers who's in charge.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Head/Hats/hos.rsi
+    sprite: Clothing/Head/Hats/hoshat.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Head/Hats/hos.rsi
+    sprite: Clothing/Head/Hats/hoshat.rsi
   - type: Tag
     tags:
     - PetWearable
@@ -757,9 +757,9 @@
   description: This hat emphasizes that you are THE LAW.
   components:
   - type: Sprite
-    sprite: _Funkystation/Clothing/Head/Hats/warden.rsi
+    sprite: Clothing/Head/Hats/warden.rsi
   - type: Clothing
-    sprite: _Funkystation/Clothing/Head/Hats/warden.rsi
+    sprite: Clothing/Head/Hats/warden.rsi
   - type: StealTarget
     stealGroup: ClothingHeadHatWarden
   - type: Tag
@@ -807,7 +807,7 @@
 
 - type: entity
   abstract: true
-  parent: [ ClothingHeadBase, BaseMagicalContraband ]
+  parent: [ ClothingHeadBase, MagicalContraband ]
   id: ClothingHeadHatWizardBase
   components:
   - type: WizardClothes
@@ -846,7 +846,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatTrucker
   name: trucker hat
-  description: Formerly Chuck's, this hat is yours now. Not really, these hats are mass produced.
+  description: Formerly Chuck's, this hat is yours now.
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/truckershat.rsi
@@ -854,7 +854,7 @@
     sprite: Clothing/Head/Hats/truckershat.rsi
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: [ ClothingHeadBase, FirstSyndicateContraband ]
   id: ClothingHeadPyjamaSyndicateBlack
   name: syndicate black pyjama hat
   description: For keeping that traitor head of yours warm.
@@ -870,7 +870,7 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: [ ClothingHeadBase, FirstSyndicateContraband ]
   id: ClothingHeadPyjamaSyndicatePink
   name: syndicate pink pyjama hat
   description: For keeping that traitor head of yours warm.
@@ -886,7 +886,7 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseSyndicateContraband ]
+  parent: [ ClothingHeadBase, FirstSyndicateContraband ]
   id: ClothingHeadPyjamaSyndicateRed
   name: syndicate red pyjama hat
   description: For keeping that traitor head of yours warm.
@@ -1027,7 +1027,7 @@
         HeadSide : HEAD
 
 - type: entity
-  parent: [ClothingHeadBase, BaseCommandContraband]
+  parent: [ClothingHeadBase, FirstCommandContraband]
   id: ClothingHeadHatBeretCmo
   name: chief medical officer's beret
   description: A turquoise beret with a cross on the front. The sight of it calms you down and makes it clear that you will be cured.
@@ -1090,7 +1090,7 @@
         Caustic: 0.95
 
 - type: entity
-  parent: [ClothingHeadBase, BaseSyndicateContraband]
+  parent: [ClothingHeadBase, FirstSyndicateContraband]
   id: ClothingHeadHatSyndie
   name: syndicate hat
   description: A souvenir hat from "Syndieland", their production has already been closed.
@@ -1196,7 +1196,7 @@
   - type: BlockMovement
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  parent: [ ClothingHeadBase, CentcommContraband ]
   id: ClothingHeadHatCentcomcap
   name: CentComm cap
   description: An extravagant, stylish cap worn by CentComm officials. Shows the Captain who's in charge.

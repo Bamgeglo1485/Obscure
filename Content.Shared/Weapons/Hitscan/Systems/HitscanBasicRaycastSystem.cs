@@ -11,6 +11,7 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
+using System.Linq;
 
 namespace Content.Shared.Weapons.Hitscan.Systems;
 
@@ -20,7 +21,6 @@ public sealed partial class HitscanBasicRaycastSystem : EntitySystem
     [Dependency] private SharedContainerSystem _container = default!;
     [Dependency] private ISharedAdminLogManager _log = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
-
     [Dependency] private EntityQuery<HitscanBasicVisualsComponent> _visualsQuery = default!;
 
     public override void Initialize()
@@ -34,10 +34,11 @@ public sealed partial class HitscanBasicRaycastSystem : EntitySystem
     {
         var shooter = args.Shooter ?? args.Gun;
         var mapCords = _transform.ToMapCoordinates(args.FromCoordinates);
-        var ray = new CollisionRay(mapCords.Position, args.ShotDirection, (int) ent.Comp.CollisionMask);
+        var ray = new CollisionRay(mapCords.Position, args.ShotDirection, (int)ent.Comp.CollisionMask);
         var rayCastResults = _physics.IntersectRay(mapCords.MapId, ray, ent.Comp.MaxDistance, shooter, false);
 
         var target = args.Target;
+
         // If you are in a container, use the raycast result
         // Otherwise:
         //  1.) Hit the first entity that you targeted.

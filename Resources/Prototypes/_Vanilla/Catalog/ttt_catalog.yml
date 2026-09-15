@@ -1,0 +1,73 @@
+- type: listing
+  id: TTTBodyArmor
+  name: ttt-body-armor-name
+  description: ttt-body-armor-desc
+  productEntity: TTTBodyArmor
+  cost:
+    TTTCredit: 1
+  categories:
+  - TTTTraitrorCategory
+
+- type: listing
+  id: TTTDisguiser
+  name: ttt-disguiser-name
+  description: ttt-disguiser-desc
+  productEntity: DisguiserImplanter
+  icon: { sprite: /Textures/Actions/Implants/implants.rsi, state: chameleon }
+  cost:
+    TTTCredit: 1
+  categories:
+  - TTTTraitrorCategory
+
+- type: listing
+  id: TTTC4
+  name: ttt-c4-name
+  description: ttt-c4-desc
+  productEntity: TTTC4
+  cost:
+    TTTCredit: 1
+  categories:
+  - TTTTraitrorCategory
+
+- type: listing
+  id: TTTKnife
+  name: ttt-knife-name
+  description: ttt-knife-desc
+  productEntity: TTTKnife
+  cost:
+    TTTCredit: 1
+  categories:
+  - TTTTraitrorCategory
+
+- type: listing
+  id: TTTRadar
+  name: ttt-radar-name
+  description: ttt-radar-desc
+  productEntity: TTTRadarImplanter
+  icon: { sprite: Interface/Actions/pai-map.rsi, state: icon }
+  cost:
+    TTTCredit: 1
+  categories:
+  - TTTTraitrorCategory
+  - TTTDetectiveCategory
+
+- type: listing
+  id: TTTDecoy
+  name: ttt-decoy-name
+  description: ttt-decoy-desc
+  productEntity: TTTDecoy
+  cost:
+    TTTCredit: 1
+  categories:
+  - TTTTraitrorCategory
+
+- type: listing
+  id: DifuseKit
+  name: ttt-defuse-name
+  description: ttt-defuse-desc
+  productEntity: DifuseKit
+  cost:
+    TTTCredit: 1
+  categories:
+  - TTTDetectiveCategory
+

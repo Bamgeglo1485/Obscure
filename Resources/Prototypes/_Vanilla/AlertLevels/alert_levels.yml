@@ -1,0 +1,13 @@
+- type: alertLevel
+  id: Nirvana
+  name: alert-level-nirvana
+  announcement: alert-level-nirvana-announcement
+  instructions: alert-level-nirvana-instructions
+  selectable: false
+  sound:
+    stereoSound: /Audio/Vanilla/Effects/Alarms/Nirvana.ogg
+    monoSound: /Audio/Vanilla/Effects/Alarms/Nirvana.ogg
+  disableSelection: true
+  color: "#940d3a"
+  emergencyLightColor: "#940d3a"
+  forceEnableEmergencyLights: true

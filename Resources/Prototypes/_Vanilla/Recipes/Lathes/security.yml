@@ -1,0 +1,105 @@
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponAssaultDominator
+  result: WeaponAssaultDominator
+  materials:
+    Steel: 2000
+    Glass: 500
+    Plastic: 500
+    Gold: 500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponEnergyShotgun
+  result: WeaponEnergyShotgun
+  materials:
+    Steel: 2000
+    Glass: 500
+    Plastic: 500
+    Gold: 500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponDominator
+  result: WeaponDominator
+  materials:
+    Steel: 2000
+    Glass: 500
+    Plastic: 500
+    Gold: 500
+
+- type: latheRecipe
+  id: ClothingEyesNightVisionDeviceEmpty
+  result: ClothingEyesNightVisionDeviceEmpty
+  completetime: 10
+  materials:
+    Steel: 250
+    Glass: 250
+    Plastic: 250
+    Gold: 250
+
+- type: latheRecipe
+  id: ClothingEyesThermalGlassesEmpty
+  result: ClothingEyesThermalGlassesEmpty
+  completetime: 10
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 500
+    Gold: 500
+
+# абсолютные вещи
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: ClothingShoesAbsoluteBoots
+  result: ClothingShoesAbsoluteBoots
+  materials:
+    Steel: 3000
+    Plastic: 1500
+    Silver: 1500
+    Plasma: 1500
+    Uranium: 1500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: ClothingHandsGlovesAbsolute
+  result: ClothingHandsGlovesAbsolute
+  materials:
+    Steel: 3000
+    Plastic: 1500
+    Silver: 1500
+    Plasma: 1500
+    Uranium: 1500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: ClothingBackpackAbsolute
+  result: ClothingBackpackAbsolute
+  materials:
+    Steel: 2000
+    Plastic: 1000
+    Silver: 1000
+    Plasma: 1000
+    Uranium: 1000
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: ClothingUniformJumpsuitAbsolute
+  result: ClothingUniformJumpsuitAbsolute
+  materials:
+    Steel: 1000
+    Plastic: 500
+    Silver: 500
+    Plasma: 500
+    Uranium: 500
+
+- type: latheRecipe
+  id: ClothingOuterCoatAbsolute
+  parent: BaseWeaponRecipeLong
+  result: ClothingOuterCoatAbsolute
+  materials:
+    Steel: 1000
+    Plastic: 500
+    Silver: 500
+    Plasma: 500
+    Uranium: 500

@@ -1,0 +1,14 @@
+ent-BaseKeyedInstrument = { ent-BaseHandheldInstrument }
+    .desc = { ent-BaseHandheldInstrument.desc }
+ent-SynthesizerInstrument = синтезатор
+    .desc = { ent-BaseKeyedInstrument.desc }
+ent-SuperSynthesizerInstrument = супер-синтезатор
+    .desc = Терроризирую гетто MIDI-ками из Touhou с 2020 года.
+    .suffix = Admin
+ent-SuperSynthesizerNoLimitInstrument = { ent-SuperSynthesizerInstrument }
+    .suffix = Безлимитный
+    .desc = { ent-SuperSynthesizerInstrument.desc }
+ent-AccordionInstrument = аккордеон
+    .desc = { ent-BaseKeyedInstrument.desc }
+ent-KalimbaInstrument = калимба
+    .desc = Мощь целого фортепиано на кончиках ваших пальцев.

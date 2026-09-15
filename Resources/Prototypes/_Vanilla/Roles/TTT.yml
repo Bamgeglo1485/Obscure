@@ -1,0 +1,171 @@
+- type: entity
+  parent: MobHuman
+  id: TTTMob
+  name: Житель города
+  components:
+  - type: MeleeWeapon
+    altDisarm: false
+  - type: CombatMode
+    toggleMouseRotator: false
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 4
+  - type: NoRotateOnMove
+  - type: MouseRotator
+  - type: ShowTTTDetectiveIcons
+  - type: Puller
+    needsHands: false
+  - type: OnDnaScanner
+  - type: Bloodstream
+    maxBleedAmount: 0
+  - type: DamageVisuals
+    thresholds: [ 100 ]
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      100: 1
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Dead
+  - type: UserInterface
+    interfaces:
+      enum.HumanoidMarkingModifierKey.Key:
+        type: HumanoidMarkingModifierBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+      enum.BodyExamineUiKey.Key:
+        type: TTTBodyExamineBoundUserInterface
+
+- type: startingGear
+  id: TTTGearInnocent
+  equipment:
+    head: ClothingHeadHatBeaverHat
+    jumpsuit: ClothingUniformJumpsuitLoungewear
+    eyes: ClothingEyesGlassesJamjar
+    ears: ClothingHeadsetGrey
+    gloves: ClothingHandsMercGlovesCombat
+    outerClothing: ClothingOuterFlannelGreen
+    shoes: ClothingShoesBootsWinter
+    neck: ClothingNeckNanoTrasenPin
+    belt: ClothingBeltSecurityWebbing
+    id: PassengerPDAUnrem
+
+- type: entity
+  parent: ClothingOuterFlannelGreen
+  id: TTTBodyArmor
+  name: зелёная фланелевая куртка
+  description: Старомодная зелёная фланелевая куртка для космической осени.
+  components:
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.7
+        Caustic: 0.7
+
+- type: entity
+  name: C4
+  description: БЕГИТЕ ГЛУПЦЫ, БЕГИТЕ
+  parent: BaseItem
+  id: TTTC4
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Bombs/c4.rsi
+    state: icon
+    layers:
+    - state: icon
+      map: ["base"]
+  - type: TTTBomb
+  - type: ExplodeOnTrigger
+    keysIn:
+    - timer
+  - type: TTTExplodeOnTrigger
+    keysIn:
+    - timer
+  - type: Explosive
+    explosionType: Cryo
+    totalIntensity: 1500
+    intensitySlope: 0.1
+    maxIntensity: 100
+    canCreateVacuum: false
+  - type: TimerTrigger
+    keysIn:
+    - trigger
+    - stuck
+    delay: 45
+    delayOptions: [45, 90, 180, 360, 600]
+    initialBeepDelay: 0
+    beepSound: /Audio/Machines/Nuke/general_beep.ogg
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.Trigger.TriggerVisuals.VisualState:
+        base:
+          Primed: { state: primed }
+          Unprimed: { state: icon }
+
+- type: entity
+  parent: KitchenKnife
+  id: TTTKnife
+  suffix: TTT
+  name: нож
+  description: Моментально убивает в спину, не оставляя днк на жертве.
+  components:
+  - type: MeleeWeapon
+    resetOnHandSelected: false
+    soundHit: null
+  - type: TTTKnife
+
+- type: entity
+  parent: BaseItem
+  id: TTTDecoy
+  suffix: TTT
+  name: Приманка
+  description: Показывает ложную точку на радаре и перенаправляет днк на сканере на себя
+  components:
+  - type: TTTDecoy
+  - type: Sprite
+    sprite: Objects/Devices/communication.rsi
+    layers:
+    - state: walkietalkie
+    - state: walkietalkie-on
+    state: walkietalkie
+  - type: Item
+    sprite: Objects/Devices/communication.rsi
+    heldPrefix: walkietalkie
+  - type: Injurable
+    damageContainer: StructuralInorganic
+  - type: Damageable
+    damageModifierSet: Card
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/poster_broken.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+
+
+# детективные предметы
+- type: entity
+  parent: Wirecutter
+  id: DifuseKit
+  name: набор сапёра
+  description: Моментально обезвреживает бомбу без риска взорваться.
+  components:
+  - type: DifusalKit
+
+- type: entity
+  parent: PinpointerBase
+  id: TTTDNAScanner
+  name: Сканер ДНК
+  description: Просканировав труп укажет направление к убийце. Просканировав оружие, с4 или станцию лечения укажет направление к взаимодействовавшему человеку.
+  components:
+  - type: TTTDnaScanner
