@@ -1,5 +1,5 @@
 ent-BasaltOne = базальт
-    .desc = Камень
+    .desc = Камень.
 ent-BasaltTwo = { ent-BasaltOne }
     .desc = { ent-BasaltOne.desc }
 ent-BasaltThree = { ent-BasaltOne }
@@ -9,5 +9,5 @@ ent-BasaltFour = { ent-BasaltOne }
 ent-BasaltFive = { ent-BasaltOne }
     .desc = { ent-BasaltOne.desc }
 ent-BasaltRandom = { ent-BasaltOne }
-    .suffix = Случайный
     .desc = { ent-BasaltOne.desc }
+    .suffix = Случайный

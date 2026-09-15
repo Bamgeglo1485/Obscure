@@ -1,5 +1,5 @@
-ent-FoodBakedBase = { ent-FoodInjectableBase }
-    .desc = { ent-FoodInjectableBase.desc }
+ent-FoodBakedBase = { ent-SolutionVeryTiny }
+    .desc = { ent-SolutionVeryTiny.desc }
 ent-FoodBakedMuffin = маффин
     .desc = Вкусный и пышный кекс.
 ent-FoodBakedMuffinBerry = ягодный маффин
@@ -69,5 +69,5 @@ ent-FoodBakedCroissantCotton = хлопковый круассан
     .desc = Маслянистое, слоистое, волокнистое лакомство.
 ent-FoodBakedGrilledCheeseSandwich = сэндвич с жареным сыром
     .desc = Хлеб и сыр, поджаренные с маслом, идеально подходят для прохладного дня в космосе.
-ent-FoodBakedGrilledCheeseSandwichCotton = молинарный сэндвич
-    .desc = Гренка из хлопковой ткани с сырной начинкой. Главный гастрономический кошмар энтомолога!
+ent-FoodBakedGrilledCheeseSandwichCotton = хлопковый сэндвич с жареным сыром
+    .desc = Cлегка обжаренный в масле хлопковый хлеб с расплавленным сыром. Молям трудно противостоять такому сочетанию.

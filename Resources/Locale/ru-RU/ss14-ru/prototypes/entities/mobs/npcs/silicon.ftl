@@ -1,7 +1,7 @@
 ent-MobRobotic = { ent-BaseMob }
     .desc = { ent-BaseMob.desc }
-ent-MobSiliconBase = { "" }
-    .desc = { "" }
+ent-MobSiliconBase = { ent-MobRobotic }
+    .desc = { ent-MobRobotic.desc }
 ent-MobFireBot = пожарбот
     .desc = Маленький бот для тушения пожаров. Он выглядит довольно встревоженным.
 ent-MobHonkBot = хонкбот
@@ -16,5 +16,5 @@ ent-MobMimeBot = мимбот
     .desc = Почему бы не помахать мимботу?
 ent-MobSupplyBot = грузобот
     .desc = Доставляет грузы!
-ent-MobHugBot = обнимашкобот
-    .desc = Ооо, кому-то нужны объятия?
+ent-MobHugBot = обнибот
+    .desc = Оуу, кому нужны объятия?

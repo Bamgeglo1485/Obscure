@@ -1,34 +1,30 @@
-# Corvax-HiddenDesc-Start
-ent-Telecrystal = красный кристалл
-    .desc = Необычные, мерцающие красным кристаллы.
-    .suffix = 20 ТК, телекристалл Синдиката
+ent-Telecrystal = телекристалл
+    .desc = Похоже, он переливается подозрительно манящей энергией.
+    .suffix = 20 ТК
 ent-Telecrystal1 = { ent-Telecrystal }
-    .suffix = 1 ТК, телекристалл Синдиката
     .desc = { ent-Telecrystal.desc }
+    .suffix = 1 ТК
 ent-Telecrystal5 = { ent-Telecrystal }
-    .suffix = 5 ТК, телекристалл Синдиката
     .desc = { ent-Telecrystal.desc }
+    .suffix = 5 ТК
 ent-Telecrystal10 = { ent-Telecrystal }
-    .suffix = 10 ТК, телекристалл Синдиката
     .desc = { ent-Telecrystal.desc }
-ent-BaseUplinkRadio = старое радио
-    .desc = Винтажное радио, которое по никому не ясной причине застыло на крайне необычной частоте, со словом «АпЛинк» на лицевой стороне.
-    .suffix = Пустой, аплинк синдиката
+    .suffix = 10 ТК
+ent-BaseUplinkRadio = аплинк синдиката
+    .desc = Подозрительно выглядящее старое радио...
+    .suffix = Пустой
 ent-BaseUplinkRadio20TC = { ent-BaseUplinkRadio }
-    .suffix = 20 ТК, аплинк синдиката
     .desc = { ent-BaseUplinkRadio.desc }
+    .suffix = 20 ТК
 ent-BaseUplinkRadio25TC = { ent-BaseUplinkRadio }
-    .suffix = 25 ТК, аплинк синдиката
     .desc = { ent-BaseUplinkRadio.desc }
-ent-BaseUplinkRadio20TCNUKIE = { ent-BaseUplinkRadio }
-    .suffix = 20 ТК, аплинк синдиката, Ядерный Оперативник
+    .suffix = 25 ТК
+ent-BaseUplinkRadio40TC = { ent-BaseUplinkRadio }
     .desc = { ent-BaseUplinkRadio.desc }
+    .suffix = 40 ТК, ЯдерныйОперативник
 ent-BaseUplinkRadio60TC = { ent-BaseUplinkRadio }
-    .suffix = 60 ТК, аплинк синдиката, Одинокий ядерный оперативник
     .desc = { ent-BaseUplinkRadio.desc }
-ent-BaseUplinkRadioDebug = радио аплинк Синдиката
+    .suffix = 60 ТК, СолоОпер
+ent-BaseUplinkRadioDebug = { ent-BaseUplinkRadio }
+    .desc = { ent-BaseUplinkRadio.desc }
     .suffix = DEBUG
-    .desc = { ent-BaseUplinkRadio.desc }
-
-# Corvax-HiddenDesc-End
-

@@ -30,6 +30,47 @@
   examineText: contraband-examine-text-GrandTheft
   showDepartmentsAndJobs: true
 
+- type: contrabandSeverity
+  id: Minor
+  examineText: contraband-examine-text-Minor
+
+# Dangerous fucking shit that doesn't belong to CyberSun or NanoTrasen, RPGs, retro laser blasters, unholy things
+- type: contrabandSeverity
+  id: Major
+  examineText: contraband-examine-text-Major
+
+# Having this without a good reason might get you yelled at by security. (spears, shivs, etc).
+# or, Having this as a regular crew member, not the department it was made for, is considered theft IC. (rcd, sec gear, etc)
+- type: contrabandSeverity
+  id: Restricted
+  examineText: contraband-examine-text-Restricted
+  showDepartmentsAndJobs: true
+
+# Having this as a regular crew member is considered grand theft. (nuke disk, captain's gear, objective items, etc)
+- type: contrabandSeverity
+  id: GrandTheft
+  examineText: contraband-examine-text-GrandTheft
+
+# This is highly illegal contraband and is illegal to own IC.
+- type: contrabandSeverity
+  id: HighlyIllegal
+  examineText: contraband-examine-text-Highly-Illegal
+
+# This is clear syndicate contraband and is illegal to own IC.
+- type: contrabandSeverity
+  id: Syndicate
+  examineText: contraband-examine-text-Syndicate
+
+# This is magical contraband and not permitted to be used IC.
+- type: contrabandSeverity
+  id: Magical
+  examineText: contraband-examine-text-Magical
+
+# These toys belong to the clown, give them back or get honked
+- type: contrabandSeverity
+  id: Honkraband
+  examineText: contraband-examine-text-Clown
+
 # Архонты, запрещённые для свободного обращения
 - type: entity
   id: ArchonContraband
@@ -55,6 +96,7 @@
     severity: ThirdLevel
 
 # Синди-штучки
+
 - type: entity
   id: FirstSyndicateContraband
   abstract: true

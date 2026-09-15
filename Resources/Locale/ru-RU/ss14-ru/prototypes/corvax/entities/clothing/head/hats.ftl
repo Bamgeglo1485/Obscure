@@ -14,3 +14,7 @@ ent-ClothingHeadHatBeretSecurityMedic = берет бригмедика
     .desc = Прочный берет с эмблемой медицинской службы.
 ent-ClothingHeadCaptainHat = капитанская шляпа
     .desc = Особая шляпа, сделанная на заказ для капитана.
+ent-ClothingHeadHatBeretSecurityPilot = берет пилота
+    .desc = Черный берет с серебряным значком.
+ent-ClothingHeadHatPwigFancy = шикарный парик
+    .desc = Честно говоря, они выглядят нелепо.

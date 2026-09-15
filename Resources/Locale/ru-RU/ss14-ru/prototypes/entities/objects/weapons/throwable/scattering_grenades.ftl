@@ -1,5 +1,5 @@
-ent-ScatteringGrenadeBase = { ent-BaseItem }
-    .desc = { ent-BaseItem.desc }
+ent-ScatteringGrenadeBase = { ent-GrenadeBase }
+    .desc = { ent-GrenadeBase.desc }
 ent-ClusterBang = кластерная светошумовая граната
     .desc = Может быть использовано только со светошумовыми гранатами. Взрывается несколько раз.
 ent-ClusterBangFull = кластерная светошумовая граната
@@ -12,4 +12,4 @@ ent-ClusterBananaPeel = кластерная банановая кожура
 ent-SlipocalypseClusterSoap = кластерное мыло Скользкопокалипсис
     .desc = После приземления разбрасывает вокруг себя маленькие кусочки мыла Синдиката.
 ent-GrenadeFoamDart = пенопластовая граната
-    .desc = Выпускает облако надоедливых пенопластовых дротиков, вызывающих споры, было ли попадание.
+    .desc = Выпускает облако надоедливых пенопластовых дротиков, вызывающих споры о том, было ли попадание.

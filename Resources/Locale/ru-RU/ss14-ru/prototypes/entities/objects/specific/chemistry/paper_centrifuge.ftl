@@ -1,4 +1,4 @@
-ent-BaseHandheldMixer = { ent-BaseItem }
-    .desc = { ent-BaseItem.desc }
-ent-HandheldMixerPaperCentrifuge = бумажная центрифуга
-    .desc = Маленькая портативная самодельная центрифуга. Работает за счёт вращения бумажных дисков при натяжении шнуров.
+ent-BaseHandheldMixer = { ent-SolutionTiny }
+    .desc = { ent-SolutionTiny.desc }
+ent-HandheldMixerPaperCentrifuge = самодельная центрифуга
+    .desc = Небольшая портативная самодельная центрифуга. Работает за счет вращения бумажных листов при натяжении шнура.
