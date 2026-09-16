@@ -1,0 +1,16 @@
+ent-FuClothingOuterWinterHos = head of security's armored winter coat
+    .desc = A sturdy, luxurious winter coat over a standard Type I armored vest to protect from hypothermic threats and otherwise.
+ent-FuClothingOuterWinterWard = warden's armored winter coat
+    .desc = A sturdy, utilitarian winter coat lined with Type I armor to protect from any brig-bound threats.
+ent-FuClothingOuterWinterSec = security armored winter coat
+    .desc = A sturdy, utalitarian winter coat over a standard Type I armored vest to protect from hypothermic threats and otherwise.
+ent-FuClothingOuterWinterMed = medical insulated labcoat
+    .desc = A medical-grade labcoat fitted with extra insulation. Still quite handy against caustic spills, while staying comfortably warm.
+ent-FuClothingOuterWinterChem = chemistry insulated labcoat
+    .desc = A medical-grade labcoat fitted with extra insulation. Still quite handy against caustic spills, while staying comfortably warm.
+ent-FuClothingOuterWinterCmo = chief medical officer's insulated labcoat
+    .desc = A medical-grade labcoat fitted with extra insulation. Still quite handy against caustic spills, while staying comfortably warm.
+ent-FuClothingOuterWinterCmoOpened = chief medical officer's insulated labcoat
+    .desc = { ent-ClothingOuterStorageFoldableBaseOpened.desc }
+ent-FuClothingOuterWinterHd = hospitality director's winter coat
+    .desc = A stylish, gold-trimmed coat for when the distro becomes a bit chilly. Comes with a superfluous belt.

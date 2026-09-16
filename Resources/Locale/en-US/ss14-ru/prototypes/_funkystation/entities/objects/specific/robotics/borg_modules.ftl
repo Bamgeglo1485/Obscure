@@ -1,0 +1,13 @@
+ent-BorgModulePaperwork = paperwork cyborg module
+    .desc = A module that comes with all that is needed to handle, file, write and stamp paperwork.
+ent-BorgModuleSyndicateHacking = hacker cyborg module
+    .desc = A module that comes with an emag, for all your hacking needs.
+ent-BorgModuleAnomalyAdvanced = advanced anomaly cyborg module
+    .desc = { ent-BaseBorgModuleScience.desc }
+ent-BorgModuleMedicalBasic = basic topicals cyborg module
+    .desc = A generic borg module that allows for basic healing. Only fits on generic borgs.
+ent-BorgModuleChemicalBasic = basic chemicals cyborg module
+    .desc = A generic borg module that allows for basic liquid handling. Only fits on generic borgs.
+ent-BorgModuleFoam = foam warrior cyborg module
+    .desc = For NT's strongest cyber warriors.
+    .suffix = do not map

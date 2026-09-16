@@ -56,6 +56,14 @@ entity-effect-guidebook-smoke-area =
         [1] Создаёт
        *[other] создать
     } дым
+entity-effect-guidebook-satiate =
+    { $chance ->
+        [1] Satiates
+       *[other] satiate
+    } { $relative ->
+        [1] { $type } averagely
+       *[other] { $type } at { NATURALFIXED($relative, 3) }x the average rate
+    }
 entity-effect-guidebook-satiate-thirst =
     { $chance ->
         [1] Утоляет
@@ -470,6 +478,16 @@ entity-effect-guidebook-plant-diethylamine =
         [1] Увеличивает
        *[other] увеличить
     } продолжительность жизни и/или базовое здоровье растения с вероятностью 10% для каждого
+entity-effect-guidebook-plant-mutate-exude-gasses =
+    { $chance ->
+        [1] Mutates
+       *[other] mutate
+    } the plant to exude gases between { $minValue } and { $maxValue } moles
+entity-effect-guidebook-plant-mutate-consume-gasses =
+    { $chance ->
+        [1] Mutates
+       *[other] mutate
+    } the plant to consume gases between { $minValue } and { $maxValue } moles
 entity-effect-guidebook-plant-robust-harvest =
     { $chance ->
         [1] Увеличивает

@@ -1,0 +1,10 @@
+ent-BaseWarningTape = { "" }
+    .desc = { "" }
+ent-WarningTapeEngineering = caution tape
+    .desc = A strip of hazard tape, warning you to keep out.
+ent-WarningTapeSecurity = security tape
+    .desc = A strip of red tape, branded AEGIS Security Consolidated. Move along.
+ent-WarningTapeRollEngineering = caution tape roll
+    .desc = A roll of yellow and black hazard tape.
+ent-WarningTapeRollSecurity = security tape roll
+    .desc = A roll of red tape, branded AEGIS Security Consolidated.

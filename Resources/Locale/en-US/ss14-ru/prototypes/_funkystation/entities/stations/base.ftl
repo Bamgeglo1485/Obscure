@@ -1,0 +1,2 @@
+ent-FuStationMagnet = { "" }
+    .desc = { "" }

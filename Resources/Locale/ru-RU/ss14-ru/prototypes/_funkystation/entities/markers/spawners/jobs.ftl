@@ -1,0 +1,19 @@
+ent-SpawnPointInternalAffairsAgent = агент внутренних дел
+    .desc = { ent-SpawnPointJobBase.desc }
+
+ent-SpawnPointCorporateLiaison = корпоративный связной
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointHospitalityDirector = менеджер сервиса
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointExecutiveOfficer = глава отдела кадров
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointCommandant = комендант
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointLieutenant = лейтенант
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointDispatcher = диспетчер
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-FuSpawnPointCourier = курьер
+    .desc = { ent-SpawnPointJobBase.desc }
+ent-SpawnPointPrisoner = заключённый
+    .desc = { ent-SpawnPointJobBase.desc }

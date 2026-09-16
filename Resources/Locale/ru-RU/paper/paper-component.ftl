@@ -12,4 +12,11 @@ paper-component-action-stamp-paper-self = Вы ставите печать на 
 # Indicator to show how full a paper is
 paper-ui-fill-level = { $currentLength }/{ $maxLength }
 paper-ui-save-button = Сохранить ({ $keybind })
+# Form and signature buttons
+paper-form-fill-button = Fill
+paper-signature-sign-button = Sign
+paper-form-dialog-ok = OK
+paper-form-dialog-cancel = Cancel
+paper-signature-unknown = Unknown
+paper-ui-no-pen = You need to be holding a writing utensil to write.
 paper-tamper-proof-modified-message = Текст на странице был написан с использованием нефальсицицируемых чернил.

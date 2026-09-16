@@ -38,6 +38,7 @@ alert-level-gamma-announcement =
     1. Все члены экипажа должны следовать указаниям капитана и сотрудников СБ в полном объеме.
     2. Ношение ID-карты в специальном слоте комбинезона обязательно.
     3. Сотрудники службы безопасности и капитан уполномочены применять летальные средства в случае неподчинения.
+alert-level-delta-nuke-announcement = The station is currently under threat of imminent destruction. Crewmembers are advised to listen to heads of staff for more information.
 alert-level-gamma-instructions = Гражданский персонал обязан немедленно обратиться к главам отделов для получения указаний к эвакуации. Корпорация Nanotrasen заверяет вас - опасность скоро будет нейтрализована.
 alert-level-gamma-announcement-disable = Станция больше не находится под угрозой.
 alert-level-delta = Дельта

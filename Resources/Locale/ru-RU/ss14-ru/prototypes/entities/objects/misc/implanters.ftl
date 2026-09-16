@@ -49,6 +49,7 @@ ent-FakeMindShieldImplanter = имплантер "Фальшивый щит ра
     .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
 ent-MindShieldImplanter = имплантер "Щит разума"
     .desc = { ent-BaseImplantOnlyImplanter.desc }
+    .suffix = DO NOT MAP
 ent-RadioImplanterCentcomm = имплантер "Радио Центком"
     .desc = { ent-BaseImplantOnlyImplanter.desc }
 ent-DeathRattleImplanterCentcomm = имплантер "Предсмертный хрип Центком"

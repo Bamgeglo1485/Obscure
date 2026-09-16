@@ -1,0 +1,16 @@
+ent-ClothingHeadHatCadetSecurity = cadet's white sailor hat
+    .desc = A clean, white hat for the newly enlisted! Here's hoping it stays clean.
+ent-FuClothingHeadHatScrubcapBlack = coroner scrub cap
+    .desc = A medical scrub cap made of synthetic polymers, commonly worn by coroners. Smells of formaldehyde.
+ent-FuClothingHeadHatScrubcapBlue = blue scrub cap
+    .desc = A medical scrub cap in generic medical colours, made of synthetic polymers. Commonly used during surgery.
+ent-FuClothingHeadHatScrubcapPurple = purple scrub cap
+    .desc = A medical scrub cap made of synthetic polymers, commonly used during surgery.
+ent-FuClothingHeadHatScrubcapTeal = teal scrub cap
+    .desc = A medical scrub cap in NanoTrasen medical colours, made of synthetic polymers. Commonly used during surgery.
+ent-FuClothingHeadHatInternMedical = medical intern's nurse hat
+    .desc = A teal nurse hat with a white-edged brim that tapers towards the back of the hat. Typically made for interns of medical.
+ent-FuClothingHeadHatHd = hospitality director's pillbox hat
+    .desc = A simple yet elegant red hat with gold trim.
+ent-FuClothingHeadHatCourier = courier hat
+    .desc = A blue courier's hat, with a red flag reminiscent of old-school mailboxes.

@@ -1,7 +1,6 @@
 ent-RandomHumanoidSpawnerDeathSquad = Агент Эскадрона смерти
     .desc = { "" }
     .suffix = Роль ОБР, Эскадрон смерти
-
 # ERT Leader
 ent-RandomHumanoidSpawnerERTLeader = ОБР лидер
     .suffix = Роль ОБР, Базовый
@@ -12,7 +11,6 @@ ent-RandomHumanoidSpawnerERTLeaderEVA = ОБР лидер
 ent-RandomHumanoidSpawnerERTLeaderArmed = { ent-RandomHumanoidSpawnerERTLeaderEVA }
     .suffix = Роль ОБР, Вооружен, ВКД
     .desc = Вооружен XL8, 4 запасных магазина разного типа.
-
 # ERT Chaplain
 ent-RandomHumanoidSpawnerERTChaplain = ОБР священник
     .desc = { ent-RandomHumanoidSpawnerERTLeader.desc }
@@ -20,7 +18,6 @@ ent-RandomHumanoidSpawnerERTChaplain = ОБР священник
 ent-RandomHumanoidSpawnerERTChaplainEVA = ОБР священник
     .suffix = Роль ОБР, ВКД
     .desc = { ent-RandomHumanoidSpawnerERTChaplain.desc }
-
 # ERT Janitor
 ent-RandomHumanoidSpawnerERTJanitor = ОБР уборщик
     .desc = { ent-RandomHumanoidSpawnerERTLeader.desc }
@@ -29,7 +26,6 @@ ent-RandomHumanoidSpawnerERTJanitor = ОБР уборщик
 ent-RandomHumanoidSpawnerERTJanitorEVA = ОБР уборщик
     .suffix = Роль ОБР, ВКД
     .desc = { ent-RandomHumanoidSpawnerERTJanitor.desc }
-
 # ERT Engineer
 ent-RandomHumanoidSpawnerERTEngineer = ОБР инженер
     .desc = { ent-RandomHumanoidSpawnerERTLeader.desc }
@@ -41,7 +37,6 @@ ent-RandomHumanoidSpawnerERTEngineerEVA = { ent-RandomHumanoidSpawnerERTEngineer
 ent-RandomHumanoidSpawnerERTEngineerArmed = { ent-RandomHumanoidSpawnerERTEngineer }
     .suffix = Роль ОБР, Вооружен, ВКД
     .desc = Вооружен Силовиком, имеет детонационный шнур и коробку детонаторов.
-
 # ERT Security
 ent-RandomHumanoidSpawnerERTSecurity = ОБР офицер безопасности
     .desc = { ent-RandomHumanoidSpawnerERTLeader.desc }
@@ -61,7 +56,6 @@ ent-RandomHumanoidSpawnerERTSecurityArmedVanguard = { ent-RandomHumanoidSpawnerE
 ent-RandomHumanoidSpawnerERTSecurityArmedShotgun = { ent-RandomHumanoidSpawnerERTSecurityEVA }, Сапёр
     .suffix = Роль ОБР, Вооружен, ВКД
     .desc = Вооружен Силовиком, 3 коробки различной дроби, осколочной гранатой, детонационным шнуром и коробкой детонаторов.
-
 # ERT Medic
 ent-RandomHumanoidSpawnerERTMedical = ОБР медик
     .desc = { ent-RandomHumanoidSpawnerERTLeader.desc }
@@ -73,13 +67,11 @@ ent-RandomHumanoidSpawnerERTMedicalEVA = ОБР медик
 ent-RandomHumanoidSpawnerERTMedicalArmed = ОБР медик
     .suffix = Роль ОБР, Вооружен, ВКД
     .desc = Вооружен Лектером, 4 запасных магазина разного типа.
-
 # CBURN
 ent-RandomHumanoidSpawnerCBURNUnit = Агент РХБЗЗ
     .desc = { "" }
     .suffix = Роль ОБР
     .desc = { "" }
-
 # misc
 ent-RandomHumanoidSpawnerCentcomOfficial = Представитель Центком
     .desc = { "" }

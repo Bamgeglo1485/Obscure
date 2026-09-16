@@ -1,5 +1,7 @@
 ent-BaseWallLight = { "" }
     .desc = { "" }
+ent-BaseLightHousingDestructible = { ent-StructureHealthMachineFlimsy }
+    .desc = { ent-StructureHealthMachineFlimsy.desc }
 ent-AlwaysPoweredWallLight = светильник
     .desc = Всегда работающий светильник.
     .suffix = Всегда запитанный

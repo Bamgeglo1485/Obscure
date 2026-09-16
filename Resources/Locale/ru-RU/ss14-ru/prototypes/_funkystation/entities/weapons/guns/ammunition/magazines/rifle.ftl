@@ -1,0 +1,13 @@
+ent-BaseMagazineRifle50 = rifle magazine (.50 AE)
+    .desc = { ent-BaseItem.desc }
+ent-MagazineRifle50 = rifle magazine (.50 AE)
+    .desc = { ent-BaseMagazineRifle50.desc }
+ent-MagazineRifle50Empty = rifle magazine (.50 AE any)
+    .suffix = empty
+    .desc = { ent-MagazineRifle50.desc }
+ent-MagazineRifle50Incendiary = rifle magazine (.50 AE incendiary)
+    .desc = { ent-MagazineRifle50.desc }
+ent-MagazineRifle50Practice = rifle magazine (.50 AE practice)
+    .desc = { ent-BaseMagazineRifle50.desc }
+ent-MagazineRifle50Uranium = rifle magazine (.50 AE uranium)
+    .desc = { ent-BaseMagazineRifle50.desc }

@@ -1,0 +1,17 @@
+ent-CigPackBase = cigarette pack
+    .desc = { ent-BaseStorageItem.desc }
+ent-CigPackMixedBase = soaked cigarette pack
+    .desc = { ent-BaseStorageItem.desc }
+ent-CigPackGreen = Interdyne Respirols packet
+    .desc = Respirols, an Interdyne brand that contains a heavy dose of bronchodilators. Healthy!
+ent-CigPackRed = Royal Reds packet
+    .desc = A premium blend of tobacco with a smooth, chocolate-y aftertaste. Elegant and renowned.
+ent-CigPackBlue = Nomads packet
+    .desc = Packed with a tightly compressed, slow-curing tobacco blend designed to burn twice as long, Nomads are for the long haul.
+ent-CigPackBlack = Ruĝa Stelo packet
+    .desc = A brand of cigarettes produced by the USP, extremely popular amongst military personnel. These are known to still burn bright even in the darkest, dampest trenches.
+ent-CigPackSyndicate = Interdyne Redlines
+    .desc = Elite cigarettes for elite syndicate agents. Infused with medicine for when you need to do more than calm your nerves.
+ent-CigPackMixed = Newstations packet
+    .desc = In a recent public relations scandal, these menthol cigarettes were revealed to be intentionally laced with various chemicals by NanoTrasen. They were too popular to recall, though.
+    .suffix = Mixed

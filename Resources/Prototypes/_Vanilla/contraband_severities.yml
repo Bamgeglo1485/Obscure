@@ -46,11 +46,6 @@
   examineText: contraband-examine-text-Restricted
   showDepartmentsAndJobs: true
 
-# Having this as a regular crew member is considered grand theft. (nuke disk, captain's gear, objective items, etc)
-- type: contrabandSeverity
-  id: GrandTheft
-  examineText: contraband-examine-text-GrandTheft
-
 # This is highly illegal contraband and is illegal to own IC.
 - type: contrabandSeverity
   id: HighlyIllegal

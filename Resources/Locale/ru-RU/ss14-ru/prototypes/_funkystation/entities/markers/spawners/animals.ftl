@@ -1,0 +1,16 @@
+ent-SpawnMobDuckGeneric = Generic Duck Spawner
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobDuckMallard = Mallard Duck Spawner
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobDuckWhite = White Duck Spawner
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobDuckBrown = Brown Duck Spawner
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobChickenGeneric = Generic Chicken Spawner
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobChickenGrey = Grey Chicken Spawner
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobChickenBrown = Brown Chicken Spawner
+    .desc = { ent-MarkerBase.desc }
+ent-SpawnMobChickenWhite = White Chicken Spawner
+    .desc = { ent-MarkerBase.desc }

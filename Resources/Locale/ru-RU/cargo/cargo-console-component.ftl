@@ -62,6 +62,8 @@ cargo-console-paper-print-text =  [head=2]Заказ №{ $orderNumber }[/head]
     { "[bold]Плательщик:[/bold]" } { $account } [font="Monospace"]\[{ $accountcode }\][/font]
     { "[bold]Одобрил:[/bold]" } { $approver }
     { "[bold]Причина:[/bold]" } { $reason }
+# Funky, signature field
+cargo-console-paper-recipient-signature =  [bold]Recipient Signature:[/bold] [signature]
 # Cargo shuttle console
 cargo-shuttle-console-menu-title = Консоль карго-шаттла
 cargo-shuttle-console-station-unknown = Неизвестно

@@ -1,0 +1,2 @@
+ent-BaseStationServiceJobs = { "" }
+    .desc = { "" }

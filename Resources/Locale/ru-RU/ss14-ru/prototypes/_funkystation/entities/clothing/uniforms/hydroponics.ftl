@@ -1,0 +1,14 @@
+ent-FuClothingUniformJumpsuitHydroponics = комбинезон гидропоники
+    .desc = Имеет сильный землистый запах.
+ent-FuClothingUniformJumpsuitHydroponicsDirty = комбинезон гидропоники
+    .desc = Имеет сильный землистый запах. Грязь не отстирывается, как бы сильно ни старались...
+ent-FuClothingUniformShirtPantstHydroponics = униформа гидропоники
+    .desc = Удобная рубашка и грузовые штаны. Простой рабочий комплект.
+ent-FuClothingUniformShirtPantstHydroponicsOveralls = униформа гидропоники
+    .desc = Удобная рубашка и комбинезон. Простой рабочий комплект.
+ent-FuClothingUniformShirtPantstHydroponicsOverallsTurtle = униформа гидропоники
+    .desc = Удобный свитер и комбинезон. Простой рабочий комплект. Уютно.
+ent-FuClothingUniformJumperskirtHydroponics = платье-сарафан гидропоники
+    .desc = Платье-сарафан для того самого аутентичного старомодного вида.
+ent-FuClothingUniformJumperskirtHydroponicsTurtle = платье-сарафан гидропоники
+    .desc = Платье-сарафан для того самого аутентичного старомодного вида. Уютно.

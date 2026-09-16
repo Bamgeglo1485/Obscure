@@ -24,3 +24,5 @@ uplink-travel-camera-name = Travel Camera
 uplink-travel-camera-desc = Stun people with your photography skills and the conveniently legal camera flash. Makes you look like a tourist.
 uplink-smuggler-satchel-name = Smuggler's Satchel
 uplink-smuggler-satchel-desc = A handy, suspicious looking satchel. Just flat enough to fit underneath floor tiles.
+uplink-weighted-coin-name = Weighted Coin
+uplink-weighted-coin-desc = A special coin that always lands on tails, designed to look like the heads and tails coins found in nanotrasen stations.

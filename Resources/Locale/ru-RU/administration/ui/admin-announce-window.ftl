@@ -8,3 +8,6 @@ admin-announce-type-server = Сервер
 admin-announce-keep-open = Держать открытым
 cmd-announceui-desc = Открывает интерфейс объявлений.
 cmd-announceui-help = Использование: announceui
+# Funky
+admin-announce-bypass-pa = Bypass PA system
+admin-announce-bypass-pa-tooltip = Bypasses PA speakers and broadcasts the announcement directly to the chatboxes of players.

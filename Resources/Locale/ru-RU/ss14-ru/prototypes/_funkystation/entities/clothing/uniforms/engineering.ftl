@@ -1,0 +1,14 @@
+ent-FuClothingUniformCoverallsEngineering = инженерный комбинезон
+    .desc = Плотный хлопковый комбинезон для инженерного отдела. Простой, для рабочего космонавта.
+ent-FuClothingUniformCoverallsEngineeringRipley = инженерный комбинезон с нашивками
+    .desc = Старый комбинезон для инженерного отдела. Эта пара идёт с нашивками, напоминающими о звёздах, когда космические путешествия были ещё в новинку.
+ent-FuClothingUniformOverallsEngineering = инженерный комбинезон
+    .desc = Плотный хлопковый комбинезон с оранжевой рубашкой.
+ent-FuClothingUniformOverallsEngineeringGrease = инженерный комбинезон
+    .desc = Плотный хлопковый комбинезон с простой рубашкой, испачканной старой смазкой.
+ent-FuClothingUniformShirtPantsEngineering = инженерная униформа
+    .desc = Плотные хлопковые штаны с оранжевой рубашкой.
+ent-FuClothingUniformShirtPantsEngineeringGrease = инженерная униформа
+    .desc = Плотные хлопковые штаны с простой рубашкой, испачканной старой смазкой.
+ent-FuClothingUniformCoverallsEngineeringIntern = комбинезон технического ассистента
+    .desc = Комбинезон для инженерного отдела. Предназначен для ассистента, со встроенным сигнальным жилетом.

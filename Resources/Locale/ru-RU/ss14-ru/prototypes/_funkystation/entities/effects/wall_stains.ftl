@@ -1,6 +1,6 @@
 ent-WallStain = { "" }
     .desc = { "" }
-ent-WallStainFireEffect = fire
-    .desc = Oops...
+ent-WallStainFireEffect = огонь
+    .desc = ПОЖАР!! ПОЖАР ААА!!!
 ent-WallStainSparkle = { ent-PuddleSparkle }
     .desc = { ent-PuddleSparkle.desc }

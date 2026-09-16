@@ -4,11 +4,11 @@
   id: JobChiefMedicalOfficer
   groups:
   - GroupTankHarness
-  - FuCmoHead # funky- previously ChiefMedicalOfficerHead
+  - ChiefMedicalOfficerHead # Obscure fuck funky sprites
   - MedicalMask
-  - FuCmoUniform # funky - ChiefMedicalOfficerJumpsuit
+  - ChiefMedicalOfficerJumpsuit # Obscure fuck funky sprites
   - MedicalBackpack
-  - FuCmoOuterclothing # funky - previously ChiefMedicalOfficerOuterClothing
+  - ChiefMedicalOfficerOuterClothing # Obscure fuck funky sprites
 #  - ChiefMedicalOfficerNeck funky - no more capes for non-militant command
   - ChiefMedicalOfficerShoes
   - Pager
@@ -24,11 +24,11 @@
   id: JobMedicalDoctor
   groups:
   - GroupTankHarness
-  - FuMedicalDoctorHead # funky - previously MedicalDoctorHead
+  - MedicalDoctorHead # Obscure fuck funky sprites
   - MedicalMask
-  - FuMedicalDoctorUniform # funky - previously MedicalDoctorJumpsuit
+  - MedicalDoctorJumpsuit # Obscure fuck funky sprites
   - MedicalBackpack
-  - FuMedicalDoctorOuterclothing # funky - previously MedicalDoctorOuterClothing
+  - MedicalDoctorOuterClothing # Obscure fuck funky sprites
   - MedicalShoes
   #- MedicalDoctorPDA # Funky: the wallet-ening, also removing the loadout choice for senior stuff
   - Pager
@@ -44,8 +44,8 @@
   id: JobMedicalIntern
   groups:
   - GroupTankHarness
-  - FuMedicalInternHead # funky - new
-  - FuMedInternUniform # funky - previously MedicalInternJumpsuit
+  - MedicalInternJumpsuit # Obscure fuck funky sprites
+  - MedicalDoctorHead # Obscure fuck funky sprites
   - MedicalBackpack
   - Pager
   - Glasses
@@ -61,10 +61,10 @@
   groups:
   - GroupTankHarness
   - MedicalMask
-  - FuChemistUniform # funky - previously ChemistJumpsuit
+  - ChemistJumpsuit # Obscure fuck funky sprites
   - FuChemistGloves # funky - new
   - ChemistBackpack
-  - FuChemistOuterclothing # funky - previously ChemistOuterClothing
+  - ChemistOuterClothing # Obscure fuck funky sprites
   - FuChemistBoots # funky - previously MedicalShoes
   - Pager
   - Glasses

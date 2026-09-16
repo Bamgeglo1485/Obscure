@@ -24,5 +24,5 @@ ent-PlasmaChemistryVial = { ent-ChemistryEmptyVialSmall }
     .desc = { ent-ChemistryEmptyVialSmall.desc }
     .suffix = Плазма
 ent-XenoborgOilChemistryAmpoule = { ent-ChemistryEmptyAmpoule }
-    .desc = { ent-ChemistryEmptyAmpoule.desc}
+    .desc = { ent-ChemistryEmptyAmpoule.desc }
     .suffix = масло ксеноборгов

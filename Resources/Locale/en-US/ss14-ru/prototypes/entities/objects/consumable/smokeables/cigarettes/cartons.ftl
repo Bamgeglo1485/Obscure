@@ -1,0 +1,10 @@
+ent-CigCartonGreen = Interdyne Respirols carton
+    .desc = A carton containing 6 packets of Interdyne Respirols.
+ent-CigCartonRed = Royal Reds carton
+    .desc = A carton containing 6 packets of Royal Reds.
+ent-CigCartonBlue = Nomads carton
+    .desc = A carton containing 6 packets of Nomads.
+ent-CigCartonBlack = Ruĝa Stelo carton
+    .desc = A carton containing 6 packets of Ruĝa Stelo.
+ent-CigCartonMixed = Newstations carton
+    .desc = A carton containg 3 packets of Newstations.

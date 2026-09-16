@@ -1,0 +1,14 @@
+ent-FuClothingOuterCoatLabMed = medical lab coat
+    .desc = A medical-grade labcoat that protects against minor chemical spills. On the arms are anti-gas detection armbands, although newer coats no longer come with functional ones.
+ent-FuClothingOuterCoatLabChem = chemistry lab coat
+    .desc = A medical-grade labcoat that protects against minor chemical spills. On the arms are anti-gas detection armbands, although newer coats no longer come with functional ones.
+ent-FuClothingOuterCoatLabCmo = chief medical officer's lab coat
+    .desc = A high quality medical-grade labcoat that protects against chemical spills. On the arms are anti-gas detection armbands, although newer coats no longer come with functional ones.
+ent-FuClothingOuterCoatWindbreakerCt = cargo technician windbreaker
+    .desc = An off-white windbreaker designed for cargo technicians. Made mostly of polyester, with a faux fur collar.
+ent-FuClothingOuterCoatWindbreakerCourier = courier windbreaker
+    .desc = A bright red windbreaker designed for couriers. Made mostly of polyester, with a name plaque on the back.
+ent-FuClothingOuterCoatWindbreakerQm = quartermaster's windbreaker
+    .desc = A command blue windbreaker speciall made for quartermasters. Made mostly of nylon, with a real fur collar.
+ent-FuClothingOuterCoatHd = hospitality director's coat
+    .desc = A red coat with gold buttons and embroidery. Unfortunately, the cufflinks are missing.

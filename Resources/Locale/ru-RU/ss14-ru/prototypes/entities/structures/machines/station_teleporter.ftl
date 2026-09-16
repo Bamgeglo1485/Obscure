@@ -25,4 +25,3 @@ ent-StationTeleporterScience = { ent-StationTeleporterNanotrasen }
 ent-StationTeleporterCargo = { ent-StationTeleporterNanotrasen }
     .desc = { ent-StationTeleporterNanotrasen.desc }
     .suffix = Снабжение, Сеть Nanotrasen
-

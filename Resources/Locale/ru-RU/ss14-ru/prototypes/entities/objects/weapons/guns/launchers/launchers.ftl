@@ -2,6 +2,7 @@ ent-BaseWeaponLauncher = BaseWeaponLauncher
     .desc = Дерзай — налетай, целься и стреляй.
 ent-WeaponLauncherChinaLake = China Lake
     .desc = БЛУП.
+    .suffix = Deprecated
 ent-WeaponLauncherHydra = гидра
     .desc = БЛУП... ПШШШШШШ...
 ent-WeaponLauncherHydraLethal = { ent-WeaponLauncherHydra }

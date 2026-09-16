@@ -1,0 +1,16 @@
+ent-ClothingHeadsetParamedic = paramedic headset
+    .desc = A headset for paramedics that receives emergency frequencies in addition to regular medical radio.
+ent-ClothingHeadsetWarden = dispatch headset
+    .desc = A headset for wardens or desk-working officers that receives prisoner and emergency frequencies in addition to regular security radio.
+ent-ClothingHeadsetInternalAffairs = internal affairs headset
+    .desc = { ent-ClothingHeadset.desc }
+ent-ClothingHeadsetMagistrate = magistrate's headset
+    .desc = { ent-ClothingHeadsetInternalAffairs.desc }
+ent-ClothingHeadsetHD = hospitality director's headset
+    .desc = { ent-ClothingHeadsetService.desc }
+ent-ClothingHeadsetCL = corporate liaison's headset
+    .desc = { ent-ClothingHeadsetCentCom.desc }
+ent-ClothingHeadsetDispatcher = dispatch headset
+    .desc = One of the many links to the beating heart of the station.
+ent-ClothingHeadsetPrisoner = prisoner headset
+    .desc = { ent-ClothingHeadset.desc }

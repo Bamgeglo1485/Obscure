@@ -39,5 +39,10 @@ changeling-takeover-start-others = { CAPITALIZE(THE($user)) } begins to crawl in
 changeling-takeover-success-self = We have successfully infested the body and assumed its form.
 # stings
 changeling-sting-success = We silently sting { THE($target) }!
+# mindshield
+changeling-fake-mindshield-enabled = We emit fake mindshield waves.
+changeling-fake-mindshield-disabled = We stop emitting fake mindshield waves.
+# chemicals
+changeling-not-enough-chemicals = We don't have enough Chemicals.
 changeling-transform-attempt-others = Кости { CAPITALIZE(POSS-ADJ($user)) } трещат, мышцы рвутся, тело меняется в иной облик.
 changeling-paused-map-name = Карта хранения личности генокрада

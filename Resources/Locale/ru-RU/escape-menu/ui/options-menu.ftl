@@ -37,6 +37,9 @@ ui-options-restart-sounds = Звуки перезапуска раунда
 ui-options-event-music = Музыка событий
 ui-options-admin-sounds = Музыка админов
 ui-options-bwoink-sound = Звук уведомления Ахелпа
+ui-options-mute-unfocused = Mute audio when unfocused
+ui-options-audio-device = Output device:
+ui-options-audio-device-default = System default
 ui-options-audio-hrtf = Enable HRTF Audio Processing (Requires Restart)
 ui-options-volume-label = Громкость
 ui-options-display-label = Дисплей
@@ -58,6 +61,9 @@ ui-options-fancy-speech = Показывать имена в облачках с
 ui-options-fancy-name-background = Добавить фон облачкам с текстом
 ui-options-chat-follow-button = As ghost, show a follow button next to chat messages
 ui-options-vsync = Вертикальная синхронизация
+ui-options-max-fps = Maximum FPS:
+ui-options-max-fps-display-rate = Display Rate
+ui-options-max-fps-tooltip = Maximum framerate the client should run at. Set to 0 for no limit. This has no effect if VSync is enabled.
 ui-options-fullscreen = Полный экран
 ui-options-lighting-label = Качество освещения:
 ui-options-lighting-very-low = Очень низкое
@@ -367,6 +373,16 @@ ui-options-disable-rainbow-overlay-tooltip = Replaces the movement in the rainbo
 ui-options-disable-singulo-warp = Singularity
 ui-options-disable-singulo-warp-tooltip = Disables the screen warping effect on the singularity.
 ui-options-speech-bubble-text-opacity = Непрозрачность текста в пузыре речи
+# Funky, ES pain flash
+ui-options-es-pain-flash-intensity = Pain flash intensity
+# funky viewcone options
+ui-options-disable-viewcone-grain = Disable the grain effect on the viewcone occlusion overlay
+ui-options-viewcone-occlusion-opacity = Viewcone occlusion strength
+# funky custom interaction outlines
+ui-options-interaction-outline-valid = Outline color for objects inside of interaction range
+ui-options-interaction-outline-invalid = Outline color for objects outside of interaction range
+ui-options-interaction-color-example = This is the outline color.
+ui-options-color-slider-default-button = Reset to default
 ui-options-speech-bubble-speaker-opacity = Непрозрачность оратора в пузыре речи
 ui-options-speech-bubble-background-opacity = Непрозрачность фона пузыря речи
 ui-options-censor-nudity = Цензурировать наготу персонажа

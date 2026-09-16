@@ -9,6 +9,7 @@ mech-menu-title = Панель управления меха
 mech-integrity-display = Целостность: { $amount }%
 mech-energy-display = Энергия: { $amount }%
 mech-energy-missing = Энергия: ОТСУТСТВУЕТ
+mech-construction-guide-string-vim = Two borg legs and an EVA helmet must be attached to the harness.
 mech-slot-display = Доступно слотов: { $amount }
 mech-no-enter = Вы не можете пилотировать это.
 mech-eject-pilot-alert = { $user } вытаскивает пилота из { $item }!

@@ -17,3 +17,4 @@ borg-slot-powercell-empty = Энергоячейки
 borg-slot-inflatable-door-empty = Надувная дверь
 borg-slot-inflatable-wall-empty = Надувная стена
 borg-slot-xenoborg-crystal-empty = Кристалл ксеноборга
+borg-slot-fuel-empty = Fuel slot

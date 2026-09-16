@@ -1,6 +1,5 @@
 # UI
 
-
 ## Window
 
 air-alarm-ui-title = Воздушная сигнализация
@@ -49,7 +48,6 @@ air-alarm-ui-pressure-bound-both = Привязка к обоим
 air-alarm-ui-widget-gas-filters = Фильтры газа
 
 ## Widgets
-
 
 ### General
 

@@ -1,2 +1,8 @@
-ent-CrateServiceWashingMachineSet = DIY washing machine kit
-    .desc = A Nanotrasen Commercial Model-C washing machine, disassembled and ready for shipping. Contains small parts that may be ingested by infants.
+ent-CrateServiceWashingMachineSet = Набор для сборки стиральной машины
+    .desc = Коммерческая стиральная машина Nanotrasen модели C, разобранная и готовая к отправке. Содержит мелкие детали, которые могут быть проглочены младенцами.
+ent-CrateServiceDocumentPrinterSet = Набор для сборки принтера документов
+    .desc = Принтер документов модели XF-880, разобранный и готовый к отправке. Не содержит чернил для заправки.
+ent-CrateServicePaperShredderSet = Набор для сборки шредера для бумаг
+    .desc = Шредер для бумаг модели IPC-84, разобранный и готовый к отправке. Включает запасной контейнер.
+ent-BoxServiceLaundryBag = коробка мешков для белья
+    .desc = Картонная коробка, содержащая несколько мешков для белья.

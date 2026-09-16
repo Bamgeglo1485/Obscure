@@ -1,0 +1,12 @@
+ent-FuWeaponShotgunDoubleBarreled = double-barreled shotgun
+    .desc = An immortal classic. Uses 12 gauge shotgun shells.
+ent-FuWeaponShotgunDoubleBarreledRubber = double-barreled shotgun
+    .desc = An immortal classic. Uses 12 gauge shotgun shells.
+    .suffix = Non-Lethal
+ent-FuWeaponShotgunKammerer = Kammerer
+    .desc = An old yet faithful design, and a favorite among irregular forces of many worlds. Uses 12 gauge shotgun shells.
+ent-FuWeaponShotgunSawn = sawn-off shotgun
+    .desc = Groovy! Uses 12 gauge shotgun shells.
+ent-FuWeaponShotgunSawnEmpty = sawn-off shotgun
+    .desc = Groovy! Uses 12 gauge shotgun shells.
+    .suffix = Empty

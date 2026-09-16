@@ -1,0 +1,16 @@
+ent-ProximitySensor = proximity sensor
+    .desc = Senses things in close proximity.
+ent-PartSilicon = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
+ent-LeftArmBorg = automa left arm
+    .desc = { ent-PartSilicon.desc }
+ent-RightArmBorg = automa right arm
+    .desc = { ent-PartSilicon.desc }
+ent-LeftLegBorg = automa left leg
+    .desc = { ent-PartSilicon.desc }
+ent-RightLegBorg = automa right leg
+    .desc = { ent-PartSilicon.desc }
+ent-LightHeadBorg = automa head
+    .desc = { ent-PartSilicon.desc }
+ent-TorsoBorg = automa torso
+    .desc = { ent-PartSilicon.desc }

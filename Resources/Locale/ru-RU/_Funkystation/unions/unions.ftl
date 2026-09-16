@@ -3,7 +3,6 @@ trait-union-leader-name = Лидер профсоюза
 trait-union-leader-desc = Возглавьте свой местный профсоюз! Следите за тем, чтобы работники соблюдали СРП, а главы отделов — правила.
 trait-union-member-name = Член профсоюза
 trait-union-member-desc = Станьте частью своего местного профсоюза!
-
 megaphone-not-a-member = Вы не принадлежите к этому профсоюзу.
 megaphone-not-leader = Только лидер профсоюза может использовать это.
 megaphone-on-cooldown = Рупору нужно немного отдохнуть перед следующим использованием.
@@ -14,7 +13,6 @@ megaphone-call-strike-button = Объявить забастовку
 megaphone-end-strike-button = Прекратить забастовку
 megaphone-message-too-long = Сообщение слишком длинное.
 megaphone-message-placeholder = Напишите причины забастовки здесь.
-
 union-clipboard-not-a-member = Вы не принадлежите к этому профсоюзу.
 union-clipboard-claim-window-title = Заявить права на лидерство
 union-clipboard-claim-prompt = Вы не являетесь текущим лидером этого профсоюза. Хотите заявить права на этот титул?
@@ -44,7 +42,6 @@ union-clipboard-steward-confirmed = { $name } теперь стюард.
 union-clipboard-steward-name = { $name } (Стюард)
 union-clipboard-assign-steward-label = Стюард:
 union-clipboard-assign-steward-none = Нет
-
 union-card-examine = Подтверждает, что { $name } является { $position } профсоюза { $union }.
 union-card-position-leader = Лидером
 union-card-position-steward = Стюардом

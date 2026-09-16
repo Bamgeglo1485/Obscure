@@ -1,0 +1,12 @@
+ent-FuClothingUniformJumpsuitLogiCt = cargo technician jumpsuit
+    .desc = The standard jumpsuit for NanoTrasen cargo technicians. Copper brown, with beige accents. Comes with more pockets than the standard uniform.
+ent-FuClothingUniformJumpsuitLogiCourier = courier jumpsuit
+    .desc = The standard jumpsuit for NanoTrasen couriers. Blue, with off-white and red stripes for easier identification.
+ent-FuClothingUniformTwopiecePantsLogiCt = cargo technician uniform
+    .desc = The standard uniform for NanoTrasen cargo technicians. A copper brown vest, with an off-white shirt and pants with brown socks.
+ent-FuClothingUniformTwopiecePantsLogiCourier = courier uniform
+    .desc = The standard uniform for NanoTrasen couriers. A blue vest and pants with an off-white shirt that features a red embroidered badge.
+ent-FuClothingUniformTwopieceSkirtLogiCt = cargo technician uniform
+    .desc = The standard uniform for NanoTrasen cargo technicians. A copper brown vest, with an off-white shirt and skirt with a brown stripe running horizontall across it.
+ent-FuClothingUniformTwopieceSkirtLogiCourier = courier uniform
+    .desc = The standard uniform for NanoTrasen cargo technicians. A blue vest, with an off-white shirt and skirt with a brown stripe running horizontall across it.

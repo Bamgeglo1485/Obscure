@@ -1139,18 +1139,18 @@
   id: HeadofSecurityJumpsuit
   name: loadout-group-head-of-security-jumpsuit
   loadouts:
-  - FuHosService
-  - FuHosDressPants
-  - FuHosDressSkirt
-  - FuHosDressSkirtStockings
-  - FuHosMessSkirt
-  - FuHosMessSkirtStockings
-#  - HeadofSecurityJumpsuit
-#  - HeadofSecurityJumpskirt
-#  - HeadofSecurityTurtleneck
-#  - HeadofSecurityTurtleneckSkirt
-#  - HeadofSecurityFormalSuit
-#  - HeadofSecurityFormalSkirt
+#  - FuHosService # OBSCURE FUCK FUNKY SPRITES
+#  - FuHosDressPants # OBSCURE FUCK FUNKY SPRITES
+#  - FuHosDressSkirt # OBSCURE FUCK FUNKY SPRITES
+#  - FuHosDressSkirtStockings # OBSCURE FUCK FUNKY SPRITES
+#  - FuHosMessSkirt # OBSCURE FUCK FUNKY SPRITES
+#  - FuHosMessSkirtStockings # OBSCURE FUCK FUNKY SPRITES
+  - HeadofSecurityJumpsuit
+  - HeadofSecurityJumpskirt
+  - HeadofSecurityTurtleneck
+  - HeadofSecurityTurtleneckSkirt
+  - HeadofSecurityFormalSuit
+  - HeadofSecurityFormalSkirt
 
 - type: loadoutGroup
   id: HeadofSecurityNeck
@@ -1188,18 +1188,18 @@
   id: WardenJumpsuit
   name: loadout-group-warden-jumpsuit
   loadouts:
-  - FuSecurityService
-  - FuSecurityDressPants
+ # - FuSecurityService # OBSCURE FUCK FUNKY SPRITES
+ # - FuSecurityDressPants # OBSCURE FUCK FUNKY SPRITES
  # - FuSecurityDressPantsSenior No senior gear
-  - FuSecurityDressSkirt
-  - FuSecurityDressSkirtStockings
+ # - FuSecurityDressSkirt # OBSCURE FUCK FUNKY SPRITES
+ # - FuSecurityDressSkirtStockings # OBSCURE FUCK FUNKY SPRITES
  # - FuSecurityDressSkirtSenior No senior gear
  # - FuSecurityDressSkirtSeniorStockings No senior gear
-  - FuSecurityMessPants
-  - FuSecurityMessSkirt
-  - FuSecurityMessSkirtStockings
-#  - WardenJumpsuit
-#  - WardenJumpskirt
+ # - FuSecurityMessPants # OBSCURE FUCK FUNKY SPRITES
+ # - FuSecurityMessSkirt # OBSCURE FUCK FUNKY SPRITES
+ # - FuSecurityMessSkirtStockings # OBSCURE FUCK FUNKY SPRITES
+  - WardenJumpsuit
+  - WardenJumpskirt
 
 - type: loadoutGroup
   id: WardenNeck
@@ -1236,23 +1236,23 @@
   id: SecurityJumpsuit
   name: loadout-group-security-jumpsuit
   loadouts:
-  - FuSecurityService
-  - FuSecurityDressPants
+ # - FuSecurityService # OBSCURE FUCK FUNKY SPRITES
+ # - FuSecurityDressPants # OBSCURE FUCK FUNKY SPRITES
  # - FuSecurityDressPantsSenior
-  - FuSecurityDressSkirt
-  - FuSecurityDressSkirtStockings
+ # - FuSecurityDressSkirt # OBSCURE FUCK FUNKY SPRITES
+ # - FuSecurityDressSkirtStockings # OBSCURE FUCK FUNKY SPRITES
  # - FuSecurityDressSkirtSenior
  # - FuSecurityDressSkirtSeniorStockings
-  - FuSecurityMessPants
-  - FuSecurityMessSkirt
-  - FuSecurityMessSkirtStockings
-#  - SecurityJumpsuit
-#  - SecurityJumpskirt
-#  - SecurityJumpsuitGrey
-#  - SecurityJumpskirtGrey
-#  - SeniorOfficerJumpsuit
-#  - SeniorOfficerJumpskirt
-#  - TrooperUniform
+ # - FuSecurityMessPants # OBSCURE FUCK FUNKY SPRITES
+ # - FuSecurityMessSkirt # OBSCURE FUCK FUNKY SPRITES
+ # - FuSecurityMessSkirtStockings # OBSCURE FUCK FUNKY SPRITES
+  - SecurityJumpsuit
+  - SecurityJumpskirt
+  - SecurityJumpsuitGrey
+  - SecurityJumpskirtGrey
+  - SeniorOfficerJumpsuit
+  - SeniorOfficerJumpskirt
+  - TrooperUniform
 
 - type: loadoutGroup
   id: SecurityBackpack
@@ -1362,8 +1362,8 @@
   id: SecurityCadetJumpsuit
   name: loadout-group-security-cadet-jumpsuit
   loadouts:
-  - FuSecurityCadetPants
-  - FuSecurityCadetSkirt
+  - SecurityJumpsuitGrey # OBSCURE SPRITES
+  - SecurityJumpskirtGrey # OBSCURE SPRITES
 #  - RedJumpsuit
 #  - RedJumpskirt
 

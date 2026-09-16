@@ -26,3 +26,6 @@ tool-quality-digging-name = Копание
 tool-quality-digging-tool-name = Лопата
 tool-quality-brushing-name = Чистка
 tool-quality-brushing-tool-name = Щётка с металлической проволокой
+# Funky - cherrypick of https://github.com/michaelchessall/SS14-Persistence/pull/182
+tool-quality-axing-name = Axing
+tool-quality-axing-tool-name = Fireaxe

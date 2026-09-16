@@ -1,0 +1,14 @@
+ent-FuClothingUniformCoverallsEngineering = engineering coveralls
+    .desc = A pair of heavy-duty cotton overalls for the engineering department. Simple, for the working Spessman.
+ent-FuClothingUniformCoverallsEngineeringRipley = engineering coveralls w/ patches
+    .desc = A pair of old-age overalls for the engineering department. This pair comes with patches reminiscent of stars, when space-faring was still a novelty.
+ent-FuClothingUniformOverallsEngineering = engineering overalls
+    .desc = A pair of heavy-duty cotton overalls with an orange shirt.
+ent-FuClothingUniformOverallsEngineeringGrease = engineering overalls
+    .desc = A pair of heavy-duty cotton overalls with a simple shirt that is stained with old grease.
+ent-FuClothingUniformShirtPantsEngineering = engineering uniform
+    .desc = A pair of heavy-duty cotton pants with an orange shirt.
+ent-FuClothingUniformShirtPantsEngineeringGrease = engineering uniform
+    .desc = A pair of heavy-duty cotton pants with a simple shirt that is stained with old grease.
+ent-FuClothingUniformCoverallsEngineeringIntern = technical assistant's coveralls
+    .desc = A pair of overalls for the engineering department. This is intended for an assistant, with a built-in hi-viz vest

@@ -45,7 +45,7 @@ job-description-serviceworker = Изучите основы барменског
 job-description-station-ai = Соблюдайте свои законы, служите экипажу.
 job-description-visitor = Наслаждайтесь своим визитом на станцию.
 job-description-warden = Следите за отделом Безопасности, помогайте офицерам в экстренных ситуациях, обеспечивайте следственные мероприятия: допросы, расследования.
-
+job-description-tram-driver = Drive around a tram from stop to stop.
 job-description-assistant = Грейтайдите эту чёртову станцию!
 job-description-xo = Управляйте персоналом станции, оформляйте переводы по должностям и обрабатывайте аудиторские отчёты.
 job-description-magistrate = Выносите приговоры задержанным членам экипажа и председательствуйте на судебных заседаниях.

@@ -111,4 +111,3 @@ ent-BoxFolderCentComClipboardThreePapers = { ent-BoxFolderCentComClipboardEmpty 
     .suffix = { ent-BoxFolderFillThreePapers.suffix }
 ent-BoxFolderQmClipboard = цифровой планшет заявок
     .desc = Громоздкий цифровой планшет, содержащий информацию о поставках и финансовых операциях. При таком количестве компрометирующих документов его следует беречь.
-
