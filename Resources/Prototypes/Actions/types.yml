@@ -75,6 +75,7 @@
   description: AAAAAAAAAAAAAAAAAAAAAAAAA
   components:
   - type: Action
+    priority: 20 # OBSCURE
     useDelay: 10
     checkCanInteract: false
   - type: Sprite

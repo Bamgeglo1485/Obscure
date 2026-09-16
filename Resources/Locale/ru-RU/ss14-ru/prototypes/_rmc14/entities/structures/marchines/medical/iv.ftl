@@ -1,9 +1,9 @@
-ent-CMIV = IV stand
-    .desc = A stand meant to hold IV bags upright, injecting or drawing from patients attached to it.
-    .suffix = IV, empty
-ent-CMBloodPack = IV bag
-    .desc = An IV bag. Contains fluids, typically used for transfusions.
-    .suffix = CM, empty
-ent-CMBloodPackFull = IV bag
-    .suffix = CM, Full
+ent-CMIV = стойка для капельницы
+    .desc = Стойка для вертикального крепления пакетов для капельницы, вводящая жидкость подключённым пациентам или забирающая её у них.
+    .suffix = Капельница, пустая
+ent-CMBloodPack = пакет для капельницы
+    .desc = Пакет для капельницы. Содержит жидкости, обычно используется для переливания.
+    .suffix = CM, пустой
+ent-CMBloodPackFull = пакет для капельницы
+    .suffix = CM, полный
     .desc = { ent-CMBloodPack.desc }

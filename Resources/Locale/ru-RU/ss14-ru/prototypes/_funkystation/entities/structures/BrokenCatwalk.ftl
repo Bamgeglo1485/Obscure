@@ -1,2 +1,2 @@
-ent-BrokenCatwalk = broken catwalk
-    .desc = This catwalk has seen better days.
+ent-BrokenCatwalk = сломанный мостик
+    .desc = Этот мостик видывал и лучшие времена.
