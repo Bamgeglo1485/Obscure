@@ -779,4 +779,35 @@
   id: 90
   time: '2026-09-15T15:58:53Z'
   url: https://github.com/funky-station/forky-station/pull/268
+- author: Joaco545
+  changes:
+  - message: Improved NCLP readability
+    type: Tweak
+  - message: Split the NanoTrasen Law and Procedure guidebook entries
+    type: Tweak
+  id: 91
+  time: '2026-09-16T01:32:41Z'
+  url: https://github.com/funky-station/forky-station/pull/487
+- author: Mirrorcult, WiZ88
+  changes:
+  - message: Ported "Face Direction" button from Ephemeral Space
+    type: Add
+  id: 92
+  time: '2026-09-16T15:26:03Z'
+  url: https://github.com/funky-station/forky-station/pull/503
+- author: mkanke-real
+  changes:
+  - message: Added security access locked shutters
+    type: Add
+  id: 93
+  time: '2026-09-16T16:29:58Z'
+  url: https://github.com/funky-station/forky-station/pull/478
+- author: TrixxedHeart
+  changes:
+  - message: Items being given to you can now be instantly accepted by clicking on
+      the offerer.
+    type: Add
+  id: 94
+  time: '2026-09-16T17:28:23Z'
+  url: https://github.com/funky-station/forky-station/pull/506
 Order: -1
