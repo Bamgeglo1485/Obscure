@@ -2,6 +2,7 @@
   id: BasicCalmEventsTable
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
+    - id: SoulTieRule # rayten
     - id: AnomalySpawn
     - id: BluespaceArtifact
     - id: BluespaceLocker
@@ -111,7 +112,7 @@
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
     startAudio: Announce # Macrocosm edit - sound prototypes
-    weight: 8
+    weight: 3 # OBSCURE
     duration: 35
   - type: AnomalySpawnRule
 
@@ -126,7 +127,7 @@
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
     startAudio: Announce # Macrocosm edit - sound prototypes
-    weight: 8
+    weight: 3 # OBSCURE
     duration: 35
   - type: BluespaceArtifactRule
 
@@ -148,7 +149,7 @@
   - type: StationEvent
     weight: 7
     duration: 1
-    minimumPlayers: 15
+    minimumPlayers: 0 # OBSCURE
   - type: BreakerFlipRule
     blacklist:
       components:
@@ -161,7 +162,7 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-bureaucratic-error-announcement
-    minimumPlayers: 25
+    minimumPlayers: 0 # OBSCURE
     weight: 3
     duration: 1
   - type: BureaucraticErrorRule
@@ -178,7 +179,7 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-clerical-error-announcement
-    minimumPlayers: 15
+    minimumPlayers: 0 # OBSCURE
     weight: 5
     duration: 1
   - type: ClericalErrorRule
@@ -192,6 +193,7 @@
     duration: 1
     occursDuringRoundEnd: false
     minimumPlayers: 10
+    minimumSecurity: 1 # OBSCURE
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
 
@@ -203,7 +205,8 @@
     weight: 6.5
     earliestStart: 40
     reoccurrenceDelay: 20
-    minimumPlayers: 20
+    minimumPlayers: 15 # OBSCURE
+    minimumSecurity: 3 # OBSCURE
     duration: null
     occursDuringRoundEnd: false
   - type: SpaceSpawnRule
@@ -233,7 +236,8 @@
     occursDuringRoundEnd: false
     earliestStart: 30
     reoccurrenceDelay: 20
-    minimumPlayers: 30
+    minimumPlayers: 10 # OBSCURE
+    minimumSecurity: 2 # OBSCURE
   - type: SpaceSpawnRule
   - type: AntagLoadProfileRule
   - type: AntagObjectives
@@ -262,7 +266,8 @@
     occursDuringRoundEnd: false
     earliestStart: 20
     reoccurrenceDelay: 20
-    minimumPlayers: 15
+    minimumPlayers: 10 # OBSCURE
+    minimumSecurity: 1 # OBSCURE
   - type: ParadoxCloneRule
     objectiveBlacklist:
       tags:
@@ -303,7 +308,8 @@
     occursDuringRoundEnd: false
     earliestStart: 30
     reoccurrenceDelay: 60
-    minimumPlayers: 30
+    minimumPlayers: 13 # OBSCURE
+    minimumSecurity: 2 # OBSCURE
 
 # disabled until event is rewritten to be more interesting
 #- type: entity
@@ -332,7 +338,7 @@
   components:
   - type: StationEvent
     earliestStart: 15
-    minimumPlayers: 15
+    minimumPlayers: 8 # OBSCURE
     weight: 7
     duration: 240
   - type: KudzuGrowthRule
@@ -385,7 +391,7 @@
     startAnnouncement: station-event-vent-clog-start-announcement
     startAudio: Attention # Macrocosm edit - sound prototypes
     earliestStart: 15
-    minimumPlayers: 15
+    minimumPlayers: 0 # OBSCURE
     weight: 5
     duration: 60
   - type: VentClogRule
@@ -400,7 +406,8 @@
     startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio: Attention # Macrocosm edit - sound prototypes
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 10 # OBSCURE
+    minimumSecurity: 1 # OBSCURE
     weight: 5
     duration: 5
     maxDuration: 20
@@ -420,7 +427,8 @@
     startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio: Attention # Macrocosm edit - sound prototypes
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 10 # OBSCURE
+    minimumSecurity: 1 # OBSCURE
     weight: 5
     duration: 5
     maxDuration: 20
@@ -440,7 +448,8 @@
     startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio: Attention # Macrocosm edit - sound prototypes
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 10 # OBSCURE
+    minimumSecurity: 1 # OBSCURE
     weight: 5
     duration: 5
     maxDuration: 20
@@ -458,7 +467,8 @@
     startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio: Attention # Macrocosm edit - sound prototypes
     earliestStart: 20
-    minimumPlayers: 20
+    minimumPlayers: 10 # OBSCURE
+    minimumSecurity: 1 # OBSCURE
     weight: 1.5
     duration: 5
     maxDuration: 20
@@ -474,7 +484,8 @@
   components:
   - type: StationEvent
     earliestStart: 90
-    minimumPlayers: 40
+    minimumPlayers: 15 # OBSCURE
+    minimumSecurity: 4 # OBSCURE
     weight: 1 # Zombies was happening basically every single survival round, so now it's super rare
     duration: 1
     occursDuringRoundEnd: false
@@ -496,7 +507,8 @@
   - type: StationEvent
     earliestStart: 35
     weight: 5.5
-    minimumPlayers: 20
+    minimumPlayers: 15 # OBSCURE
+    minimumSecurity: 3 # OBSCURE
     duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end screen (not always "Neutral outcome!") and... ending the game if the station is nuked.
     occursDuringRoundEnd: false
   - type: RuleGrids
@@ -518,7 +530,8 @@
   - type: StationEvent
     earliestStart: 30
     weight: 8
-    minimumPlayers: 15
+    minimumPlayers: 10 # OBSCURE
+    minimumSecurity: 1 # OBSCURE
     maxOccurrences: 1 # can only happen once per round
     startAnnouncement: station-event-communication-interception
     startAudio: Intercept # Macrocosm edit - sound prototypes
@@ -566,7 +579,8 @@
   - type: StationEvent
     startAudio: Intercept # Macrocosm edit - sound prototypes
     weight: 5
-    minimumPlayers: 25
+    minimumPlayers: 15 # OBSCURE
+    minimumSecurity: 1 # OBSCURE
     reoccurrenceDelay: 20
   - type: GreytideVirusRule
     accessGroups:
@@ -668,7 +682,8 @@
   components:
   - type: StationEvent
     earliestStart: 25
-    minimumPlayers: 15
+    minimumPlayers: 10 # OBSCURE
+    minimumSecurity: 1 # OBSCURE
   - type: AntagSpawner
     prototype: PlayerBorgSyndicateDerelictGhostRole
   - type: AntagSelection

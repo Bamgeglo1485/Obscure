@@ -1,3 +1,4 @@
+using Content.Server.Vanilla.LowPop; // RAYTEN
 using System.Linq;
 using Content.Server.GameTicking;
 using Content.Server.RoundEnd;
@@ -14,6 +15,7 @@ namespace Content.Server.StationEvents;
 
 public sealed partial class EventManagerSystem : EntitySystem
 {
+    [Dependency] private LowPopSystem _lowpop = default!; // rayten
     [Dependency] private IConfigurationManager _configurationManager = default!;
     [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private IRobustRandom _random = default!;
@@ -325,7 +327,7 @@ public sealed partial class EventManagerSystem : EntitySystem
             return false;
         }
 
-        if (playerCount < stationEvent.MinimumPlayers)
+        if (playerCount < stationEvent.MinimumPlayers && _lowpop.GetSecurityCount() < stationEvent.MinimumSecurity) // RAYTEN
         {
             return false;
         }

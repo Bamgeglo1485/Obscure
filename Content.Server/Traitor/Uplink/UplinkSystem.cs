@@ -161,27 +161,12 @@ public sealed partial class UplinkSystem : EntitySystem
     /// </summary>
     public bool TryImplantUplink(EntityUid user, EntityUid storeEntity, FixedPoint2 balance, bool giveDiscounts)
     {
-        if (!ProtoMan.Resolve(FallbackUplinkCatalog, out var catalog))
-            return false;
+        // OBSCURE START
+        // У форки кошельки вместо кпк, а так же импланты у всех предателей - не круто
+        // Поэтому по базе мы не выдаем аплинк предателям, а радио-аплинк через AntagPrototype и StartingGear
 
-        if (!catalog.Cost.TryGetValue(TelecrystalCurrencyPrototype, out var cost))
-            return false;
-
-        if (balance < cost) // Can't use Math functions on FixedPoint2
-            balance = 0;
-        else
-            balance = balance - cost;
-
-        SetUplink(user, storeEntity, balance, giveDiscounts);
-        var implant = _subdermalImplant.AddImplant(user, FallbackUplinkImplant);
-
-        if (!HasComp<RemoteStoreComponent>(implant))
-        {
-            Log.Error($"Implant does not have the store component {implant}");
-            return false;
-        }
-
-        return true;
+        return false;
+        // OBSCURE ENDS
     }
 
     /// <summary>

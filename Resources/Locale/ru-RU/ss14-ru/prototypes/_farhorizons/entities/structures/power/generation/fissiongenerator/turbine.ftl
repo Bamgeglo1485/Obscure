@@ -1,7 +1,7 @@
-ent-Turbine = gas turbine
-    .desc = A large turbine used for generating power using hot gas.
-ent-TurbineSmall = small gas turbine
-    .desc = A small turbine used for generating power using hot gas.
+ent-Turbine = газовая турбина
+    .desc = Большая турбина для выработки энергии с использованием горячего газа.
+ent-TurbineSmall = малая газовая турбина
+    .desc = Малая турбина для выработки энергии с использованием горячего газа.
 ent-TurbineGasPipe = { "" }
     .desc = { "" }
 ent-GasTurbineAlarmEntity = { "" }

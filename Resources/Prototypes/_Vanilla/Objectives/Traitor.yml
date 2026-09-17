@@ -94,7 +94,7 @@
 
 - type: entity
   parent: [BaseTraitorObjective, BaseRPObjective]
-  id: VerbEnrageObjective
+  id: EnrageObjective
   description: Синдикату нужна реклама в НТоке, так что взбесите главу, а мы вырежем это на короткие ролики.
   components:
   - type: Objective

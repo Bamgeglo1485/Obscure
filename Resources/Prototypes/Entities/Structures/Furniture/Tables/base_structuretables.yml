@@ -36,6 +36,7 @@
       collection: FootstepHull
   - type: Tag
     tags:
+    - Table # RAYTEN
     - ForceFixRotations
 
 - type: entity

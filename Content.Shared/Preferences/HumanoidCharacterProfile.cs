@@ -869,10 +869,13 @@ namespace Content.Shared.Preferences
         /// <summary>
         /// Takes in an IEnumerable of traits and returns a List of the valid traits.
         /// </summary>
-        public List<ProtoId<TraitPrototype>> GetValidTraits(IEnumerable<ProtoId<TraitPrototype>> traits, IPrototypeManager protoManager)
+        public List<ProtoId<TraitPrototype>> GetValidTraits(
+            IEnumerable<ProtoId<TraitPrototype>> traits,
+            IPrototypeManager protoManager)
         {
-            // Track points count for each group.
-            var groups = new Dictionary<string, int>();
+            // OBSCURE-TRAITS STARTS
+            var byCategory = new Dictionary<string, (TraitCategoryPrototype Category, List<ProtoId<TraitPrototype>> Traits)>();
+
             var result = new List<ProtoId<TraitPrototype>>();
 
             foreach (var trait in traits)
@@ -880,29 +883,42 @@ namespace Content.Shared.Preferences
                 if (!protoManager.TryIndex(trait, out var traitProto))
                     continue;
 
-                // Always valid.
                 if (traitProto.Category == null)
                 {
                     result.Add(trait);
                     continue;
                 }
 
-                // No category so dump it.
                 if (!protoManager.Resolve(traitProto.Category, out var category))
                     continue;
 
-                var existing = groups.GetOrNew(category.ID);
-                existing += traitProto.Cost;
+                if (!byCategory.TryGetValue(category.ID, out var entry))
+                {
+                    entry = (category, new List<ProtoId<TraitPrototype>>());
+                    byCategory[category.ID] = entry;
+                }
 
-                // Too expensive.
-                if (existing > category.MaxTraitPoints)
+                entry.Traits.Add(trait);
+                byCategory[category.ID] = entry;
+            }
+
+            foreach (var (_, (category, categoryTraits)) in byCategory)
+            {
+                var total = 0;
+                foreach (var id in categoryTraits)
+                {
+                    if (protoManager.TryIndex(id, out var proto))
+                        total += proto.Cost;
+                }
+
+                if (category.MaxTraitPoints >= 0 && total > category.MaxTraitPoints)
                     continue;
 
-                groups[category.ID] = existing;
-                result.Add(trait);
+                result.AddRange(categoryTraits);
             }
 
             return result;
+            // OBSCURE-TRAITS ENDS
         }
         // Rayten-Voice-Start
         public static bool CanHaveVoice(VoiceSpeechPrototype voice, Sex sex)

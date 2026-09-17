@@ -6,6 +6,11 @@
     snap:
     - Wallmount
   components:
+  # RAYTEN STARTS
+  - type: Tag
+    tags:
+    - Lighting
+  # RAYTEN ENDS
   - type: MeleeSound
     soundGroups:
       Brute:

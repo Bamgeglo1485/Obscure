@@ -10,6 +10,14 @@ namespace Content.Server.StationEvents.Components;
 [RegisterComponent, AutoGenerateComponentPause]
 public sealed partial class StationEventComponent : Component
 {
+    ///Rayten-Start
+    [DataField]
+    public int MinimumSecurity = 0;
+    [DataField]
+    [AutoPausedField]
+    public TimeSpan? BlockDuration = null;
+    /// Rayten-End
+
     public const float WeightVeryLow = 0.0f;
     public const float WeightLow = 5.0f;
     public const float WeightNormal = 10.0f;

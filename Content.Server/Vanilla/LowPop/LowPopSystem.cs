@@ -21,27 +21,28 @@ public sealed class LowPopSystem : EntitySystem
     }
     private void RebalanceLowPop()
     {
+        // ОБСКУР -> УБРАН ДЕБАГ СМЭСОВ
         //инженеры
-        if (_engCount == 0)
-        {
-            var query = EntityQueryEnumerator<SmesComponent>();
-            while (query.MoveNext(out var uid, out _))
-            {
-                if (TryComp<BatteryComponent>(uid, out var battery))
-                {
-                    var recharger = EnsureComp<BatterySelfRechargerComponent>(uid);
-                    recharger.AutoRechargeRate = battery.MaxCharge;
-                }
-            }
-        }
-        else
-        {
-            var query = EntityQueryEnumerator<SmesComponent>();
-            while (query.MoveNext(out var uid, out _))
-            {
-                RemComp<BatterySelfRechargerComponent>(uid);
-            }
-        }
+        //if (_engCount == 0)
+        //{
+        //    var query = EntityQueryEnumerator<SmesComponent>();
+        //    while (query.MoveNext(out var uid, out _))
+        //    {
+        //        if (TryComp<BatteryComponent>(uid, out var battery))
+        //        {
+        //            var recharger = EnsureComp<BatterySelfRechargerComponent>(uid);
+        //            recharger.AutoRechargeRate = battery.MaxCharge;
+        //        }
+        //    }
+        //}
+        //else
+        //{
+        //    var query = EntityQueryEnumerator<SmesComponent>();
+        //    while (query.MoveNext(out var uid, out _))
+        //    {
+        //        RemComp<BatterySelfRechargerComponent>(uid);
+        //    }
+        //}
     }
 
     private void OnRoundStarting(RoundStartedEvent ev)

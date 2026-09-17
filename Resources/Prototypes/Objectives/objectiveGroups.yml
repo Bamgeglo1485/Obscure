@@ -3,7 +3,7 @@
   weights:
     TraitorObjectiveGroupSteal: 1
     TraitorObjectiveGroupKill: 1
-    TraitorObjectiveGroupState: 1 #As in, something about your character. Alive, dead, arrested, gained an ability...
+    TraitorObjectiveGroupState: 0.2 # У обскура нет эвака
     TraitorObjectiveGroupSocial: 1 #Involves helping/harming others without killing them or stealing their stuff
     TraitorObjectiveGroupSabotage: 1
     TraitorObjectiveGroupOther: 1
@@ -31,11 +31,13 @@
     KillRandomPersonObjective: 1
     KillStationAiObjective: 0.25
     KillRandomHeadObjective: 0.25
+    TeachRandomPersonObjective: 0.3 # OBSCURE
+    TeachRandomHeadObjective: 0.3 # OBSCURE
 
 - type: weightedRandom
   id: TraitorObjectiveGroupState
   weights:
-    EscapeShuttleObjective: 1
+    #EscapeShuttleObjective: 1 # У обскура нет эвака
     DieObjective: 0.2
     #HijackShuttleObjective: 0.02
 
@@ -44,6 +46,9 @@
   weights:
 #    RandomTraitorAliveObjective: 1 - Removed because the objective was boring and didn't progress the round.
     RandomTraitorProgressObjective: 1
+    JailRPObjective: 1 # OBSCURE
+    VerbRPObjective: 1 # OBSCURE
+    EnrageObjective: 1 # OBSCURE
 
 - type: weightedRandom
   id: TraitorObjectiveGroupSabotage

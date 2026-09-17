@@ -1,3 +1,11 @@
+# OBSCURE STARTS
+- type: startingGear
+  id: TraitorUplinkGear
+  storage:
+    back:
+    - BaseUplinkRadio100TC
+# OBSCURE ENDS
+
 - type: antag
   id: Traitor
   name: roles-antag-syndicate-agent-name
@@ -17,6 +25,7 @@
 - type: antagSpecifier
   parent: BaseTraitor
   id: Traitor
+  startingGear: TraitorUplinkGear # OBSCURE
   prefRoles:
   - Traitor
   blacklist:
@@ -39,6 +48,7 @@
 - type: antagSpecifier
   parent: BaseTraitor
   id: TraitorSleeper
+  startingGear: TraitorUplinkGear # OBSCURE
   prefRoles:
   - TraitorSleeper
   mindRoles:
@@ -108,7 +118,7 @@
     - WeaponPistolViper
     - Syringe
     - Syringe
-    
+
 - type: startingGear
   id: SyndicateReinforcementSpy
   equipment:
