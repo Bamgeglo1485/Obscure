@@ -1,28 +1,28 @@
 <Document>
-# Apid
+# Апиды
 <Box>
   <GuideEntityEmbed Entity="MobApid" Caption=""/>
 </Box>
-Apids, or "Beefolk" as they are sometimes colloquially known, are a unique asset to Nanotrasen's logistics network.
+Апиды, иногда в просторечии называемые «быколюдьми», — уникальный актив логистической сети Nanotrasen.
 
-They are a eusocial species, forming "hives" with a high degree of organization and efficiency. Under a recent contract, Apids have easily integrated into the Nanotrasen work structure, providing reliable, well trained labour on short term notice.
+Это эусоциальный вид, формирующий «ульи» с высокой степенью организации и эффективности. По недавнему контракту апиды легко интегрировались в рабочую структуру Nanotrasen, предоставляя надёжную, хорошо обученную рабочую силу в кратчайшие сроки.
 
-## Physiology
-Apids possess uniquely weak limbs, rendering them incapable of maneuvering normally on the ground - however, [color=#1e90ff]their strong wings and ultralight physiology enable them to fly continuously under standard NT gravity[/color], and allows them to [color=#1e90ff]easily outpace most other Nanotrasen-dealing species while doing so.[/color]
+## Физиология
+Апиды обладают уникально слабыми конечностями, из-за чего неспособны нормально передвигаться по земле. Однако [color=#1e90ff]их сильные крылья и ультралёгкая физиология позволяют им непрерывно летать при стандартной гравитации NT[/color], и при этом они [color=#1e90ff]легко обгоняют большинство других видов, имеющих дело с Nanotrasen.[/color]
 
-This reliance on being airborne does come with significant disadvantages - [color=#ffa500]Their weak forelimbs are only capable of holding aloft one object at a time,[/color] meaning for all intents and purposes they only have one hand. As well as this, [color=#ffa500]the placement of their wings prevents them from wearing backpacks, jetpacks, or suit tanks[/color].
+Эта зависимость от нахождения в воздухе имеет и значительные недостатки. [color=#ffa500]Их слабые передние конечности способны удерживать лишь один предмет за раз,[/color] что фактически означает наличие только одной руки. Кроме того, [color=#ffa500]расположение их крыльев не позволяет им носить рюкзаки, реактивные ранцы или баллоны для скафандров[/color].
 
-In addition, their lightweight build leaves [color=#ffa500]significantly more vulnerable to physical trauma, going critical at only 60 damage[/color], and they have a [color=#ffa500]tendency to become drowsy when exposed to atmospheric water vapor[/color].
+Вдобавок их лёгкое телосложение делает их [color=#ffa500]значительно более уязвимыми к физическим травмам — критическое состояние наступает уже при 60 единицах урона[/color], а также у них есть [color=#ffa500]склонность к сонливости при воздействии атмосферного водяного пара[/color].
 
-  ## Apid Naming Conventions
-  Apids originate from a utilitarian society, and as of such, their naming traditions are similarly utilitarian. Their "first name" is generally a simple title of the work they enjoy, with their "last name" being a mononym in their native language.
-  - [color=#449944]Acceptable:[/color] Baker R'zvsszsr
-  - [color=#449944]Acceptable:[/color] Playwright S'rzvz
-  - [color=#449944]Acceptable:[/color] Builder S'vszs-vs
-  - [color=#449944]Acceptable:[/color] Technician Zs'vsz
-  - [color=#994444]Bad:[/color] Motherfucker Unlimited
-  - [color=#994444]Bad:[/color] Barry B. Benson
-  - [color=#994444]Bad:[/color] Not the Bees
-  - [color=#994444]Bad:[/color] Benry
+  ## Соглашения об именах апидов
+  Апиды происходят из утилитарного общества, и поэтому их традиции именования столь же утилитарны. Их «имя» обычно представляет собой простое название работы, которая им нравится, а «фамилия» — мононим на их родном языке.
+  - [color=#449944]Приемлемо:[/color] Пекарь Р'звссзср
+  - [color=#449944]Приемлемо:[/color] Драматург С'рзвз
+  - [color=#449944]Приемлемо:[/color] Строитель С'всзс-вс
+  - [color=#449944]Приемлемо:[/color] Техник Зс'всз
+  - [color=#994444]Плохо:[/color] Ублюдок Бесконечный
+  - [color=#994444]Плохо:[/color] Барри Б. Бенсон
+  - [color=#994444]Плохо:[/color] Не Пчёлы
+  - [color=#994444]Плохо:[/color] Бенри
 
 </Document>

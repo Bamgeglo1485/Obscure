@@ -20,10 +20,21 @@ public abstract partial class SharedCombatModeSystem : EntitySystem
     {
         base.Initialize();
 
+        SubscribeLocalEvent<CombatModeComponent, AttemptMobCollideEvent>(OnCollide);//rayten
         SubscribeLocalEvent<CombatModeComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<CombatModeComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<CombatModeComponent, ToggleCombatActionEvent>(OnActionPerform);
     }
+
+    // Rayten-start
+    private void OnCollide(EntityUid uid, CombatModeComponent component, ref AttemptMobCollideEvent args)
+    {
+        if (!component.IsInCombatMode)
+        {
+            args.Cancelled = !component.IsInCombatMode;
+        }
+    }
+    // Rayten-end
 
     private void OnMapInit(EntityUid uid, CombatModeComponent component, MapInitEvent args)
     {

@@ -1,58 +1,58 @@
 <Document>
-  # Decapoid
+  # Декапоид
 
   <Box>
     <GuideEntityEmbed Entity="BaseMobDecapoidInternals" Caption=""/>
   </Box>
 
-  [color=red]Caution! This species has several SEVERELY limiting game mechanics and is only recommended for highly experienced players. Some jobs and tasks may be difficult or impossible to perform by yourself with only one hand, and you will be limited to melee combat only.[/color]
+  [color=red]Внимание! Этот вид имеет несколько СЕРЬЁЗНО ограничивающих игровых механик и рекомендуется только для опытных игроков. Некоторые работы и задачи могут быть сложными или невозможными для выполнения в одиночку одной рукой, а в бою вы будете ограничены только ближним боем.[/color]
 
-  ## Physiology
-  Decapoids are a recent addition to Nanotrasen's list of accepted species, and are one of the more unusual species NT has encountered. [color=#1e90ff]Their carapace is uniquely adapted for extreme pressures, allowing them to traverse space without the aid of a pressure suit.[/color] Perhaps as a result of this, [color=#1e90ff]they have developed an affinity for microgravity - they are capable of moving considerably faster in it.[/color]
+  ## Физиология
+  Декапоиды — недавнее пополнение в списке принятых видов Nanotrasen, и один из самых необычных видов, с которыми NT сталкивалась. [color=#1e90ff]Их панцирь уникально приспособлен к экстремальному давлению, позволяя им перемещаться в космосе без скафандра.[/color] Возможно, как следствие этого, [color=#1e90ff]у них развилась предрасположенность к микрогравитации — в ней они способны передвигаться значительно быстрее.[/color]
 
-  This enormous benefit comes with a laundry list of detriments, however, when it comes to operating aboard a Nanotrasen vessel. For example, while under the effects of gravity, [color=#ffa500]they move somewhat slower than most other species.[/color] Additionally, their unique configuration of lower limbs makes it [color=#ffa500]impossible for them to wear shoes.[/color]
+  Однако это огромное преимущество сопровождается длинным списком недостатков при работе на борту судна Nanotrasen. Например, под воздействием гравитации [color=#ffa500]они двигаются несколько медленнее большинства других видов.[/color] Кроме того, уникальная конфигурация их нижних конечностей делает [color=#ffa500]невозможным ношение обуви.[/color]
 
-  Their major claw is enormous and somewhat unwieldy. [color=#ffa500]This left "hand" is useless for most of the tasks one might use a hand for,[/color] and functions primarily as a [color=#1e90ff]prying tool and cutting tool, though it can also serve as a competent melee weapon and shield.[/color] Their minor claw isn't much more dextrous, and while its smaller size allows it to manipulate most tools, [color=#ffa500]Decapoids are incapable of efficiently using firearms of any kind.[/color] It's not all bad, however - Their abundance of limbs allows them to [color=#1e90ff]drag objects without the use of their claws,[/color] and their immense physical strength [color=#1e90ff]negates the normal speed penalty for dragging.[/color]
+  Их большая клешня огромна и несколько неуклюжа. [color=#ffa500]Эта «левая рука» бесполезна для большинства задач, для которых обычно используют руку,[/color] и функционирует в первую очередь как [color=#1e90ff]инструмент для взлома и резки, хотя также может служить неплохим оружием ближнего боя и щитом.[/color] Их малая клешня не намного более ловкая, и хотя её меньший размер позволяет манипулировать большинством инструментов, [color=#ffa500]декапоиды неспособны эффективно использовать огнестрельное оружие любого типа.[/color] Впрочем, не всё так плохо — обилие конечностей позволяет им [color=#1e90ff]тащить предметы без использования клешней,[/color] а их огромная физическая сила [color=#1e90ff]нейтрализует обычный штраф к скорости за перетаскивание.[/color]
 
-  Decapoids do not undergo senescence like other species - Like some of Earth's crustaceans, they are capable of living indefinitely so long as they are able to safely molt, growing slightly larger each time. High-status Decapoids, such as the Emperor, have been known to [color=#1e90ff]live for hundreds of years and grow to colossal sizes.[/color] However, the majority of Decapoids employed by NanoTrasen are [color=#1e90ff]less than two hundred years old.[/color]
+  Декапоиды не подвержены старению, как другие виды. Подобно некоторым земным ракообразным, они способны жить бесконечно долго, пока могут безопасно линять, с каждой линькой становясь немного крупнее. Высокопоставленные декапоиды, такие как Император, известны тем, что [color=#1e90ff]живут сотни лет и вырастают до колоссальных размеров.[/color] Однако большинство декапоидов, нанятых NanoTrasen, [color=#1e90ff]моложе двухсот лет.[/color]
 
-  ## Breathing Requirements
+  ## Требования к дыханию
 
   <Box>
     <GuideEntityEmbed Entity="DecapoidBreathingApparatus" Caption=""/>
     <GuideEntityEmbed Entity="DecapoidVaporTankFilled" Caption=""/>
   </Box>
 
-  Their recently aquatic ancestry left them with respiratory needs unique among NT-accepted species. [color=#ffa500]Decapoids require a steady supply of water vapor to survive.[/color] Luckily, the Decapoid Empire has seen fit to supply each Decapoid with a [color=#1e90ff]Vaporizer[/color] and a [color=#1e90ff]Vapor Tank,[/color] devices capable of safely turning water into water vapor and supplying it to their gills, respectively. The Decapoid Empire has not, however, deigned to provide Nanotrasen with the blueprints for these devices, so [color=red]Decapoids are encouraged not to lose theirs.[/color]
+  Их недавнее водное происхождение оставило им потребности в дыхании, уникальные среди принятых NT видов. [color=#ffa500]Декапоидам требуется постоянный приток водяного пара для выживания.[/color] К счастью, Империя Декапоидов сочла нужным снабдить каждого декапоида [color=#1e90ff]Испарителем[/color] и [color=#1e90ff]Баком с паром[/color] — устройствами, способными безопасно превращать воду в водяной пар и подавать его к их жабрам соответственно. Однако Империя Декапоидов не соизволила предоставить Nanotrasen чертежи этих устройств, поэтому [color=red]декапоидам настоятельно рекомендуется не терять свои.[/color]
 
-  This is not the only feature their aquatic history has left them, however - Decapoids do not possess vocal cords that would function in a gaseous atmosphere. [color=#ffa500]They are incapable of normal speech.[/color] This deficit is fortunately mitigated by their [color=#1e90ff]Vaporizers,[/color] which plug directly into their nervous system and [color=#1e90ff]translate their brainwaves into sound directly.[/color] The NT Board of Directors would like to once again stress that [color=red][bold]Decapoids should avoid losing these devices at all costs, as they cannot be replaced.[/color][/bold]
+  Однако это не единственная особенность, оставленная им водной историей. У декапоидов нет голосовых связок, которые функционировали бы в газовой атмосфере. [color=#ffa500]Они неспособны к нормальной речи.[/color] К счастью, этот недостаток компенсируется их [color=#1e90ff]Испарителями,[/color] которые подключаются напрямую к их нервной системе и [color=#1e90ff]преобразуют их мозговые волны непосредственно в звук.[/color] Совет директоров NT хотел бы ещё раз подчеркнуть, что [color=red][bold]декапоидам следует избегать потери этих устройств любой ценой, поскольку они не подлежат замене.[/color][/bold]
 
-  In the event of the loss of these items, [color=#1e90ff]reach out to the Atmos team immediately to be supplied with water vapor. Decapoids are capable of using any NT-provided internals mask as a stopgap measure, [/color]but [color=#ffa500]they will be unable to speak while doing so. [/color][color=red]Keep this in mind.[/color]
+  В случае утери этих предметов [color=#1e90ff]немедленно обратитесь к команде атмосферщиков для получения водяного пара. Декапоиды способны использовать любую дыхательную маску, предоставленную NT, в качестве временной меры,[/color] но [color=#ffa500]они не смогут говорить, пока делают это.[/color] [color=red]Учтите это.[/color]
 
-  ## Damage
-  [color=yellow][bold]NOTE:[/bold][/color] Species damage modifiers work largely the same way worn armor does, primarily applying to external, direct sources of damage. Unless explicitly stated, these [color=yellow][bold]do not[/bold][/color] apply to intrinsic sources of damage, such extreme pressure, extreme body temperature, or metabolizing chemicals.
+  ## Урон
+  [color=yellow][bold]ПРИМЕЧАНИЕ:[/bold][/color] Видовые модификаторы урона работают в основном так же, как носимая броня, и применяются преимущественно к внешним, прямым источникам урона. Если не указано иное, они [color=yellow][bold]НЕ[/bold][/color] применяются к внутренним источникам урона, таким как экстремальное давление, экстремальная температура тела или метаболизм химикатов.
 
-  A Decapoid's carapace is extremely sturdy, and capable of deflecting blades and bullets alike, but relatively brittle. As a result, they take [color=#1e90ff]15% less Slashing and Piercing damage,[/color] but [color=#ffa500]20% more damage from Blunt.[/color] Their particular adaptations render them [color=#1e90ff]fully immune to Cold damage, low body temperature damage, and barotrauma from vacuum exposure,[/color] but more sensitive to high temperatures - [color=#ffa500]they take 35% more Heat damage.[/color]
+  Панцирь декапоида чрезвычайно прочен и способен отражать как клинки, так и пули, но относительно хрупок. В результате они получают [color=#1e90ff]на 15% меньше режущего и колющего урона,[/color] но [color=#ffa500]на 20% больше дробящего урона.[/color] Их особые адаптации делают их [color=#1e90ff]полностью невосприимчивыми к холодовому урону, урону от низкой температуры тела и баротравме от воздействия вакуума,[/color] но более чувствительными к высоким температурам — [color=#ffa500]они получают на 35% больше теплового урона.[/color]
 
-  They are able to raise their large claw to use it as a shield, taking [color=#1e90ff]50% less damage from Blunt, Slashing, and Piercing (stacking multiplicatively with other sources),[/color] but [color=#ffa500]slowing their movement speed by 70%.[color]
+  Они способны поднять свою большую клешню и использовать её как щит, получая [color=#1e90ff]на 50% меньше дробящего, режущего и колющего урона (складывается мультипликативно с другими источниками),[/color] но [color=#ffa500]замедляя свою скорость передвижения на 70%.[/color]
 
-  Their thick, spaceproof chitin is not conducive to some methods of healing typically used on humanoids. [color=#ffa500]They cannot be injected with fluids,[/color] as syringes and hyposprays will simply fail to penetrate their carapace. As such, it is recommended that all NT Medical staff familiarize themselves with both pillmaking and the station's Cryo Pods.
+  Их толстый, непроницаемый для космоса хитин несовместим с некоторыми методами лечения, обычно применяемыми к гуманоидам. [color=#ffa500]Им нельзя вводить жидкости,[/color] так как шприцы и гипоспреи просто не пробьют их панцирь. Поэтому рекомендуется всем сотрудникам медицинского отдела NT ознакомиться как с изготовлением таблеток, так и с криокапсулами станции.
 
-  Their blood, similarly to that of Arachnids, uses a copper-based respiratory protein, and as such [color=#ffa500]can only be metabolized from copper, not iron.[/color]
+  Их кровь, подобно крови арахнидов, использует медный дыхательный белок, и поэтому [color=#ffa500]может метаболизироваться только из меди, а не из железа.[/color]
 
-  ## Decapoid Naming Conventions and Culture
-  Decapoids are born in broods of (almost always) exactly thirty individuals. The Empire has developed a caste system based on the order in which these brood eggs hatch, with the oldest among a brood being ranked highest.
+  ## Соглашения об именах и культура декапоидов
+  Декапоиды рождаются в выводках из (почти всегда) ровно тридцати особей. Империя разработала кастовую систему, основанную на порядке вылупления этих яиц, причём старший в выводке имеет наивысший ранг.
 
-  As a result, the structure of their names is very simple - Decapoid names consist of a "brood name," similar to a Human last name, which indicates familial relation, followed by the ordinal number of their rank. Some Decapoids who are estranged from the Empire for one reason or another may choose to go by a mononym, rather than display their rank.
+  В результате структура их имён очень проста — имена декапоидов состоят из «имени выводка», аналогичного фамилии человека, указывающего на родственные связи, за которым следует порядковый номер их ранга. Некоторые декапоиды, отчуждённые от Империи по той или иной причине, могут предпочесть использовать мононим вместо отображения своего ранга.
 
-  Brood names are written in a rough transliteration of native Decapoid, and thus only use voiceless consonants (Ch, K, P, S, Sh, T, Th,) with an apostrophe marking a glottal stop.
-  - [color=#449944]Acceptable:[/color] U'uqet, Sixth
-  - [color=#449944]Acceptable:[/color] 'Uut, Seventeenth
-  - [color=#449944]Acceptable:[/color] Tep'atet, Twenty-Fourth
-  - [color=#449944]Acceptable:[/color] Ku'ut
-  - [color=#994444]Bad:[/color] Brrrx, Sixty-Ninth
-  - [color=#994444]Bad:[/color] Jeff, 420th
-  - [color=#994444]Bad:[/color] Crab Legs
-  - [color=#994444]Bad:[/color] Keith Hardshell
-  - [color=#994444]Bad:[/color] Benry
+  Имена выводков записываются в приблизительной транслитерации родного языка декапоидов и поэтому используют только глухие согласные (Ch, K, P, S, Sh, T, Th,) с апострофом, обозначающим гортанную смычку.
+  - [color=#449944]Приемлемо:[/color] У'укет, Шестой
+  - [color=#449944]Приемлемо:[/color] 'Уут, Семнадцатый
+  - [color=#449944]Приемлемо:[/color] Теп'атет, Двадцать четвёртый
+  - [color=#449944]Приемлемо:[/color] Ку'ут
+  - [color=#994444]Плохо:[/color] Бррркс, Шестьдесят девятый
+  - [color=#994444]Плохо:[/color] Джефф, 420-й
+  - [color=#994444]Плохо:[/color] Крабьи Ноги
+  - [color=#994444]Плохо:[/color] Кит Хардшелл
+  - [color=#994444]Плохо:[/color] Бенри
 </Document>

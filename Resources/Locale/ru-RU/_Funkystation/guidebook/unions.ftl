@@ -1,1 +1,1 @@
-guide-entry-unions = Department Unions
+guide-entry-unions = Профсоюзы отделов

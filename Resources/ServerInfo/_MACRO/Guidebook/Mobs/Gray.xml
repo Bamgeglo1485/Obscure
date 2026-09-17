@@ -1,56 +1,56 @@
 ﻿<Document>
-  # Grays
+  # Серые
   <Box>
     <GuideEntityEmbed Entity="MobGray" Caption=""/>
   </Box>
-  ## Physiology
-  Grays are much like Humans, in many ways. Their basic external physiology is largely similar to that of Humans, although they exhibit no sexual dimorphism. Internally, however, Grays are remarkably different - The structures of their organs are utterly unique among observed species, and [color=#ffa500]their blood is composed of something almost identical to liquid Radium, which cannot be metabolized from any known source.[/color]
+  ## Физиология
+  Серые во многом похожи на людей. Их базовая внешняя физиология в значительной степени сходна с человеческой, хотя у них отсутствует половой диморфизм. Однако внутренне серые удивительно отличаются — структуры их органов совершенно уникальны среди наблюдаемых видов, а [color=#ffa500]их кровь состоит из чего-то почти идентичного жидкому радию, который не может метаболизироваться ни из какого известного источника.[/color]
 
-  Their bodies are adapted for exposure to extreme environments, so they take [color=#1e90ff]60% less damage from Cold and Heat, and 80% less Radiation damage,[/color] but are otherwise very fragile - They take [color=#ffa500]50% more Blunt, Slash, and Piercing damage.[/color]
+  Их тела приспособлены к воздействию экстремальных сред, поэтому они получают [color=#1e90ff]на 60% меньше урона от холода и тепла и на 80% меньше радиационного урона,[/color] но в остальном очень хрупки — они получают [color=#ffa500]на 50% больше дробящего, режущего и колющего урона.[/color]
 
-  ## Language
-  [color=#ffa500]The Gray language, colloquially known as "Grayspeak," has evaded attempts at automatic translation up to this point.[/color] Although some Grays have, through various means, learned how to speak Common, [color=#ffa500]most Grays are largely unintelligible to other species.[/color]
+  ## Язык
+  [color=#ffa500]Язык серых, в просторечии известный как «сэрпоговор», до сих пор ускользал от попыток автоматического перевода.[/color] Хотя некоторые серые тем или иным способом научились говорить на Общем, [color=#ffa500]большинство серых в значительной степени непонятны для других видов.[/color]
 
-  ## Culture
-  Grays are cultural sponges, and appear to absorb elements of other Humanoid cultures rapidly through exposure. However, they have been observed to possess a singular fascination with Human culture from the early Internet era, and their knowledge of it appears to terminate around the year 2010. It is unknown precisely why this is the case.
+  ## Культура
+  Серые — культурные губки, и, по-видимому, быстро впитывают элементы других гуманоидных культур через контакт. Однако было замечено, что они питают исключительный интерес с человеческой культурой ранней эпохи Интернета, и их знания о ней, по-видимому, обрываются примерно на 2010 году. Почему именно так — неизвестно.
 
-  ## Gray Naming Conventions
+  ## Соглашения об именах серых
 
-  Grays typically name themselves after Grayspeak-adjacent sounds, or "corrupted," Grayspeak-ified versions of things that interest them from other Humanoid cultures - generally surface-level interpretations of the names of products. For example, "Tonka Truck"  may become "Tonky Chuck." Try to avoid outright, unchanged references to recent media or memes.
+  Серые обычно называют себя в честь звуков, близких к сэрпоговору, или «испорченных», осэрпогоренных версий вещей, которые их интересуют из других гуманоидных культур — как правило, поверхностных интерпретаций названий продуктов. Например, «Tonka Truck» может превратиться в «Tonky Chuck». Старайтесь избегать прямых, неизменённых отсылок к недавним медиа или мемам.
 
-  - [color=#449944]GOOD:[/color] Carp Shitto
-  - [color=#449944]GOOD:[/color] Gnarpy Da
-  - [color=#449944]GOOD:[/color] Yippi Zoota
-  - [color=#449944]GOOD:[/color] Tonky Chuck
-  - [color=#449944]GOOD:[/color] New Ports
-  - [color=#449944]GOOD:[/color] Ford Mustang
-  - [color=#449944]GOOD:[/color] Images
-  - [color=#449944]GOOD:[/color] Emess Paint
-  - [color=#449944]GOOD:[/color] Spunch Bop
-  - [color=#994444]BAD:[/color] Isuggest Forcefem
-  - [color=#994444]BAD:[/color] The Syndicate
-  - [color=#994444]BAD:[/color] Kanye West
-  - [color=#994444]BAD:[/color] Talk Tuah Podcast
-  - [color=#994444]BAD:[/color] Call Of Duty Black Ops 2
-  - [color=#994444]BAD:[/color] Skibidi Toilet
-  - [color=#994444]BAD:[/color] Benry
+  - [color=#449944]ХОРОШО:[/color] Карп Шитто
+  - [color=#449944]ХОРОШО:[/color] Гнарпи Да
+  - [color=#449944]ХОРОШО:[/color] Йиппи Зута
+  - [color=#449944]ХОРОШО:[/color] Тонки Чак
+  - [color=#449944]ХОРОШО:[/color] Нью Порц
+  - [color=#449944]ХОРОШО:[/color] Форд Мустанг
+  - [color=#449944]ХОРОШО:[/color] Имиджес
+  - [color=#449944]ХОРОШО:[/color] Эмесс Пейнт
+  - [color=#449944]ХОРОШО:[/color] Спанч Боп
+  - [color=#994444]ПЛОХО:[/color] Айсэджест Форсфем
+  - [color=#994444]ПЛОХО:[/color] Синдикат
+  - [color=#994444]ПЛОХО:[/color] Канье Уэст
+  - [color=#994444]ПЛОХО:[/color] Подкаст Talk Tuah
+  - [color=#994444]ПЛОХО:[/color] Call Of Duty Black Ops 2
+  - [color=#994444]ПЛОХО:[/color] Скибиди Туалет
+  - [color=#994444]ПЛОХО:[/color] Бенри
 
-  [color=#1b67a5][bold]Unknown Transmission Recieved by Nanotrasen Sensors:[/color][/bold]
+  [color=#1b67a5][bold]Неизвестная передача, полученная сенсорами Nanotrasen:[/color][/bold]
 
-  ## GLEEP TEK NEWPORT
+  ## ГЛИП ТЕК НЬЮПОРТ
   <Box>
     <GuideEntityEmbed Entity="CigPackGreen" Caption=""/>
   </Box>
-  GLEEP OUU PIB ZOOTI FRIENDS WOGLUMP GLEEP LOVE THESE THINGS!!!!
+  ГЛИП УУ ПИБ ЗУТИ ДРУЗЬЯ ВОГЛАМП ГЛИП ЛЮБИТ ЭТИ ВЕЩИ!!!!
   <Box>
     <GuideEntityEmbed Entity="LeavesCannabis" Caption=""/>
     <GuideEntityEmbed Entity="ToyNuke" Caption=""/>
     <GuideEntityEmbed Entity="PlushieHuman" Caption=""/>
   </Box>
-  GIVE US ZIIP JORL THEM PIB GLEEP WORK JAZEE MO!!!
+  ДАЙТЕ НАМ ЗИИП ДЖОРЛ ИМ ПИБ ГЛИП РАБОТА ДЖАЗИ МО!!!
   <Box>
     <GuideEntityEmbed Entity="FoodBurgerSuper" Caption=""/>
   </Box>
-  [color=#1b67a5]- End Transmission.[/color]
+  [color=#1b67a5]- Конец передачи.[/color]
 
 </Document>

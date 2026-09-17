@@ -1,12 +1,13 @@
-- type: guideEntry
-  id: NCLP
-  name: guide-entry-nclp
-  text: "/ServerInfo/_Funkystation/Guidebook/NCLP/nclp.xml"
-  children:
-    - Article_1
-    - Article_2
-    - Article_3
-    - Article_5
+# У ОБСКУРА СВОЙ ЗАКОН!
+#- type: guideEntry
+#  id: NCLP
+#  name: guide-entry-nclp
+#  text: "/ServerInfo/_Funkystation/Guidebook/NCLP/nclp.xml"
+#  children:
+#    - Article_1
+#    - Article_2
+#    - Article_3
+#    - Article_5
 
   # Article 1
 

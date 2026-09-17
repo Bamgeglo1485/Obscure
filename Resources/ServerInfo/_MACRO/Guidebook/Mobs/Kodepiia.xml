@@ -1,20 +1,20 @@
 ﻿<Document>
-  # Kodepiia
+  # Кодепия
 
   <Box>
     <GuideEntityEmbed Entity="MobKodepiia" Caption=""/>
   </Box>
 
-  ## Physiology
-  Kodepiiae are invertebrates most closely comparable to mollusca. Kodepiiae have incredible and minute control over every aspect of their appearance, and generally feel compelled to camouflage and blend in with their surroundings — [color=#ffa500]particularly imitating other sapient species.[/color]
+  ## Физиология
+  Кодепии — беспозвоночные, наиболее близкие к моллюскам. Кодепии обладают невероятным и мельчайшим контролем над каждым аспектом своей внешности и обычно чувствуют потребность маскироваться и сливаться с окружением — [color=#ffa500]особенно подражая другим разумным видам.[/color]
 
-  A Kodepiia can "scramble" their appearance on the fly, but the time pressure of doing so quickly means that the result of that scramble is random.
+  Кодепия может «перемешать» свою внешность на лету, но спешка при этом означает, что результат такого перемешивания случаен.
 
-  In addition to their unparalleled ability to change their appearance, Kodepiiae have an astounding memory for sound, and perfect replication. Kodepiiae have a large and mostly unique selection of emotes.
+  В дополнение к своей несравненной способности менять внешность, кодепии обладают поразительной памятью на звуки и идеальным их воспроизведением. У кодепий большой и по большей части уникальный набор эмоций.
 
-  Kodepiiae have short lifespans, and [color=#ffa500]reach old age at 40.[/color]
+  Кодепии живут недолго и [color=#ffa500]достигают старости в 40 лет.[/color]
 
-  ## Diet
+  ## Диета
 
   <Box>
     <GuideEntityEmbed Entity="FoodMeatHuman" Caption=""/>
@@ -23,36 +23,36 @@
     <GuideEntityEmbed Entity="FoodMeatKodepiia" Caption=""/>
   </Box>
 
-  Because of a quirk of their biology, Kodepiiae can only digest uncooked proteins from raw meat and corpses. [color=#1e90ff]Cooked protein makes Kodepiiae sick![/color]
+  Из-за особенности своей биологии кодепии могут переваривать только необработанный белок из сырого мяса и трупов. [color=#1e90ff]Приготовленный белок вызывает у кодепий тошноту![/color]
 
-  Kodepiiae have a [color=#ffa500]truly absurd rate of hunger[/color], requiring far more food than other species to remain sated. They have somewhat of a reputation of having "eyes bigger than their stomach", however, and a hungry enough Kodepiia can, with some preparation, [color=#ffa500]take a bite out of a corpse they could not otherwise eat[/color], dealing genetic damage to the dead body in exchange for satiating the Kodepiia's hunger. [bold][color=#994444]Be careful when eating — Prevention of Revival is a capital crime.[/bold][/color]
+  У кодепий [color=#ffa500]поистине абсурдная скорость голода[/color], им требуется гораздо больше еды, чем другим видам, чтобы оставаться сытыми. Однако у них есть несколько репутация «глаза больше живота», и достаточно голодная кодепия может, с некоторой подготовкой, [color=#ffa500]откусить от трупа, который иначе не смогла бы съесть[/color], нанося генетический урон мёртвому телу в обмен на утоление голода кодепии. [bold][color=#994444]Будьте осторожны во время еды — предотвращение воскрешения является уголовным преступлением.[/bold][/color]
 
-  ## Breathing
-  Kodepiiae require [color=#1e90ff]higher blood-oxygen content than other species[/color]; they breathe twice as fast, will begin choking if they inhale waste gasses and are very sensitive to changes in the atmospheric oxygen content.
+  ## Дыхание
+  Кодепии требуют [color=#1e90ff]более высокого содержания кислорода в крови, чем другие виды[/color]; они дышат вдвое быстрее, начинают задыхаться при вдыхании отработанных газов и очень чувствительны к изменениям содержания кислорода в атмосфере.
 
-  ## Damage
+  ## Урон
 
-  [color=yellow][bold]NOTE:[/bold][/color] Species damage modifiers work largely the same way worn armor does, primarily applying to external, direct sources of damage. Unless explicitly stated, these [color=yellow][bold]do not[/bold][/color] apply to intrinsic sources of damage, such extreme pressure, extreme body temperature, or metabolizing chemicals.
+  [color=yellow][bold]ПРИМЕЧАНИЕ:[/bold][/color] Видовые модификаторы урона работают в основном так же, как носимая броня, и применяются преимущественно к внешним, прямым источникам урона. Если не указано иное, они [color=yellow][bold]НЕ[/bold][/color] применяются к внутренним источникам урона, таким как экстремальное давление, экстремальная температура тела или метаболизм химикатов.
 
-  Kodepiiae are unusually fragile. They take [color=#ffa500]15% more Blunt, Slash, and Piercing damage[/color].
+  Кодепии необычайно хрупки. Они получают [color=#ffa500]на 15% больше дробящего, режущего и колющего урона[/color].
 
-  ## Kodepiia Naming Conventions
+  ## Соглашения об именах кодепий
 
-  Kodepiiae often style their names as a crude, imperfect imitation of other species. Otherwise their names tend to be a combination of color and pattern.
+  Кодепии часто стилизуют свои имена как грубую, несовершенную имитацию других видов. В остальных случаях их имена, как правило, представляют собой сочетание цвета и узора.
 
-  - [color=#449944]Acceptable:[/color] Aqua Damask
-  - [color=#449944]Acceptable:[/color] Boosssaaa Noova
-  - [color=#449944]Acceptable:[/color] Cranb'irry; the First
-  - [color=#449944]Acceptable:[/color] Dark Times
-  - [color=#449944]Acceptable:[/color] Hiya Creedly
-  - [color=#449944]Acceptable:[/color] Red Herringbone
-  - [color=#449944]Acceptable:[/color] Simmis Mimmim Poppop
-  - [color=#449944]Acceptable:[/color] Your Friend Dave
-  - [color=#994444]Bad:[/color] Blue Waffle
-  - [color=#994444]Bad:[/color] Duel 1971
-  - [color=#994444]Bad:[/color] Fair Market Value
-  - [color=#994444]Bad:[/color] Gina Carano
-  - [color=#994444]Bad:[/color] Magenta Magenta
-  - [color=#994444]Bad:[/color] Benry
+  - [color=#449944]Приемлемо:[/color] Аква Дамаск
+  - [color=#449944]Приемлемо:[/color] Бууссааа Ноова
+  - [color=#449944]Приемлемо:[/color] Кранб'ирри; Первая
+  - [color=#449944]Приемлемо:[/color] Тёмные Времена
+  - [color=#449944]Приемлемо:[/color] Хайя Кридли
+  - [color=#449944]Приемлемо:[/color] Красная Ёлочка
+  - [color=#449944]Приемлемо:[/color] Симмис Миммим Поппоп
+  - [color=#449944]Приемлемо:[/color] Твой Друг Дейв
+  - [color=#994444]Плохо:[/color] Синяя Вафля
+  - [color=#994444]Плохо:[/color] Дуэль 1971
+  - [color=#994444]Плохо:[/color] Справедливая Рыночная Стоимость
+  - [color=#994444]Плохо:[/color] Джина Карано
+  - [color=#994444]Плохо:[/color] Маджента Маджента
+  - [color=#994444]Плохо:[/color] Бенри
 
 </Document>

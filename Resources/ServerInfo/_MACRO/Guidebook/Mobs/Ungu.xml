@@ -1,13 +1,13 @@
 <Document>
-  # Ungu
+  # Унгу
 
   <Box>
     <GuideEntityEmbed Entity="MobUngu" Caption=""/>
   </Box>
 
-  [color=#ffa500]Caution! This species has a severely limiting game mechanic.[/color]
+  [color=#ffa500]Внимание! Этот вид имеет серьёзно ограничивающую игровую механику.[/color]
 
-  Ungu are a species characterized by their astounding physical strength. Due to their large build, [color=#ffa500]they are unable to wear Nanotrasen-issue hardsuits,[/color] and instead must use two-piece "softsuits", such as the EVA suit, for work that requires it.
+  Унгу — вид, характеризующийся своей поразительной физической силой. Из-за крупного телосложения [color=#ffa500]они не могут носить жёсткие скафандры, выдаваемые Nanotrasen,[/color] и вместо этого вынуждены использовать двухкомпонентные «мягкие скафандры», такие как скафандр EVA, для работ, где это требуется.
 
   <Box>
     <GuideEntityEmbed Entity="ClothingOuterHardsuitEVA" Caption=""/>
@@ -15,40 +15,40 @@
     <GuideEntityEmbed Entity="ClothingOuterHardsuitAncientEVA" Caption=""/>
   </Box>
 
-  ## Damage
+  ## Урон
 
-  [color=yellow][bold]NOTE:[/bold][/color] Species damage modifiers work largely the same way worn armor does, primarily applying to external, direct sources of damage. Unless explicitly stated, these [color=yellow][bold]do not[/bold][/color] apply to intrinsic sources of damage, such extreme pressure, extreme body temperature, or metabolizing chemicals.
+  [color=yellow][bold]ПРИМЕЧАНИЕ:[/bold][/color] Видовые модификаторы урона работают в основном так же, как носимая броня, и применяются преимущественно к внешним, прямым источникам урона. Если не указано иное, они [color=yellow][bold]НЕ[/bold][/color] применяются к внутренним источникам урона, таким как экстремальное давление, экстремальная температура тела или метаболизм химикатов.
 
-  Ungu have a [color=#1e90ff]high pain tolerance[/color], allowing them to take up to [color=#1e90ff]150 damage before going into critical condition.[/color] However, this does not affect their overall constitution; [color=#ffa500]they will still die upon reaching 200 damage.[/color]
+  Унгу обладают [color=#1e90ff]высоким болевым порогом[/color], позволяющим им выдерживать до [color=#1e90ff]150 единиц урона до перехода в критическое состояние.[/color] Однако это не влияет на их общую конституцию; [color=#ffa500]они всё равно умрут при достижении 200 единиц урона.[/color]
 
-  Ungu have thick layers of blubber and fur, insulating them from the cold. This allows them to take [color=#1e90ff]40% less Cold damage and have a higher tolerance for cold temperatures.[/color] However, this also makes them more susceptible to overheating, causing them to take [color=#ffa500]50% more Heat damage, have a lower tolerance for warm temperatures, and take extra Heat damage from high body temperatures.[/color] Their skin is also relatively soft and sensitive, causing them to take [color=#ffa500]30% more Piercing damage and 60% more Poison damage.[/color]
+  Унгу имеют толстые слои жира и меха, изолирующие их от холода. Это позволяет им получать [color=#1e90ff]на 40% меньше холодового урона и иметь более высокую устойчивость к низким температурам.[/color] Однако это также делает их более подверженными перегреву, заставляя получать [color=#ffa500]на 50% больше теплового урона, иметь более низкую устойчивость к высоким температурам и получать дополнительный тепловой урон от высокой температуры тела.[/color] Их кожа также относительно мягкая и чувствительная, из-за чего они получают [color=#ffa500]на 30% больше колющего урона и на 60% больше урона от яда.[/color]
 
-  ## Diet and Metabolism
-  Ungu are vegetarian, and a standard diet consists of vegetables and fruit. Kudzu is a delicacy in their culture.
+  ## Диета и метаболизм
+  Унгу — вегетарианцы, и их стандартный рацион состоит из овощей и фруктов. Кудзу — деликатес в их культуре.
 
   <Box>
     <GuideEntityEmbed Entity="WheatBushel" Caption=""/>
   </Box>
 
-  Ungu have a much larger stomach than other humanoids, and require more intake to be completely satiated. In turn, they grow hungry at a much slower pace and are [color=#ffa500]vulnerable to any ingested toxins, including plant-based chemicals such as theobromine and allicin.[/color]
+  У унгу желудок гораздо больше, чем у других гуманоидов, и им требуется больше потребления, чтобы полностью насытиться. В свою очередь, они испытывают голод гораздо медленнее и [color=#ffa500]уязвимы к любым проглоченным токсинам, включая растительные химикаты, такие как теобромин и аллицин.[/color]
 
-  ## Physical Strength
-  Hand-to-hand combat is a favored pastime of Ungu. While their attacks are slower than other humanoids, they are far stronger, and can even deal structural damage. Ungu are known for their predilection towards charging their combatants, despite the possibility that they may sustain damage in the process.
+  ## Физическая сила
+  Рукопашный бой — излюбленное времяпрепровождение унгу. Хотя их атаки медленнее, чем у других гуманоидов, они гораздо сильнее и могут даже наносить структурный урон. Унгу известны своей склонностью бросаться на противников, несмотря на возможность получить урон в процессе.
 
-  ## Ungu Naming Conventions
+  ## Соглашения об именах унгу
 
-  Ungu names tend to be one or two syllables long, and are customarily written using only three letters. A title of the holder's choosing is often appended, serving as a shorthand for stories traditionally exchanged as a greeting.
-  These titles can draw from the holder's qualities and skills, or from their experiences and accomplishments. They can even be based in flaws and failures — "negative" titles aren't seen to be shameful, but rather as a sign of strength.
+  Имена унгу, как правило, состоят из одного-двух слогов и обычно записываются с использованием только трёх букв. Часто добавляется титул на выбор носителя, служащий кратким обозначением историй, традиционно обмениваемых при приветствии.
+  Эти титулы могут происходить из качеств и навыков носителя или из его опыта и достижений. Они могут быть основаны даже на недостатках и неудачах — «негативные» титулы не считаются постыдными, а скорее знаком силы.
 
-  - [color=#449944]Acceptable:[/color] Mob, Who Mixed Brutes
-  - [color=#449944]Acceptable:[/color] Bub, Who Knows
-  - [color=#449944]Acceptable:[/color] Ohe, The Fool
-  - [color=#449944]Acceptable:[/color] Kaz, Haunted
-  - [color=#449944]Acceptable:[/color] Slo, The Steady Hauler
-  - [color=#449944]Acceptable:[/color] Gaw, Solved A Tricky Puzzle
-  - [color=#994444]Bad:[/color] Bessie, The Cow
-  - [color=#994444]Bad:[/color] Thog, Dont Caare
-  - [color=#994444]Bad:[/color] Big, The Cat
-  - [color=#994444]Bad:[/color] Benry, Who Had His Passport
+  - [color=#449944]Приемлемо:[/color] Моб, Кто Смешал Грубиянов
+  - [color=#449944]Приемлемо:[/color] Буб, Кто Знает
+  - [color=#449944]Приемлемо:[/color] Охе, Дурак
+  - [color=#449944]Приемлемо:[/color] Каз, Одержимый
+  - [color=#449944]Приемлемо:[/color] Сло, Устойчивый Грузчик
+  - [color=#449944]Приемлемо:[/color] Гав, Решил Хитрую Загадку
+  - [color=#994444]Плохо:[/color] Бэсси, Корова
+  - [color=#994444]Плохо:[/color] Тог, Пофиг
+  - [color=#994444]Плохо:[/color] Биг, Кот
+  - [color=#994444]Плохо:[/color] Бенри, У Которого Был Паспорт
 
 </Document>
