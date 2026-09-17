@@ -1,7 +1,7 @@
 ﻿- type: species
   id: Ant
   name: species-name-ant
-  roundStart: true
+  roundStart: true # Obscure ANTS AS PLAYABLE SPECIE
   #randomViable: false
   prototype: MobAnt
   dollPrototype: AppearanceAnt
