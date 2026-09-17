@@ -94,4 +94,7 @@ role_time = 10
 storage_limit = 3
 
 [queue]
-enabled = true
+enabled = false
+
+[funkystation]
+viewcone_enabled = false
