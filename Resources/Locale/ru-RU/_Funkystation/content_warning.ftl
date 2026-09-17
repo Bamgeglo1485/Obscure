@@ -1,23 +1,12 @@
-content-warning-title = Content Warning
-content-warning-label = CONTENT WARNING: BEFORE YOU PLAY
-content-warning-accept = I understand.
-content-warning-reject = This is not the place for me.
+content-warning-title = Предупреждение о содержании
+content-warning-label = ПРЕДУПРЕЖДЕНИЕ О СОДЕРЖАНИИ: ПЕРЕД НАЧАЛОМ ИГРЫ
+content-warning-accept = Я понимаю.
+content-warning-reject = Это место не для меня.
 content-warning-message =
-    Space Station 14 is a game about surviving a disaster with incompetent and cruel people on a space station.
-    
-    Your character is not a stand in for yourself. At Funky Station, we believe this is the incorrect way to play the game. With that in mind, we also believe in fully sharing what we think may be potentially triggering scenarios.
-    
-    Do not play Funky Station if you are sensitive to:
-    
-    - You losing control of your character
-    - Violent crime
-    - Interrogations
-    - Being a victim to violent crime
-    - Your own character dying
-    - Witnessing others dying
-    - Brainwashing
-    - Body horror
-    - You playing a character that is not yours, or someone else playing your character
-    - Being framed for a crime that you did not do
-    
-    Do not make a stand in for yourself. If you are not confident in your ability to distinguish what is part of the game and what isn't, do not play here.
+    Space Station 14 — это игра о выживании в катастрофе среди некомпетентных и абсурдных людей на космической станции.
+    Так как игра 13+, мы можем забанить вас, если посчитаем вас младше указанного возраста. Это так же возможно, если вы слишком безграмотны.
+
+    Мы против душного и мудаческого поведения как среди игроков, так и среди администрации.
+
+    Мы считаем, что РП - это создание интересных ситуаций и активное взаимодействие друг с другом, включая конфликты.
+    Если для вас РП на втором плане, или вы слишком серьёзно относитесь к игре - это сервер не для вас.

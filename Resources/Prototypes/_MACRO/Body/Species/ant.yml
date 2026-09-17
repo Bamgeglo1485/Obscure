@@ -150,9 +150,9 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      2: SoftCritical
-      9: HardCritical
-      10: Dead
+      30: SoftCritical # Obscure ANTS AS PLAYABLE SPECIE
+      45: HardCritical # Obscure ANTS AS PLAYABLE SPECIE
+      60: Dead # Obscure ANTS AS PLAYABLE SPECIE
   - type: MobState
     allowedStates:
     - Alive
@@ -164,7 +164,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 20
+        damage: 250 # Obscure ANTS AS PLAYABLE SPECIE
       behaviors:
       - !type:GibBehavior { }
   - type: StepTrigger
