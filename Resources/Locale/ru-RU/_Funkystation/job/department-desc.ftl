@@ -1,3 +1,3 @@
-department-Logistics-description = Produce raw materials, purchase goods, and distribute them across the station.
-department-Service-description = Keep crew morale high by providing catering and entertainment.
-department-InternalAffairs-description = Audit departments for SOP breaches and handle legal proceedings.
+department-Logistics-description = Добывайте сырьё, закупайте товары и распределяйте их по станции.
+department-Service-description = Поддерживайте высокий боевой дух экипажа, обеспечивая кейтеринг и развлечения.
+department-InternalAffairs-description = Проводите аудит отделов на предмет нарушений СРП и ведите судебные разбирательства.

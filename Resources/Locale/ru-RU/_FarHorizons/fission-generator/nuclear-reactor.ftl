@@ -1,43 +1,58 @@
 ### Popups
 
-reactor-smoke-start = The { $owner } begins to smoke!
-reactor-smoke-stop = The { $owner } stops smoking.
-reactor-fire-start = The { $owner } begins to burn!
-reactor-fire-stop = The { $owner } stops burning.
-reactor-unanchor-melted = You cannot unanchor the nuclear reactor, it's melted into the hull!
-reactor-unanchor-warning = You cannot unanchor the nuclear reactor while it's not empty or hotter than 80C!
-reactor-anchor-warning = Invalid anchor position.
+reactor-smoke-start = { $owner } начинает дымиться!
+reactor-smoke-stop = { $owner } перестает дымиться.
+reactor-fire-start = { $owner } начинает гореть!
+reactor-fire-stop = { $owner } перестает гореть.
+reactor-unanchor-melted = Ядерный реактор нельзя открепить, он приплавился к корпусу!
+reactor-unanchor-warning = Нельзя открепить ядерный реактор, пока он не опустошен или его температура не опустилась ниже 80 °C!
+reactor-anchor-warning = Неверное положение.
 
 ### Messages
 
-reactor-smoke-start-message = ALERT: The { $owner } has reached a dangerous temperature: { $temperature }K. Intervene immediately to prevent meltdown.
-reactor-smoke-stop-message = The { $owner } has cooled below dangerous temperature. Have a nice day.
-reactor-fire-start-message = ALERT: The { $owner } has reached CRITICAL temperature: { $temperature }K. MELTDOWN IMMINENT.
-reactor-fire-stop-message = The { $owner } has cooled below critical temperature. Meltdown averted.
-reactor-temperature-dangerous-message = The { $owner } is at dangerous temperature: { $temperature }K.
-reactor-temperature-critical-message = The { $owner } is at critical temperature: { $temperature }K.
-reactor-temperature-cooling-message = The { $owner } is cooling: { $temperature }K.
-reactor-melting-announcement = A nuclear reactor aboard the station is beginning to meltdown. Evacuation of the surrounding area is advised.
-reactor-melting-announcement-sender = Nuclear Emergency
-reactor-meltdown-announcement = A nuclear reactor aboard the station has catastrophically overloaded. Radioactive debris, nuclear fallout, and coolant fires are likely. Immediate evacuation of the surrounding area is strongly advised.
-reactor-meltdown-announcement-sender = Nuclear Meltdown
+reactor-smoke-start-message = ПРЕДУПРЕЖДЕНИЕ: Температура ядерного реактора достигла опасного уровня: { $temperature }°C. Необходимо немедленно принять меры по предотвращению плавления.
+reactor-smoke-stop-message = Температура ядерного реактора опустилась ниже опасного уровня. Хорошего дня.
+reactor-fire-start-message = ПРЕДУПРЕЖДЕНИЕ: Температура ядерного реактора достигла критического уровня: { $temperature }°C. Плавление неизбежно.
+reactor-fire-stop-message = Температура ядерного реактора опустилась ниже критического уровня. Плавление предотвращено.
+reactor-temperature-dangerous-message = Температура ядерного реактора достигла опасного уровня: { $temperature }°C.
+reactor-temperature-critical-message = Температура ядерного реактора достигла критического уровня: { $temperature }°C.
+reactor-temperature-cooling-message = Ядерный реактор охлаждается: { $temperature }°C.
+reactor-melting-announcement = На борту станции начинается расплавление ядерного реактора. Рекомендуется немедленно эвакуировать весь персонал с прилегающей территории.
+reactor-melting-announcement-sender = { $station }
+reactor-meltdown-announcement = Ядерный реактор на борту станции подвергся катастрофической перегрузке. Возможен выброс радиоактивных обломков и осадков, а также возгорание теплоносителя. Настоятельно рекомендуется немедленная эвакуация из прилегающих зон.
+reactor-meltdown-announcement-sender = { $station }
 
 ### UI
 
-comp-nuclear-reactor-ui-locked = Locked
-comp-nuclear-reactor-ui-insert-button = Insert
-comp-nuclear-reactor-ui-remove-button = Remove
-comp-nuclear-reactor-ui-eject-button = Eject
-comp-nuclear-reactor-ui-view-change = Change View
-comp-nuclear-reactor-ui-view-temp = Temperature View
-comp-nuclear-reactor-ui-view-neutron = Neutron View
-comp-nuclear-reactor-ui-view-target = Target View
-comp-nuclear-reactor-ui-view-fuel = Fuel View
-comp-nuclear-reactor-ui-status-panel = Reactor Status
-comp-nuclear-reactor-ui-reactor-temp = Temperature
-comp-nuclear-reactor-ui-reactor-rads = Radiation
-comp-nuclear-reactor-ui-reactor-therm = Thermal Power
-comp-nuclear-reactor-ui-reactor-control = Control Rods
-comp-nuclear-reactor-ui-therm-format = { POWERWATTS($power) }t
-comp-nuclear-reactor-ui-footer-left = Danger: high radiation.
+comp-nuclear-reactor-ui-window-title = Ядерный реактор
+comp-nuclear-reactor-ui-empty = пусто
+comp-nuclear-reactor-ui-locked = Заблокировано
+comp-nuclear-reactor-ui-insert-button = Вставить
+comp-nuclear-reactor-ui-remove-button = Вытянуть
+comp-nuclear-reactor-ui-eject-button = Извлечь
+comp-nuclear-reactor-ui-view-change = Сменить вид
+comp-nuclear-reactor-ui-view-temp = Вид «Температура»
+comp-nuclear-reactor-ui-view-neutron = Вид «Нейтроны»
+comp-nuclear-reactor-ui-view-target = Вид «Цель»
+comp-nuclear-reactor-ui-view-fuel = Вид «Топливо»
+comp-nuclear-reactor-ui-status-panel = Статус реактора
+comp-nuclear-reactor-ui-reactor-temp = Температура
+comp-nuclear-reactor-ui-reactor-rads = Радиация
+comp-nuclear-reactor-ui-reactor-therm = Выработка
+comp-nuclear-reactor-ui-reactor-control = Стержни управления
+comp-nuclear-reactor-ui-overload = ПЕРЕГРУЗКА
+comp-nuclear-reactor-ui-therm-format = { POWERWATTS($power) }
+comp-nuclear-reactor-ui-footer-left = Опасно: высокая радиация.
 comp-nuclear-reactor-ui-footer-right = 0.8 REV 3
+
+### Messages (WF)
+
+reactor-smoke-start-message-wf = ПРЕДУПРЕЖДЕНИЕ: ядерный реактор на станции { $station } достиг опасной температуры: { $temperature }°C. Необходимо немедленно принять меры, чтобы предотвратить расплавление.
+reactor-smoke-stop-message-wf = Температура ядерного реактора на станции { $station } опустилась ниже опасного уровня. Хорошего дня.
+reactor-fire-start-message-wf = ПРЕДУПРЕЖДЕНИЕ: ядерный реактор на станции { $station } достиг критической температуры: { $temperature }°C. Плавление неизбежно.
+reactor-fire-stop-message-wf = Температура ядерного реактора на станции { $station } опустилась ниже критического уровня. Плавление предотвращено.
+reactor-temperature-dangerous-message-wf = Температура ядерного реактора на станции { $station } достигла опасного уровня: { $temperature }°C.
+reactor-temperature-critical-message-wf = Температура ядерного реактора на станции { $station } достигла критического уровня: { $temperature }°C.
+reactor-temperature-cooling-message-wf = Температура ядерного реактора на станции { $station } опускается: { $temperature }°C.
+reactor-melting-announcement-wf = На станции { $station } начинается расплавление ядерного реактора. Рекомендуется немедленно эвакуировать весь персонал с прилегающей территории.
+reactor-meltdown-announcement-wf = Ядерный реактор на станции { $station } подвергся катастрофической перегрузке. Возможен выброс радиоактивных обломков и осадков, а также возгорание теплоносителя. Настоятельно рекомендуется немедленно эвакуировать весь персонал с прилегающей территории.

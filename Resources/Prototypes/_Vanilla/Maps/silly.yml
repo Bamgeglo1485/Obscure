@@ -15,6 +15,13 @@
             prefixCreator: 'ABK'
         - type: StationJobs
           availableJobs:
+            # фанки хуйня
+            ExecutiveOfficer: [ 1, 1 ]
+            HospitalityDirector: [ 1, 1 ]
+            Magistrate: [ 1, 1 ]
+            CorporateLiaison: [ 1, 1 ]
+            InternalAffairsAgent: [ 1, 1 ]
+            Commandant: [ 1, 1 ]
             # command
             Captain: [ 1, 1 ]
             # cargo

@@ -1,3 +1,3 @@
-department-Logistics = Logistics
-department-Service = Service
-department-InternalAffairs = Internal Affairs
+department-Logistics = Логистика
+department-Service = Сервисный отдел
+department-InternalAffairs = Отдел Внутренних Дел

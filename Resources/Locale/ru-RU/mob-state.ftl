@@ -1,4 +1,4 @@
-mob-state-action-requires-state = You need to be { $states } to do that!
-mob-state-Alive = Alive
-mob-state-Critical = Critical
-mob-state-Dead = Dead
+mob-state-action-requires-state = Для этого вы должны быть в состоянии: { $states }!
+mob-state-Alive = Живой
+mob-state-Critical = Критический
+mob-state-Dead = Мёртвый

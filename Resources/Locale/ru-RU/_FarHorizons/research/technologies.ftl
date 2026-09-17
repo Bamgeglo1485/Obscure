@@ -1,5 +1,5 @@
-research-technology-nuclear-power = Nuclear Power
-research-technology-nuclear-recycling = Nuclear Waste Recycling
-research-technology-mechanised-security = Mechanised security
-research-technology-blast-proof = Blast-Proof Containers
-research-technology-hypoinjector = Automated Injection
+research-technology-nuclear-power = Ядерная энергетика
+research-technology-nuclear-recycling = Переработка ядерных отходов
+research-technology-mechanised-security = Механизированная безопасность
+research-technology-blast-proof = Взрывостойкие контейнеры
+research-technology-hypoinjector = Автоматическая инъекция

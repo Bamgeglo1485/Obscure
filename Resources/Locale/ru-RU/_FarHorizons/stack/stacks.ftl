@@ -1,2 +1,2 @@
-stack-plutonium = plutonium
-stack-ammoniapack = Ammonia Pack
+stack-plutonium = плутоний
+stack-ammoniapack = Набор аммиака

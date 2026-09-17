@@ -1,6 +1,6 @@
-trait-hayfever-name = Hay Fever
-trait-hayfever-description = Because of space allergens, you can't help but sneeze all the time.
-trait-hayfever-popup1 = Your nose is itching.
-trait-hayfever-popup2 = Your eyes are itching.
-trait-hayfever-popup3 = You feel an incoming sneeze.
-trait-hayfever-popup4 = You feel an impending sneeze attack.
+trait-hayfever-name = Сенная лихорадка
+trait-hayfever-description = Из-за космических аллергенов вы не можете перестать чихать.
+trait-hayfever-popup1 = У вас чешется нос.
+trait-hayfever-popup2 = У вас чешутся глаза.
+trait-hayfever-popup3 = Вы чувствуете приближающийся чих.
+trait-hayfever-popup4 = Вы чувствуете надвигающийся приступ чихания.

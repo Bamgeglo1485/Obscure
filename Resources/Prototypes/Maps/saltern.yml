@@ -16,6 +16,13 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs: # 45 jobs total w/o latejoins & interns, 62 jobs total w/ latejoins & interns
+            # фанки хуйня
+            ExecutiveOfficer: [ 1, 1 ]
+            HospitalityDirector: [ 1, 1 ]
+            Magistrate: [ 1, 1 ]
+            CorporateLiaison: [ 1, 1 ]
+            InternalAffairsAgent: [ 1, 1 ]
+            Commandant: [ 1, 1 ]
             #command (7)
             Captain: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]

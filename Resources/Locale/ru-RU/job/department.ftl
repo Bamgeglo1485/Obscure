@@ -9,5 +9,3 @@ department-Science = Отдел Исследований и Разработок
 department-Silicon = Синтетики
 department-Specific = На определённых станциях
 department-Unknown = Неизвестно
-department-InternalAffairs = Внутренние Дела
-department-Service = Сервисный Отдел
