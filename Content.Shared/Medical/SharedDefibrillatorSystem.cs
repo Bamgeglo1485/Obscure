@@ -33,6 +33,7 @@ using Content.Shared._Funkystation.CCVar;
 using Content.Shared.Damage;
 // funky end
 
+
 namespace Content.Shared.Medical;
 
 /// <summary>
@@ -55,29 +56,13 @@ public abstract partial class SharedDefibrillatorSystem : EntitySystem
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private UseDelaySystem _useDelay = default!;
     [Dependency] private SharedInteractionSystem _interaction = default!;
-    [Dependency] private InventorySystem _inventory = default!; // funky
-    [Dependency] private SharedSolutionContainerSystem _solutionContainer = default!; // funky
-    [Dependency] private IRobustRandom _random = default!; // funky
-    [Dependency] private IPrototypeManager _prototypeManager = default!; // funky
-    [Dependency] private IConfigurationManager _config = default!; // funky
-    [Dependency] private INetManager _net = default!; // funky
 
     private readonly HashSet<EntityUid> _interactors = new();
-    private float _reviveChance; // funky
-    private float _adrenalineCostPerShock; // funky
 
-    public override void Initialize()
-    {
-        base.Initialize(); // funky
-        _config.OnValueChanged(DefibrillatorCVars.ReviveChance, value => _reviveChance = value, true); // funky
-        _config.OnValueChanged(DefibrillatorCVars.AdrenalineCost, value => _adrenalineCostPerShock = value, true); // funky
-
-        SubscribeLocalEvent<DefibrillatorComponent, AfterInteractEvent>(OnAfterInteract);
-    }
-
+    [SubscribeLocalEvent]
     private void OnAfterInteract(Entity<DefibrillatorComponent> ent, ref AfterInteractEvent args)
     {
-        if (args.Handled || args.Target is not { } target)
+        if (args.Handled || args.Target is not { } target || !args.CanReach)
             return;
 
         args.Handled = TryStartZap(ent.AsNullable(), target, args.User);
@@ -125,13 +110,7 @@ public abstract partial class SharedDefibrillatorSystem : EntitySystem
         if (!_powerCell.HasActivatableCharge(ent.Owner, user: user, predicted: true))
             return false;
 
-        // funky, gotta take off their hardsuit or coat
-        if (!_inventory.TryGetSlotEntity(target, "outerClothing", out _))
-            return true;
-
-        _popup.PopupClient(Loc.GetString("defibrillator-clothing-blocking"), user);
-        return false;
-
+        return true;
     }
 
     /// <summary>
@@ -226,13 +205,14 @@ public abstract partial class SharedDefibrillatorSystem : EntitySystem
     private bool TryRevive(Entity<DefibrillatorComponent> ent, EntityUid user, EntityUid target, bool isOriginal)
     {
         bool failedRevive = true;
+        string? message = null;
         if (_rotting.IsRotten(target))
         {
-            _chat.TrySendInGameICMessage(ent.Owner, Loc.GetString("defibrillator-rotten"), InGameICChatType.Speak, true);
+            message = Loc.GetString("defibrillator-rotten");
         }
         else if (TryComp<UnrevivableComponent>(target, out var unrevivable))
         {
-            _chat.TrySendInGameICMessage(ent.Owner, Loc.GetString(unrevivable.ReasonMessage), InGameICChatType.Speak, true);
+            message = Loc.GetString(unrevivable.ReasonMessage);
         }
         else
         {
@@ -240,74 +220,8 @@ public abstract partial class SharedDefibrillatorSystem : EntitySystem
 
             _damageable.TryChangeDamage(target, ent.Comp.ZapHeal, true, origin: user);
 
-            // funky start, need an adrenaline reagent in their system to kick the heart back on
-            var hasAdrenaline = false;
-            if (TryComp<BloodstreamComponent>(target, out var bloodstream))
-            {
-                var bloodSolution = bloodstream.BloodSolution;
-
-                if (_solutionContainer.ResolveSolution(target, bloodstream.BloodSolutionName, ref bloodSolution))
-                {
-                    var contents = bloodSolution.Value.Comp.Solution.Contents;
-
-                    // check reagents in bloodstream
-                    foreach (var (reagentId, quantity) in contents)
-                    {
-                        if (quantity <= FixedPoint2.Zero)
-                            continue;
-
-                        // check effects
-                        if (!_prototypeManager.TryIndex<ReagentPrototype>(reagentId.Prototype, out var reagentProto))
-                            continue;
-
-                        if (reagentProto.Metabolisms == null || !reagentProto.Metabolisms.Metabolisms.TryGetValue("Bloodstream", out var metabolism))
-                            continue;
-
-                        var isAdrenaline = metabolism.Effects.Any(effect => effect is ModifyStatusEffect modify &&
-                            modify.EffectProto.Id == "StatusEffectAdrenaline");
-
-                        // if this reagent grants adrenaline, consume it and roll for revival
-                        if (!isAdrenaline)
-                            continue;
-
-                        hasAdrenaline = true;
-
-                        // removes the adrenaline cost amount
-                        _solutionContainer.RemoveReagent(bloodSolution.Value, reagentId, FixedPoint2.New(_adrenalineCostPerShock));
-
-                        break;
-                    }
-                }
-            }
-
-            var canRevive = true;
-            if (_mobState.IsDead(target, targetMobState))
-            {
-                canRevive = false;
-
-                if (hasAdrenaline)
-                {
-                    // server-only roll to prevent client mispredicting a successful revival
-                    canRevive = _net.IsServer && _random.Prob(_reviveChance);
-                }
-                else
-                {
-                    // if they have no adrenaline reagent, popup
-                    _popup.PopupClient(Loc.GetString("defibrillator-no-adrenaline"), target, user);
-                }
-            }
-
-            // adrenaline zap heals 25 asphyx
-            if (hasAdrenaline)
-            {
-                var asphyxHeal = new DamageSpecifier();
-                asphyxHeal.DamageDict.Add("Asphyxiation", FixedPoint2.New(-25));
-                _damageable.TryChangeDamage(target, asphyxHeal, true, origin: user);
-            }
-            // funky end
-
-            if (canRevive && // funky
-                TryComp<MobThresholdsComponent>(target, out var targetThresholds) &&
+            if (_mobState.IsDead(target, targetMobState) && // is the target currently dead
+                TryComp<MobThresholdsComponent>(target, out var targetThresholds) && //do they have a threshold
                 _mobThreshold.TryGetThresholdForState(target, MobState.Dead, out var threshold, targetThresholds) &&
                 _damageable.GetTotalDamage(target) < threshold) //is their current health above their death threshold
             {
@@ -325,11 +239,16 @@ public abstract partial class SharedDefibrillatorSystem : EntitySystem
             else
             {
                 if (HasComp<MindContainerComponent>(target))
-                    _chat.TrySendInGameICMessage(ent.Owner, Loc.GetString("defibrillator-no-mind"), InGameICChatType.Speak, true); //target can host a mind but doesn't
+                    message = Loc.GetString("defibrillator-no-mind"); //target can host a mind but doesn't
                 else
-                    _chat.TrySendInGameICMessage(ent.Owner, Loc.GetString("defibrillator-not-living"), InGameICChatType.Speak, true); //target couldn't have hosted a mind
+                    message = Loc.GetString("defibrillator-not-living"); //target couldn't have hosted a mind
             }
         }
+
+        // Only report on the entity the pads were actually placed on. Everything else caught in the chain
+        // (the bed the patient is strapped to, whoever is pulling them) still gets zapped, just silently.
+        if (isOriginal && message != null)
+            _chat.TrySendInGameICMessage(ent.Owner, message, InGameICChatType.Speak, true);
 
         _electrocution.TryDoElectrocution(
             target,
