@@ -42,7 +42,7 @@ public sealed class CCVVars
     /// <summary>
     /// Включен ли тим дезматч в конце раунда
     /// </summary>
-    public static readonly CVarDef<bool> TDMRoundEndEnabled = CVarDef.Create("game.tdmroundend_enabled", false, CVar.SERVERONLY);
+    public static readonly CVarDef<bool> TDMRoundEndEnabled = CVarDef.Create("game.tdmroundend_enabled", true, CVar.SERVERONLY);
 
     /// <summary>
     /// Эффект шума

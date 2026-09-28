@@ -90,14 +90,6 @@ public sealed partial class TDMSystem : EntitySystem
     }
     private void OnRoundEnded(RoundEndTextAppendEvent ev)
     {
-        foreach (var session in _playerManager.Sessions)
-        {
-            if (!session.AttachedEntity.HasValue) continue;
-
-            var entityId = session.AttachedEntity.Value;
-            EnsureComp<PacifiedComponent>(entityId);
-        }
-
         if (TryComp<TDMRuleComponent>(_currentrule, out var rule))
         {
             GameOver(_currentrule.Value, rule);

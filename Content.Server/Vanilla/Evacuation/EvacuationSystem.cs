@@ -253,8 +253,10 @@ public sealed partial class EvacuationSystem : EntitySystem
             _sound.StopStationEventMusic(_nuke.Value, StationEventMusicType.Nuke);
 
         _station = null;
-        _evac_state = EvacState.Idle;
         _evac_end = TimeSpan.Zero;
+        _pre_evac = TimeSpan.Zero;
+        _evac_state = EvacState.Idle;
         _requests = 0;
+        _authorized.Clear();
     }
 }

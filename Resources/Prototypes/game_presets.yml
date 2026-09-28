@@ -6,6 +6,7 @@
   showInVote: false # secret
   description: survival-description
   rules:
+    - TeamDeathMatch # RAYTEN
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
@@ -21,6 +22,7 @@
   showInVote: false # secret
   description: kessler-syndrome-description
   rules:
+    - TeamDeathMatch # RAYTEN
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
@@ -34,6 +36,7 @@
   description: all-at-once-description
   showInVote: false
   rules:
+    - TeamDeathMatch # RAYTEN
     - Nukeops
     - Traitor
     - Revolutionary
@@ -57,6 +60,7 @@
   description: aller-at-once-description
   showInVote: false #Please god dont do this
   rules:
+    - TeamDeathMatch # RAYTEN
     - Nukeops
     - Traitor
     - Revolutionary
@@ -81,6 +85,7 @@
   showInVote: true # Obscure
   description: extended-description
   rules:
+  - TeamDeathMatch # RAYTEN
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
@@ -95,6 +100,7 @@
   showInVote: false #4boring4vote
   description: greenshift-description
   rules:
+  - TeamDeathMatch # RAYTEN
   - BasicRoundstartVariation
 
 - type: gamePreset
@@ -107,6 +113,7 @@
   showInVote: false # admin-only for now until we fix some bugs
   description: dynamic-description
   rules:
+  - TeamDeathMatch # RAYTEN
   - DynamicRule
   - DummyNonAntag
   - DynamicStationEventScheduler
@@ -134,6 +141,7 @@
   showInVote: false # Not suitable for use without admin intervention, since entity spamming can quickly crash a server
   maxPlayers: 5
   rules:
+    - TeamDeathMatch # RAYTEN
     - Sandbox
 
 - type: gamePreset
@@ -145,6 +153,7 @@
   description: traitor-description
   showInVote: true # Obscure
   rules:
+  - TeamDeathMatch # RAYTEN
   - DummyNonAntagChance
   - Traitor
   - SubGamemodesRuleNoWizard
@@ -164,6 +173,7 @@
   showInVote: true
   supportedMaps: DeathMatchMapPool
   rules:
+    - TeamDeathMatch # RAYTEN
     - DeathMatch31
 
 - type: gamePreset
@@ -174,6 +184,7 @@
   description: nukeops-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN
   - Nukeops
   - DummyNonAntagChance
   - SubGamemodesRuleNoWizard
@@ -192,6 +203,7 @@
   description: rev-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN
   - DummyNonAntagChance
   - Revolutionary
   - SubGamemodesRuleNoWizard
@@ -208,6 +220,7 @@
   description: wizard-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN
   - Wizard
   - DummyNonAntagChance
   - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
@@ -224,6 +237,7 @@
   description: xenoborgs-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN
   - Xenoborgs
   - DummyNonAntagChance
   - SubGamemodesRuleNoWizardNoXenoborg # no two motherships
@@ -244,6 +258,7 @@
   description: zombie-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN
   - Zombie
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
@@ -260,6 +275,7 @@
   description: zombieteors-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN
   - Zombie
   - BasicStationEventScheduler
   - KesslerSyndromeScheduler

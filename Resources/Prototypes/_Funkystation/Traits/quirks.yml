@@ -2,7 +2,8 @@
   id: HayFever
   name: trait-hayfever-name
   description: trait-hayfever-description
-  category: Quirks
+  category: General # OBSCURE
+  cost: -1 # OBSCURE
   components:
   - type: HayFever
     ReactionInterval: 45
@@ -11,7 +12,8 @@
   id: Smoker
   name: trait-smoker-name
   description: trait-smoker-description
-  category: Quirks
+  category: General # OBSCURE
+  cost: -2 # OBSCURE
   components:
   - type: Smoker
     WithdrawalInterval: 185
