@@ -154,6 +154,22 @@ namespace Content.Client.Gameplay
             if (eye == null)
                 return Array.Empty<EntityUid>();
 
+            // 3D view: what is under a position is decided by the crosshair/cursor pick (Content.Client.Render3D),
+            // followed by whatever the 2D lookup finds at the same spot.
+            if (Content.Client.Render3D.Render3DPicking.TryBegin(_eyeManager, coordinates, out var picked3D))
+            {
+                try
+                {
+                    Content.Client.Render3D.Render3DPicking.AddMissing(picked3D, GetClickableEntities(coordinates, eye, excludeFaded));
+                }
+                finally
+                {
+                    Content.Client.Render3D.Render3DPicking.End();
+                }
+
+                return picked3D;
+            }
+
             // Find all the entities intersecting our click
             var spriteTree = _entityManager.EntitySysManager.GetEntitySystem<SpriteTreeSystem>();
             var entities = spriteTree.QueryAabb(coordinates.MapId, Box2.CenteredAround(coordinates.Position, new Vector2(1, 1)));

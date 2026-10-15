@@ -77,9 +77,13 @@ public sealed class MapTextOverlay : Overlay
             if (mapText.CachedFont == null)
                 continue;
 
-            var pos = Vector2.Transform(mapPos.Position, matrix) + mapText.Offset;
+            if (!Content.Client.Render3D.Render3DOverlays.ShowMapText(args.ViewportControl, mapPos.Position))
+                continue;
+
+            var pos = Content.Client.Render3D.Render3DOverlays.WorldToScreen(args.ViewportControl, mapPos.Position, matrix) + mapText.Offset;
             var dimensions = handle.GetDimensions(mapText.CachedFont, mapText.CachedText, scale);
-            handle.DrawString(mapText.CachedFont, pos - dimensions / 2f, mapText.CachedText, scale, mapText.Color);
+            if (Content.Client.Render3D.Render3DOverlays.AllowLabel(args.ViewportControl, pos - dimensions / 2f, dimensions))
+                handle.DrawString(mapText.CachedFont, pos - dimensions / 2f, mapText.CachedText, scale, mapText.Color);
         }
     }
 }
