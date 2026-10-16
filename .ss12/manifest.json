@@ -1,0 +1,494 @@
+{
+  "InstallerVersion": "1.4.0",
+  "InstalledUtc": "2026-10-15T12:48:45.4902266Z",
+  "EngineVersion": "289.0.0",
+  "Enforce": false,
+  "Overlay": [
+    {
+      "Path": "Content.Client/Render3D/AtlasAudit.cs",
+      "Sha256": "F21B67EB190C4681C0CDA9FC16D44EE6D4659FC16A076EF12B424158EF4D3FD2"
+    },
+    {
+      "Path": "Content.Client/Render3D/AtlasBounds.cs",
+      "Sha256": "6886D83AC68DF96990FAD5822F90615ED9E78508BDDC7BA65D71D355C4187D61"
+    },
+    {
+      "Path": "Content.Client/Render3D/AutoQualityPolicy.cs",
+      "Sha256": "98D06FA50B0909AE64BD00E5A8CF5F6D10FBCBD1AF5FB82AE61BFA549E2AC38E"
+    },
+    {
+      "Path": "Content.Client/Render3D/BillboardAtlas.cs",
+      "Sha256": "BA43A91388C93BE8439A555561EB4DFEE77A801F8512A89B38BB942B42CCE2F1"
+    },
+    {
+      "Path": "Content.Client/Render3D/Camera3D.cs",
+      "Sha256": "DE10D33BD79A0E6873043B8D38E517D040AC3F539D341630447BAC10E3F4C137"
+    },
+    {
+      "Path": "Content.Client/Render3D/CameraYawSystem.cs",
+      "Sha256": "2C92563413224D55CA0B9BA1A093465F84E8839B66A1C3C1C5CB3F7890FAB8F2"
+    },
+    {
+      "Path": "Content.Client/Render3D/EntityClassifier.cs",
+      "Sha256": "AF6BDC04349E50326F08C8837CCE2B9F065CCDBC719440DF8356076DA80F38F8"
+    },
+    {
+      "Path": "Content.Client/Render3D/EntityPass.cs",
+      "Sha256": "CC443596DD64D2024948FCBFC9E9A3326D0B7FE385673039BA3347ED92463261"
+    },
+    {
+      "Path": "Content.Client/Render3D/EntityShape.cs",
+      "Sha256": "D0A7A86C2A65D7A9BC177A59FC221E02B9D7A81FBB17D43171679DBB6279C8F2"
+    },
+    {
+      "Path": "Content.Client/Render3D/GlassLook.cs",
+      "Sha256": "B3E443FB23D6FE8F4B18DE92A6781940ED4E5E50E6ECBA31578476E23A55CB0A"
+    },
+    {
+      "Path": "Content.Client/Render3D/GroundLayer.cs",
+      "Sha256": "3D5EB7203F19B3760CB7C50E7FB02A442614D2607391F78A84E6A81B64D9C9B1"
+    },
+    {
+      "Path": "Content.Client/Render3D/ItemSpread.cs",
+      "Sha256": "A8796FAA6B756F6DA71D9B6A3305236B10EEE67431D9DCDCAA31914D6B0CE853"
+    },
+    {
+      "Path": "Content.Client/Render3D/MinimapView.cs",
+      "Sha256": "594BD6FE97143B49F3E797ED3CEA50E90D0CECA0D8D7CC67A104BE2A61D7227A"
+    },
+    {
+      "Path": "Content.Client/Render3D/MouseCapturePolicy.cs",
+      "Sha256": "B8C05849AE00BB4B881A60C7486A7DE16190C8D533D183F2A47A022E3DA6AFAA"
+    },
+    {
+      "Path": "Content.Client/Render3D/Picking3D.cs",
+      "Sha256": "38D7BEFB6E6F3CA46104D508C9674A946CBC5DB0C78C902559EB16B5DC6D0678"
+    },
+    {
+      "Path": "Content.Client/Render3D/PointListState.cs",
+      "Sha256": "992D1A48EACC56F43203A76EDFC22D0585E8B507249D3805B72294E1814FD72C"
+    },
+    {
+      "Path": "Content.Client/Render3D/PostFx.cs",
+      "Sha256": "E4D1FDCE3F1B8A86021FAE16F8CE7998DEF875B60EB0581C0541A602721FA378"
+    },
+    {
+      "Path": "Content.Client/Render3D/QuadBuilder.cs",
+      "Sha256": "C1E4F47DFEBDF43FC5BD7505963488FC14AB6CF1CC8232C2D90B70A7C3BDF99A"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DCompat.cs",
+      "Sha256": "FFB75B7627E5C3598E54604C5CAB61B75C9F982B43D505164441F9CB991C6607"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DController.Minimap.cs",
+      "Sha256": "5C1B7B09E5A47F1B7A2535452543EA4D25F6F370B46CC0904ACC92482B462A0E"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DController.PointList.cs",
+      "Sha256": "722D0930A7590BF5D627EC0F19D8044A2E47731EED3161AC6F96049F32518035"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DController.Quality.cs",
+      "Sha256": "AE5CF58B80A464218014666174DE634AFE90B5AA8DA5305E26E0ED6D52D0BC6F"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DController.Windows.cs",
+      "Sha256": "79305080E00D87C0966F1FD4E33406D0C48C0A192023DC6421B3B1E6EDF0BD02"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DController.cs",
+      "Sha256": "8E6A28199E0078FE2C6749565E97CE3A0CE99F14EBF7AC3AC96C064E2FD78D8D"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DDevChannel.cs",
+      "Sha256": "72C2995F7AE0BFAC3DE072646D49DD6CED0187E7E86100484FE5EE359ADBB1F1"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DKeys.cs",
+      "Sha256": "BEEFE2BCF0BB96A99A03C0150F62A1AB162F83468339A78BA0813AED1D7A061B"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DMinimap.cs",
+      "Sha256": "CF213A50F13C133CEA2579B0258585CA8E064D8A3BFE6DDD41BC1855780BA25C"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DPointList.cs",
+      "Sha256": "91E6251697B90A62B4BD5E2329F078575A5D2F14E8B2A1DA65DA8E82E32E8C7E"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DPointer.cs",
+      "Sha256": "13E9C1085566F9E357BB173A1975BA02ED890612DBC1D3FEF4B611352F6B508F"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DQuality.cs",
+      "Sha256": "E84CB8E531445D2F859547954FE067E7D1C945BEF508DDA57DC4692EE2A8B881"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DSettingsWindow.cs",
+      "Sha256": "28B9DEA10B2B74F56D6490616A4F907722A31778E3C2912AF3A467FC2792B83A"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DTuneWindow.cs",
+      "Sha256": "E998ACAD42230C96A7D3CC962732BBA1310D5C4CECC3C6977286864470439F75"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DViewportControl.StatusIcons.cs",
+      "Sha256": "3A7C375703DB5AF11EF282D31793800A95F430E19958BFEE7F39C9D0D4924561"
+    },
+    {
+      "Path": "Content.Client/Render3D/Render3DViewportControl.cs",
+      "Sha256": "574AE3E0EE3FAB51E36A5E23FCAE2427148F30D20654F7D4E50AD5582168E7D6"
+    },
+    {
+      "Path": "Content.Client/Render3D/TileWorldSystem.cs",
+      "Sha256": "A4A4EC2C432177083F1B200C4F4A2C4D1CB52B438F90B84057F0B2356F10CEA4"
+    },
+    {
+      "Path": "Content.Client/Render3D/WallAtlas.cs",
+      "Sha256": "F3632123161B66A5D84A7B50F6C2C0F16527DF3FB076C8457344897AC3F4FDB1"
+    },
+    {
+      "Path": "Content.Client/Render3D/WallDecalSide.cs",
+      "Sha256": "4C61BD68EEDE954BC9CED566B5392545F94306BAC1251DE10E0509802E4DC08E"
+    },
+    {
+      "Path": "Content.IntegrationTests/Tests/Render3D/CameraYawLockedCameraTest.cs",
+      "Sha256": "26B6D52D2EF7F98849BA7418691EF3E20A4559A5A59156976BE7B80B1FA1ACB3"
+    },
+    {
+      "Path": "Content.IntegrationTests/Tests/Render3D/CameraYawTest.cs",
+      "Sha256": "C1E6BB483285055092388B042F69E2EC9F0234F13F2DA798DD444D6093A970CF"
+    },
+    {
+      "Path": "Content.IntegrationTests/Tests/Render3D/Render3DFixtureTest.cs",
+      "Sha256": "79E957B9054CFEA66AF5CE0A355E0584D7177A88615D538500D533663B430787"
+    },
+    {
+      "Path": "Content.IntegrationTests/Tests/Render3D/Render3DGlassLookTest.cs",
+      "Sha256": "9428D95A72165709AD2DCA720D52F069BA40335EEA4B7FABE5805DE95B6C86FF"
+    },
+    {
+      "Path": "Content.IntegrationTests/Tests/Render3D/Render3DGlassRulesTest.cs",
+      "Sha256": "485AD81EC78960C3414F8D957D497843ABE09C3BE09F8791740AD5677208B824"
+    },
+    {
+      "Path": "Content.IntegrationTests/Tests/Render3D/Render3DRulesTest.cs",
+      "Sha256": "C16ED2378A8DCC48A12CD149C178B7D2FAB3349014DFA67159308DA451A09812"
+    },
+    {
+      "Path": "Content.IntegrationTests/Tests/Render3D/Render3DShapeRulesTest.cs",
+      "Sha256": "15E6188711AA303246FB781AB5E8A31CDE1C5A3F291FBFA779DF5CB8EE9B576A"
+    },
+    {
+      "Path": "Content.IntegrationTests/Tests/Render3D/Render3DSurfaceRulesTest.cs",
+      "Sha256": "90DC7FC528B92640D38D4A6C5BADA0D3568977D7B6CDAD6B8D301140143ACE7B"
+    },
+    {
+      "Path": "Content.Server/Render3D/CameraYawSystem.cs",
+      "Sha256": "20113F27A1C703F13AD09180C29DEDA6EB60C69E926348F8F3D656C64C9B2D9C"
+    },
+    {
+      "Path": "Content.Server/Render3D/Render3DFacingSystem.cs",
+      "Sha256": "79F48C11F5E0EFB6E56FFFF097DF682726C8F3CDBA04C5FA25A9C277AA8A7041"
+    },
+    {
+      "Path": "Content.Shared/CCVar/CCVars.Render3D.cs",
+      "Sha256": "643FF25056826406053A0D0D77D1DA20B9545E609807923C128DE8B3220E21F0"
+    },
+    {
+      "Path": "Content.Shared/Render3D/CameraYawMath.cs",
+      "Sha256": "8B724A1EA54251DEDEB677A5C79CBF07D9AD66FB99310995E78B8027D7A0060D"
+    },
+    {
+      "Path": "Content.Shared/Render3D/Render3DComponent.cs",
+      "Sha256": "F20ECFA724AEDA442695D9847810DFE676161491878716DFE54484642FF69B69"
+    },
+    {
+      "Path": "Content.Shared/Render3D/Render3DKeyFunctions.cs",
+      "Sha256": "351F98B635BA9EC3009AE8274442AD908EF799557E5434E8BA5A7AA4F871377F"
+    },
+    {
+      "Path": "Content.Shared/Render3D/Render3DRulesPrototype.cs",
+      "Sha256": "F33F4227143FB69D50A2DBD0A99499EEB5CA7CC04FABE7A385C4326B7D040E22"
+    },
+    {
+      "Path": "Content.Shared/Render3D/SharedCameraYawSystem.cs",
+      "Sha256": "8F07D3F6CD389573945D66AB4BA9109A2CCC8A3840601975E793041329D9B5FF"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/AdaptiveLayersTest.cs",
+      "Sha256": "F9401DDE4D455D1DDD13550E75F24C27A2821297C2E489522BEF5EC23AF3EFB1"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/AtlasAuditTest.cs",
+      "Sha256": "9156A3F499C420666061912BDB54CD2FB51AC1FA014B3DC1816DCEEF1DF23B27"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/AtlasBoundsTest.cs",
+      "Sha256": "C72C0BC7CF9F62E025E500E066DBC958B927644B4AE8B3CCC141BE560B646811"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/AtlasDrawnBoundsTest.cs",
+      "Sha256": "D99952E083819FB7778EB4175DA31A3E3FD8249EC4201DD9290B28CF857824E7"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/AtlasTileCropTest.cs",
+      "Sha256": "32759507A22C9611510C7A1E8AC93755A1CCAF2CA50DAE8EE66AFCFDFE628E1A"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/AutoQualityPolicyTest.cs",
+      "Sha256": "7B60960A8A4B6B48091530D70EC38DF9670CE9504866D9364C596ADB7B5D6903"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/CameraYawThrottleTest.cs",
+      "Sha256": "54AE0870B1D3FFB01C7187684E960AF0C5640C0915792369D73F5B9A17CB64F0"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/EntityCapTest.cs",
+      "Sha256": "9FA09D053A1EC30FBF02F234AF57C5D7DBA5C217B32B8A46CA8FE780FF778398"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/EntityShapeLeanCapTest.cs",
+      "Sha256": "67879AAFA0AD0F8DE8D3D7D6D6DFC658713029DCECD72427F18DFF6EE985CD50"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/EntityShapeNearCameraTest.cs",
+      "Sha256": "83E7AB3A1C3D3F6ABF188E29B36C531564133F3EFEC1C5317B4A2403737B2C94"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/EntityShapeTest.cs",
+      "Sha256": "2F2FEE3187F1664C13709BCEFF949A3CDF867C342A3F6536DBB859101C182F7E"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/GlassLookTest.cs",
+      "Sha256": "B1420D3343BAB81D455BEA5AF1884F2A85FDC461885DC724038D526CE825D698"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/ItemSpreadTest.cs",
+      "Sha256": "E052B31305D3BBBB6B9313801E3D3BD9E149A280C567F9BE045D04335176FCF9"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/MinimapViewTest.cs",
+      "Sha256": "7B19D1EDDE61A3C868B053FDE37B49DB0E89CBBBA8D17CC8A1C106A3E7F9980F"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/MouseCapturePolicyTest.cs",
+      "Sha256": "890C8A50219D3DD088D52805B567580A24E1C49AB37F31B17D82D7AD9AC52AFE"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/PointListStateTest.cs",
+      "Sha256": "F05E2CA29C729527E4024B2896396B9B2D72FE088960B41D3F6D17C2FC1F5EE5"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/QuadBuilderOrderTest.cs",
+      "Sha256": "E94C4CC2322B75BD3CA3886A2A6C6DA27C8D29C07796C3315E03E26B05B7CDE4"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/Render3DMathTest.cs",
+      "Sha256": "90EBB68063C0E7ECF256E21F1B521E2E65208D488D08D6176040102BF0859C2B"
+    },
+    {
+      "Path": "Content.Tests/Client/Render3D/WallDecalSideTest.cs",
+      "Sha256": "848F5E39017905C1E42C8F5C697D95D08E54169F80D060284559EAB59DB7F220"
+    },
+    {
+      "Path": "Content.Tests/Shared/Render3D/CameraYawMathTest.cs",
+      "Sha256": "C3F17097E5B604DFE6BAC67E7915E8CA8E481430639384DBD24572C2CF111056"
+    },
+    {
+      "Path": "Resources/Locale/en-US/render3d.ftl",
+      "Sha256": "10D02693A8435D220BED7485F673EF2D709E0B62771FA895C8FE8F333E92B78F"
+    },
+    {
+      "Path": "Resources/Prototypes/Render3D/rules.yml",
+      "Sha256": "D8ABF8C766601EAA8A3AF7972DB90534D1806378867BCEAE40CBB343040F0F17"
+    },
+    {
+      "Path": "Resources/Prototypes/Shaders/render3d.yml",
+      "Sha256": "6CC1760A22E9079FD363BCC44630FD8ECCEE62E606E22695CA5DAA899BA5FB39"
+    },
+    {
+      "Path": "Resources/Textures/Shaders/Render3D/bloom_extract.swsl",
+      "Sha256": "9A2710B8F936021FE062EAF2819AD412A289D207CED3E412C3B87BCA6D7888B6"
+    },
+    {
+      "Path": "Resources/Textures/Shaders/Render3D/blur.swsl",
+      "Sha256": "1A17454358F48B284F66C0BF0CA37FA72155BB5C47F903F30A89CA2DD77C312B"
+    },
+    {
+      "Path": "Resources/Textures/Shaders/Render3D/entity.swsl",
+      "Sha256": "B47749C06069C66ED64936E2D40D8B0388498728849C1AFA21CBF9F0DFD44D12"
+    },
+    {
+      "Path": "Resources/Textures/Shaders/Render3D/glasspane.swsl",
+      "Sha256": "993E00A3082A63E769A17E842CA9709943C7BAF16551E08085E00C7EB95E772D"
+    },
+    {
+      "Path": "Resources/Textures/Shaders/Render3D/glowmask.swsl",
+      "Sha256": "5521D18008B3FA659AD40E01310D60B10E04B34897E8661816BDBF8E1B0810D0"
+    },
+    {
+      "Path": "Resources/Textures/Shaders/Render3D/post.swsl",
+      "Sha256": "4F8E91C4B7E8A0F563EBFB5FAC0B5D6940CB58DFDA91935549E4F2835410BD39"
+    },
+    {
+      "Path": "Resources/Textures/Shaders/Render3D/present.swsl",
+      "Sha256": "86B38DD7057E88BD7341C665D8536B34FD199C895F59CAEE420D940D13476DEC"
+    },
+    {
+      "Path": "Resources/Textures/Shaders/Render3D/raymarch.swsl",
+      "Sha256": "6AD9E5C9D85398EFD9C5CE26017EA2C9CAF2348192CFE6F49FD0CC0B725019E6"
+    },
+    {
+      "Path": "Resources/Textures/Shaders/Render3D/resolve.swsl",
+      "Sha256": "55A635768EBEC81398FCFA30561FF3D3A853DA42291D2A07E95928CB3C947AEB"
+    },
+    {
+      "Path": "Tools/render3d-dev/README.md",
+      "Sha256": "4435A55D4FFD41159BAAD4454C86F6424310FAE61944544A0DBFF8BFDA7D3422"
+    },
+    {
+      "Path": "Tools/render3d-dev/aimproto.sh",
+      "Sha256": "1FE570A77F0388E05BF0B2EE409B0DA8B0AF5005D1A27E97C16D2C728403B3AC"
+    },
+    {
+      "Path": "Tools/render3d-dev/aimrel.sh",
+      "Sha256": "65284EFD239409E6B62DC8A3828DDE57BC30C385F728F5F2AC27ED85CFED2CD3"
+    },
+    {
+      "Path": "Tools/render3d-dev/cmd.sh",
+      "Sha256": "1CAF701154BEC998EB20F6D5A32CE77447884F4C4BC97541AA6B2ED91264B6BD"
+    },
+    {
+      "Path": "Tools/render3d-dev/shot.sh",
+      "Sha256": "58F3ED64AF27DEAAB48BC4C611AE38FA1B5D13781B2948900E68D833AA526774"
+    },
+    {
+      "Path": "Tools/render3d-dev/soak.sh",
+      "Sha256": "495357625AE5E31DE0CC0C12B6B3527E839711EF7A55500E87C3679A80242EB4"
+    },
+    {
+      "Path": "docs/ss12/COMPAT.md",
+      "Sha256": "2669919805B8CA856ABC22FDAB5C4B10E5B1BCD7026B4AC7614BC57FA8E03DC3"
+    },
+    {
+      "Path": "docs/ss12/COMPAT.ru.md",
+      "Sha256": "3971E34A4646C50EC5B577E8224B0A03AD29BA2434E783F057DFA938F3CF35E7"
+    },
+    {
+      "Path": "docs/ss12/ONBOARDING.md",
+      "Sha256": "0313AEA31E37A486CF14A50D018239F0FA91F8168EED4A9519ADF676BD849F3E"
+    },
+    {
+      "Path": "docs/ss12/ONBOARDING.ru.md",
+      "Sha256": "9DBBF64589E090D9C01A8825C044566C9AEFF8A1FEBAAF68CDBF87BFB9B5D85F"
+    },
+    {
+      "Path": "docs/ss12/README.md",
+      "Sha256": "BCFA2AC01DD4ED6A88A942973057834B142362CBBCBB348D937598593EC303F6"
+    },
+    {
+      "Path": "docs/ss12/README.ru.md",
+      "Sha256": "70A325E37E526DB06FF1513DD988C2DF0032DBDC681C993FF5ECD41DF6C2AC3F"
+    }
+  ],
+  "Modified": [
+    {
+      "Path": "Content.Client/Gameplay/GameplayStateBase.cs",
+      "OriginalSha256": "490A65E962BA5B17935E580EDF79DDE851C673EE215A8EEE95890580592B4082",
+      "NewSha256": "7560EC8C6AF1FE7CC9F478367A70693862E60322CBA44AB65B94977CBB07B8F7",
+      "Transforms": [
+        "pick-merge"
+      ]
+    },
+    {
+      "Path": "Content.Client/Interaction/DragDropSystem.cs",
+      "OriginalSha256": "E1B8AFDCCA890E5CB167CC300AED6B62BDFC08139799BC4700346A510F1A4256",
+      "NewSha256": "72EB784C80B05DCF59A3A262EEA2C6FA0B395DCC7A5A44E66E35744E2F3EEDB1",
+      "Transforms": [
+        "pointer-aim",
+        "drag-drop"
+      ]
+    },
+    {
+      "Path": "Content.Client/MapText/MapTextOverlay.cs",
+      "OriginalSha256": "81752A951679287B15090FE0EC667298B752A9A0791577AF0D512770220A2296",
+      "NewSha256": "002C109EDC39996A7937623C7E8CC05499B302680D32A88D8C2C2A47F4E93A93",
+      "Transforms": [
+        "map-text"
+      ]
+    },
+    {
+      "Path": "Content.Client/Outline/TargetOutlineSystem.cs",
+      "OriginalSha256": "CEA4BA467DF25CB74B459525EB2A48B7F3645EF9552E4731400FE767960CC8F5",
+      "NewSha256": "AC7A9E7DD69208FA32A95FC57BA69984C80EF5F6556FEF738ADF0974B74C4278",
+      "Transforms": [
+        "pointer-aim"
+      ]
+    },
+    {
+      "Path": "Content.Client/Overlays/EntityHealthBarOverlay.cs",
+      "OriginalSha256": "920BBBF773A9D47AB5CBF7971725252A80583AC95C391B8256E588725A719683",
+      "NewSha256": "403A16495084D2DE34020DE66FCFE3AB5726E3E53E6B87257A3CE4480C2AE0DF",
+      "Transforms": [
+        "health-bars"
+      ]
+    },
+    {
+      "Path": "Content.Client/Popups/PopupOverlay.cs",
+      "OriginalSha256": "C9E5DD9BB3FFF05F1914C68DDF2CCD1018BC5A4DA64CC852C5B7452A7FD3084D",
+      "NewSha256": "BF5A7C32B7199F0AD5961533006FFF9FAD752F6ECA52322FB549203C02117674",
+      "Transforms": [
+        "popups"
+      ]
+    },
+    {
+      "Path": "Content.Client/Sprite/SpriteFadeSystem.cs",
+      "OriginalSha256": "4C23667302F2D13F4417F65A89873E36B5569FD08D968568646A2A394D6892B7",
+      "NewSha256": "0CD54A5A2B5EB599C4F4066E5038BB47DCC5D5783488A4F611114A2EB1B03E29",
+      "Transforms": [
+        "sprite-fade"
+      ]
+    },
+    {
+      "Path": "Content.Client/Vanilla/Weapons/Ranged/MicroHIDSystem.cs",
+      "OriginalSha256": "265CC448BCB5E0FAEC8642E3C0794C988521E0B322052A957AB387187C310FAB",
+      "NewSha256": "28E3D739D7450B3C1CDA6CAA9C156217F524D5D9CB2E5A3637038E73143626ED",
+      "Transforms": [
+        "pointer-aim"
+      ]
+    },
+    {
+      "Path": "Content.Client/Weapons/Melee/MeleeWeaponSystem.cs",
+      "OriginalSha256": "00DEF46B3FE05DF7FE22F28736A1099DEC5E60A2980A33E9532C646E65E9E451",
+      "NewSha256": "8D716EAF7E5730843A30935E651E11D130C11DC3BF7F2AB9BE79244D7FE1AA61",
+      "Transforms": [
+        "pointer-aim"
+      ]
+    },
+    {
+      "Path": "Content.Client/Weapons/Ranged/Systems/GunSystem.cs",
+      "OriginalSha256": "F351283785F75CAA1683606BCB2E3A4167722402523201FDCC50F91CE209F3DE",
+      "NewSha256": "6CDAAD28335BD51FB6CAB6804F10E37C6563C49B58CA09247C7AC52255A7915F",
+      "Transforms": [
+        "pointer-aim"
+      ]
+    },
+    {
+      "Path": "Content.Client/_ES/Viewcone/ESViewconeOverlayManagementSystem.cs",
+      "OriginalSha256": "008950D188D69D3A4C51EFBE43BFFB79EDBD13B6C965C1A1A3525A5608B7CBD0",
+      "NewSha256": "848D6A112321671691E6B9A0209654B68DFD5610D7808F92A22381FFD2D4B56E",
+      "Transforms": [
+        "pointer-aim"
+      ]
+    }
+  ],
+  "Generated": [
+    {
+      "Path": "Resources/ConfigPresets/Build/render3d.toml",
+      "Sha256": "31B8A2D4275267A4E4EFD69823A846C7FF735C8ABCB5C0BA5EA490D3ABFB0132"
+    }
+  ],
+  "BaseCommit": "f23b6bac1976577837ac1383ff3f12402368fc07"
+}

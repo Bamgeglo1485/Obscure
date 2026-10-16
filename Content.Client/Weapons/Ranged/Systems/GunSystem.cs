@@ -197,7 +197,7 @@ public sealed partial class GunSystem : SharedGunSystem
         if (gun.Comp.NextFire > Timing.CurTime)
             return;
 
-        var mousePos = _eyeManager.PixelToMap(_inputManager.MouseScreenPosition);
+        var mousePos = Content.Client.Render3D.Render3DPointer.PixelToMap(_eyeManager, _inputManager.MouseScreenPosition);
 
         if (mousePos.MapId == MapId.Nullspace)
         {

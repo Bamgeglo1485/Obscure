@@ -20,7 +20,7 @@ namespace Content.Client.Overlays;
 /// <summary>
 /// Overlay that shows a health bar on mobs.
 /// </summary>
-public sealed class EntityHealthBarOverlay : Overlay
+public sealed class EntityHealthBarOverlay : Overlay, Content.Client.Render3D.IRender3DHealthBar
 {
     private readonly IEntityManager _entManager;
     private readonly IPrototypeManager _prototype;
@@ -130,6 +130,38 @@ public sealed class EntityHealthBarOverlay : Overlay
         }
 
         handle.SetTransform(Matrix3x2.Identity);
+    }
+
+    /// <summary>
+    /// Same selection rules as <see cref="Draw"/> for a single entity, for views (the 3D renderer) that draw the bar
+    /// themselves in screen space. Returns false when the entity shows no bar.
+    /// </summary>
+    public bool TryGetBar(EntityUid uid, out float ratio, out Color color)
+    {
+        ratio = 0;
+        color = Color.White;
+
+        if (!_entManager.TryGetComponent(uid, out MobThresholdsComponent? thresholds)
+            || !_entManager.TryGetComponent(uid, out MobStateComponent? mobState)
+            || !_entManager.TryGetComponent(uid, out DamageableComponent? damageable)
+            || !_entManager.TryGetComponent(uid, out InjurableComponent? injurable))
+        {
+            return false;
+        }
+
+        _prototype.Resolve(StatusIcon, out var statusIcon);
+        if (statusIcon != null && !_statusIconSystem.IsVisible((uid, _entManager.GetComponent<MetaDataComponent>(uid)), statusIcon))
+            return false;
+
+        if (injurable.DamageContainer == null || !DamageContainers.Contains(injurable.DamageContainer))
+            return false;
+
+        if (CalcProgress(uid, mobState, damageable, thresholds) is not { } progress)
+            return false;
+
+        ratio = progress.ratio;
+        color = GetProgressColor(progress.ratio, progress.inCrit);
+        return true;
     }
 
     /// <summary>

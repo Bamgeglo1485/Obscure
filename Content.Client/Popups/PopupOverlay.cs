@@ -99,7 +99,7 @@ public sealed class PopupOverlay : Overlay
                     e => e == popup.InitialPos.EntityId || e == ourEntity))
                 continue;
 
-            var pos = Vector2.Transform(mapPos.Position, matrix);
+            var pos = Content.Client.Render3D.Render3DOverlays.WorldToScreen(args.ViewportControl, mapPos.Position, matrix);
             _controller.DrawPopup(popup, worldHandle, pos, scale);
         }
     }

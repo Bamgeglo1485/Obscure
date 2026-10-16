@@ -219,6 +219,7 @@ public sealed partial class DragDropSystem : SharedDragDropSystem
         _state = DragState.MouseDown;
         _mouseDownScreenPos = args.ScreenCoordinates;
         _mouseDownTime = 0;
+        Content.Client.Render3D.Render3DPointer.ResetDrag();
 
         // don't want anything else to process the click,
         // but we will save the event so we can "re-play" it if this drag does
@@ -432,7 +433,7 @@ public sealed partial class DragDropSystem : SharedDragDropSystem
 
         // find possible targets on screen even if not reachable
         // TODO: Duplicated in SpriteSystem and TargetOutlineSystem. Should probably be cached somewhere for a frame?
-        var mousePos = _eyeManager.PixelToMap(_inputManager.MouseScreenPosition);
+        var mousePos = Content.Client.Render3D.Render3DPointer.PixelToMap(_eyeManager, _inputManager.MouseScreenPosition);
         var expansion = new Vector2(1.5f, 1.5f);
 
         var bounds = new Box2(mousePos.Position - expansion, mousePos.Position + expansion);
@@ -569,7 +570,7 @@ public sealed partial class DragDropSystem : SharedDragDropSystem
             case DragState.MouseDown:
             {
                 var screenPos = _inputManager.MouseScreenPosition;
-                if ((_mouseDownScreenPos!.Value.Position - screenPos.Position).Length() > Deadzone)
+                if (Content.Client.Render3D.Render3DPointer.DragMoved((_mouseDownScreenPos!.Value.Position - screenPos.Position).Length() > Deadzone, Deadzone))
                 {
                     StartDrag();
                 }
@@ -589,7 +590,7 @@ public sealed partial class DragDropSystem : SharedDragDropSystem
         // Update position every frame to make it smooth.
         if (Exists(_dragShadow))
         {
-            var mousePos = _eyeManager.PixelToMap(_inputManager.MouseScreenPosition);
+            var mousePos = Content.Client.Render3D.Render3DPointer.PixelToMap(_eyeManager, _inputManager.MouseScreenPosition);
             _transformSystem.SetWorldPosition(_dragShadow.Value, mousePos.Position);
         }
     }

@@ -176,7 +176,8 @@ public sealed partial class SpriteFadeSystem : EntitySystem
 
         var change = ChangeRate * frameTime;
 
-        FadeIn(change);
+        if (!Content.Client.Render3D.Render3DPointer.Shown)
+            FadeIn(change);
         FadeOut(change);
 
         _comps.Clear();

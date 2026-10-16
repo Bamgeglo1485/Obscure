@@ -62,7 +62,7 @@ public sealed partial class MicroHIDSystem : SharedMicroHIDSystem
         {
             if (_stateManager.CurrentState is GameplayStateBase screen)
             {
-                var mousePos = _eyeManager.PixelToMap(_inputManager.MouseScreenPosition);
+                var mousePos = Content.Client.Render3D.Render3DPointer.PixelToMap(_eyeManager, _inputManager.MouseScreenPosition);
                 var target = screen.GetClickedEntity(mousePos);
                 RaisePredictiveEvent(new WeaponChargeShootRequestEvent(GetNetEntity(weaponUid), GetNetEntity(target)));
             }

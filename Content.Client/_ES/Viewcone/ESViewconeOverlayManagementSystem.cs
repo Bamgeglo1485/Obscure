@@ -88,7 +88,7 @@ public sealed partial class ESViewconeOverlayManagementSystem : EntitySystem
 
             if (HasComp<MouseRotatorComponent>(uid))
             {
-                var mousePos = _eye.PixelToMap(_input.MouseScreenPosition);
+                var mousePos = Content.Client.Render3D.Render3DPointer.PixelToMap(_eye, _input.MouseScreenPosition);
                 if (mousePos.MapId != MapId.Nullspace)
                     playerAngle = (mousePos.Position - _xform.GetMapCoordinates(xform).Position).ToAngle() + Angle.FromDegrees(90);
 
