@@ -45,7 +45,7 @@ jobs:
       run: dotnet run --project Content.Packaging server --platform win-x64 --platform win-arm64 --platform linux-x64 --platform linux-arm64 --platform osx-x64 --platform osx-arm64
 
     - name: Package client
-      run: dotnet run --project Content.Packaging client --no-wipe-release
+      run: dotnet run --project Content.Packaging client
 
     - name: Publish version
       run: Tools/publish_multi_request.py
