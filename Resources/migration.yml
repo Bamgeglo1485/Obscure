@@ -847,16 +847,16 @@ CratePartsT4: null
 
 # 2026-05-05 - Funky security resprite port
 
-ClothingUniformJumpsuitSec: FuClothingUniformSecService
-ClothingUniformJumpskirtSec: FuClothingUniformSecService
-ClothingUniformJumpsuitSecGrey: FuClothingUniformSecDressPants
-ClothingUniformJumpskirtSecGrey: FuClothingUniformSecDressSkirt
-ClothingUniformJumpsuitSecBlue: FuClothingUniformSecService
-ClothingUniformJumpSuitHosParadeMale: null
-ClothingUniformJumpskirtHoSParadeMale: null
-ClothingOuterWinterHos: FuClothingOuterWinterHos
-ClothingOuterWinterWarden: FuClothingOuterWinterWard
-ClothingOuterWinterSec: FuClothingOuterWinterSec
+#ClothingUniformJumpsuitSec: FuClothingUniformSecService
+#ClothingUniformJumpskirtSec: FuClothingUniformSecService
+#ClothingUniformJumpsuitSecGrey: FuClothingUniformSecDressPants
+#ClothingUniformJumpskirtSecGrey: FuClothingUniformSecDressSkirt
+#ClothingUniformJumpsuitSecBlue: FuClothingUniformSecService
+#ClothingUniformJumpSuitHosParadeMale: null
+#ClothingUniformJumpskirtHoSParadeMale: null
+#ClothingOuterWinterHos: FuClothingOuterWinterHos
+#ClothingOuterWinterWarden: FuClothingOuterWinterWard
+#ClothingOuterWinterSec: FuClothingOuterWinterSec
 
 # 08-04-2026 botany uniform/loadout resprite
 ClothingMaskBandBotany: ClothingMaskBandGreen
