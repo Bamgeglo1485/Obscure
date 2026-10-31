@@ -139,6 +139,14 @@
   clientHandled: true
 
 - type: alert
+  id: Stun
+  icons:
+  - sprite: /Textures/Objects/Weapons/Melee/stunbaton.rsi #Should probably draw a proper icon
+    state: stunbaton_off
+  name: alerts-stunned-name
+  description: alerts-stunned-desc
+
+- type: alert
   id: Knockdown
   clickEvent: !type:KnockedDownAlertEvent
   icons:

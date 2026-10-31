@@ -12,7 +12,7 @@
 - type: startingGear
   id: PassengerGear
   equipment:
-    id: PassengerWallet # Funky: the wallet-ening
+    id: PassengerPDA
     ears: ClothingHeadsetGrey
   #storage:
     #back:

@@ -9,7 +9,7 @@ public sealed class PAAnnouncementCVars
     /// Enables PA speakers, allowing them to say announcements out loud.
     /// </summary>
     public static readonly CVarDef<bool> PAEnabled =
-        CVarDef.Create("funkystation.pa.enabled", true, CVar.SERVER | CVar.REPLICATED,
+        CVarDef.Create("funkystation.pa.enabled", false, CVar.SERVER | CVar.REPLICATED, // OBSCURE EDIT true->false
             "Enable PA speakers, allowing them to say announcements out loud.");
 
     /// <summary>

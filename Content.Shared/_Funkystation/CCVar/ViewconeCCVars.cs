@@ -1,4 +1,4 @@
-﻿using Robust.Shared;
+using Robust.Shared;
 using Robust.Shared.Configuration;
 
 namespace Content.Shared._Funkystation.CCVar;
@@ -11,7 +11,7 @@ public sealed class ViewconeCCVars : CVars
 {
     // toggle for the whole viewcone system.
     public static readonly CVarDef<bool> ViewconeEnabled =
-        CVarDef.Create("funkystation.viewcone_enabled", true, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("funkystation.viewcone_enabled", false, CVar.SERVER | CVar.REPLICATED); // OBSCURE EDIT true->false
 
     // base viewcone angle in degrees, before modifiers
     public static readonly CVarDef<float> ViewconeBaseAngle =
@@ -19,7 +19,7 @@ public sealed class ViewconeCCVars : CVars
 
     // whether moving opposite your facing direction forces walk
     public static readonly CVarDef<bool> ForceWalkBackwards =
-        CVarDef.Create("funkystation.force_walk_backwards", true, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("funkystation.force_walk_backwards", false, CVar.SERVER | CVar.REPLICATED); // OBSCURE EDIT true->false
 
     // whether mobs always rotate to face the mouse cursor
     public static readonly CVarDef<bool> AlwaysFaceCursor =
