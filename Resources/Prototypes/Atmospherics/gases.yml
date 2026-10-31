@@ -117,3 +117,13 @@
   color: '#3a758c'
   reagent: Frezon
   pricePerMole: 1.2 #funkystation
+
+- type: gas
+  id: FartGas
+  name: gas-fart
+  abbreviation: fart-abbreviation
+  molarHeatCapacity: 20
+  heatCapacityRatio: 1.4
+  molarMass: 32
+  pricePerMole: 1.1
+
