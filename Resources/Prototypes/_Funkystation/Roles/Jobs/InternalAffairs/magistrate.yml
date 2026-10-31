@@ -25,7 +25,7 @@
   equipment:
     head: ClothingHeadHatPwig
     shoes: ClothingShoesBootsLaceup
-    id: MagistrateWallet
+    id: MagistratePDA
     ears: ClothingHeadsetMagistrate
     outerClothing: ClothingOuterRobesJudge
   storage:
